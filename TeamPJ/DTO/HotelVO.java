@@ -1,28 +1,27 @@
 package DTO;
 
-import java.time.LocalDateTime;
 
 public class HotelVO {
 	
-	private String Room;
+	private String room;
 	private String name;
 	private String phoneNum;
 	private String date;
-	private LocalDateTime bookdate;
+	private String bookNum;
 	private int cost;
-	private int booknumber;
+	private String booknumber;
 	
-	public int getBooknumber() {
+	public String getBooknumber() {
 		return booknumber;
 	}
-	public void setBooknumber(int booknumber) {
+	public void setBooknumber(String booknumber) {
 		this.booknumber = booknumber;
 	}
 	public String getRoom() {
-		return Room;
+		return room;
 	}
 	public void setRoom(String room) {
-		Room = room;
+		this.room = room;
 	}
 	public String getName() {
 		return name;
@@ -42,11 +41,11 @@ public class HotelVO {
 	public void setDate(String date) {
 		this.date = date;
 	}
-	public LocalDateTime getBookdate() {
-		return bookdate;
+	public String getBookdate() {
+		return bookNum;
 	}
-	public void setBookdate(LocalDateTime bookdate) {
-		this.bookdate = bookdate;
+	public void setBookdate(String bookNum) {
+		this.bookNum = bookNum;
 	}
 	public int getCost() {
 		return cost;
@@ -56,8 +55,11 @@ public class HotelVO {
 	}
 	@Override
 	public String toString() {
-		return "HotelVO [예약번호 : "+booknumber+", 예약자=" + name + ", Room=" + Room + ", 연락처=" + phoneNum + ", 이용기간=" + date + ", "
-				+ "예약일="+ bookdate + ", 비용=" + cost + "]";
+		return "HotelVO [예약번호 : "+booknumber+", 예약자=" + name + ", Room=" + room + ", 연락처=" + phoneNum + ", 이용기간=" + date + ", "
+				+ "예약일="+ bookNum + ", 비용=" + cost + "]";
+	}
+	public void print() {
+		System.out.println(booknumber);
 	}
 	
 }
