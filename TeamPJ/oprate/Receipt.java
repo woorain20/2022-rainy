@@ -1,6 +1,6 @@
-package oprate;
+package operate;
 
-public class Rooms {
+public class Receipt {
 	
 	public static void Singleroom() {
 		

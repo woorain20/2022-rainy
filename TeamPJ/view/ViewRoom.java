@@ -1,18 +1,11 @@
 package view;
 
-
-
 import java.util.Scanner;
 
-import dto.HotelVO;
-import roomif.DoubleRoom;
-import roomif.SingleRoom;
-import roomif.SuiteRoom;
-import roomif.TwinRoom;
+import roomIf.Room;
 
 public class ViewRoom {
-	Scanner sc=new Scanner(System.in);
-
+	private Scanner sc=new Scanner(System.in);
 	
 	//∞¥Ω« º±≈√
 	public void Room() {
@@ -27,22 +20,22 @@ public class ViewRoom {
 		
 			if(room.equals("ΩÃ±€")) {
 				System.out.println("ΩÃ±€∑Î¿ª º±≈√«œºÃΩ¿¥œ¥Ÿ.");
-				SingleRoom sr=new SingleRoom();
+				Room sr=new Room();
 				sr.single();
 				break;
 			}else if(room.equals("¥ı∫Ì")) {
 				System.out.println("¥ı∫Ì∑Î¿ª º±≈√«œºÃΩ¿¥œ¥Ÿ.");
-				DoubleRoom dr=new DoubleRoom();
+				Room dr=new Room();
 				dr.Double();
 				break;
 			}else if(room.equals("∆Æ¿©")) {
 				System.out.println("∆Æ¿©∑Î¿ª º±≈√«œºÃΩ¿¥œ¥Ÿ.");
-				TwinRoom tr=new TwinRoom();
+				Room tr=new Room();
 				tr.Twin();
 				break;
 			}else if(room.equals("Ω∫¿ß∆Æ")) {
 				System.out.println("Ω∫¿ß∆Æ∑Î¿ª º±≈√«œºÃΩ¿¥œ¥Ÿ.");
-				SuiteRoom su=new SuiteRoom();
+				Room su=new Room();
 				su.Suite();
 				break;
 			}else {
@@ -51,14 +44,9 @@ public class ViewRoom {
 			}
 		}
 		System.out.println();
-	}
-			
+	}	
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
 		ViewRoom vr=new ViewRoom();
-		String room=sc.nextLine();
-	
+		vr.Room();
 	}
-
-
 }

@@ -2,19 +2,22 @@ package view;
 
 import java.util.Scanner;
 
+import operate.Receipt;
+import roomIf.Room;
+import controller.CaseOnePrint;
 import dto.HotelVO;
-import oprate.Booknumber;
-import oprate.Rooms;
+import operate.Booknumber;
 
 public class HotelView {
 	
 	private Scanner sc=new Scanner(System.in);
-	HotelVO hotelVO=new HotelVO();
+	
 	int n;
 	
 	public void Reservation() {
 		
 		//예약 화면
+		Scanner sc=new Scanner(System.in);
 		System.out.println("Welcome to NWJ Hotel");
 		System.out.println("예약자 이름을 입력해주세요.");
 		String name=sc.nextLine();
@@ -35,38 +38,10 @@ public class HotelView {
 		
 		case 1:
 			System.out.println("예약을 선택하셨습니다.");
-			//HotelReservation 가져오기
-			ViewRoom vr=new ViewRoom();
-			ViewNight vn=new ViewNight();
-			ViewCheckIn vc=new ViewCheckIn();
-			Booknumber bn=new Booknumber();
-			vr.Room();
-			vn.Night();
-			vc.CheckIn();
-			System.out.println("예약번호: "+bn.bookNumber());
-			System.out.println();
+			CaseOnePrint cop=new CaseOnePrint();
+			cop.OneReservation();
+			break;
 			
-//			while(true) {
-//				System.out.println("예약을 진행하겠습니까?");
-//				System.out.println("1. Yes || 2. No");
-//				int answer=sc.nextInt();
-//					
-//				if(answer==1) {
-//					Rooms ro= new Rooms();
-//					ro.Singleroom();
-//					ro.Doubleroom();
-//					ro.TwinRoom();
-//					ro.suiteroom();
-//					break;
-//				}else if(answer==2){
-//					System.out.println("예약을 종료합니다.");
-//					break;
-//				}else {
-//					System.out.println("잘못 입력하셨습니다.");
-//					System.out.println("다시 입력해주세요.");
-//				}
-//			}
-				break;
 		case 2:
 			System.out.println("예약조회를 선택하셨습니다.");
 			
@@ -88,9 +63,7 @@ public class HotelView {
 		
 	}
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
 		HotelView hv=new HotelView();
 		hv.Reservation();
-		
 	}
 }
