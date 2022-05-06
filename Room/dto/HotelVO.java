@@ -57,8 +57,7 @@ public class HotelVO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
+		
 	public int getCheckIn() {
 		return checkIn;
 	}

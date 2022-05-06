@@ -1,27 +1,34 @@
 package view;
 
+
 import java.util.Scanner;
 
 
 import dto.HotelVO;
 import operate.Booknumber;
-import operate.Receipt;
+import operate.ViewCheckIn;
+import operate.ViewNight;
+import operate.ViewRoom;
+import servic.Management;
+
 
 public class HotelView {
 	
-
+	public static String name;
+	public static int phoneN=0;
+	
 	public static void Reservation() {
-		int n;
 		HotelVO hotelVO=new HotelVO();
 		Scanner sc=new Scanner(System.in);
+		Management mng=new Management();
 		
 		//예약 화면
 		System.out.println("Welcome to NWJ Hotel");
 		System.out.println("예약자 이름을 입력해주세요.");
-		String name=sc.nextLine();
+		name=sc.nextLine();
 		System.out.println("예약자명: "+name);
 		System.out.println("연락처(-없이 입력해주세요.)");	
-		int phoneN=sc.nextInt();	
+		phoneN=sc.nextInt();	
 		System.out.println("연락처: "+phoneN);
 		System.out.println();
 		System.out.println("아래의 항목 중 원하시는 항목의 번호를 선택해주세요");
@@ -30,10 +37,11 @@ public class HotelView {
 		System.out.print("Reservation: ");
 		System.out.println();
 		
-		n=sc.nextInt();
-				
 		hotelVO.setName(name);
 		hotelVO.setPhoneNum(phoneN);
+		
+		int n;
+		n=sc.nextInt();
 		
 		switch(n) {
 		
@@ -47,52 +55,25 @@ public class HotelView {
 			vr.Room();
 			vn.Night();
 			vc.CheckIn();
-			System.out.println("예약번호: "+bn.bookNumber());
-			System.out.println();
 			hotelVO.setBooknumber(bn.bookNumber());
 			hotelVO.setRoom(vr.room);
 			hotelVO.setNight(vn.night);
 			hotelVO.setYear(vc.year);
 			hotelVO.setMonth(vc.month);
 			hotelVO.setDay(vc.day);
-			hotelVO.print();
-			while(true) {
-				System.out.println("예약을 진행하겠습니까?");
-				System.out.println("1. Yes || 2. No");
-				int answer=sc.nextInt();
-					
-				if(answer==1) {
-					Receipt ro= new Receipt();
-					ro.Singleroom();
-//					ro.Doubleroom();
-//					ro.TwinRoom();
-//					ro.suiteroom();
-					break;
-				}else if(answer==2){
-					System.out.println("예약을 종료합니다.");
-					break;
-				}else {
-					System.out.println("잘못 입력하셨습니다.");
-					System.out.println("다시 입력해주세요.");
-				}
-			}
-			
-			
-			
+			mng.createRervation(hotelVO);
 				break;
 		case 2:
+			mng.readResrve();
 			System.out.println("예약조회를 선택하셨습니다.");
-			
 			break;
 			
 		case 3:
 			System.out.println("예약을 변경하겠습니다.");
-			
 			break;
 			
 		case 4:
 			System.out.println("예약을 취소하겠습니다.");
-			
 			break;
 			
 		default:
@@ -100,9 +81,5 @@ public class HotelView {
 		}	
 		
 	}
-	public static void main(String[] args) {
-		HotelView hv=new HotelView();
-		hv.Reservation();
-		
-	}
+	
 }
