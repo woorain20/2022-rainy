@@ -1,21 +1,49 @@
-package DTO;
+package dto;
 
 
 public class HotelVO {
 	
 	private String room;
 	private String name;
-	private String phoneNum;
-	private String date;
-	private String bookNum;
+	private int phoneNum;
+	private int night;
+	private int checkIn;
 	private int cost;
 	private String booknumber;
+	private int year;
+	private int month;
+	private int day;
 	
-	public String getBooknumber() {
-		return booknumber;
+	public int getNight() {
+		return night;
 	}
-	public void setBooknumber(String booknumber) {
-		this.booknumber = booknumber;
+	public void setNight(int night) {
+		this.night = night;
+	}
+	
+	public int getPhoneNum() {
+		return phoneNum;
+	}
+	public void setPhoneNum(int phoneNum) {
+		this.phoneNum = phoneNum;
+	}
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
+	public int getMonth() {
+		return month;
+	}
+	public void setMonth(int month) {
+		this.month = month;
+	}
+	public int getDay() {
+		return day;
+	}
+	public void setDay(int day) {
+		this.day = day;
 	}
 	public String getRoom() {
 		return room;
@@ -29,23 +57,18 @@ public class HotelVO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getPhoneNum() {
-		return phoneNum;
+	
+	
+	public int getCheckIn() {
+		return checkIn;
 	}
-	public void setPhoneNum(String phoneNum) {
-		this.phoneNum = phoneNum;
+	public void setCheckIn(int checkIn) {
+		this.checkIn = checkIn;
 	}
-	public String getDate() {
-		return date;
-	}
-	public void setDate(String date) {
-		this.date = date;
-	}
-	public String getBookdate() {
-		return bookNum;
-	}
-	public void setBookdate(String bookNum) {
-		this.bookNum = bookNum;
+	public void setCheckIn(int year, int month, int day) {
+		 this.year=year;
+		 this.month=month;
+		 this.day=day;
 	}
 	public int getCost() {
 		return cost;
@@ -53,13 +76,26 @@ public class HotelVO {
 	public void setCost(int cost) {
 		this.cost = cost;
 	}
+	public String getBooknumber() {
+		return booknumber;
+	}
+	public void setBooknumber(String booknumber) {
+		this.booknumber = booknumber;
+	}
 	@Override
 	public String toString() {
-		return "HotelVO [예약번호 : "+booknumber+", 예약자=" + name + ", Room=" + room + ", 연락처=" + phoneNum + ", 이용기간=" + date + ", "
-				+ "예약일="+ bookNum + ", 비용=" + cost + "]";
+		return "HotelVO [예약번호 : "+booknumber+", 예약자=" + name + ", Room=" + room + ", 연락처=" + phoneNum + ", 이용기간=" + night + ", "
+				+ "예약일="+ year+"-"+month+"-"+day+ ", 비용=" + cost + "]";
 	}
 	public void print() {
 		System.out.println(booknumber);
+		System.out.println(name);
+		System.out.println(phoneNum);
+		System.out.println(year+"-"+month+"-"+day);
+		System.out.println(room);
+		System.out.println(toString());
 	}
+	
+
 	
 }

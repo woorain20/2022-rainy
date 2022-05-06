@@ -1,10 +1,10 @@
-package Macro;
+package oprate;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
-import DTO.HotelVO;
+import dto.HotelVO;
 
 public class Booknumber {
 	
@@ -47,14 +47,20 @@ public class Booknumber {
 		return bookNumber;
 								
 	}
+
+	public void bookwqNumblerprint() {
+		
+	hotelVO.setBooknumber(bookNumber());
+	}
+	
+	
 	public static void main(String[] args) {
 		HotelVO hotelVO=new HotelVO();
-		
 		hotelVO.setBooknumber(bookNumber());
-		hotelVO.print();
-		
-		
+
 	}
+		
+	
 	
 	
 }
