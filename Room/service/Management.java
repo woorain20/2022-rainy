@@ -1,4 +1,4 @@
-package servic;
+package service;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -9,10 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 import dto.HotelVO;
 import operate.Booknumber;
+import view.HotelView;
 
 
 public class Management {
-	HotelVO hotelVO=new HotelVO();
 	List<HotelVO> hotellist=new ArrayList<>();
 	Booknumber bn=new Booknumber();
 	
@@ -26,7 +26,7 @@ public class Management {
 
 
 	public void createRervation(HotelVO hotelVO) {
-		writeReserve();
+		writeReserve(hotelVO);
 		hotellist.add(hotelVO);
 		hotelVO.print();
 		
@@ -35,10 +35,11 @@ public class Management {
 
 		//파일로 저장
 
-	public void writeReserve() {
+	public void writeReserve(HotelVO hotelVO) {
 		try(ObjectOutputStream oo=
 				new ObjectOutputStream(new FileOutputStream(hotelVO.getBooknumber()+".txt")))
 		{oo.writeObject(hotellist);
+			System.out.println(hotelVO.getBooknumber());
 			System.out.println("파일 저장 성공");
 		}catch(IOException e) {
 			e.getMessage();
