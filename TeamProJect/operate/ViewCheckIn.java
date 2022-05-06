@@ -1,18 +1,20 @@
-package view;
+package operate;
 
 import java.time.LocalDate;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import dto.HotelVO;
+
 public class ViewCheckIn {
 	private Scanner sc=new Scanner(System.in);
 	
+	public int year=0;
+	public int month=0;
+	public int day=0;
 		//체크인 날짜
 		public void CheckIn() {
 			
-			int year=0;
-			int month=0;
-			int day=0;
 			
 			System.out.println("Check-in 날짜를 선택해주세요");
 			System.out.println("Start: ");
@@ -83,9 +85,11 @@ public class ViewCheckIn {
 				break;
 			}
 			System.out.println(year+""+month+""+day);
+
+	
 		}
-		public static void main(String[] args) {
-			ViewCheckIn vci=new ViewCheckIn();
-			vci.CheckIn();
-		}
+
+		
+		
+		
 }

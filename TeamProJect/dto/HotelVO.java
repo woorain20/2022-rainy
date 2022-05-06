@@ -14,18 +14,48 @@ public class HotelVO {
 	private int month;
 	private int day;
 	
+	
+	public String getRoom() {
+		return room;
+	}
+	public void setRoom(String room) {
+		this.room = room;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getPhoneNum() {
+		return phoneNum;
+	}
+	public void setPhoneNum(int phoneNum) {
+		this.phoneNum = phoneNum;
+	}
 	public int getNight() {
 		return night;
 	}
 	public void setNight(int night) {
 		this.night = night;
 	}
-	
-	public int getPhoneNum() {
-		return phoneNum;
+	public int getCheckIn() {
+		return checkIn;
 	}
-	public void setPhoneNum(int phoneNum) {
-		this.phoneNum = phoneNum;
+	public void setCheckIn(int checkIn) {
+		this.checkIn = checkIn;
+	}
+	public int getCost() {
+		return cost;
+	}
+	public void setCost(int cost) {
+		this.cost = cost;
+	}
+	public String getBooknumber() {
+		return booknumber;
+	}
+	public void setBooknumber(String booknumber) {
+		this.booknumber = booknumber;
 	}
 	public int getYear() {
 		return year;
@@ -44,42 +74,6 @@ public class HotelVO {
 	}
 	public void setDay(int day) {
 		this.day = day;
-	}
-	public String getRoom() {
-		return room;
-	}
-	public void setRoom(String room) {
-		this.room = room;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-		
-	public int getCheckIn() {
-		return checkIn;
-	}
-	public void setCheckIn(int checkIn) {
-		this.checkIn = checkIn;
-	}
-	public void setCheckIn(int year, int month, int day) {
-		 this.year=year;
-		 this.month=month;
-		 this.day=day;
-	}
-	public int getCost() {
-		return cost;
-	}
-	public void setCost(int cost) {
-		this.cost = cost;
-	}
-	public String getBooknumber() {
-		return booknumber;
-	}
-	public void setBooknumber(String booknumber) {
-		this.booknumber = booknumber;
 	}
 	@Override
 	public String toString() {

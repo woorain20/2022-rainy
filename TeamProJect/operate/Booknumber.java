@@ -7,8 +7,6 @@ import java.util.Random;
 import dto.HotelVO;
 
 public class Booknumber {
-	
-	
 			
 	public String numberGen(int dupCd) {
 		
@@ -48,17 +46,6 @@ public class Booknumber {
 								
 	}
 
-	public void bookwqNumblerprint() {
-		
-	hotelVO.setBooknumber(bookNumber());
-	}
-	
-	
-	public static void main(String[] args) {
-		HotelVO hotelVO=new HotelVO();
-		hotelVO.setBooknumber(bookNumber());
-
-	}
 		
 	
 	

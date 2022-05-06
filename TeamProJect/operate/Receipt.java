@@ -2,15 +2,14 @@ package operate;
 
 import dto.HotelVO;
 
+
 public class Receipt {
-	static HotelVO hotelVO=new HotelVO();
-	static int phoneNum = hotelVO.getPhoneNum();    //폰번호<--view에서 가져오기
-	static int night = hotelVO.getNight();       //이용기간
-	static String name = hotelVO.getName();  //이름 
-	static String bookNumber=hotelVO.getBooknumber();
-	
-	public static void Singleroom() {
-		String room = "single Room";  // 방이름
+		
+	public void Singleroom(HotelVO hotelVO) {
+		int phoneNum = hotelVO.getPhoneNum();    //폰번호<--view에서 가져오기
+		int night = hotelVO.getNight();       //이용기간
+		String name = hotelVO.getName();  //이름 
+		String bookNumber=hotelVO.getBooknumber();
 		int cost = 70000; //비용
 
 		    System.out.println(" ");
@@ -18,7 +17,7 @@ public class Receipt {
 			System.out.println("예약번호 : "+bookNumber);
 			System.out.println("예약자 : "+name);
 			System.out.println("연락처 : "+phoneNum);
-			System.out.println("결제 상품 : "+room);
+			System.out.println("결제 상품 : Single Room");
 			System.out.println("이용기간 : "+night);
 			System.out.println("기본요금 : "+cost);
 			System.out.println("방 1|침대 1|욕실 1|오션뷰");
@@ -27,8 +26,11 @@ public class Receipt {
 		
 }
 		
-	public static void Doubleroom() {
-		String room = "Double Room";  // 방이름
+	public void Doubleroom(HotelVO hotelVO) {
+		int phoneNum = hotelVO.getPhoneNum();    //폰번호<--view에서 가져오기
+		int night = hotelVO.getNight();       //이용기간
+		String name = hotelVO.getName();  //이름 
+		String bookNumber=hotelVO.getBooknumber();
 		int cost = 100000; //비용
 
 		    System.out.println(" ");
@@ -36,7 +38,7 @@ public class Receipt {
 			System.out.println("예약번호 : "+bookNumber);
 			System.out.println("예약자 : "+name);
 			System.out.println("연락처 : "+phoneNum);
-			System.out.println("결제 상품 : "+room);
+			System.out.println("결제 상품 : Double Room");
 			System.out.println("이용기간 : "+night);
 			System.out.println("기본요금 : "+cost);
 			System.out.println("최대인원 : 2");
@@ -45,8 +47,11 @@ public class Receipt {
 			System.out.println("\t\t 이용 감사드립니다. \t");
 			
 }
-	public static void TwinRoom() {
-		String room = "Twin Room";  // 방이름
+	public void TwinRoom(HotelVO hotelVO) {
+		int phoneNum = hotelVO.getPhoneNum();    //폰번호<--view에서 가져오기
+		int night = hotelVO.getNight();       //이용기간
+		String name = hotelVO.getName();  //이름 
+		String bookNumber=hotelVO.getBooknumber();
 		int cost = 100000; //비용
 
 		    System.out.println(" ");
@@ -54,7 +59,7 @@ public class Receipt {
 			System.out.println("예약번호 : "+bookNumber);
 			System.out.println("예약자 : "+name);
 			System.out.println("연락처 : "+phoneNum);
-			System.out.println("결제 상품 : "+room);
+			System.out.println("결제 상품 : Twin Room");
 			System.out.println("이용기간 : "+night);
 			System.out.println("기본요금 : "+cost);
 			System.out.println("최대인원 : 2");
@@ -63,9 +68,12 @@ public class Receipt {
 			System.out.println("\t\t 이용 감사드립니다. \t");
 			
 		
-	}			
-			public static void suiteroom() {
-				String room = "Suite Room";  // 방이름
+		}			
+		public void suiteroom(HotelVO hotelVO) {
+			int phoneNum = hotelVO.getPhoneNum();    //폰번호<--view에서 가져오기
+			int night = hotelVO.getNight();       //이용기간
+			String name = hotelVO.getName();  //이름 
+			String bookNumber=hotelVO.getBooknumber();
 				int cost = 200000; //비용
 
 					System.out.println(" ");
@@ -73,7 +81,7 @@ public class Receipt {
 					System.out.println("예약번호 : "+bookNumber);
 					System.out.println("예약자 : "+name);
 					System.out.println("연락처 : "+phoneNum);
-					System.out.println("결제 상품 : "+room);
+					System.out.println("결제 상품 : Suite Room");
 					System.out.println("이용기간 : "+night);
 					System.out.println("기본요금 : "+cost);
 					System.out.println("최대인원 : 4");
@@ -82,38 +90,4 @@ public class Receipt {
 					System.out.println("\t\t 이용 감사드립니다. \t");
 
 			}
-//			public void roomSelection(String room) {
-//				Rooms rooms=new Rooms();
-//				HotelVO hotelVO=new HotelVO();
-//				if(room.equals("싱글")) {
-//					hotelVO.getName();
-//					hotelVO.getPhoneNum();
-//					hotelVO.getNight();
-//					rooms.Singleroom();
-//				}else if(room.equals("더블")) {
-//					hotelVO.getName();
-//					hotelVO.getPhoneNum();
-//					hotelVO.getNight();
-//					rooms.Doubleroom();
-//				}else if(room.equals("트윈")) {
-//					hotelVO.getName();
-//					hotelVO.getPhoneNum();
-//					hotelVO.getNight();
-//					rooms.TwinRoom();
-//				}else if(room.equals("스위트")) {
-//					hotelVO.getName();
-//					hotelVO.getPhoneNum();
-//					hotelVO.getNight();
-//					rooms.suiteroom();
-//				}
-//			}
-		public static void main(String[] args) {
-			Singleroom();
-			Doubleroom();
-			TwinRoom();
-			suiteroom();
-			
-					
-}
-		
 }

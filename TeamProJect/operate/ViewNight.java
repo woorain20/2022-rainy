@@ -31,8 +31,5 @@ public class ViewNight {
 			}
 			
 		}
-		public static void main(String[] args) {
-			ViewNight vn=new ViewNight();
-			
-		}
+
 }
