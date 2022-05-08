@@ -25,12 +25,12 @@ public class HotelView {
 		Scanner sc=new Scanner(System.in);
 		Management mng=new Management();
 		
-		//¿¹¾à È­¸é
-		System.out.println("Welcome to ÀÚ¹Ù Hotel");
+		//ì˜ˆì•½ í™”ë©´
+		System.out.println("Welcome to ìë°” Hotel");
 		System.out.println();
-		System.out.println("¾Æ·¡ÀÇ Ç×¸ñ Áß ¿øÇÏ½Ã´Â Ç×¸ñÀÇ ¹øÈ£¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä");
+		System.out.println("ì•„ë˜ì˜ í•­ëª© ì¤‘ ì›í•˜ì‹œëŠ” í•­ëª©ì˜ ë²ˆí˜¸ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”");
 		System.out.println("======================================================");
-		System.out.println("1. ¿¹¾à || 2. ¿¹¾àÁ¶È¸ || 3. ¿¹¾àº¯°æ || 4. ¿¹¾àÃë¼Ò || 5. Á¾·á");
+		System.out.println("1. ì˜ˆì•½ || 2. ì˜ˆì•½ì¡°íšŒ || 3. ì˜ˆì•½ë³€ê²½ || 4. ì˜ˆì•½ì·¨ì†Œ || 5. ì¢…ë£Œ");
 		System.out.print("Reservation: ");
 		System.out.println();
 		
@@ -43,15 +43,16 @@ public class HotelView {
 		
 		case 1:
 			Scanner sc1=new Scanner(System.in);
-			System.out.println("¿¹¾àÀ» ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.");
-			System.out.println("¿¹¾àÀÚ ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.println("ì˜ˆì•½ì„ ì§„í–‰í•˜ê² ìŠµë‹ˆë‹¤.");
+			System.out.println("====================");
+			System.out.println("ì˜ˆì•½ì ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			name=sc1.nextLine();
-			System.out.println("¿¹¾àÀÚ¸í: "+name);
-			System.out.println("¿¬¶ôÃ³(-¾øÀÌ ÀÔ·ÂÇØÁÖ¼¼¿ä.)");	
+			System.out.println("ì˜ˆì•½ìëª…: "+name);
+			System.out.println("ì—°ë½ì²˜(-ì—†ì´ ì…ë ¥í•´ì£¼ì„¸ìš”.)");	
 			phoneN=sc1.nextInt();	
-			System.out.println("¿¬¶ôÃ³: "+phoneN);
+			System.out.println("ì—°ë½ì²˜: "+phoneN);
 			System.out.println();
-			//HotelReservation °¡Á®¿À±â
+			//HotelReservation ê°€ì ¸ì˜¤ê¸°
 			ViewRoom vr=new ViewRoom();
 			ViewNight vn=new ViewNight();
 			ViewCheckIn vc=new ViewCheckIn();
@@ -76,24 +77,35 @@ public class HotelView {
 			break;
 			
 		case 2:
-			System.out.println("¿¹¾àÁ¶È¸¸¦ ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.");
-			System.out.println("¿¹¾à¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
-			System.out.print("¿¹¾à¹øÈ£: ");
+			System.out.println();
+			System.out.println("ì˜ˆì•½ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
+			System.out.println("====================");
+			System.out.print("ì˜ˆì•½ë²ˆí˜¸: ");
 			mng.readResrve();
 
 			break;
 			
 		case 3:
-			System.out.println("¿¹¾àÀ» º¯°æÇÏ°Ú½À´Ï´Ù.");
+			System.out.println("ì˜ˆì•½ ë³€ê²½");
+			System.out.println();
+			System.out.println("ì˜ˆì•½ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
+			System.out.println("====================");
+			System.out.print("ì˜ˆì•½ë²ˆí˜¸: ");
 			mng.readResrve();
 			break;
 			
 		case 4:
-			System.out.println("¿¹¾àÀ» Ãë¼ÒÇÏ°Ú½À´Ï´Ù.");
+			System.out.println("ì˜ˆì•½ ì·¨ì†Œ");
+			System.out.println();
+			System.out.println("ì˜ˆì•½ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
+			System.out.println("====================");
+			System.out.print("ì˜ˆì•½ë²ˆí˜¸: ");
 			break;
 			
 		default:
-			System.out.println("Á¾·á");
+			System.out.println("ì´ìš©í•´ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤.");
+			System.out.println();
+			System.out.println("\tì¢…ë£Œ");
 		}	
 		
 	}
