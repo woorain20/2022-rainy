@@ -10,8 +10,8 @@ public class Receipt {
 		String name = hotelVO.getName();  //이름 
 		String bookNumber=hotelVO.getBooknumber();
 		String room = hotelVO.getRoom();
-		int cost; //비용
-		int tocost;	//총 비용
+		double tocost= hotelVO.getCost();
+	
 
 		    System.out.println();
 			System.out.println("\t\t 예약확인 \t\t");;
@@ -21,29 +21,25 @@ public class Receipt {
 			System.out.println("결제 상품 : "+room);
 			System.out.println("이용기간 : "+night);
 			if(room.equals("싱글")) {
-				cost=70000;
-				tocost=cost*night;
-				System.out.println("이용요금 : "+tocost);
+
+				System.out.println("이용요금 : "+(int)tocost+"원");
 				System.out.println("방 1|침대 1|욕실 1|오션뷰");
 				System.out.println("서비스 : 조식 | 미니바 ");
 			}else if(room.equals("더블")) {
-				cost=100000;
-				tocost=cost*night;
-				System.out.println("이용요금 : "+tocost);
+
+				System.out.println("이용요금 : "+(int)tocost+"원");
 				System.out.println("최대인원 : 2");
 				System.out.println("방 1|침대 2|욕실 1|오션뷰");
 				System.out.println("서비스 : 조식 | 미니바");
 			}else if(room.equals("트윈")) {
-				cost=120000;
-				tocost=cost*night;
-				System.out.println("이용요금 : "+tocost);
+
+				System.out.println("이용요금 : "+(int)tocost+"원");
 				System.out.println("최대인원 : 2");
 				System.out.println("방 2|침대 2|욕실 1|마운틴뷰");
 				System.out.println("서비스 : 조식 | 미니바");
 			}else if(room.equals("스위트")) {
-				cost=300000;
-				tocost=cost*night;
-				System.out.println("이용요금 : "+tocost);
+
+				System.out.println("이용요금 : "+(int)tocost+"원");
 				System.out.println("최대인원 : 4");
 				System.out.println("방 2|침대 4|욕실 2|마운틴뷰");
 				System.out.println("서비스 : 조식 | 미니바 | 헬스장");

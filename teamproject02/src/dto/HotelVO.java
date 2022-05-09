@@ -8,7 +8,7 @@ public class HotelVO {
 	private int phoneNum;
 	private int night;
 	private int checkIn;
-	private int cost;
+	private double cost;
 	private String booknumber;
 	private int year;
 	private int month;
@@ -45,10 +45,10 @@ public class HotelVO {
 	public void setCheckIn(int checkIn) {
 		this.checkIn = checkIn;
 	}
-	public int getCost() {
+	public double getCost() {
 		return cost;
 	}
-	public void setCost(int cost) {
+	public void setCost(double cost) {
 		this.cost = cost;
 	}
 	public String getBooknumber() {
