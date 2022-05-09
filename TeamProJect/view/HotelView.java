@@ -1,11 +1,12 @@
 package view;
 
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
-
-
 import dto.HotelVO;
 import operate.Booknumber;
+import operate.CostChange;
+import operate.Receipt;
 import operate.ViewCheckIn;
 import operate.ViewNight;
 import operate.ViewRoom;
@@ -16,70 +17,103 @@ public class HotelView {
 	
 	public String name;
 	public int phoneN=0;
-	public HotelVO hotelVO=new HotelVO();
+	private HotelVO hotelVO=new HotelVO();
+	private Scanner sc=new Scanner(System.in);
 	
-	public void Reservation() {
-		Scanner sc=new Scanner(System.in);
-		Management mng=new Management();
-		
-		//예약 화면
-		System.out.println("Welcome to NWJ Hotel");
+	Management mng=new Management();
+	Receipt rec=new Receipt();
+	ViewRoom vr=new ViewRoom();
+	ViewNight vn=new ViewNight();
+	ViewCheckIn vc=new ViewCheckIn();
+	CostChange cc=new CostChange();
+	Booknumber bn=new Booknumber();
+	private int room;
+	public int night;
+	public int year;
+	public int month;
+	public int day;
+	public String book;
+	
+	public int ReservationManu() {
+			System.out.println("Welcome to 자바 Hotel");
+			System.out.println();
+			System.out.println("아래의 항목 중 원하시는 항목의 번호를 선택해주세요");
+			System.out.println("======================================================");
+			System.out.println("1. 예약 || 2. 예약조회 || 3. 예약변경 || 4. 예약취소 || 5. 종료");
+			System.out.print("Reservation: ");
+			System.out.println();
+			int choice=-1;
+			try {
+				choice=sc.nextInt();
+				sc.nextLine();
+			}catch(InputMismatchException e) {
+				sc.nextLine();
+				System.out.println("범위내 숫자를 입력하세요.");
+			}return choice;
+	}
+	public void ReservationStart() {
+		System.out.println("예약을 진행하겠습니다.");
 		System.out.println("예약자 이름을 입력해주세요.");
 		name=sc.nextLine();
 		System.out.println("예약자명: "+name);
 		System.out.println("연락처(-없이 입력해주세요.)");	
-		phoneN=sc.nextInt();	
+		phoneN=sc.nextInt();
 		System.out.println("연락처: "+phoneN);
-		System.out.println();
-		System.out.println("아래의 항목 중 원하시는 항목의 번호를 선택해주세요");
-		System.out.println("======================================================");
-		System.out.println("1. 예약 || 2. 예약조회 || 3. 예약변경 || 4. 예약취소 || 5. 종료");
-		System.out.print("Reservation: ");
-		System.out.println();
-		
-		hotelVO.setName(name);
-		hotelVO.setPhoneNum(phoneN);
-		
-		int n;
-		n=sc.nextInt();
-		
-		switch(n) {
-		
-		case 1:
-			System.out.println("예약을 선택하셨습니다.");
-			//HotelReservation 가져오기
-			ViewRoom vr=new ViewRoom();
-			ViewNight vn=new ViewNight();
-			ViewCheckIn vc=new ViewCheckIn();
-			Booknumber bn=new Booknumber();
-			vr.Room();
-			vn.Night();
-			vc.CheckIn();
-			hotelVO.setBooknumber(bn.bookNumber());
-			hotelVO.setRoom(vr.room);
-			hotelVO.setNight(vn.night);
-			hotelVO.setYear(vc.year);
-			hotelVO.setMonth(vc.month);
-			hotelVO.setDay(vc.day);
-			mng.createRervation(hotelVO);
-				break;
-		case 2:
-			System.out.println("예약조회를 선택하셨습니다.");
-			mng.readResrve();
-			break;
-			
-		case 3:
-			System.out.println("예약을 변경하겠습니다.");
-			break;
-			
-		case 4:
-			System.out.println("예약을 취소하겠습니다.");
-			break;
-			
-		default:
-			System.out.println("종료");
-		}	
-		
 	}
+	public void roomChice() {
+		//HotelReservation 가져오기// 룸 숫자로 변환
+		System.out.println();
+		System.out.println("아래의 방 중 원하시는 방을 선택해주세요(번호)");
+		System.out.println("1.싱글 || 2.더블 || 3.트윈 || 4.스위트");
+		room = sc.nextInt();
+		System.out.print("선택 방: "+room+"번");
+		vr.Room(room);
+	}
+		
+	public void night() {	
+		System.out.println("숙박기간을 선택해주세요");
+		System.out.println("date: ");
+		vn.Night(night=sc.nextInt());
+	}
+	public void Checkinday() {
+		System.out.println();			
+		System.out.println("Check-in 날짜를 선택해주세요");
+		System.out.println("년,월,일을 순서대로 기입해주세요(각 기입마다 엔터키를 눌러주세요) ");
+		vc.CheckIn(year=sc.nextInt(),month=sc.nextInt(),day=sc.nextInt());
+	}
+	public String reservationCheck() {
+				//예약조회
+				System.out.println("예약 조회");
+				System.out.println();
+				System.out.println("예약번호를 입력해주세요");
+				book=sc.nextLine();
+				System.out.println("예약번호: "+book);
+				return book;
+	}
+	
+		
+			public String reservationUpdate() {
+				//예약 수정
+				System.out.println("예약 변경");
+				System.out.println();
+				System.out.println("예약번호를 입력해주세요");
+				book=sc.nextLine();
+				System.out.println("예약번호: "+book);	
+			return book;	
+			}
+//				
+//			}else if(n==4) {
+		public String reserveCancel() {
+				System.out.println("예약 취소");
+				System.out.println();
+				System.out.println("예약번호를 입력해주세요");
+				book=sc.nextLine();
+				System.out.println("예약번호: "+book);	
+			return book;
+		}
+		
+
+		
+	
 	
 }

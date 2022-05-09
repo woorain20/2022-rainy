@@ -30,7 +30,6 @@ public class Booknumber {
 		return numStr;
 	}
 	
-
 	HotelVO hotelVO=new HotelVO();
 	static Booknumber bn=new Booknumber();	
 		
@@ -41,13 +40,8 @@ public class Booknumber {
 		
 		String bookNumber = ld.format(fm1)+bn.numberGen(2);
 		
-		
 		return bookNumber;
 								
 	}
 
-		
-	
-	
-	
 }
