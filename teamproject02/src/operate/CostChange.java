@@ -59,7 +59,6 @@ public class CostChange {
 			vacation(bookday);
 			tocost+=cost;
 			}
-		System.out.println("결제금 : "+(int) cost+"원");
 		return tocost;
 
 		}

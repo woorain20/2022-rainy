@@ -1,7 +1,8 @@
 package dto;
 
+import java.io.Serializable;
 
-public class HotelVO {
+public class HotelVO implements Serializable{
 	
 	private String room;
 	private String name;
@@ -78,7 +79,7 @@ public class HotelVO {
 	@Override
 	public String toString() {
 		return "HotelVO [예약번호 : "+booknumber+", 예약자=" + name + ", Room=" + room + ", 연락처=" + phoneNum + ", 이용기간=" + night + ", "
-				+ "예약일="+ year+"-"+month+"-"+day+ ", 비용=" + cost + "]";
+				+ "체크인="+ year+"-"+month+"-"+day+ ", 결제금=" + cost + "]";
 	}
 	public void print() {
 	

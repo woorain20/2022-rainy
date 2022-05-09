@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import dto.HotelVO;
+
 
 public class ViewCheckIn {
 	private Scanner sc=new Scanner(System.in);
@@ -83,8 +83,5 @@ public class ViewCheckIn {
 				}
 				break;
 			}
-			System.out.println(year+""+month+""+day);
-
 		}
-			
 }
