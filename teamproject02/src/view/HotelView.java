@@ -80,6 +80,9 @@ public class HotelView {
 			System.out.println("예약번호를 입력해주세요");
 			System.out.println("====================");
 			System.out.print("예약번호: ");
+			mng.readResrve();
+			hotelVO.print();
+			break;
 			
 		case 3:
 			System.out.println("예약 변경");
@@ -87,6 +90,8 @@ public class HotelView {
 			System.out.println("예약번호를 입력해주세요");
 			System.out.println("====================");
 			System.out.print("예약번호: ");
+			mng.readResrve();
+			break;
 			
 		case 4:
 			System.out.println("예약 취소");
@@ -94,6 +99,8 @@ public class HotelView {
 			System.out.println("예약번호를 입력해주세요");
 			System.out.println("====================");
 			System.out.print("예약번호: ");
+			mng.readResrve();
+			break;
 			
 		default:
 			System.out.println("이용해주셔서 감사합니다.");

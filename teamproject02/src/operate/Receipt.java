@@ -10,6 +10,9 @@ public class Receipt {
 		String name = hotelVO.getName();  //이름 
 		String bookNumber=hotelVO.getBooknumber();
 		String room = hotelVO.getRoom();
+		int year=hotelVO.getYear();
+		int month=hotelVO.getMonth();
+		int day=hotelVO.getDay();
 		double tocost= hotelVO.getCost();
 	
 
@@ -19,6 +22,7 @@ public class Receipt {
 			System.out.println("예약자 : "+name);
 			System.out.println("연락처 : "+phoneNum);
 			System.out.println("결제 상품 : "+room);
+			System.out.println("체크인: "+year+"-"+month+"-"+day);
 			System.out.println("이용기간 : "+night);
 			if(room.equals("싱글")) {
 
