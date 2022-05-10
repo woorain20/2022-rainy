@@ -18,11 +18,11 @@ public class ViewCheckIn {
 						//현재 시간보다 과거 날짜 처리 불가
 						if(ld.getYear()<=year){
 							System.out.println(year+"년");		
+							System.out.println("월을 선택해주세요");
 							break;
 						}else {
 							System.out.println("과거날짜를 선택할 수 없습니다.");
 						}
-						System.out.println("월을 선택해주세요");
 					}
 				}catch(InputMismatchException e) {
 					System.out.println("숫자를 입력해주세요.");
@@ -38,11 +38,11 @@ public class ViewCheckIn {
 					while(true) {
 						if(month<=12) {
 							System.out.println(month+"월");
+							System.out.println("일을 선택해주세요");
 							break;
 						}else {
 							System.out.println("1~12월 중에 선택해주세요.");
 						}
-						System.out.println("일을 선택해주세요");
 					}
 				}catch(InputMismatchException e) {
 					System.out.println("숫자를 입력해주세요");
@@ -52,7 +52,7 @@ public class ViewCheckIn {
 			}
 		}
 			
-			public void CheckInDay(int day) {
+		public void CheckInDay(int day) {
 			//일 문자열 예외처리
 			while(true) {
 				try {

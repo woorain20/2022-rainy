@@ -46,31 +46,30 @@ public class ReservationCon {
 					//예약 조회
 					hotelView.reservationCheck();
 					mng.getReservation(hotelView.book);
-					hotelVO.print();
 					break;
 					
 				case 3:
 					//예약 수정
 					hotelView.reservationUpdate();
-					hotelView.roomChice();
-					hotelView.night();
-					hotelView.Checkinday();
 					hotelVO.setBooknumber(hotelView.book);
+					hotelView.roomChice();
 					hotelVO.setRoom(ViewRoom.room);
+					hotelView.night();
 					hotelVO.setNight(hotelView.night);
+					hotelView.Checkinday();
 					hotelVO.setYear(hotelView.year);
 					hotelVO.setMonth(hotelView.month);
 					hotelVO.setDay(hotelView.day);
 					cc.totalCost(hotelVO);
 					hotelVO.setCost(CostChange.totalCost);
-					
-					
-					mng.createRervation(hotelVO);
-					rec.Room(hotelVO);
+	//				hotelVO.print();
+					mng.reviseResreve(hotelVO);
+					//rec.Room(hotelVO);
 					break;
 				
 				case 4:
 					hotelView.reserveCancel();
+					hotelVO.setBooknumber(hotelView.book);
 					mng.deleteReservation(hotelVO);
 					break;
 					

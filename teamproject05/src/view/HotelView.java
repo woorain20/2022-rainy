@@ -101,8 +101,7 @@ public class HotelView {
 		System.out.println("예약번호: "+book);	
 		return book;	
 	}
-//				
-//			}else if(n==4) {
+
 	public String reserveCancel() {
 		System.out.println("예약 취소");
 		System.out.println();
