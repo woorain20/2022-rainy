@@ -13,7 +13,7 @@ public class CostChange {
 	//요일 숫자 변환 
 	
 	public double cost;  
-	public static double tocost;
+	public static double totalCost = 0;
 
 	//주말 추가요금	
 	public void weekendcost(LocalDate date) {
@@ -39,27 +39,27 @@ public class CostChange {
 	}
 
 	
-	
 	public double totalCost(HotelVO hotelVO) {
 			
+		
 		for(int i=0; i<hotelVO.getNight();i++) {
 
-			if(hotelVO.getRoom().equals("싱글")) {
+			if(hotelVO.getRoom().equals("싱글룸")) {
 				cost = 700000;           
-			}else if(hotelVO.getRoom().equals("더블")) {
+			}else if(hotelVO.getRoom().equals("더블룸")) {
 				cost = 100000;        
-			}else if(hotelVO.getRoom().equals("트윈")) {
+			}else if(hotelVO.getRoom().equals("트윈룸")) {
 				cost = 120000;           
-			}else if(hotelVO.getRoom().equals("스위트")) {
+			}else if(hotelVO.getRoom().equals("스위트룸")) {
 				cost = 300000;           
 			}
 			LocalDate bookday=LocalDate.of(hotelVO.getYear(), hotelVO.getMonth(), hotelVO.getDay());//<예약일 들어가게 하기
 			bookday=bookday.plusDays(i);
 			weekendcost(bookday);
 			vacation(bookday);
-			tocost+=cost;
+			totalCost+=cost;
 			}
-		return tocost;
+		return totalCost;
 
 		}
 

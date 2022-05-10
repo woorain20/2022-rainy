@@ -24,14 +24,12 @@ public class Management {
 	Scanner sc=new Scanner(System.in);
 	private Path hotelFile=Paths.get("hotelList.bin");
 
-	
+	//파일 로드 및 생성
 	public Management() {
 		try {
-			hotelFile=Files.createFile(hotelFile);
+			hotelFile=Files.createFile(hotelFile); //파일 생성(없을시)
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-//			e.printStackTrace();
-			System.out.println("파일 로드 성공");
+			System.out.println("파일 로드 성공");  //파일 로드(기존파일)
 			readResrve();
 		}
 	}
@@ -44,28 +42,13 @@ public class Management {
 		this.hotelList = hotelList;
 	}
 
-	// DB생성
-	public void createSetting(String room, int night, int year, int month, int day) {
-		HotelVO hotelVO=new HotelVO();
-		hotelVO.setRoom(room);
-		hotelVO.setNight(night);
-		hotelVO.setYear(year);
-		hotelVO.setMonth(month);
-		hotelVO.setDay(day);
-		hotelList.add(hotelVO);
-		writeReserve();
-	}
-	
+	//DB 파일 생성
 	public void createRervation(HotelVO hotelVO) {
 		hotelList.add(hotelVO);
 		writeReserve();
-		
-
-	
 	}
-
-	//파일로 저장
-	//writeReserve(HotelVO hotelVO)-> hoteldVO 인트턴스 불러오기(HotelView에서 만든 인스턴스)
+	
+	//파일 저장
 	public void writeReserve() {
 		try(ObjectOutputStream oo=
 				new ObjectOutputStream(Files.newOutputStream(hotelFile))){
@@ -74,7 +57,6 @@ public class Management {
 		}catch(IOException e) {
 			System.out.println("파일 저장 실패");
 		}
-//		try(FileWriter tw=new)
 	}
 	
 	//파일 불러 오기
@@ -93,19 +75,27 @@ public class Management {
 			hotelList=new ArrayList<>();
 		}
 	}
-	public void putResreve(HotelVO hotelVO) {
+	//파일 수정하기(Update)
+	public void reviseResreve(HotelVO hotelVO) {
 		Iterator<HotelVO> itr=hotelList.iterator();
 		while(itr.hasNext()) {
 			HotelVO arrhotelVO=itr.next();
-			if(arrhotelVO.getBooknumber()==hotelVO.getBooknumber()) {
+			if(arrhotelVO.getBooknumber().equals(hotelVO.getBooknumber())) {				
 				arrhotelVO.setRoom(hotelVO.getRoom());
 				arrhotelVO.setNight(hotelVO.getNight());
 				arrhotelVO.setYear(hotelVO.getYear());
 				arrhotelVO.setMonth(hotelVO.getMonth());
 				arrhotelVO.setDay(hotelVO.getDay());
+				arrhotelVO.setCost(hotelVO.getCost());
+				
+			}else {
+				System.out.println("수정대상아님");				
 			}
-		}
+			arrhotelVO.print();
+			System.out.println("수정완료");
+		}writeReserve();
 	}
+	//파일 조회
 	public void getReservation(String booknumbker) {
 		for(HotelVO hotelVO:hotelList) {
 			if(hotelVO.getBooknumber()!=null&&hotelVO.getBooknumber().equals(booknumbker)) {
@@ -114,29 +104,14 @@ public class Management {
 				System.out.println("없는 예약번호 입니다.");	
 			}
 		}
-
-	}
-	
-	public void getHotelLists(List<HotelVO> hotelList) {
-			Iterator<HotelVO> itr=hotelList.iterator();
-			while(itr.hasNext()) {
-				HotelVO hotelVO=itr.next();
-				System.out.println(hotelVO.toString());
-			}
 	}
 	public void deleteReservation(HotelVO hotelVO) {
 		Iterator<HotelVO> itr=hotelList.iterator();
 		while(itr.hasNext()) {
 			HotelVO arrFortuneVO=itr.next();
-			if(arrFortuneVO.getBooknumber()==hotelVO.getBooknumber()) {
+			if(arrFortuneVO.getBooknumber().equals(hotelVO.getBooknumber())) {
 				itr.remove();
 			}
 		}
 	}
-	
-	public void makeReserve(){
-
-	}
-
-
 }

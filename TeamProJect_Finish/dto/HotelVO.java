@@ -15,7 +15,7 @@ public class HotelVO implements Serializable{
 	private int month;
 	private int day;
 	
-	
+
 	public String getRoom() {
 		return room;
 	}
@@ -85,6 +85,9 @@ public class HotelVO implements Serializable{
 	
 		System.out.println(toString());
 	}
+
+	
+
 	
 
 	

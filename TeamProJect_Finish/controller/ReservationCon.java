@@ -1,5 +1,7 @@
 package controller;
 
+import java.util.List;
+
 import dto.HotelVO;
 import operate.Booknumber;
 import operate.CostChange;
@@ -12,6 +14,7 @@ public class ReservationCon {
 	HotelView hotelView=new HotelView();	
 	Management mng=new Management();
 	Receipt rec=new Receipt();
+	CostChange cc=new CostChange();
 	
 	public void makeReservation() {
 		int manu;
@@ -20,6 +23,10 @@ public class ReservationCon {
 			HotelVO hotelVO=new HotelVO();
 			//main loop
 			switch(manu){
+				case 0:
+					System.out.println(mng.getHotellist());
+					break;
+					
 				case 1:
 					//예약 실행
 					hotelView.ReservationStart();
@@ -27,14 +34,15 @@ public class ReservationCon {
 					hotelVO.setPhoneNum(hotelView.phoneN);
 					hotelView.roomChice();
 					hotelVO.setRoom(ViewRoom.room);
-					hotelView.night();
-					hotelVO.setNight(hotelView.night);
 					hotelView.Checkinday();
 					hotelVO.setYear(hotelView.year);
 					hotelVO.setMonth(hotelView.month);
 					hotelVO.setDay(hotelView.day);
+					hotelView.night();
+					hotelVO.setNight(hotelView.night);
 					hotelVO.setBooknumber(Booknumber.bookNumber());
-					hotelVO.setCost(CostChange.tocost);
+					cc.totalCost(hotelVO);
+					hotelVO.setCost(CostChange.totalCost);
 					
 					mng.createRervation(hotelVO);
 					rec.Room(hotelVO);
@@ -44,29 +52,29 @@ public class ReservationCon {
 					//예약 조회
 					hotelView.reservationCheck();
 					mng.getReservation(hotelView.book);
-					hotelVO.print();
 					break;
 					
 				case 3:
 					//예약 수정
 					hotelView.reservationUpdate();
-					hotelView.roomChice();
-					hotelView.night();
-					hotelView.Checkinday();
 					hotelVO.setBooknumber(hotelView.book);
+					hotelView.roomChice();
 					hotelVO.setRoom(ViewRoom.room);
-					hotelVO.setNight(hotelView.night);
+					hotelView.Checkinday();
 					hotelVO.setYear(hotelView.year);
 					hotelVO.setMonth(hotelView.month);
 					hotelVO.setDay(hotelView.day);
-					hotelVO.setCost(CostChange.tocost);
-					
-					mng.createRervation(hotelVO);
-					rec.Room(hotelVO);
+					hotelView.night();
+					hotelVO.setNight(hotelView.night);
+					cc.totalCost(hotelVO);
+					hotelVO.setCost(CostChange.totalCost);
+					mng.reviseResreve(hotelVO);
+					//rec.Room(hotelVO);
 					break;
 				
 				case 4:
 					hotelView.reserveCancel();
+					hotelVO.setBooknumber(hotelView.book);
 					mng.deleteReservation(hotelVO);
 					break;
 					
@@ -75,6 +83,7 @@ public class ReservationCon {
 					System.out.println();
 					System.out.println("\t종료");
 					return;
+					
 			}
 		}
 	}

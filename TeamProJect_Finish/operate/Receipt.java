@@ -9,11 +9,12 @@ public class Receipt {
 		int night = hotelVO.getNight();       //이용기간
 		String name = hotelVO.getName();  //이름 
 		String bookNumber=hotelVO.getBooknumber();
-		String room = hotelVO.getRoom();
 		int year=hotelVO.getYear();
 		int month=hotelVO.getMonth();
 		int day=hotelVO.getDay();
 		double tocost= hotelVO.getCost();
+		String room = hotelVO.getRoom();
+
 	
 
 		System.out.println();
@@ -23,25 +24,26 @@ public class Receipt {
 		System.out.println("연락처 : "+phoneNum);
 		System.out.println("결제 상품 : "+room);
 		System.out.println("체크인: "+year+"-"+month+"-"+day);
-		System.out.println("이용기간 : "+night);
-		if(room.equals("싱글")) {
-
+		System.out.println("이용기간 : "+night+"박 "+(night+1)+"일");
+		
+		if(room.equals("싱글룸")) {
+			
 			System.out.println("이용요금 : "+(int)tocost+"원");
 			System.out.println("방 1|침대 1|욕실 1|오션뷰");
 			System.out.println("서비스 : 조식 | 미니바 ");
-		}else if(room.equals("더블")) {
+		}else if(room.equals("더블룸")) {
 
 			System.out.println("이용요금 : "+(int)tocost+"원");
 			System.out.println("최대인원 : 2");
 			System.out.println("방 1|침대 2|욕실 1|오션뷰");
 			System.out.println("서비스 : 조식 | 미니바");
-		}else if(room.equals("트윈")) {
+		}else if(room.equals("트윈룸")) {
 
 			System.out.println("이용요금 : "+(int)tocost+"원");
 			System.out.println("최대인원 : 2");
 			System.out.println("방 2|침대 2|욕실 1|마운틴뷰");
 			System.out.println("서비스 : 조식 | 미니바");
-		}else if(room.equals("스위트")) {
+		}else if(room.equals("스위트룸")) {
 
 			System.out.println("이용요금 : "+(int)tocost+"원");
 			System.out.println("최대인원 : 4");
