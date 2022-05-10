@@ -109,10 +109,10 @@ public class Management {
 				itr.remove();
 			}
 			System.out.println("예약 취소 완료");
-		}
+		}writeReserve();
 	}
 		//리스트 전체 보기
-		public void getHotelLists(List<HotelVO> hotelList) {
+		public void getAllHotelLists(List<HotelVO> hotelList) {
 				Iterator<HotelVO> itr=hotelList.iterator();
 				while(itr.hasNext()) {
 					HotelVO hotelVO=itr.next();
