@@ -1,6 +1,6 @@
-package controller;
+package app;
 
-import service.Management;
+import service.ReservationCon;
 
 public class ResrvationApp {
 	public static void main(String[] args) {

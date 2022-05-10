@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
-import dto.HotelVO;
 
 public class Booknumber {
 			
@@ -29,11 +28,9 @@ public class Booknumber {
 		}
 		return numStr;
 	}
-	
-	HotelVO hotelVO=new HotelVO();
-	static Booknumber bn=new Booknumber();	
 		
 	public static String bookNumber() {
+		Booknumber bn=new Booknumber();	
 
 		LocalDate ld=LocalDate.now();
 		DateTimeFormatter fm1=DateTimeFormatter.ofPattern("yyMMdd");

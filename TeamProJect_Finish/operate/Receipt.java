@@ -5,9 +5,9 @@ import dto.HotelVO;
 public class Receipt {
 		
 	public void Room(HotelVO hotelVO) {
-		int phoneNum = hotelVO.getPhoneNum();    //폰번호<--view에서 가져오기
-		int night = hotelVO.getNight();       //이용기간
-		String name = hotelVO.getName();  //이름 
+		String phoneNum = hotelVO.getPhoneNum();    
+		int night = hotelVO.getNight();       
+		String name = hotelVO.getName();  
 		String bookNumber=hotelVO.getBooknumber();
 		int year=hotelVO.getYear();
 		int month=hotelVO.getMonth();

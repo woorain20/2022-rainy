@@ -6,9 +6,8 @@ public class HotelVO implements Serializable{
 	
 	private String room;
 	private String name;
-	private int phoneNum;
+	private String phoneNum;
 	private int night;
-	private int checkIn;
 	private double cost;
 	private String booknumber;
 	private int year;
@@ -28,10 +27,10 @@ public class HotelVO implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getPhoneNum() {
+	public String getPhoneNum() {
 		return phoneNum;
 	}
-	public void setPhoneNum(int phoneNum) {
+	public void setPhoneNum(String phoneNum) {
 		this.phoneNum = phoneNum;
 	}
 	public int getNight() {
@@ -39,12 +38,6 @@ public class HotelVO implements Serializable{
 	}
 	public void setNight(int night) {
 		this.night = night;
-	}
-	public int getCheckIn() {
-		return checkIn;
-	}
-	public void setCheckIn(int checkIn) {
-		this.checkIn = checkIn;
 	}
 	public double getCost() {
 		return cost;
@@ -76,6 +69,7 @@ public class HotelVO implements Serializable{
 	public void setDay(int day) {
 		this.day = day;
 	}
+	
 	@Override
 	public String toString() {
 		return "HotelVO [예약번호 : "+booknumber+", 예약자=" + name + ", Room=" + room + ", 연락처=" + phoneNum + ", 이용기간=" + night + ", "
@@ -85,10 +79,5 @@ public class HotelVO implements Serializable{
 	
 		System.out.println(toString());
 	}
-
-	
-
-	
-
 	
 }

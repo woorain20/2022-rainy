@@ -9,10 +9,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Scanner;
 import dto.HotelVO;
-import operate.Booknumber;
 import operate.Receipt;
+
 
 
 
@@ -20,8 +19,6 @@ public class Management {
 	
 	
 	List<HotelVO> hotelList=new ArrayList<HotelVO>();
-	Booknumber bn=new Booknumber();
-	Scanner sc=new Scanner(System.in);
 	private Path hotelFile=Paths.get("hotelList.bin");
 
 	//파일 로드 및 생성
@@ -88,18 +85,17 @@ public class Management {
 				arrhotelVO.setDay(hotelVO.getDay());
 				arrhotelVO.setCost(hotelVO.getCost());
 				
-			}else {
-				System.out.println("수정대상아님");				
 			}
-			arrhotelVO.print();
-			System.out.println("수정완료");
+			System.out.println("예약 변경 완료");
 		}writeReserve();
 	}
 	//파일 조회
 	public void getReservation(String booknumbker) {
 		for(HotelVO hotelVO:hotelList) {
 			if(hotelVO.getBooknumber()!=null&&hotelVO.getBooknumber().equals(booknumbker)) {
-				hotelVO.print();
+//				hotelVO.print();
+				Receipt rcp=new Receipt();
+				rcp.Room(hotelVO);
 			}else {
 				System.out.println("없는 예약번호 입니다.");	
 			}
@@ -108,10 +104,20 @@ public class Management {
 	public void deleteReservation(HotelVO hotelVO) {
 		Iterator<HotelVO> itr=hotelList.iterator();
 		while(itr.hasNext()) {
-			HotelVO arrFortuneVO=itr.next();
-			if(arrFortuneVO.getBooknumber().equals(hotelVO.getBooknumber())) {
+			HotelVO arrHotelVO=itr.next();
+			if(arrHotelVO.getBooknumber().equals(hotelVO.getBooknumber())) {
 				itr.remove();
 			}
+			System.out.println("예약 취소 완료");
 		}
 	}
+		//리스트 전체 보기
+		public void getHotelLists(List<HotelVO> hotelList) {
+				Iterator<HotelVO> itr=hotelList.iterator();
+				while(itr.hasNext()) {
+					HotelVO hotelVO=itr.next();
+					System.out.println(hotelVO.toString());
+				}
+		}	
+	
 }

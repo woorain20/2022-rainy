@@ -25,8 +25,7 @@ public class CostChange {
 
 	}
 	//성수기 추가요금
-	
-	public void vacation(LocalDate date) {
+		public void vacation(LocalDate date) {
 				
 		if(date.getMonthValue()==7||date.getMonthValue()==12) {			
 			if(date.getDayOfMonth()>14) {

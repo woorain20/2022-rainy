@@ -15,7 +15,7 @@ import service.Management;
 public class HotelView {
 	
 	public String name;
-	public int phoneN=0;
+	public String phoneN;
 	private HotelVO hotelVO=new HotelVO();
 	private Scanner sc=new Scanner(System.in);
 	
@@ -56,7 +56,7 @@ public class HotelView {
 		name=sc.nextLine();
 		System.out.println("예약자명: "+name);
 		System.out.println("연락처(-없이 입력해주세요.)");	
-		phoneN=sc.nextInt();
+		phoneN=sc.nextLine();
 		System.out.println("연락처: "+phoneN);
 	}
 	public void roomChice() {

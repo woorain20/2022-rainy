@@ -1,4 +1,4 @@
-package controller;
+package service;
 
 import java.util.List;
 
@@ -7,7 +7,6 @@ import operate.Booknumber;
 import operate.CostChange;
 import operate.Receipt;
 import operate.ViewRoom;
-import service.Management;
 import view.HotelView;
 
 public class ReservationCon {
@@ -52,6 +51,7 @@ public class ReservationCon {
 					//예약 조회
 					hotelView.reservationCheck();
 					mng.getReservation(hotelView.book);
+
 					break;
 					
 				case 3:
@@ -69,7 +69,8 @@ public class ReservationCon {
 					cc.totalCost(hotelVO);
 					hotelVO.setCost(CostChange.totalCost);
 					mng.reviseResreve(hotelVO);
-					//rec.Room(hotelVO);
+					mng.getReservation(hotelView.book);
+
 					break;
 				
 				case 4:
