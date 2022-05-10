@@ -45,7 +45,7 @@ public class Management {
 	}
 
 	// DB»ý¼º
-	public void createSetting(int room, int night, int year, int month, int day) {
+	public void createSetting(String room, int night, int year, int month, int day) {
 		HotelVO hotelVO=new HotelVO();
 		hotelVO.setRoom(room);
 		hotelVO.setNight(night);

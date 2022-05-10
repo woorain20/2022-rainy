@@ -12,6 +12,7 @@ public class ReservationCon {
 	HotelView hotelView=new HotelView();	
 	Management mng=new Management();
 	Receipt rec=new Receipt();
+	CostChange cc=new CostChange();
 	
 	public void makeReservation() {
 		int manu;
@@ -26,7 +27,7 @@ public class ReservationCon {
 					hotelVO.setName(hotelView.name);
 					hotelVO.setPhoneNum(hotelView.phoneN);
 					hotelView.roomChice();
-					hotelVO.setRoom(hotelView.room);
+					hotelVO.setRoom(ViewRoom.room);
 					hotelView.Checkinday();
 					hotelVO.setYear(hotelView.year);
 					hotelVO.setMonth(hotelView.month);
@@ -34,7 +35,8 @@ public class ReservationCon {
 					hotelView.night();
 					hotelVO.setNight(hotelView.night);
 					hotelVO.setBooknumber(Booknumber.bookNumber());
-					hotelVO.setCost(CostChange.tocost);
+					cc.totalCost(hotelVO);
+					hotelVO.setCost(CostChange.totalCost);
 					
 					mng.createRervation(hotelVO);
 					rec.Room(hotelVO);
@@ -54,12 +56,14 @@ public class ReservationCon {
 					hotelView.night();
 					hotelView.Checkinday();
 					hotelVO.setBooknumber(hotelView.book);
-					hotelVO.setRoom(hotelView.room);
+					hotelVO.setRoom(ViewRoom.room);
 					hotelVO.setNight(hotelView.night);
 					hotelVO.setYear(hotelView.year);
 					hotelVO.setMonth(hotelView.month);
 					hotelVO.setDay(hotelView.day);
-					hotelVO.setCost(CostChange.tocost);
+					cc.totalCost(hotelVO);
+					hotelVO.setCost(CostChange.totalCost);
+					
 					
 					mng.createRervation(hotelVO);
 					rec.Room(hotelVO);

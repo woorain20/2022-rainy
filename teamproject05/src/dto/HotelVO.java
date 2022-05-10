@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class HotelVO implements Serializable{
 	
-	private int room;
+	private String room;
 	private String name;
 	private int phoneNum;
 	private int night;
@@ -16,10 +16,10 @@ public class HotelVO implements Serializable{
 	private int day;
 	
 
-	public int getRoom() {
+	public String getRoom() {
 		return room;
 	}
-	public void setRoom(int room) {
+	public void setRoom(String room) {
 		this.room = room;
 	}
 	public String getName() {
@@ -85,6 +85,9 @@ public class HotelVO implements Serializable{
 	
 		System.out.println(toString());
 	}
+
+	
+
 	
 
 	

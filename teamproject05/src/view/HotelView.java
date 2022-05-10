@@ -5,7 +5,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import dto.HotelVO;
 import operate.Booknumber;
-import operate.CostChange;
 import operate.Receipt;
 import operate.ViewCheckIn;
 import operate.ViewNight;
@@ -25,7 +24,6 @@ public class HotelView {
 	ViewRoom vr=new ViewRoom();
 	ViewNight vn=new ViewNight();
 	ViewCheckIn vc=new ViewCheckIn();
-	CostChange cc=new CostChange();
 	Booknumber bn=new Booknumber();
 	public int room;
 	public int night;
@@ -33,6 +31,7 @@ public class HotelView {
 	public int month;
 	public int day;
 	public String book;
+
 	
 	public int ReservationManu() {
 		System.out.println("Welcome to 자바 Hotel");
@@ -73,8 +72,10 @@ public class HotelView {
 	public void Checkinday() {
 		System.out.println();			
 		System.out.println("Check-in 날짜를 선택해주세요");
-		System.out.println("년,월,일을 순서대로 기입해주세요(각 기입마다 엔터키를 눌러주세요) ");
-		vc.CheckIn(year=sc.nextInt(),month=sc.nextInt(),day=sc.nextInt());
+		System.out.println("입실 연도를 선택해 주세요 ");
+		vc.CheckInYear(year=sc.nextInt());
+		vc.CheckInMonth(month=sc.nextInt());
+		vc.CheckInDay(day=sc.nextInt());
 	}
 	public void night() {	
 		System.out.println("숙박기간을 선택해주세요");
