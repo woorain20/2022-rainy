@@ -1,11 +1,11 @@
-package controller;
+package service;
 
 import dto.HotelVO;
 import operate.Booknumber;
 import operate.CostChange;
 import operate.Receipt;
+import operate.ViewCheckIn;
 import operate.ViewRoom;
-import service.Management;
 import view.HotelView;
 
 public class ReservationCon {
@@ -21,6 +21,10 @@ public class ReservationCon {
 			HotelVO hotelVO=new HotelVO();
 			//main loop
 			switch(manu){
+				case 0:
+					System.out.println(mng.getHotellist()); 
+					break;
+					
 				case 1:
 					//예약 실행
 					hotelView.ReservationStart();
@@ -29,9 +33,9 @@ public class ReservationCon {
 					hotelView.roomChice();
 					hotelVO.setRoom(ViewRoom.room);
 					hotelView.Checkinday();
-					hotelVO.setYear(hotelView.year);
-					hotelVO.setMonth(hotelView.month);
-					hotelVO.setDay(hotelView.day);
+					hotelVO.setYear(ViewCheckIn.year);
+					hotelVO.setMonth(ViewCheckIn.month);
+					hotelVO.setDay(ViewCheckIn.day);
 					hotelView.night();
 					hotelVO.setNight(hotelView.night);
 					hotelVO.setBooknumber(Booknumber.bookNumber());
@@ -46,6 +50,7 @@ public class ReservationCon {
 					//예약 조회
 					hotelView.reservationCheck();
 					mng.getReservation(hotelView.book);
+
 					break;
 					
 				case 3:
@@ -54,17 +59,17 @@ public class ReservationCon {
 					hotelVO.setBooknumber(hotelView.book);
 					hotelView.roomChice();
 					hotelVO.setRoom(ViewRoom.room);
-					hotelView.night();
-					hotelVO.setNight(hotelView.night);
 					hotelView.Checkinday();
 					hotelVO.setYear(hotelView.year);
 					hotelVO.setMonth(hotelView.month);
 					hotelVO.setDay(hotelView.day);
+					hotelView.night();
+					hotelVO.setNight(hotelView.night);
 					cc.totalCost(hotelVO);
 					hotelVO.setCost(CostChange.totalCost);
-	//				hotelVO.print();
 					mng.reviseResreve(hotelVO);
-					//rec.Room(hotelVO);
+					mng.getReservation(hotelView.book);
+
 					break;
 				
 				case 4:
@@ -78,6 +83,7 @@ public class ReservationCon {
 					System.out.println();
 					System.out.println("\t종료");
 					return;
+					
 			}
 		}
 	}

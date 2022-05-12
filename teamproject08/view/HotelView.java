@@ -15,7 +15,7 @@ import service.Management;
 public class HotelView {
 	
 	public String name;
-	public int phoneN=0;
+	public String phoneN;
 	private HotelVO hotelVO=new HotelVO();
 	private Scanner sc=new Scanner(System.in);
 	
@@ -56,7 +56,7 @@ public class HotelView {
 		name=sc.nextLine();
 		System.out.println("예약자명: "+name);
 		System.out.println("연락처(-없이 입력해주세요.)");	
-		phoneN=sc.nextInt();
+		phoneN=sc.nextLine();
 		System.out.println("연락처: "+phoneN);
 	}
 	public void roomChice() {
@@ -72,10 +72,9 @@ public class HotelView {
 	public void Checkinday() {
 		System.out.println();			
 		System.out.println("Check-in 날짜를 선택해주세요");
-		System.out.println("입실 연도를 선택해 주세요 ");
-		vc.CheckInYear(year=sc.nextInt());
-		vc.CheckInMonth(month=sc.nextInt());
-		vc.CheckInDay(day=sc.nextInt());
+		vc.CheckInYear();
+		vc.CheckInMonth();
+		vc.CheckInDay();
 	}
 	public void night() {	
 		System.out.println("숙박기간을 선택해주세요");
