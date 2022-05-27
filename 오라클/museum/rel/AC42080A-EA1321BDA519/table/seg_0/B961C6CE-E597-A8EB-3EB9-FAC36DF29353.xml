@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B961C6CE-E597-A8EB-3EB9-FAC36DF29353" name="trelic">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:59:52 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<ordsAlias>table_14</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="m_name" id="EF97ED84-B47D-D222-5C9B-E2EAF80C5848">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:47:02 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="t_code" id="70851AA4-1EE1-1E54-DA42-6C714A552A06">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:00:18 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="t_category" id="277194E1-5AC2-43BF-B98B-570E94A512CB">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:13:47 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="t_place" id="F91A4236-E0E3-638F-7850-E9DB290058C4">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:00:32 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="exrelic_ed_code" id="C89EF44A-D326-89AC-FEED-D71A0185FEE4">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:34:59 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C00D5D0E-AEB5-C5D8-96B7-F0638866FA3E" referredColumn="9AA9A518-C4D8-5156-1A66-34917159231E"/>
+</associations>
+</Column>
+<Column name="srelic_s_name" id="451577E5-122A-1E34-EA7E-612865DB5C86">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:35:40 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="69335A15-2B0B-9797-66A8-413AEB98BE81" referredColumn="CC237277-5580-CE68-D794-5E65826703FA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="491433E7-CBAA-5ACA-F9BA-4C0933C49133" name="trelic_PK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:00:18 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="70851AA4-1EE1-1E54-DA42-6C714A552A06"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="272909F6-5E82-8816-515A-212FC86958B4" name="trelic_exrelic_FK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:34:59 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C89EF44A-D326-89AC-FEED-D71A0185FEE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7A7B5A7A-BE25-8D2D-2B34-B05111641727" name="trelic_srelic_FK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:35:40 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="451577E5-122A-1E34-EA7E-612865DB5C86"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

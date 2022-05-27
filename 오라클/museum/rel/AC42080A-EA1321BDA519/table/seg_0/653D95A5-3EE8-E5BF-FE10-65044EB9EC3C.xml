@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="653D95A5-3EE8-E5BF-FE10-65044EB9EC3C" name="storage">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:37:13 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="m_name" id="BF172D41-09EC-24D7-2D90-D6FC15A8F5AA">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:37:49 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="s_code" id="C0FFB956-3844-6972-BA12-D32438582A8C">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:37:44 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="s_name" id="74424F04-BFE6-623E-B629-BA9B154B253C">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:41:20 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="s_admint" id="7D7F0487-E02F-FDDD-2D31-6E8F1E13B309">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:47:56 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="s_adminm" id="270F44B2-1B02-B8D3-DBF5-BBC4876E4C55">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:48:26 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="s_admins" id="F13B6460-0DD4-51E2-F31A-49B0ACF063C5">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:48:39 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="srelic_s_name" id="D521BEE1-224A-7EA4-DFCC-D3C02BD196C7">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:49:53 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2B8E5D35-2029-0F48-7127-67086F90D792" referredColumn="CC237277-5580-CE68-D794-5E65826703FA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="11B1E292-21DB-24AF-29E4-DC48EA8EF367" name="storage_PK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:37:44 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C0FFB956-3844-6972-BA12-D32438582A8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="53F5A839-F1F1-41BB-7D6A-A6E4744FC43E" name="storage_srelic_FK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:49:53 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D521BEE1-224A-7EA4-DFCC-D3C02BD196C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

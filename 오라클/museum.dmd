@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="museum" id="DCB240C2-1180-FEC9-2ECC-4C85FA38A4A9" version="3.5">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:17:22 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>DCB240C2-1180-FEC9-2ECC-4C85FA38A4A9</designId>
+</OSDM_Design>

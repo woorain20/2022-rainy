@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C391BC7C-CACD-BD07-A891-93B7E45FB3EA" name="exrelic">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:30:37 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ed_code" id="9AA9A518-C4D8-5156-1A66-34917159231E">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:33:02 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ed_category" id="D30771B9-C216-417D-9781-FE2FC7CBC750">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:41:52 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ed_name" id="CC7C2E76-E602-0655-CC61-7F504D227285">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:33:18 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>24</dataTypeSize>
+<ownDataTypeParameters>24,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ed_mtime" id="32619F69-3FE6-ABFF-ED0F-8BA8FCAC6DDD">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:34:53 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ed_creator" id="D41F2DDA-8E17-CAF0-5F35-359C8AB9F5FB">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:35:17 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ed_place" id="6DDBED7A-89F5-1243-50F0-4F04BED642A6">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:36:33 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D0B75A90-3C90-1146-68EE-004A4D4719E7" name="exrelictbl_PK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:33:02 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9AA9A518-C4D8-5156-1A66-34917159231E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

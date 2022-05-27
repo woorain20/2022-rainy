@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C00D5D0E-AEB5-C5D8-96B7-F0638866FA3E" containerWithKeyObject="B961C6CE-E597-A8EB-3EB9-FAC36DF29353" localFKIndex="272909F6-5E82-8816-515A-212FC86958B4" name="trelic_exrelic_FK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:34:59 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<referredTableLongName>exrelic</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C391BC7C-CACD-BD07-A891-93B7E45FB3EA</referredTableID>
+<keyObject>D0B75A90-3C90-1146-68EE-004A4D4719E7</keyObject>
+<referredKeyID>D0B75A90-3C90-1146-68EE-004A4D4719E7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ed_code</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

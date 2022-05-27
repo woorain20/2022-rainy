@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7D803976-EFBD-EE15-D15B-C0235E841F09" name="store">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:20:32 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<ordsAlias>table_17</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="m_name" id="CD7D8713-3322-C3FC-6DF2-04FF4713F4E6">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:21:03 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="st_name" id="50557C86-EC87-EE31-91CB-04F1DBE98F22">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:21:21 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="st_place" id="FC89BFB5-BBBA-54A6-C34D-37C8EC50D25D">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:21:35 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="st_admin" id="D8907117-869E-55B1-7D21-CCA79418EAB4">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:22:10 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="st_depart" id="89BA9AE0-996E-5DAE-6524-73C7AC81C2A0">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:32:21 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="st_gcategory" id="48D16DEE-4777-77DC-9331-9020BA243ACE">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:23:14 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="goods_g_code" id="D7DB1BD8-98E0-2B14-43A2-E58D95C59CEB">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:31:39 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="68CDDB78-7A4B-10B4-949F-2217ED261010" referredColumn="B3DD1E52-A671-6BF4-A4CC-6E5749AFD512"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CDE6CCB1-17DC-9F92-C59F-02FAA3A1473A" name="store_PK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:22:10 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="50557C86-EC87-EE31-91CB-04F1DBE98F22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="18BEAF11-2F58-C80E-13F0-F97E88577020" name="store_goods_FK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:31:39 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D7DB1BD8-98E0-2B14-43A2-E58D95C59CEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

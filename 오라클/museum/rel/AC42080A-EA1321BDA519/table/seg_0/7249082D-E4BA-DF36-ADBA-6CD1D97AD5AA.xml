@@ -1,0 +1,165 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7249082D-E4BA-DF36-ADBA-6CD1D97AD5AA" name="space">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:56:38 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<ordsAlias>table_13</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="m_name" id="E6732046-D4D4-6AB1-61C8-071F7161C903">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:33:28 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sp_code" id="07B20E54-2B76-931B-F3AA-6E9A5E6D716D">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:56:58 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sp_category" id="25D1C570-4C60-E31F-5543-F9E192FFCE26">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:57:30 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sp_name" id="0D2A5119-2916-A7E9-F0CD-9C823DF382A6">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:57:52 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="trelic_t_code" id="F53E03D3-87FE-DA7A-7FB9-742F6083D08F">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:34:08 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="15E09ED6-7687-C71F-516D-336655FE0EDC" referredColumn="70851AA4-1EE1-1E54-DA42-6C714A552A06"/>
+</associations>
+</Column>
+<Column name="auditory_a_code" id="0B644789-CF54-9F25-4D4F-7907CF9BAEF1">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:55:14 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="995E6587-19E6-9304-A57A-3A3716951A38" referredColumn="F3392A1D-A3EF-D32B-E6CC-5BF228680D72"/>
+</associations>
+</Column>
+<Column name="storage_s_code" id="51622A98-4CE5-3247-4C5E-95B8CF329E44">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:55:22 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="41EEED51-9747-90DD-D5FE-A827D844D2E3" referredColumn="C0FFB956-3844-6972-BA12-D32438582A8C"/>
+</associations>
+</Column>
+<Column name="store_st_name" id="0245E459-41AF-A405-F37C-B219DC2D9D01">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:56:46 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="33D69782-FD2D-2E90-C8F4-16F80D2F6234" referredColumn="50557C86-EC87-EE31-91CB-04F1DBE98F22"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="70876D2C-3246-9E54-93EF-D8296088A57F" name="space_PK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:56:58 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07B20E54-2B76-931B-F3AA-6E9A5E6D716D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="86AFBFF3-65F7-C366-DE6A-C74D85734D30" name="space_trelic_FK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:34:08 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F53E03D3-87FE-DA7A-7FB9-742F6083D08F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B7AF413A-185A-6920-6EE8-1696E12DBE5A" name="space_auditory_FK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:55:14 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B644789-CF54-9F25-4D4F-7907CF9BAEF1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="23E0A616-7C92-A316-B585-850C72F24D6D" name="space_storage_FK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:55:22 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51622A98-4CE5-3247-4C5E-95B8CF329E44"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8CCD947B-A07C-8030-2FB6-9BE518DB6E9D" name="space_store_FK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:56:46 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0245E459-41AF-A405-F37C-B219DC2D9D01"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5456CD64-CF02-C6AC-CE0B-EFA16D7804B5" name="srelic">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:42:52 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="s_name" id="CC237277-5580-CE68-D794-5E65826703FA">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:43:33 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="s_rcode" id="C18EEF18-0522-AA9D-C028-A56EAE34C5B5">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:44:24 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="s_category" id="0B30EAE3-7665-16A8-A10C-0077EF2C5C2C">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:44:51 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="s_rname" id="C33E5156-465F-1A0B-32B7-9A42F0F54937">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:45:44 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>24</dataTypeSize>
+<ownDataTypeParameters>24,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="s_rtime" id="17180739-ECB7-1BC9-1256-829B9AE1EAFE">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:46:04 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="s_rcreator" id="3E3C431A-289F-F52B-0EA2-FC79C14474C3">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:46:23 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="s_place" id="96A325FE-53C8-32D4-CF19-41BAFD7FDC3C">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:35:34 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="28FB8448-420A-B3F6-D2D4-6948418BD465" name="srelictbl_PK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 01:43:33 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC237277-5580-CE68-D794-5E65826703FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

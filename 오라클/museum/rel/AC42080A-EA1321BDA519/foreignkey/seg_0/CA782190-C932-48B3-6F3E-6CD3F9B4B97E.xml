@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CA782190-C932-48B3-6F3E-6CD3F9B4B97E" containerWithKeyObject="2EF4E2CE-B826-D031-8C8C-075C56D072F4" localFKIndex="5662BF31-DDA0-B795-ACDD-D0133331BE24" name="museum_storage_FK">
+<createdBy>KB</createdBy>
+<createdTime>2022-05-27 02:37:59 UTC</createdTime>
+<ownerDesignName>museum</ownerDesignName>
+<referredTableLongName>storage</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>653D95A5-3EE8-E5BF-FE10-65044EB9EC3C</referredTableID>
+<keyObject>11B1E292-21DB-24AF-29E4-DC48EA8EF367</keyObject>
+<referredKeyID>11B1E292-21DB-24AF-29E4-DC48EA8EF367</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>s_code</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
