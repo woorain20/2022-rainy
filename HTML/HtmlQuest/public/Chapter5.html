@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>chapter5</title>
+	<style type="text/css">
+	*{margin:0; padding:0;}
+	body{font-family: sans-serif;}
+	li{list-style:none;}
+	a{text-decoration:none;}
+	img{border:0;}
+	</style>
+	<style type="text/css">
+		#title{
+			font-family: fantasy;
+		}
+		#main_header{
+			width:960px; 
+			margin: 0 auto;
+			height:160px;
+			position: relative;
+		}			
+		#main_header>#title{
+			position:absolute;
+			left:20px; top:30px;
+		}
+		#main_header>#main_gnb{
+		
+			position: absolute;
+			right:0; top:0;
+		}
+		#main_header>#main_lnb{
+			position: absolute;
+			right: 0; top:100px;
+		}
+		#main_gnb>ul{overflow:hidden;}
+		#main_gnb>ul>li{float:left; list-style : none;}
+		#main_gnb>ul>li>a{ 
+			display : block;
+			padding: 2px 10px;
+			border:1px solid black;
+			text-decoration: none;
+		}
+		#main_gnb>ul>li>a:hover{
+			background:black;
+			color:white;
+		} 
+		#main_gnb>ul>li:first-child>a{
+			border-radius:10px 0px 0px 10px;
+		}
+		#main_gnb>ul>li:last-child>a{
+			border-radius:0px 10px 10px 0px;
+		}
+				
+		#main_lnb>ul{overflow:hidden;}
+		#main_lnb>ul>li{float:left; list-style : none;}
+		#main_lnb>ul>li>a{ 
+			display : block;
+			padding: 2px 10px;
+			border:1px solid black;
+			text-decoration: none;
+		}
+		#main_lnb>ul>li>a:hover{
+			background-color:black;
+			color:white;			
+		} 
+		#main_lnb>ul>li:first-child>a{
+			border-radius:10px 0px 0px 10px;
+		}
+		#main_lnb>ul>li:last-child>a{
+			border-radius:0px 10px 10px 0px;
+		}
+		#content{
+			width:960px;
+			margin:0 auto;
+			overflow:hidden;
+		}
+		#content>#main_section{
+			width:750px;
+			float:left;
+		}
+		#content>#main_aside{
+			width:200px;
+			float:right;
+		}
+		#main_section>article.main_article{
+			margin-bottom:10px;
+			padding:20px;
+			border:1px solid black;
+		}
+		input:nth-of-type(1){display:none;}
+		input:nth-of-type(1)~div:nth-of-type(1){display:none;}
+		input:nth-of-type(1):checked~div:nth-of-type(1){display:block;}
+		
+		input:nth-of-type(2){display:none;}
+		input:nth-of-type(2)~div:nth-of-type(2){display:none;}
+		input:nth-of-type(2):checked~div:nth-of-type(2){display:block;}
+		
+		section.buttons{overflow:hidden;}
+		section.buttons>label{
+			display:block; float:left;
+			width:100px; height:30px;
+			line-height: 30px;
+			text-align: center;
+			
+			box-sizing: border-box;
+			border:1px solid black;
+			
+			background-color:white;
+			color:black;
+		}
+		section.buttons>label:hover{
+			background-color:gray;
+			color:black;			
+		}
+		input:nth-of-type(1):checked~section.buttons>label:nth-of-type(1){
+			background-color:black;
+			color:white;
+		}
+		input:nth-of-type(2):checked~section.buttons>label:nth-of-type(2){
+			background-color:black;
+			color:white;
+		}
+		#main_aside>div>ul{
+			padding-left:0px;
+			margin:0 auto;
+		}		
+		.item{
+			list-style : none;
+			border:1px solid black;
+			overflow:hidden;
+			padding:10px;
+			border-top:none;
+		}
+		.thumbnail{
+			float:left;
+		}
+		.discription{
+			float: left;
+			margin-left: 10px;
+		}
+		.discription>strong{
+			display:block;
+			width:120px;
+			/*글이 길어 넘는 타이핑을 ... 으로 변경해주는 3총사*/ 
+			white-space:nowrap;
+			overflow:hidden;
+			text-overflow:ellipsis;
+		}
+		.discription>p{
+			margin-bottom:5px;
+		}
+		#main_footer{
+			width:960px; margin:0 auto;
+			margin-bottom:10px;
+			box-sizing: border-box;
+			padding:10px;
+			border:1px solid black;
+			text-align: center;
+		}
+		#main_footer>h3{
+			margin-bottom:5px;
+		}
+	</style>
+</head>
+<body>
+	<header id="main_header">
+		<div id ="title">
+			<h1>Rint Academy</h1>
+			<h2>HTML + CSS class</h2>
+		</div>
+		<nav id="main_gnb">
+			<ul>
+				<li><a href="#">Web</a>
+				<li><a href="#">Mobile</a>
+				<li><a href="#">Game</a>
+				<li><a href="#">Simulation</a>
+				<li><a href="#">Data</a>
+			</ul>
+		</nav>
+		<nav id="main_lnb">
+			<ul>
+				<li><a href="#">HTML</a>
+				<li><a href="#">CSS3</a>
+				<li><a href="#">JavaScript</a>
+				<li><a href="#">JQuery</a>
+				<li><a href="#">Node.js</a>
+			</ul>
+		</nav>	
+	</header>
+	<div id="content">
+		<div id="main_section">
+			<article class="main_article">
+			<h1>Main Article</h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			</article>
+			<article class="main_article">
+			<h1>Main Article</h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			</article>
+			<article class="main_article">
+			<h1>Main Article</h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			</article>			
+		</div>		
+		<div id="main_aside">
+			<input id="first" type="radio" name="tab" checked="checked" />
+			<input id="second" type="radio" name="tab" />
+			<section class="buttons">
+				<label for="first">First</label>
+				<label for="second">Second</label>		
+			</section>
+			<div class="tab_item">
+				<ul>
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="./img/icons8_drop_down_32px.png"/>
+							</div>
+							<div class="discription">
+								<strong>HTML5 Canvas</strong>
+								<p>2022-06-15</p>
+							</div>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="./img/icons8_drop_down_32px.png"/>
+							</div>
+							<div class="discription">
+								<strong>HTML5 Audio</strong>
+								<p>2022-06-15</p>
+							</div>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="./img/icons8_drop_down_32px.png"/>
+							</div>
+							<div class="discription">
+								<strong>HTML5 Video</strong>
+								<p>2022-06-15</p>
+							</div>						
+						</a>
+					</li>
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="./img/icons8_drop_down_32px.png"/>
+							</div>
+							<div class="discription">
+								<strong>HTML5 Semantic Wab</strong>
+								<p>2022-06-15</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="tab_item">
+				<ul>
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="./img/icons8_drop_down_32px.png"/>
+							</div>
+							<div class="discription">
+								<strong>CSS Transition</strong>
+								<p>2022-06-15</p>
+							</div>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="./img/icons8_drop_down_32px.png"/>
+							</div>
+							<div class="discription">
+								<strong>CSS Animation</strong>
+								<p>2022-06-15</p>
+							</div>
+						</a>
+					</li>					
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="./img/icons8_drop_down_32px.png"/>
+							</div>
+							<div class="discription">
+								<strong>CSS Border</strong>
+								<p>2022-06-15</p>
+							</div>
+						</a>
+					</li>					
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="./img/icons8_drop_down_32px.png"/>
+							</div>
+							<div class="discription">
+								<strong>CSS Box</strong>
+								<p>2022-06-15</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+	<footer id="main_footer">
+		<h3>HTML5+CSS Basic</h3>
+		<address>Website laypout basic</address>
+	</footer>
+</body>
+</html>

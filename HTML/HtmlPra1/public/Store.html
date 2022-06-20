@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Cafe E Desert/Store</title>
+<style type="text/css">
+	#full{
+		width:100%;
+		height:900px;
+	}
+	#up{
+		width:100%;
+		height:200px;
+		margin:0 auto;
+		background-image:url('./image/banner.jpg');
+	}
+	#up > h1{
+		font-size:6em;
+		color: #d9983d;
+		font-family:Courier New;
+		letter-spacing: 0.3em;
+	}
+	#cen{
+		width:100%;
+		height:800px;
+		margin:0 auto;
+		display: flex;
+	}
+	#left{
+		height:800px;
+		float:left;
+		flex:1;
+		font-family:Courier New;
+		background-image:url('./image/brown.png');
+	}
+	#left a{
+		text-decoration-line:none;
+	}
+	#left a:visited{
+		color: black;
+	}
+	#left li{
+		list-style:none;
+		color: black;
+	}
+	#mid{
+		height:800px;
+		flex:8;
+		background-image:url('./image/back.jpg');
+	}
+	#mid img{
+		width:400px;
+		height:200px;
+	}
+	#mid td{
+		font-family:Courier New;
+	}
+	#mid h2{
+		font-family:Courier New;
+	}
+	#right{
+		float:right;
+		height:800px;
+		flex:1;
+		font-family:Courier New;
+		background-image:url('./image/brown.png');
+	}
+	#floor{
+		width:100%;
+		height:100px;
+		margin:0 auto;
+		font-family:Courier New;
+	}
+	#floor li{
+		list-style:none;
+		float:left;
+		padding:20px;
+	}
+	#floor li:first-child{
+		border-radius:10px 0 0 10px;
+	}
+	#floor li:last-child{
+		border-radius:0 10px 10px 0;
+	}
+	#mt{
+		width:100%;
+		height:100px;
+	}
+	#mt > h2{
+		font-size:2em;
+		color: #76ab13;
+		font-family:Courier New;
+		letter-spacing: 0.2em;
+	}
+	#md{
+		width:100%;
+		height:300px;
+		display:flex;
+	}
+	#ml{
+		height:300px;
+		float: left;
+		flex: 5;
+	}
+	#ml > iframe{
+		width:450px;
+		height:300px;
+		border:0;
+	}
+	#mr{
+		height:300px;
+		float: right;
+		flex: 5;
+	}
+	#mf{
+		width:100%;
+		height:200px;
+		margin:50px;
+	}
+	#mf > h3{
+		font-size:25px;
+		color: #76ab13;
+		font-family:Comic Sans MS;
+		letter-spacing: 0.2em;
+	}
+	#mft{
+		width:80%;
+		height:200px;
+		background-color: #ffe6e6;
+		overflow-y: scroll;
+	}
+	.store{
+		width:100%;
+		height:100px;
+		background-color: #ffe6e6;
+		text-align:center;
+	}
+	.fix{
+		position: sticky;
+		top:0;
+		background-color: #ffb3b3;
+	}
+</style>
+</head>
+<body>
+<div id="full">
+	<div id="up">
+		<h1 align="center">Cafe E Desert</h1>
+	</div>
+	<div id="cen">
+		<div id="left">
+			<ul>
+				<li><label>About us</label><br/>
+					<ul><br/>
+						<li><a href="./Intro.html">인사말</a></li>
+						<li>소개</li>
+						<li>철학</li>
+					</ul>
+				</li><br/>
+				<li><label>Menu</label><br/>
+					<ul><br/>
+						<li><a href="./Desert.html">디저트</a></li>
+						<li><a href="./Coffee.html">음료</a></li>
+					</ul>
+				</li><br/>
+				<li><label>Store</label><br/>
+					<ul><br/>
+						<li><a href="./Store.html">지점찾기</a></li>
+					</ul>
+				</li><br/>
+				<li>Event</li><br/>
+				<li><a href="./main.html">Home</a></li>
+			</ul>
+		</div>		
+		<div id="mid" align="center">
+			<div id="mt">
+				<h2>store</h2>
+			</div>
+			<div id="md">			
+				<div id="ml">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9143.685868724164!2d128.
+					63144502370378!3d35.87887987096124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+					1!5e0!3m2!1sko!2skr!4v1655184619922!5m2!1sko!2skr" 
+					allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<div id="mr">
+					<table>
+						<tr>
+							<th>지역</th>
+							<th>점포명</th>
+							<th></th>
+						</tr>
+						<tr>
+							<td>
+								<select>
+									<optgroup label="지역">
+										<option>수도권</option>
+										<option>강원도</option>
+										<option>충청도</option>
+										<option>전라도</option>
+										<option>경상도</option>
+									</optgroup>
+								</select>
+							</td>
+							<td><input type="text"></td>
+							<td><button>찾기</button></td>
+						</tr>
+					</table>			
+				</div>
+			</div>
+			<div id="mf">
+				<h3>직접 찾기</h3>
+				<div id="mft">
+				<table class="store">
+					<tr>
+						<th class="fix">지역</th>
+						<th class="fix">지점명</th>
+						<th class="fix">전화번호</th>
+					</tr>
+					<tr>
+						<td>경상도</td>
+						<td>대구 동대구역점</td>
+						<td>053-111-1111</td>
+					</tr>
+					<tr>
+						<td>경상도</td>
+						<td>대구 평리점</td>
+						<td>053-111-2222</td>
+					</tr>
+					<tr>
+						<td>경상도</td>
+						<td>대구 안심점</td>
+						<td>053-111-3333</td>
+					</tr>
+					<tr>
+						<td>전라도</td>
+						<td>광주 전남대점</td>
+						<td>062-111-3333</td>
+					</tr>
+					<tr>
+						<td>충청도</td>
+						<td>대전 이글스파크점</td>
+						<td>042-111-2222</td>
+					</tr>
+					<tr>
+						<td>강원도</td>
+						<td>춘천 닭갈비골목점</td>
+						<td>033-111-4444</td>
+					</tr>
+					<tr>
+						<td>수도권</td>
+						<td>서울 강남점</td>
+						<td>02-111-5555</td>
+					</tr>
+					<tr>
+						<td>수도권</td>
+						<td>경기 수원팔달점</td>
+						<td>031-111-6666</td>
+					</tr>
+					<tr>
+						<td>수도권</td>
+						<td>인천 부평점</td>
+						<td>032-111-1111</td>
+					</tr>
+					<tr>
+						<td>수도권</td>
+						<td>성남 분당점</td>
+						<td>031-111-1111</td>
+					</tr>
+					<tr>
+						<td>경상도</td>
+						<td>부산 해운대점</td>
+						<td>051-111-2222</td>
+					</tr>
+					<tr>
+						<td>경상도</td>
+						<td>부산 다대포점</td>
+						<td>051-111-3333</td>
+					</tr>
+				</table>
+				</div>
+			</div>
+		</div>
+		<div id="right">
+			<form>
+				<fieldset style="background-color:lightyellow">
+					<legend>회원 로그인</legend><br/>
+						<label>아이디</label>
+						<input type="text" maxlength="12"/><br/><br/>
+						<label>비밀번호</label>
+						<input type="password" maxlength="18"/><br/><br/>
+						<button>로그인</button>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div id="floor">
+		<ul>
+			<li><a href="https://www.facebook.com" target="_blank">
+				<img src="./image/icons8_facebook_48px.png"></a></li>
+			<li><a href="https://www.twitter.com" target="_blank">
+				<img src="./image/icons8_twitter_48px.png"></a></li>
+			<li><a href="https://www.instagram.com" target="_blank">
+				<img src="./image/icons8_instagram_logo_48px.png"></a></li>
+			<li><a href="https://www.youtube.com" target="_blank">
+				<img src="./image/icons8_youtube_play_button_48px.png"></a></li>
+		</ul>
+		<address align="right">본사: 충청남도 서천군 기산면 두북리 산 63-1</address>
+		<p align="right">대표번호: 041-000-0000</p>
+		<p align="right">대표자명: Arsen Kim</p>
+	</div>	
+</div>
+</body>
+</html>
