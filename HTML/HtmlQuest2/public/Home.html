@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Arsenal</title>
+<style type="text/css">
+	*{
+		margin:0; padding:0;
+		font-family: 함초롱바탕;
+	}
+	#header{
+		width:100%;
+		height: 80px;
+		background-color:#cc0000;
+	}
+	#header>img{
+		float:left;
+		padding:15px;
+	}
+	#header>h1{
+		font-size: 1.6em;
+		font-family: arita dotum;
+		color:#ffffff;
+		padding:25px;
+		letter-spacing: 0.15em;
+	}
+	#header a{
+		text-decoration: none;
+		color:#ffffff;
+	}
+	#header a:visited{
+		color:#ffffff;
+	}
+	#nav{
+		width:100%;
+		height: 50px;
+		background-color:#b30000;	
+		text-align: center;
+		display: flex;
+	}
+	#nav_sp{
+		flex:1;
+		padding: 10px;
+	}
+	#nav_bar{
+		margin: 0 auto;
+		flex:8;
+	}
+	#nav_bar>ul{
+		height:50px;
+	}
+	.nav_li{
+		list-style: none;
+		height:40px;
+		display: inline-block;
+		padding:0 50px;	
+		font-weight: 900;
+		font-size: 1.3em;
+		padding-top:10px;
+	}
+	.nav_li>a{
+		color:#ffffff;
+		text-decoration: none;
+	}
+	.nav_li>a:visited {
+		color:#ffffff;
+	}
+	#nav_form{
+		line-height: 50px;
+		flex:1;
+	}
+	#center{
+		width:100%;
+		height: 1000px;
+		display: flex;
+		margin: 10px 0;
+		float:left;
+	}
+	#section{
+		flex:8.5;
+		height:1000px;
+	}
+	#aside{
+		flex:1.5;
+		height: 1000px;
+		padding:10px;
+	}
+	#asd_fo{
+		width:100%;
+		text-align: center;
+		margin-bottom: 20px;
+		border-radius: 15px 15px 15px 15px;
+		background-color: #ffe6e6;
+	}
+	.asd_info{
+		text-decoration: none;
+		color:black;
+	}
+	.asd_info:visited{
+		color:black;
+	}
+	#asd_bar{
+		padding:25px;
+		border-radius: 15px 15px 15px 15px;
+		background-color: #ffe6e6;
+		margin-bottom: 20px;
+	}
+	.asd_li{
+		list-style: none;
+		line-height: 2;
+		background-color: #d9d9d9;
+	}
+	.asd_li>a{
+		color:#ff1a1a;
+		text-decoration: none;
+		font-weight: 900;
+	}
+	.asd_li>a:visited {
+		color:#ff1a1a;	
+	}
+	#asd_li_ul{
+		padding:5px;
+		line-height: 2;
+	}
+	.asd_li_li{
+		list-style: none;
+		line-height: 2;
+		padding-left:20px;
+	}
+	.asd_li_li>a{
+		color:black;
+		text-decoration: none;
+	}
+	.asd_li_li>a:visited {
+		color:black;	
+	}
+	#asd_mem{
+		float: right;
+		padding: 15px;
+		border-radius: 15px 15px 15px 15px;
+		background-color: #ffe6e6;
+	}
+	#asd_nowm{
+		overflow-y:scroll; 
+		height: 100px;
+		width: 250px;
+	}
+	#section_up{
+		height: 40%;
+		padding:10px;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+	}
+	#section_up input[type=radio]{
+	    display: none;
+	}
+	.imgs{
+	    padding: 0;
+	    margin: 0;
+	    list-style: none;    
+	}
+	.imgs li{
+	    position: absolute;
+		width:100%;
+		height:400px;
+	    padding: 0;
+	    margin: 0;
+	}
+	.bullets{
+	    position: absolute;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    bottom: 20px;
+	    z-index: 2;
+	}
+	.bullets label{
+	    display: inline-block;
+	    border-radius: 50%;
+	    background-color: rgba(0,0,0,0.55);
+	    width: 20px;
+	    height: 20px;
+	    cursor: pointer;
+	}
+	#section_up input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
+	    background-color: #fff;
+	}
+	#section_up input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
+	    background-color: #fff;
+	}
+	#section_up input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
+	    background-color: #fff;
+	}
+	#section_up input[type=radio]:nth-child(4):checked~.bullets>label:nth-child(4){
+	    background-color: #fff;
+	}
+	#section_up input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
+	    left: 0;
+	    opacity: 1;
+	    transition: 1s;
+	    z-index:1;
+	}
+	#section_up input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
+	    left: 0;
+	    opacity: 1;
+	    transition: 1s;
+	    z-index:1;
+	}
+	#section_up input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
+	    left: 0;
+	    opacity: 1;
+	    transition: 1s;
+	    z-index:1;
+	}
+	#section_up input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(4){
+	    left: 0;
+	    opacity: 1;
+	    transition: 1s;
+	    z-index:1;
+	}
+	#section_mid{
+		height: 30%;
+		padding:10px;
+	}
+	#section_mid h4{
+		color:#ff1a1a;
+		background-color:#d9d9d9;
+		text-align: center;
+	}
+	#sem{
+		display: flex;
+		padding: 10px;
+	}
+	#sem_le{
+		flex:3.3;
+		padding:25px;
+		border-right: 1px dashed black;
+	}
+	#sem_ce{
+		flex:3.3;
+		padding:25px;
+		border-right: 1px dashed black;
+	}
+	#sem_ri{
+		flex:3.3;
+		padding:25px;
+	}
+	.sem_List>ul>li{
+		list-style: circle;
+		line-height: 1.8;
+		padding-left: 20px;
+	}
+	#section_do{
+		height:28%;
+		margin:10px;
+		display: flex;
+	}
+	#section_do h4{
+		color:#ff1a1a;
+		background-color:#d9d9d9;
+	}
+	#sed_l{
+		flex: 5;
+		padding:15px;
+	}
+	#sed_r{
+		flex: 5;
+		padding:15px;
+	}
+	.sed_list{
+		padding:15px;
+	}
+	.sed_list>li{
+		list-style: none;
+		display: inline;
+	}
+	#footer{
+		width:100%;
+		height:80px;
+		float: left;
+		color:#a6a6a6;
+		padding-top:40px;
+	}
+	#footer a{
+		text-decoration: none;
+		color:#a6a6a6;
+	}
+	#footer a:visited {
+		color:#a6a6a6;
+	}
+	#fo_info{
+		display: flex;
+	}
+	#fo_inl{
+		flex:7;
+		padding-left:30px;
+	}
+	#fo_inr{
+		flex:3;
+		text-align: right;
+		padding-right:30px;
+	}
+	#fo_site{
+		padding-top:30px;
+		padding-left:30px;
+	}
+</style>
+</head>
+<body>
+	<div id="header">
+		<img alt="아스날" src="./img/Arsenal_FC.svg.png" width="40px" height="50px">
+		<h1><a href="./Home.html">Arsenal</a></h1>
+	</div>
+	<div id="nav">
+		<div id="nav_sp">
+			<img alt="아디다스" src="./img/adidas.png" width="30px" height="30px">
+			<img alt="르완다" src="./img/visit-rwanda.png" width="30px" height="30px">
+			<img alt="에미레이트항공" src="./img/emirates.png" width="30px" height="30px">
+		</div>
+		<div id="nav_bar">
+			<ul>
+				<li class="nav_li"><a href="./Intro.html">소개</a></li>
+				<li class="nav_li"><a href="./FirstTeamPlayer.html">퍼스트팀</a></li>
+				<li class="nav_li"><a href="#">리저브팀</a></li>
+				<li class="nav_li"><a href="#">우먼스</a></li>
+				<li class="nav_li"><a href="#">미디어</a></li>
+				<li class="nav_li"><a href="#">티켓 예매</a></li>
+			</ul>
+		</div>
+		<div id="nav_form">
+			<form>
+				<input type="text" class="form-control" placeholder="Search" style="height:30px"/>
+			</form>
+		</div>
+	</div>
+	<div id="center">
+		<div id="aside">
+			<div id="asd_fo">
+				<form id="asd_form">
+					<div id="asd_log">
+						<fieldset style="border: 0"><br/>
+							<input type="text" placeholder="ID" maxlength="10"><br/><br/>
+							<input type="password" placeholder="Password" maxlength="14"><br/><br/>
+							<button type="submit" style="width:150px">로그인</button>
+						</fieldset><br/>
+					</div>
+					<div id="asd_if">
+						<a class="asd_info" href="#">회원가입</a>
+						<a>|</a>
+						<a class="asd_info" href="#">정보찾기</a>
+					</div><br/>
+				</form>
+			</div>
+			<div id="asd_bar">
+				<h2>카테고리</h2><br/>
+				<ul id="asd_ul">
+					<li class="asd_li"><a href="#">공지사항</a></li><br/>
+					<li class="asd_li"><a href="#">게시판</a></li><br/>
+						<div id=asd_li_ul><ul>
+							<li class="asd_li_li"><a href="#">축구 게시판</a></li>
+							<li class="asd_li_li"><a href="#">자유 게시판</a></li><br/>
+						</ul></div>
+					<li class="asd_li"><a href="#https://arsenaldirect.arsenal.com/" target="_blank">공식스토어</a></li><br/>
+					<li class="asd_li"><a href="#">소셜미디어</a></li><br/>
+						<div id=asd_li_ul><ul>
+							<li class="asd_li_li"><a href="https://www.facebook.com/afc.korea" >페이스북</a></li>
+							<li class="asd_li_li"><a href="https://twitter.com/afc_korea" target="_blank">트위터</a></li>
+							<li class="asd_li_li"><a href="https://www.instagram.com/arsenalkorea/" target="_blank">인스타그램</a></li>
+							<li class="asd_li_li"><a href="https://www.youtube.com/channel/UCjMBPFBV9RWSs4q-Dxftrew" target="_blank">유튜브</a></li>
+							<li class="asd_li_li"><a href="https://www.twitch.tv/arsenalkorea" target="_blank">트위치</a></li>
+						</ul></div>
+				</ul>
+			</div>
+			<div id=asd_mem>
+				<h4 align="right">접속중인 회원</h4><br/>
+				<fieldset>
+					<ul id="asd_nowm">
+						<li>King Henry</li>
+						<li>Arsen Wenger</li>
+						<li>No.7 로사</li>
+						<li>no.10 ESR</li>
+						<li>외데골</li>
+						<li>대구 구너</li>
+						<li>구너사우르스</li>
+						<li>말티</li>
+					</ul>
+				</fieldset>
+			</div>
+		</div>
+		<div id=section>
+			<div id="section_up">
+				<input type="radio" name="slide" id="slide1" checked>
+			    <input type="radio" name="slide" id="slide2">
+			    <input type="radio" name="slide" id="slide3">
+			    <input type="radio" name="slide" id="slide4">
+			    <ul id="imgholder" class="imgs">
+			        <li><img src="./img/emirates-stadium-1416679_1280.webp" width="100%" height="400px"></li>
+			        <li><img src="./img/arsenal-1584845_960_720.jpg" width="100%" height="400px"></li>
+			        <li><img src="./img/arsenal-2865370__480.jpg" width="100%" height="400px"></li>
+			        <li><img src="./img/gettyimages-111976410-612x612.jpg" width="100%" height="400px"></li>
+			    </ul>
+			    <div class="bullets">
+			        <label for="slide1">&nbsp;</label>
+			        <label for="slide2">&nbsp;</label>
+			        <label for="slide3">&nbsp;</label>
+			        <label for="slide4">&nbsp;</label>
+			    </div>
+			</div>
+			<div id="section_mid">
+				<div id="sem">
+					<div id="sem_le">
+						<h4>공지사항</h4><br/>
+						<div class="sem_List">
+							<ul>
+								<li>22-23 회원 모집 안내</li>
+								<li>서포터즈 멤버십 공지사항</li>
+								<li>운영진 문의 공지사항</li>
+								<li>홈페이지 점검 안내</li>
+								<li>아스날 코리아 운영 변경</li>
+								<li>21-22 회원 모집 안내</li>
+								<li>TOT찬양하라 퇴장 조치</li>
+							</ul>
+						</div>
+					</div>
+					<div id="sem_ce">
+						<h4>축구 게시판</h4><br/>
+						<div class="sem_List">
+							<ul>
+								<li>[오피셜] 파비우 비에이라 영입</li>
+								<li>로마노, 제수스 아스날행 임박</li>
+								<li>[투표] 하피냐에 얼마를 쓰는게 적당한지</li>
+								<li>유리 틸레망스 사가 정리</li>
+								<li>레반도프스키, 바르샤행 원해</li>
+								<li>터너 옷피셜</li>
+								<li>리산드로 마르티네즈 하이라이트</li>
+							</ul>
+						</div>		
+					</div>
+					<div id="sem_ri">
+						<h4>자유 게시판</h4><br/>
+						<div class="sem_List">
+							<ul>
+								<li>레플리카 나눔합니다</li>
+								<li>서포터즈 가입하려면</li>
+								<li>안녕하세요</li>
+								<li>아스날 코리아 판타지 리그</li>
+								<li>안녕하세요 반갑습니다</li>
+								<li>아스날 코리아 모임 일정</li>
+								<li>레플리카 샀어요</li>
+							</ul>
+						</div>				
+					</div>
+				</div>
+			</div>
+			<div id="section_do">
+				<div id="sed_l">
+					<h4>아스날 사진관</h4>
+					<ul class="sed_list">
+						<li><img src="https://via.placeholder.com/170x200"></li>
+						<li><img src="https://via.placeholder.com/170x200"></li>
+						<li><img src="https://via.placeholder.com/170x200"></li>
+						<li><img src="https://via.placeholder.com/170x200"></li>
+					</ul>			
+				</div>
+				<div id="sed_r">
+					<h4>아스날 영상관</h4>				
+					<ul class="sed_list">
+						<li><img src="https://via.placeholder.com/170x200"></li>
+						<li><img src="https://via.placeholder.com/170x200"></li>
+						<li><img src="https://via.placeholder.com/170x200"></li>
+						<li><img src="https://via.placeholder.com/170x200"></li>
+					</ul>			
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div id="fo_info">
+			<div id="fo_inl">
+				<a href="#">사이트 소개</a>
+				<a href="#">이용약관</a>
+				<a href="#">개인정보처리방침</a>
+				<a href="#">이메일 무단수집거부</a>
+				<a href="#">책임의 한계와 법적고지</a>
+			</div>
+			<div id="fo_inr">
+				<a href="#">이용안내</a>
+				<a href="#">문의하기</a>
+				<a href="#">모바일버전</a>
+			</div>
+		</div>
+		<div id="fo_site">
+			<span class="info"></span>
+			<p>
+				<strong>아스날 코리아</strong>
+				All right reserved.
+			</p>
+		</div>
+	</div>
+</body>
+</html>

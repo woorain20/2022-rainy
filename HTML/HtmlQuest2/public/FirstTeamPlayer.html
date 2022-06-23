@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Arsenal/FirstTeam/Player</title>
+<style type="text/css">
+	*{
+		margin:0; padding:0;
+		font-family: 함초롱바탕;
+	}
+	#header{
+		width:100%;
+		height: 80px;
+		background-color:#cc0000;
+	}
+	#header>img{
+		float:left;
+		padding:15px;
+	}
+	#header>h1{
+		font-size: 1.6em;
+		font-family: arita dotum;
+		color:#ffffff;
+		padding:25px;
+		letter-spacing: 0.15em;
+	}
+	#header a{
+		text-decoration: none;
+		color:#ffffff;
+	}
+	#header a:visited{
+		color:#ffffff;
+	}
+	#nav{
+		width:100%;
+		height: 50px;
+		background-color:#b30000;	
+		text-align: center;
+		display: flex;
+	}
+	#nav_sp{
+		flex:1;
+		padding: 10px;
+	}
+	#nav_bar{
+		flex:8;
+		margin: 0 auto;
+	}
+	#nav_bar>ul{
+		height:50px;
+	}
+	.nav_li{
+		list-style: none;
+		height:40px;
+		display: inline-block;
+		padding:0 50px;	
+		font-weight: 900;
+		font-size: 1.3em;
+		padding-top:10px;
+	}
+	.nav_li>a{
+		color:#ffffff;
+		text-decoration: none;
+	}
+	.nav_li>a:visited {
+		color:#ffffff;
+	}
+	#nav_bar #check{
+		background-color: #990000;
+	}
+	#nav_form{
+		line-height: 50px;
+		flex:1;
+	}
+	#center{
+		width:100%;
+		height: 1900px;
+		display: flex;
+		margin: 10px 0;
+		float:left;
+	}
+	#section{
+		flex:8.5;
+		height:1000px;
+	}
+	#aside{
+		flex:1.5;
+		height: 1900px;
+		padding:10px;
+	}
+	#asd_fo{
+		width:100%;
+		text-align: center;
+		margin-bottom: 20px;
+		border-radius: 15px 15px 15px 15px;
+		background-color: #ffe6e6;
+	}
+	.asd_info{
+		text-decoration: none;
+		color:black;
+	}
+	.asd_info:visited{
+		color:black;
+	}
+	#asd_bar{
+		padding:25px;
+		border-radius: 15px 15px 15px 15px;
+		background-color: #ffe6e6;
+		margin-bottom: 20px;
+	}
+	.asd_li{
+		list-style: none;
+		line-height: 2;
+		background-color: #d9d9d9;
+	}
+	.asd_li>a{
+		color:#ff1a1a;
+		text-decoration: none;
+		font-weight: 900;
+	}
+	.asd_li>a:visited {
+		color:#ff1a1a;	
+	}
+	#asd_li_ul{
+		padding:5px;
+		line-height: 2;
+	}
+	.asd_li_li{
+		list-style: none;
+		line-height: 2;
+		padding-left:20px;
+	}
+	.asd_li_li>a{
+		color:black;
+		text-decoration: none;
+	}
+	.asd_li_li>a:visited {
+		color:black;	
+	}
+	#asd_mem{
+		float: right;
+		padding: 15px;
+		border-radius: 15px 15px 15px 15px;
+		background-color: #ffe6e6;
+	}
+	#asd_nowm{
+		overflow-y:scroll; 
+		height: 100px;
+		width: 250px;
+	}
+	#section_up{
+		height: 10%;
+		padding:10px;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+		background-color: #47476b;
+	}
+	#section_up> h1{
+		text-align: left;
+		color:white;
+	}
+	#section_up> ul{
+		list-style: none;
+	}
+	#section_up>ul>li{
+		float: left;
+		position: relative;
+		width:10%;
+		margin-right:25px;
+	}
+	#section_up>ul>li>a{
+		text-decoration: none;
+		color:white;
+		font-size: 1.2em;
+		font-weight: 700;
+	}
+	#section_up>ul>li>a:visited{
+		color:white;
+	}
+	#seu_ch{
+		border-bottom: 5px solid #ff1a1a;
+	}
+	#section_mid{
+		height: 90%;
+		padding:10px;
+	}
+	#section_mid h2{
+		background-color:#d9d9d9;
+	}
+	#section_mid h4{
+		color:black;
+		text-align: center;
+	}
+	#sem_gk{	
+		width:90%;
+		height:300px;
+		margin:12px;
+	}
+	.gk{
+		float:left;
+	}
+	.gk img{
+		width:200px;
+		height:200px;
+		padding:10px 75px;
+	}
+	#sem_df{
+		width:90%;
+		height:550px;
+		margin:12px;
+	}
+	.df{
+		float:left;
+	}
+	.df img{
+		width:200px;
+		height:200px;
+		padding:10px 75px;
+	}
+	#sem_mf{
+		width:90%;
+		height:550px;
+		margin:12px;
+	}
+	.mf{
+		float:left;
+	}
+	.mf img{
+		width:200px;
+		height:200px;
+		padding:10px 75px;
+	}
+	#sem_fw{
+		width:90%;
+		height:300px;
+		margin:12px;
+	}
+	.fw{
+		float: left;
+	}
+	.fw img{
+		width:200px;
+		height:200px;
+		padding:10px 75px;
+	}
+	#top_bt{
+		display: block;
+		float: right;
+		padding: 10px;
+		margin-top: 180px;
+	}
+	#footer{
+		width:100%;
+		height:80px;
+		float: left;
+		color:#a6a6a6;
+		padding-top:40px;
+	}
+	#footer a{
+		text-decoration: none;
+		color:#a6a6a6;
+	}
+	#footer a:visited {
+		color:#a6a6a6;
+	}
+	#fo_info{
+		display: flex;
+	}
+	#fo_inl{
+		flex:7;
+		padding-left:30px;
+	}
+	#fo_inr{
+		flex:3;
+		text-align: right;
+		padding-right:30px;
+	}
+	#fo_site{
+		padding-top:30px;
+		padding-left:30px;
+	}
+</style>
+</head>
+<body>
+	<div id="header">
+		<img alt="아스날" src="./img/Arsenal_FC.svg.png" width="40px" height="50px">
+		<h1><a href="./Home.html">Arsenal</a></h1>
+	</div>
+	<div id="nav">
+		<div id="nav_sp">
+			<img alt="아디다스" src="./img/adidas.png" width="30px" height="30px">
+			<img alt="르완다" src="./img/visit-rwanda.png" width="30px" height="30px">
+			<img alt="에미레이트항공" src="./img/emirates.png" width="30px" height="30px">
+		</div>
+		<div id="nav_bar">
+			<ul>
+				<li class="nav_li"><a href="./Intro.html">소개</a></li>
+				<li class="nav_li" id="check"><a href="./FirstTeamPlayer.html">퍼스트팀</a></li>
+				<li class="nav_li"><a href="#">리저브팀</a></li>
+				<li class="nav_li"><a href="#">우먼스</a></li>
+				<li class="nav_li"><a href="#">미디어</a></li>
+				<li class="nav_li"><a href="#">티켓 예매</a></li>
+			</ul>
+		</div>
+		<div id="nav_form">
+			<form>
+				<input type="text" class="form-control" placeholder="Search" style="height:30px"/>
+			</form>
+		</div>
+	</div>
+	<div id="center">
+		<div id="aside">
+			<div id="asd_fo">
+				<form id="asd_form">
+					<div id="asd_log">
+						<fieldset style="border: 0"><br/>
+							<input type="text" placeholder="ID" maxlength="10"><br/><br/>
+							<input type="password" placeholder="Password" maxlength="14"><br/><br/>
+							<button type="submit" style="width:150px">로그인</button>
+						</fieldset><br/>
+					</div>
+					<div id="asd_if">
+						<a class="asd_info" href="#">회원가입</a>
+						<a>|</a>
+						<a class="asd_info" href="#">정보찾기</a>
+					</div><br/>
+				</form>
+			</div>
+			<div id="asd_bar">
+				<h2>카테고리</h2><br/>
+				<ul id="asd_ul">
+					<li class="asd_li"><a href="#">공지사항</a></li><br/>
+					<li class="asd_li"><a href="#">게시판</a></li><br/>
+						<div id=asd_li_ul><ul>
+							<li class="asd_li_li"><a href="#">축구 게시판</a></li>
+							<li class="asd_li_li"><a href="#">자유 게시판</a></li><br/>
+						</ul></div>
+					<li class="asd_li"><a href="#https://arsenaldirect.arsenal.com/" target="_blank">공식스토어</a></li><br/>
+					<li class="asd_li"><a href="#">소셜미디어</a></li><br/>
+						<div id=asd_li_ul><ul>
+							<li class="asd_li_li"><a href="https://www.facebook.com/afc.korea" >페이스북</a></li>
+							<li class="asd_li_li"><a href="https://twitter.com/afc_korea" target="_blank">트위터</a></li>
+							<li class="asd_li_li"><a href="https://www.instagram.com/arsenalkorea/" target="_blank">인스타그램</a></li>
+							<li class="asd_li_li"><a href="https://www.youtube.com/channel/UCjMBPFBV9RWSs4q-Dxftrew" target="_blank">유튜브</a></li>
+							<li class="asd_li_li"><a href="https://www.twitch.tv/arsenalkorea" target="_blank">트위치</a></li>
+						</ul></div>
+				</ul>
+			</div>
+			<div id=asd_mem>
+				<h4 align="right">접속중인 회원</h4><br/>
+				<fieldset>
+					<ul id="asd_nowm">
+						<li>King Henry</li>
+						<li>Arsen Wenger</li>
+						<li>No.7 로사</li>
+						<li>no.10 ESR</li>
+						<li>외데골</li>
+						<li>대구 구너</li>
+						<li>구너사우르스</li>
+						<li>말티</li>
+					</ul>
+				</fieldset>
+			</div>
+		</div>
+		<div id=section>
+			<div id="section_up">
+				<h1>First Teams</h1><br/>
+				<ul>
+					<li id="seu_ch"><a href="./FirstTeamPlayer.html">스쿼드</a></li>
+					<li><a href="./FirstTeamLeague.html">리그</a></li>
+					<li><a href="#">기록</a></li>
+				</ul>
+			</div>
+			<div id="section_mid">
+				<div id="sem">
+					<div id="sem_gk">
+						<h2>GoalKeepers</h2><br/>
+						<div class="gk">
+							<a href="#"><img src="./player/Leno_1100x693.jpg"></a>
+							<h4>Bernd Leno</h4>
+						</div>
+						<div class="gk">
+							<a href="#"><img src="./player/Ramsdale_1100x693.jpg"></a>
+							<h4>Aaron Ramsdale</h4>
+						</div>
+						<div class="gk">
+							<a href="#"><img src="./player/Okonkwo_1100x693.jpg"></a>
+							<h4>Arthur Okonkwo</h4>
+						</div>
+					</div>
+					<div id="sem_df">
+						<h2>Defenders</h2><br/>	
+						<div class="df">
+							<a href="#"><img src="./player/Tierney_1100x693.jpg"></a>
+							<h4>Kieran Tierney</h4>
+						</div>
+						<div class="df">
+							<a href="#"><img src="./player/saliba_1100x693.jpg"></a>
+							<h4>William Saliba</h4>
+						</div>
+						<div class="df">
+							<a href="#"><img src="./player/White_1100x693.jpg"></a>
+							<h4>Ben White</h4>
+						</div>
+						<div class="df">
+							<a href="#"><img src="./player/Gabriel_1100x693.jpg"></a>
+							<h4>Gabriel</h4>
+						</div>
+						<div class="df">
+							<a href="#"><img src="./player/Holding_1100x693.jpg"></a>
+							<h4>Rob Holding</h4>
+						</div>
+						<div class="df">
+							<a href="#"><img src="./player/Cedric_1100x693.jpg"></a>
+							<h4>Cedric</h4>
+						</div>
+						<div class="df">
+							<a href="#"><img src="./player/MicrosoftTeams-image (2)_3.png"></a>
+							<h4>Tomiyasu</h4>
+						</div>
+						<div class="df">
+							<a href="#"><img src="./player/Tavares_1100x693.jpg"></a>
+							<h4>Nuno Tavares</h4>
+						</div>
+					</div>
+					<div id="sem_mf">
+						<h2>Midfielders</h2><br/>
+						<div class="mf">
+							<a href="#"><img src="./player/Thomas_1100x693.jpg"></a>
+							<h4>Thomas</h4>
+						</div>			
+						<div class="mf">
+							<a href="#"><img src="./player/Saka_1100x693.jpg"></a>
+							<h4>Bukayo Saka</h4>
+						</div>			
+						<div class="mf">
+							<a href="#"><img src="./player/Odegaard_1100x693.jpg"></a>
+							<h4>Martin Odegaard</h4>
+						</div>			
+						<div class="mf">
+							<a href="#"><img src="./player/SmithRowe_1100x693.jpg"></a>
+							<h4>Emile Smith Rowe</h4>
+						</div>			
+						<div class="mf">
+							<a href="#"><img src="./player/Fabio.jpg"></a>
+							<h4>Fabio Vieira</h4>
+						</div>			
+						<div class="mf">
+							<a href="#"><img src="./player/Lokonga_1100x693.jpg"></a>
+							<h4>Albert Lokonga</h4>
+						</div>			
+						<div class="mf">
+							<a href="#"><img src="./player/Elneny_1100x693.jpg"></a>
+							<h4>Mohamed Elneny</h4>
+						</div>			
+						<div class="mf">
+							<a href="#"><img src="./player/Xhaka_1100x693.jpg"></a>
+							<h4>Granit Xhaka</h4>
+						</div>			
+					</div>
+					<div id="sem_fw">	
+						<h2>Forwards</h2><br/>	
+						<div class="fw">
+							<a href="#"><img src="./player/Nketiah_1100x693.jpg"></a>
+							<h4>Eddie Nketiah</h4>
+						</div>	
+						<div class="fw">
+							<a href="#"><img src="./player/Pepe_1100x693.jpg"></a>
+							<h4>Nicolas Pepe</h4>
+						</div>	
+						<div class="fw">
+							<a href="#"><img src="./player/Martinelli_1100x693.jpg"></a>
+							<h4>Gabriel Martinelli</h4>
+						</div>
+						<div id="top_bt">
+							<a href="#"><img src="./img/icons8_up_squared_26px.png" width="30px" height="30px"></a>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div id="footer">
+		<div id="fo_info">
+			<div id="fo_inl">
+				<a href="#">사이트 소개</a>
+				<a href="#">이용약관</a>
+				<a href="#">개인정보처리방침</a>
+				<a href="#">이메일 무단수집거부</a>
+				<a href="#">책임의 한계와 법적고지</a>
+			</div>
+			<div id="fo_inr">
+				<a href="#">이용안내</a>
+				<a href="#">문의하기</a>
+				<a href="#">모바일버전</a>
+			</div>
+		</div>
+		<div id="fo_site">
+			<span class="info"></span>
+			<p>
+				<strong>아스날 코리아</strong>
+				All right reserved.
+			</p>
+		</div>
+	</div>
+</body>
+</html>

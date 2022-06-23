@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Arsenal/FirstTeam/League</title>
+<style type="text/css">
+	*{
+		margin:0; padding:0;
+		font-family: 함초롱바탕;
+	}
+	#header{
+		width:100%;
+		height: 80px;
+		background-color:#cc0000;
+	}
+	#header>img{
+		float:left;
+		padding:15px;
+	}
+	#header>h1{
+		font-size: 1.6em;
+		font-family: arita dotum;
+		color:#ffffff;
+		padding:25px;
+		letter-spacing: 0.15em;
+	}
+	#header a{
+		text-decoration: none;
+		color:#ffffff;
+	}
+	#header a:visited{
+		color:#ffffff;
+	}
+	#nav{
+		width:100%;
+		height: 50px;
+		background-color:#b30000;	
+		text-align: center;
+		display: flex;
+	}
+	#nav_sp{
+		flex:1;
+		padding: 10px;
+	}
+	#nav_bar{
+		flex:8;
+		margin: 0 auto;
+	}
+	#nav_bar>ul{
+		height:50px;
+	}
+	.nav_li{
+		list-style: none;
+		height:40px;
+		display: inline-block;
+		padding:0 50px;	
+		font-weight: 900;
+		font-size: 1.3em;
+		padding-top:10px;
+	}
+	.nav_li>a{
+		color:#ffffff;
+		text-decoration: none;
+	}
+	.nav_li>a:visited {
+		color:#ffffff;
+	}
+	#nav_bar #check{
+		background-color: #990000;
+	}
+	#nav_form{
+		line-height: 50px;
+		flex:1;
+	}
+	#center{
+		width:100%;
+		height: 1400px;
+		display: flex;
+		margin: 10px 0;
+		float:left;
+	}
+	#section{
+		flex:8.5;
+		height:1000px;
+	}
+	#aside{
+		flex:1.5;
+		height: 1400px;
+		padding:10px;
+	}
+	#asd_fo{
+		width:100%;
+		text-align: center;
+		margin-bottom: 20px;
+		border-radius: 15px 15px 15px 15px;
+		background-color: #ffe6e6;
+	}
+	.asd_info{
+		text-decoration: none;
+		color:black;
+	}
+	.asd_info:visited{
+		color:black;
+	}
+	#asd_bar{
+		padding:25px;
+		border-radius: 15px 15px 15px 15px;
+		background-color: #ffe6e6;
+		margin-bottom: 20px;
+	}
+	.asd_li{
+		list-style: none;
+		line-height: 2;
+		background-color: #d9d9d9;
+	}
+	.asd_li>a{
+		color:#ff1a1a;
+		text-decoration: none;
+		font-weight: 900;
+	}
+	.asd_li>a:visited {
+		color:#ff1a1a;	
+	}
+	#asd_li_ul{
+		padding:5px;
+		line-height: 2;
+	}
+	.asd_li_li{
+		list-style: none;
+		line-height: 2;
+		padding-left:20px;
+	}
+	.asd_li_li>a{
+		color:black;
+		text-decoration: none;
+	}
+	.asd_li_li>a:visited {
+		color:black;	
+	}
+	#asd_mem{
+		float: right;
+		padding: 15px;
+		border-radius: 15px 15px 15px 15px;
+		background-color: #ffe6e6;
+	}
+	#asd_nowm{
+		overflow-y:scroll; 
+		height: 100px;
+		width: 250px;
+	}
+	#section_up{
+		height: 10%;
+		padding:10px;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+		background-color: #47476b;
+	}
+	#section_up> h1{
+		text-align: left;
+		color:white;
+	}
+	#section_up> ul{
+		list-style: none;
+	}
+	#section_up>ul>li{
+		float: left;
+		position: relative;
+		width:10%;
+		margin-right:25px;
+	}
+	#section_up>ul>li>a{
+		text-decoration: none;
+		color:white;
+		font-size: 1.2em;
+		font-weight: 700;
+	}
+	#section_up>ul>li>a:visited{
+		color:white;
+	}
+	#seu_ch{
+		border-bottom: 5px solid #ff1a1a;
+	}
+	#section_mid{
+		height: 90%;
+		padding:10px;
+	}
+	#sem_ss{
+		width:80%;
+		height:50px;
+	}
+	#sem_ss h3{
+		float:right;
+		padding-right:25px;
+	}
+	#sem_ss select{
+		float:right;
+		width:120px;
+		height:30px;
+		border-radius: 10px 10px 10px 10px;
+		text-align: center;
+		font-weight: 700;
+	}
+	#sem_tab{
+		width:100%;
+		height: 800px;
+	}
+	#sem_tabh{
+		width:80%;
+		height:40px;
+		background-color: #52527a;
+		color:white;
+		padding-top: 20px;
+	}
+	#sem_lea{
+		width:100%;
+		height: 740px;
+	}
+	#sem_lea >table{
+		width:80%;
+		height: 740px;
+		text-align: center;
+		line-height: 30px;
+		background-color: #f2f2f2;
+	}
+	.sem_img{
+		padding-top:10px; 
+	}
+	.sem_ltr{
+		border-bottom: 1px dashed black;
+	}
+	#top_bt{
+		display: block;
+		float: right;
+		padding: 10px;
+		margin-top: 380px;
+		margin-right: 240px;
+	}
+	#footer{
+		width:100%;
+		height:80px;
+		float: left;
+		color:#a6a6a6;
+		padding-top:40px;
+	}
+	#footer a{
+		text-decoration: none;
+		color:#a6a6a6;
+	}
+	#footer a:visited {
+		color:#a6a6a6;
+	}
+	#fo_info{
+		display: flex;
+	}
+	#fo_inl{
+		flex:7;
+		padding-left:30px;
+	}
+	#fo_inr{
+		flex:3;
+		text-align: right;
+		padding-right:30px;
+	}
+	#fo_site{
+		padding-top:30px;
+		padding-left:30px;
+	}
+</style>
+</head>
+<body>
+	<div id="header">
+		<img alt="아스날" src="./img/Arsenal_FC.svg.png" width="40px" height="50px">
+		<h1><a href="./Home.html">Arsenal</a></h1>
+	</div>
+	<div id="nav">
+		<div id="nav_sp">
+			<img alt="아디다스" src="./img/adidas.png" width="30px" height="30px">
+			<img alt="르완다" src="./img/visit-rwanda.png" width="30px" height="30px">
+			<img alt="에미레이트항공" src="./img/emirates.png" width="30px" height="30px">
+		</div>
+		<div id="nav_bar">
+			<ul>
+				<li class="nav_li"><a href="./Intro.html">소개</a></li>
+				<li class="nav_li" id="check"><a href="./FirstTeamPlayer.html">퍼스트팀</a></li>
+				<li class="nav_li"><a href="#">리저브팀</a></li>
+				<li class="nav_li"><a href="#">우먼스</a></li>
+				<li class="nav_li"><a href="#">미디어</a></li>
+				<li class="nav_li"><a href="#">티켓 예매</a></li>
+			</ul>
+		</div>
+		<div id="nav_form">
+			<form>
+				<input type="text" class="form-control" placeholder="Search" style="height:30px"/>
+			</form>
+		</div>
+	</div>
+	<div id="center">
+		<div id="aside">
+			<div id="asd_fo">
+				<form id="asd_form">
+					<div id="asd_log">
+						<fieldset style="border: 0"><br/>
+							<input type="text" placeholder="ID" maxlength="10"><br/><br/>
+							<input type="password" placeholder="Password" maxlength="14"><br/><br/>
+							<button type="submit" style="width:150px">로그인</button>
+						</fieldset><br/>
+					</div>
+					<div id="asd_if">
+						<a class="asd_info" href="#">회원가입</a>
+						<a>|</a>
+						<a class="asd_info" href="#">정보찾기</a>
+					</div><br/>
+				</form>
+			</div>
+			<div id="asd_bar">
+				<h2>카테고리</h2><br/>
+				<ul id="asd_ul">
+					<li class="asd_li"><a href="#">공지사항</a></li><br/>
+					<li class="asd_li"><a href="#">게시판</a></li><br/>
+						<div id=asd_li_ul><ul>
+							<li class="asd_li_li"><a href="#">축구 게시판</a></li>
+							<li class="asd_li_li"><a href="#">자유 게시판</a></li><br/>
+						</ul></div>
+					<li class="asd_li"><a href="#https://arsenaldirect.arsenal.com/" target="_blank">공식스토어</a></li><br/>
+					<li class="asd_li"><a href="#">소셜미디어</a></li><br/>
+						<div id=asd_li_ul><ul>
+							<li class="asd_li_li"><a href="https://www.facebook.com/afc.korea" >페이스북</a></li>
+							<li class="asd_li_li"><a href="https://twitter.com/afc_korea" target="_blank">트위터</a></li>
+							<li class="asd_li_li"><a href="https://www.instagram.com/arsenalkorea/" target="_blank">인스타그램</a></li>
+							<li class="asd_li_li"><a href="https://www.youtube.com/channel/UCjMBPFBV9RWSs4q-Dxftrew" target="_blank">유튜브</a></li>
+							<li class="asd_li_li"><a href="https://www.twitch.tv/arsenalkorea" target="_blank">트위치</a></li>
+						</ul></div>
+				</ul>
+			</div>
+			<div id=asd_mem>
+				<h4 align="right">접속중인 회원</h4><br/>
+				<fieldset>
+					<ul id="asd_nowm">
+						<li>King Henry</li>
+						<li>Arsen Wenger</li>
+						<li>No.7 로사</li>
+						<li>no.10 ESR</li>
+						<li>외데골</li>
+						<li>대구 구너</li>
+						<li>구너사우르스</li>
+						<li>말티</li>
+					</ul>
+				</fieldset>
+			</div>
+		</div>
+		<div id=section>
+			<div id="section_up">
+				<h1>First Teams</h1><br/>
+				<ul>
+					<li><a href="./FirstTeamPlayer.html">스쿼드</a></li>
+					<li id="seu_ch"><a href="./FirstTeamLeague.html">리그</a></li>
+					<li><a href="#">기록</a></li>
+				</ul>
+			</div>
+			<div id="section_mid">
+				<div id="sem">
+					<div id="sem_ss">
+						<select>
+							<option>2022-2023</option>
+							<option>2021-2022</option>
+							<option>2020-2021</option>
+							<option>2019-2020</option>
+							<option>2018-2019</option>
+						</select>
+						<h3>season</h3>
+					</div>
+					<div id="sem_tab">
+						<div id="sem_tabh">
+							<h2>Premier League 2022-2023</h2>
+						</div>
+						<div id="sem_lea">
+							<table>
+								<tr>
+									<th class="sem_ltr">순위</th>
+									<th class="sem_ltr"></th>
+									<th class="sem_ltr">Team</th>
+									<th class="sem_ltr">P</th>
+									<th class="sem_ltr">W</th>
+									<th class="sem_ltr">D</th>
+									<th class="sem_ltr">L</th>
+									<th class="sem_ltr">득점</th>
+									<th class="sem_ltr">실점</th>
+									<th class="sem_ltr">골득실</th>
+									<th class="sem_ltr">승점</th>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="sem_img"><img src="./team/bournemouth.png"></td>
+									<td>AFC Bournemouth</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td class="sem_img"><img src="./team/arsenal-1.png"></td>
+									<td>Arsenal</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td class="sem_img"><img src="./team/astonvilla_5.png"></td>
+									<td>Aston Villa</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td class="sem_img"><img src="./team/BrentfordCrest.png"></td>
+									<td>Brentford FC</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td class="sem_img"><img src="./team/brightonandhovealbion.png"></td>
+									<td>Brighton</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td class="sem_img"><img src="./team/chelsea.png"></td>
+									<td>Chelsea</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td class="sem_img"><img src="./team/crystalpalace.png"></td>
+									<td>Crystal Palace</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td class="sem_img"><img src="./team/everton.png"></td>
+									<td>Everton</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td class="sem_img"><img src="./team/fulham.png"></td>
+									<td>Fulham</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td class="sem_img"><img src="./team/leeds_1_0.png"></td>
+									<td>Leeds</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>11</td>
+									<td class="sem_img"><img src="./team/leicestercity.png"></td>
+									<td>Leicester City</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>12</td>
+									<td class="sem_img"><img src="./team/liverpool.png"></td>
+									<td>Liverpool</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>13</td>
+									<td class="sem_img"><img src="./team/MCFC_0_1.png"></td>
+									<td>Manchester City</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>14</td>
+									<td class="sem_img"><img src="./team/manchesterunited.gif"></td>
+									<td>Manchester United</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>15</td>
+									<td class="sem_img"><img src="./team/newcastleunited_0.png"></td>
+									<td>Newcastle United</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>16</td>
+									<td class="sem_img"><img src="./team/nottinghamforest_0.png"></td>
+									<td>Nottingham Forest FC</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>17</td>
+									<td class="sem_img"><img src="./team/southampton.png"></td>
+									<td>Southampton</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>18</td>
+									<td class="sem_img"><img src="./team/tottenham.png"></td>
+									<td>Tottenham Hotspur</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>19</td>
+									<td class="sem_img"><img src="./team/westhamunited.png"></td>
+									<td>West Ham United</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>20</td>
+									<td class="sem_img"><img src="./team/wolverhampton_1.gif"></td>
+									<td>Wolves</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+							</table>
+						</div>
+						<div id="top_bt">
+							<a href="#"><img src="./img/icons8_up_squared_26px.png" width="30px" height="30px"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div id="footer">
+		<div id="fo_info">
+			<div id="fo_inl">
+				<a href="#">사이트 소개</a>
+				<a href="#">이용약관</a>
+				<a href="#">개인정보처리방침</a>
+				<a href="#">이메일 무단수집거부</a>
+				<a href="#">책임의 한계와 법적고지</a>
+			</div>
+			<div id="fo_inr">
+				<a href="#">이용안내</a>
+				<a href="#">문의하기</a>
+				<a href="#">모바일버전</a>
+			</div>
+		</div>
+		<div id="fo_site">
+			<span class="info"></span>
+			<p>
+				<strong>아스날 코리아</strong>
+				All right reserved.
+			</p>
+		</div>
+	</div>
+</body>
+</html>
