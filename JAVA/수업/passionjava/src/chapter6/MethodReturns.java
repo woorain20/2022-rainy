@@ -1,0 +1,23 @@
+package chapter6;
+
+public class MethodReturns {
+	public static void main(String[] args) {
+		int result;
+		result=adder(4,5);
+		System.out.println(square(adder(3,6)));
+		System.out.println("4+5="+result);
+		System.out.println("3.5*3.5="+square(3.5));
+		
+	}
+	public static int adder(int num1,int num2) {
+		int addResult=num1+num2;
+		return addResult;
+	}
+	public static double square(double num) {
+		return num*num;
+	}
+	//void=공허=반환값이 없다
+	public static void hiEveryone() {
+		
+	}
+}
