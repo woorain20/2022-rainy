@@ -1,0 +1,7 @@
+https://downloads.mysql.com/archives/installer/
+
+
+ConnectDB	db이름
+connectuser	유저이름
+connect123!@#	비밀번호
+connectdb	스키마
