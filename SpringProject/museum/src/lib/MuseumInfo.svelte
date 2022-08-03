@@ -280,9 +280,7 @@
         display: table-cell;
         vertical-align: middle;
     }
-    #list{
-        margin-top: 70px;
-    }
+  
     h1{
         margin-bottom: 50px;
     }

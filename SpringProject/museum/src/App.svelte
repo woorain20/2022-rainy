@@ -1,5 +1,6 @@
 <script>
-  import MuseumInfo from './lib/MuseumInfo.svelte'
+  import Upsidposter from './lib/mainpage/Upsidposter.svelte';
+import MuseumInfo from './lib/MuseumInfo.svelte'
 </script>
 
 <main>
@@ -29,8 +30,9 @@
     </div>
   <div>
 </main>
-<div>
-    <MuseumInfo/>
+<div id="test">
+    <!-- <MuseumInfo/> -->
+    <Upsidposter />
 </div>
 
 
