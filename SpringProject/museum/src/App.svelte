@@ -4,6 +4,31 @@
 </script>
 
 <main>
+  <body>
+    <div class="navbar navbar-dark bg-dark fixed-top navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">Korea Museum</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-content">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="#">박물관 정보</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">국내 유물</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">상설 전시회</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">특별 전시회</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">EVENT</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">게시판</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Museum Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Node.js</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">API</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   <div>
     <a href="https://vitejs.dev" target="_blank"> 
       <img src="/vite.svg" class="logo" alt="Vite Logo" />
@@ -27,19 +52,4 @@
   </p>
 </main>
 
-<style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
-  }
-</style>
+
