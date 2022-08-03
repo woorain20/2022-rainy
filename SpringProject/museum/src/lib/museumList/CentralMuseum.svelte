@@ -11,8 +11,9 @@
             <img {src} alt="국립중앙박물관">
         </div>
         <div>
+            <!-- svelte-ignore a11y-missing-attribute -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2660.8965812951724!2d126.97676049742918!3d37.52307752115598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2208965526d%3A0xd9a7a08c18440ed4!2z6rWt66a97KSR7JWZ67CV66y86rSA!5e0!3m2!1sko!2skr!4v1659507635480!5m2!1sko!2skr"
-             width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             width="400" height="300" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <table>
                 <tr>
                     <td>주소</td>
