@@ -1,2 +1,4 @@
 호스트:192.168.0.80
 사용자명 : kb602
+
+https://app.getpostman.com/join-team?invite_code=45b0d5767356f3fd434277f06f4002bc&target_code=6b2af52775f835f899e029e4cc503666
