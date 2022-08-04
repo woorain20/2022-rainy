@@ -5,8 +5,8 @@ import { onMount } from "svelte";
 let posters=[]
 let exhib=[]
 
-const upsidebanner="http://127.0.0.1:8080/mainpage/"
-const slidingbnn="http://127.0.0.1:8080/exhibition/"
+const upsidebanner="http://192.168.0.51:8080/mainpage/"
+const slidingbnn="http://192.168.0.51:8080/exhibition/"
 
 onMount(async function(){
     const res=await fetch(upsidebanner)
