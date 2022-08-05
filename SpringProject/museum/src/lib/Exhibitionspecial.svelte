@@ -1,6 +1,5 @@
 <script>
     import { onMount } from "svelte";
-import Exhibitiondetail from "./exhibitiondetail.svelte";
     
 
     let exhib=[]
@@ -17,19 +16,19 @@ import Exhibitiondetail from "./exhibitiondetail.svelte";
     
     </script>
     
-    <h1>Always Exhibitions</h1>
+    <h1>Specail Exhibitions</h1>
     
     <div class="grid">
         {#each exhib.filter(t=>t.done) as exhibition}
-            {#if exhibition.always}
-            <label class="square" >
-                    <button id="d" on:click={()=>{inknum=exhibition.id}}>
-                    <img src="./src/lib/exhibitionposter/{exhibition.poster}.jpg" alt = "사진오류" />
-                    <br /><br />
-                    <h4>{exhibition.title}</h4>
-                    <p>{exhibition.startday}~{exhibition.endday}</p>
-                </button>
-            </label>
+            {#if !exhibition.always}
+                <label class="square" >
+                        <button id="d" on:click={()=>{inknum=exhibition.id}}>
+                        <img src="./src/lib/exhibitionposter/{exhibition.poster}.jpg" alt = "사진오류" />
+                        <br /><br />
+                        <h4>{exhibition.title}</h4>
+                        <p>{exhibition.startday}~{exhibition.endday}</p>
+                    </button>
+                </label>
             {/if}
         {/each}
     </div>

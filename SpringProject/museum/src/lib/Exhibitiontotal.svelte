@@ -1,5 +1,6 @@
 <script>
 import Exhibitionalways from "./Exhibitionalways.svelte";
+import Exhibitionspecial from "./Exhibitionspecial.svelte";
 
 let step = true
 
@@ -17,5 +18,6 @@ let step = true
 
 {#if step}
 <Exhibitionalways />
-
+{:else}
+<Exhibitionspecial />
 {/if}
