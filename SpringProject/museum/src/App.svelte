@@ -1,6 +1,4 @@
 <script>
-  import Upsidposter from './lib/mainpage/Upsidposter.svelte';
-  import MuseumInfo from './lib/museumList/MuseumInfo.svelte';
 
 </script>
 
@@ -31,9 +29,9 @@
     </div>
   <div>
 </main>
+<p>store 활용 - 전시회 누르면 Id 가 넘어가서 원하는 골라 오기</p>
 <div id="test">
-    <MuseumInfo/>
-    <!-- <Upsidposter /> -->
+
 </div>
 
 
