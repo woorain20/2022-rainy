@@ -18,19 +18,19 @@
     <div id="contents">
         <div id="muse">
             {#each museuminfomation as museum}
-                {#if museum.photo=="central3"}
+                {#if museum.photo=="gimhae1"}
                     <div id="img">
                         <img src="./src/lib/museumlist/infoimg/{museum.photo}.jpg" alt="박물관">
                     </div>
                     <div id="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.3241777948615!2d126.97828151564724!3d37.52385483432824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2ed7e746c37%3A0x616286c7a66e50e7!2z6rWt66a97KSR7JWZ67CV66y86rSA!5e0!3m2!1sko!2skr!4v1659573632166!5m2!1sko!2skr"
-                        width="400" height="300" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.511317965506!2d128.87041141560388!3d35.24353316145844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568c76fc4f5381b%3A0xd777389c5050cbea!2z6rWt66a96rmA7ZW067CV66y86rSA!5e0!3m2!1sko!2skr!4v1659664632235!5m2!1sko!2skr"
+                         width="400" height="300" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div id="info">
                         <table>
                             <tr>
                                 <td class="tdb">장소</td>
-                                <td class="tda">국립중앙박물관</td>
+                                <td class="tda">국립김해박물관</td>
                             </tr>
                             <tr>
                                 <td class="tdb">주소</td>
@@ -62,7 +62,7 @@
                             </tr>
                             <tr>
                                 <td class="tdb">홈페이지</td>
-                                <td class="tda"><a href="https://www.museum.go.kr" target="_blank">{museum.homepage}</a></td>
+                                <td class="tda"><a href="https://gimhae.museum.go.kr/" target="_blank">{museum.homepage}</a></td>
                             </tr>
                         </table>
                     </div>
