@@ -52,7 +52,7 @@ onMount(async function(){
 {#each exhib as exhibition}
 <label>
     <button>
-        <img src = "./src/lib/mainpage/image/{exhibition.poster}.jpg" alt="업슴">
+        <img src = "./src/lib/exhibitionposter/{exhibition.poster}.jpg" alt="업슴">
     </button>
 </label>
 {/each}

@@ -31,7 +31,7 @@
 </main>
 <p>store 활용 - 전시회 누르면 Id 가 넘어가서 원하는 골라 오기</p>
 <div id="test">
-
 </div>
+
 
 
