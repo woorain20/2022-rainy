@@ -15,7 +15,7 @@
     import NajuMuseum from "./NajuMuseum.svelte";
     import src from "./infoimg/roof-tile-g319be8635_1920.jpg"
 
-    let main, list, list2, list3, list4, list5, list6, list7, list8, list9, list10, list11, list12, list13, list14=false
+    let list, list2, list3, list4, list5, list6, list7, list8, list9, list10, list11, list12, list13, list14=false
     function centralopen(){
         list=!list
         list2=list3=list4=list5=list6=list7=list8=list9=list10=list11=list12=list13=list14=false
