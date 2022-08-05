@@ -1,6 +1,12 @@
 <script>
+<<<<<<< Updated upstream
 import Exhibitiontotal from "./lib/Exhibitiontotal.svelte";
 
+=======
+  import Upsidposter from './lib/mainpage/Upsidposter.svelte';
+  import MuseumInfo from './lib/museumList/MuseumInfo.svelte';
+  import Relic from './lib/relic/Relic.svelte';
+>>>>>>> Stashed changes
 
 </script>
 
@@ -33,6 +39,12 @@ import Exhibitiontotal from "./lib/Exhibitiontotal.svelte";
 </main>
 <p>store 활용 - 전시회 누르면 Id 가 넘어가서 원하는 골라 오기</p>
 <div id="test">
+<<<<<<< Updated upstream
+=======
+    <!-- <MuseumInfo/> -->
+    <!-- <Upsidposter /> -->
+    <Relic/>
+>>>>>>> Stashed changes
 </div>
 <Exhibitiontotal />
 
