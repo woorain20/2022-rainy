@@ -1,0 +1,1227 @@
+중앙박물관
+
+{
+image: cenmr1,
+name: 민무늬토기,
+museum: 국립중앙박물관,
+period: 청동기,
+excavation: 충남 서산 휴암리,
+note: 
+}
+
+{
+image: cenmr2,
+name: 금동반가사유상,
+museum: 국립중앙박물관,
+period: 한국(韓國)-삼국(三國) 6세기 후반,
+excavation: ,
+note: 국보 78호
+}
+{
+image: cenmr3,
+name: 반가사유상,
+museum: 국립중앙박물관,
+period: 한국(韓國)-삼국(三國) 7세기 전반,
+excavation: ,
+note: 국보 83호
+}
+{
+image: cenmr4,
+name: 경천사 십층석탑,
+museum: 국립중앙박물관,
+period: 한국(韓國)-고려(高麗) 1348년,
+excavation: ,
+note: 국보 86호
+}
+{
+image: cenmr5,
+name: 백자 철화 포도 원숭이 무늬 항아리,
+museum: 국립중앙박물관,
+period: 조선 17세기 후반~18세기 전반,
+excavation: ,
+note: 국보 93호
+}
+{
+image: cenmr6,
+name: 감산사 석조 미륵보살입상,
+museum: 국립중앙박물관,
+period: 통일신라 719년,
+excavation: 경북 경주,
+note: 국보 81호
+}
+{
+image: cenmr7,
+name: 감산사 석조 석조아미타여래입상
+museum: 국립중앙박물관,
+period: 통일신라 720년,
+excavation: 경북 경주,
+note: 국보 82호
+}
+{
+image: cenmr8,
+name: 개성 남계원 칠층석탑,
+museum: 국립중앙박물관,
+period: 한국 - 고려,
+excavation: 경기도 개성 부근,
+note: 국보 100호
+}
+{
+image: cenmr9,
+name: 북한산 신라 진흥왕 순수비,
+museum: 국립중앙박물관,
+period: 한국(韓國)-신라(新羅) 555년 경,
+excavation: 서울 북한산 비봉,
+note: 국보 3호
+}
+{
+image: cenmr10,
+name: 단원풍속도첩(김홍도),
+museum: 국립중앙박물관,
+period: 한국(韓國)-조선(朝鮮) 18세기,
+excavation: ,
+note: 보물 527호
+}
+{
+image: cenmr11,
+name: 금령총 금관,
+museum: 국립중앙박물관,
+period: 신라 6세기,
+excavation: 경북 경주 금령총,
+note: 보물 338호
+}
+{
+image: cenmr12,
+name: 윤봉길의사 선서문,
+museum: 국립중앙박물관,
+period: 한국(韓國)-일제강점기,
+excavation: ,
+note: 보물 568-1호
+}
+{
+image: cenmr13,
+name: 도기 녹유 탁잔,
+museum: 국립중앙박물관,
+period: 한국 - 백제,
+excavation: ,
+note: 보물 453호
+}
+{
+image: cenmr14,
+name: 옛 보신각 동종,
+museum: 국립중앙박물관,
+period: 	한국 - 조선,
+excavation: ,
+note: 보물 2호
+}
+{
+image: cenmr15,
+name: 고대 그리스 청동투구,
+museum: 국립중앙박물관,
+period: 유럽 - 그리스,
+excavation: 올림피아 제우스 신전,
+note: 보물 904호
+}
+
+
+경주
+{
+image: gyemr1,
+name: 성덕대왕신종,
+museum: 국립경주박물관,
+period: 한국-통일신라​,
+excavation: ,
+note: 국보 29호
+}
+{
+image: gyemr2,
+name: 금관총 금관 및 금제장식,
+museum: 국립경주박물관,
+period: 한국-신라​,
+excavation: 경북 경주 금관총,
+note: 국보 87호
+}
+{
+image: gyemr3,
+name: 금관총 허리띠,
+museum: 국립경주박물관,
+period: 한국-신라​,
+excavation: 경북 경주 금관총,
+note: 국보 88호
+}
+{
+image: gyemr4,
+name: 천마총 관모,
+museum: 국립경주박물관,
+period: 한국-신라​,
+excavation: 경북 경주 천마총,
+note: 국보 189호
+}
+{
+image: gyemr5,
+name: 천마총 장니 천마도,
+museum: 국립경주박물관,
+period: 한국-신라​,
+excavation: 경북 경주 천마총,
+note: 국보 207호
+}
+{
+image: gyemr6,
+name: 백륜사 금동약사여래입상,
+museum: 국립경주박물관,
+period: 한국-통일신라​,
+excavation: 경북 경주 백륜사,
+note: 국보 28호
+}
+{
+image: gyemr7,
+name: 도기 기마인물형 뿔잔,
+museum: 국립경주박물관,
+period: 한국-삼국시대​,
+excavation: 경남 김해 대동면,
+note: 국보 275호
+}
+{
+image: gyemr8,
+name: 천마총 환두대도,
+museum: 국립경주박물관,
+period: 한국-신라​,
+excavation: 경북 경주 천마총,
+note: 보물 621호
+}
+{
+image: gyemr9,
+name: 경주 계림로 보검,
+museum: 국립경주박물관,
+period: 한국-신라​,
+excavation: 경북 경주 미추왕릉 지구,
+note: 보물 제 635호
+}
+{
+image: gyemr10,
+name: 임신서기석,
+museum: 국립경주박물관,
+period: 한국-신라​,
+excavation: 경북 경주 석장사 터,
+note: 보물 1411호
+}
+{
+image: gyemr11,
+name: 월지 금동초심지 가위,
+museum: 국립경주박물관,
+period: 한국-통일신라​,
+excavation: 경북 경주 월지,
+note: 보물 1844호
+}
+{
+image: gyemr12,
+name: 얼굴무늬 수막새,
+museum: 국립경주박물관,
+period: 한국-신라​,
+excavation: 경북 경주 영묘사지,
+note: 보물 2010호
+}
+
+광주
+{
+image: gwamr1,
+name: 중흥산성 쌍사자 석등,
+museum: 국립광주박물관,
+period: 한국-통일신라​,
+excavation: 전남 광양 중흥산성,
+note: 국보 103호
+}
+{
+image: gwamr2,
+name: 화순 대곡리 청동기 일괄,
+museum: 국립광주박물관,
+period: ,
+excavation: 전남 화순 대곡리,
+note: 국보 143호
+}
+{
+image: gwamr3,
+name: 현자총통,
+museum: 국립광주박물관,
+period: 한국-조선​,
+excavation: 전남 여천,
+note: 보물 1233호
+}
+{
+image: gwamr4,
+name: 순천 매곡동 석탑 청동불감 및 금동아미타여래삼존좌상,
+museum: 국립광주박물관,
+period: 한국 - 조선​,
+excavation: 전남 순천,
+note: 보물 1874호
+}
+{
+image: gwamr5,
+name: 보림사삼층석탑 탑지석,
+museum: 국립광주박물관,
+period: ,
+excavation: 전남 장흥 보림사,
+note: 
+}
+{
+image: gwamr6,
+name: 장생사 종,
+museum: 국립광주박물관,
+period: 한국-고려,
+excavation: 전남 여수,
+note: null
+}
+{
+image: gwamr7,
+name: 심득경 초상,
+museum: 국립광주박물관,
+period: 한국-조선,
+excavation: ,
+note: 보물 1488호
+}
+{
+image: gwamr8,
+name: 바람개비문양칠기,
+museum: 국립광주박물관,
+period: 한국-초기철기,
+excavation: ,
+note: 
+}
+{
+image: gwamr9,
+name: 고려청자투합,
+museum: 국립광주박물관,
+period: 한국-고려,
+excavation: ,
+note: 
+}
+{
+image: gwamr10,
+name: 신여량 상가교서,
+museum: 국립광주박물관,
+period: 한국-조선-선조 37,
+excavation: ,
+note: 보물 1937호
+}
+
+
+공주
+{
+image: gonmr1,
+name: 무령왕 금제관식,
+museum: 국립공주박물관,
+period: 한국-백제,
+excavation: 충남 공주 무령왕릉,
+note: 국보 154호
+}
+{
+image: gonmr2,
+name: 무령왕 금귀걸이,
+museum: 국립공주박물관,
+period: 한국-백제,
+excavation: 충남 공주 무령왕릉,
+note: 국보 156호
+}
+{
+image: gonmr3,
+name: 무령왕비 금목걸이,
+museum: 국립공주박물관,
+period: 한국-백제,
+excavation: 충남 공주 무령왕릉,
+note: 국보 158호
+}
+{
+image: gonmr4,
+name: 무령왕릉 청동거울 일괄,
+museum: 국립공주박물관,
+period: 한국-백제,
+excavation: 충남 공주 무령왕릉,
+note: 국보 161호
+}
+{
+image: gonmr5,
+name: 무령왕릉 지석,
+museum: 국립공주박물관,
+period: 한국-백제,
+excavation: 충남 공주 무령왕릉,
+note: 국보 163호
+}
+{
+image: gonmr6,
+name: 무령왕비 베개,
+museum: 국립공주박물관,
+period: 한국-백제,
+excavation: 충남 공주 무령왕릉,
+note: 국보 164호
+}
+{
+image: gonmr7,
+name: 무령왕 발받침,
+museum: 국립공주박물관,
+period: 한국-백제,
+excavation: 충남 공주 무령왕릉,
+note: 국보 165호
+}
+{
+image: gonmr8,
+name: 공주 의당 금동보살입상,
+museum: 국립공주박물관,
+period: 한국-백제,
+excavation: 충남 공주 송정리 절터,
+note: 국보 247호
+}
+{
+image: gonmr9,
+name: 공주서혈사지석조여래좌상,
+museum: 국립공주박물관,
+period: 한국-통일신라,
+excavation: 충남 공주 서혈사 터,
+note: 보물 979호
+}
+{
+image: gonmr10,
+name: 공주 중동 석조,
+museum: 국립공주박물관,
+period: 한국-백제,
+excavation: 충남 공주 대통사 터,
+note: 보물 148호
+}
+{
+image: gonmr11,
+name: 공주 반죽동 석조,
+museum: 국립공주박물관,
+period: 한국-백제,
+excavation: 충남 공주 대통사 터,
+note: 보물 149호
+}
+
+
+
+대구
+{
+image: daemr1,
+name: 칠곡 정도사지 오층석탑,
+museum: 국립대구박물관,
+period: 한국-고려,
+excavation: ,
+note: 보물 357호
+}
+{
+image: daemr2,
+name: 구미 선산읍 금동여래입상,
+museum: 국립대구박물관,
+period: 한국-통일신라,
+excavation: 경북 구미 선산,
+note: 국보 182호
+}
+{
+image: daemr3,
+name: 구미 선산읍 금동보살입상,
+museum: 국립대구박물관,
+period: 한국-통일신라,
+excavation: 경북 구미 선산,
+note: 국보 183호
+}
+{
+image: daemr4,
+name: 구미 선산읍 금동보살입상,
+museum: 국립대구박물관,
+period: 한국-통일신라,
+excavation: 경북 구미 선산,
+note: 국보 184호
+}
+{
+image: daemr5,
+name: 영주 흑석사 목조아미타여래좌상 및 복장유물,
+museum: 국립대구박물관,
+period: ,
+excavation: ,
+note: 국보 282호
+}
+{
+image: daemr6,
+name: 김일손 거문고,
+museum: 국립대구박물관,
+period: 한국-조선,
+excavation: ,
+note: 보물 957호
+}
+{
+image: daemr7,
+name: 흥선대원군 기린흉배,
+museum: 국립대구박물관,
+period: 19세기,
+excavation: ,
+note: 국가민속문화재 65호
+}
+{
+image: daemr8,
+name: 경산 신대리 1호 목관묘 출토 청동호랑이모양 띠고리,
+museum: 국립대구박물관,
+period: 한국-삼한시대,
+excavation: 경북 경산 신대리 1호분 목관묘,
+note: 보물 2017호
+}
+{
+image: daemr9,
+name: 칠곡 송림사 오층전탑 사리장엄구,
+museum: 국립대구박물관,
+period: 한국-신라,
+excavation: 경북 칠곡 송림사,
+note: 보물 325호
+}
+{
+image: daemr10,
+name: 이헌국 호성공신교서,
+museum: 국립대구박물관,
+period: 1604년,
+excavation: ,
+note: 보물 1617호
+}
+
+
+전주
+{
+image: jeomr1,
+name: 익산 왕궁리 오층석탑 사리장엄구,
+museum: 국립전주박물관,
+period: 한국-통일신라,
+excavation: 전북 익산,
+note: 국보 123호
+}
+{
+image: jeomr2,
+name: 전주이씨 고림군파 종중 문서 일괄,
+museum: 국립전주박물관,
+period: 한국-조선 연산군 8년(1502),
+excavation: ,
+note: 보물 718호
+}
+{
+image: jeomr3,
+name: 전 낙수정 동종,
+museum: 국립전주박물관,
+period: 한국-고려,
+excavation: ,
+note: 보물 1325호
+}
+{
+image: jeomr4,
+name: 설씨부인 권선문,
+museum: 국립전주박물관,
+period: 한국-조선,
+excavation: ,
+note: 보물 728호
+}
+{
+image: jeomr5,
+name: 전주부지도,
+museum: 국립전주박물관,
+period: 한국-조선,
+excavation: ,
+note: 전라북도 유형문화재 80호
+}
+{
+image: jeomr6,
+name: 이상길 초상,
+museum: 국립전주박물관,
+period: 한국-조선,
+excavation: ,
+note: 보물 792호
+}
+{
+image: jeomr7,
+name: 완주 갈동 출토 정문경 일괄,
+museum: 국립전주박물관,
+period: 한국-초기철기,
+excavation: 전북 완주,
+note: 보물 2034호
+}
+{
+image: jeomr8,
+name: 완주 갈동 출토 동검동과 거푸집 일괄,
+museum: 국립전주박물관,
+period: 한국-초기철기,
+excavation: 전북 완주,
+note: 보물 2033호
+}
+{
+image: jeomr9,
+name: 고창 봉덕리 1호분 출토 금동신발,
+museum: 국립전주박물관,
+period: 한국-백제,
+excavation: 전북 고창,
+note: 보물 2124호
+}
+{
+image: jeomr10,
+name: 남원양씨 종중 문서 일괄,
+museum: 국립전주박물관,
+period: 한국-고려 공민왕 4년(1355),
+excavation: ,
+note: 보물 718호
+}
+
+
+부여
+{
+image: buymr1,
+name: 백제 금동대향로,
+museum: 국립부여박물관,
+period: 한국-백제(6∼7세기),
+excavation: 충남 부여 능산리,
+note: 국보 287호
+}
+{
+image: buymr2,
+name: 부여 능산리사지 석조사리감,
+museum: 국립부여박물관,
+period: 한국-백제(567년),
+excavation: 충남 부여 능산리,
+note: 국보 288호
+}
+{
+image: buymr3,
+name: 부여 규암리 금동관음보살입상,
+museum: 국립부여박물관,
+period: 한국-삼국시대,
+excavation: 충남 부여 규암면,
+note: 국보 293호
+}
+{
+image: buymr4,
+name: 부여 석조,
+museum: 국립부여박물관,
+period: 한국-백제,
+excavation: ,
+note: 보물 194호
+}
+{
+image: buymr5,
+name: 당유인원기공비,
+museum: 국립부여박물관,
+period: 한국-삼국시대,
+excavation: 충남 부여,
+note: 보물 21호
+}
+{
+image: buymr6,
+name: 보광사 대보광선사비,
+museum: 국립부여박물관,
+period: 한국-고려,
+excavation: 충남 부여 보광사터,
+note: 보물 107호
+}
+{
+image: buymr7,
+name: 부여 사택지적비,
+museum: 국립부여박물관,
+period: 한국-백제,
+excavation: 충남 부여,
+note: 보물 1845호
+}
+{
+image: buymr8,
+name: 석조여래입상,
+museum: 국립부여박물관,
+period: 한국-고려,
+excavation: 충남 부여 천왕사터,
+note: 충청남도 문화재자료 106호
+}
+{
+image: buymr9,
+name: 동남리석탑,
+museum: 국립부여박물관,
+period: 한국-고려,
+excavation: 충남 부여,
+note: 충청남도 문화재자료 104호
+}
+{
+image: buymr10,
+name: 금동정지원명석가여래삼존입상,
+museum: 국립부여박물관,
+period: 한국-백제말기,
+excavation: ,
+note: 보물 195호
+}
+
+
+진주
+{
+image: jinmr1,
+name: 산청 범학리 삼층석탑,
+museum: 국립진주박물관,
+period: 한국-통일신라(9세기),
+excavation: ,
+note: 국보 105호
+}
+{
+image: jinmr2,
+name: 이제 개국공신교서,
+museum: 국립진주박물관,
+period: 한국-1392년(태조 1),
+excavation: ,
+note: 국보 324호
+}
+{
+image: jinmr3,
+name: 권응수장군 유물,
+museum: 국립진주박물관,
+period: 한국-조선 선조,
+excavation: ,
+note: 보물 668호
+}
+{
+image: jinmr4,
+name: 김광려 삼남매 화회문기,
+museum: 국립진주박물관,
+period: 한국-조선,
+excavation: ,
+note: 보물 1020호
+}
+{
+image: jinmr5,
+name: 도기 바퀴장식 뿔잔,
+museum: 국립진주박물관,
+period: 한국-삼국,
+excavation: ,
+note: 보물 637호
+}
+{
+image: jinmr6,
+name: 소상팔경도,
+museum: 국립진주박물관,
+period: 한국-조선,
+excavation: ,
+note: 보물 1864호
+}
+{
+image: jinmr7,
+name: 김시민 선무공신 교서,
+museum: 국립진주박물관,
+period: 한국-조선,
+excavation: ,
+note: 보물 1476호
+}
+{
+image: jinmr8,
+name: 정조어필 - 신제학정민시출안호남,
+museum: 국립진주박물관,
+period: 한국-조선 정조,
+excavation: ,
+note: 보물 1632-1호
+}
+{
+image: jinmr9,
+name: 중완구(1986-1),
+museum: 국립진주박물관,
+period: 한국-조선,
+excavation: 경남 하동,
+note: 보물 858호
+}
+{
+image: jinmr10,
+name: 현자총통(1986),
+museum: 국립진주박물관,
+period: 한국-조선-선조 29,
+excavation: 경남 거제,
+note: 보물 885호
+}
+
+
+김해
+{
+image: gimmr1,
+name: 부산 복천동 출토 금동관,
+museum: 국립김해박물관,
+period: 한국-삼국시대,
+excavation: 부산 복천동,
+note: 보물 1922호
+}
+{
+image: gimmr2,
+name: 부산 복천동 22호분 출토 청동칠두령,
+museum: 국립김해박물관,
+period: 한국-삼국시대-가야(4~5세기),
+excavation: 부산 복천동,
+note: 보물 2019호
+}
+{
+image: gimmr3,
+name: 부산 복천동 38호분 출토 철제갑옷 일괄,
+museum: 국립김해박물관,
+period: 한국-삼국시대-가야(4세기),
+excavation: 부산 복천동,
+note: 보물 2020호
+}
+{
+image: gimmr4,
+name: 뼈바늘, 뼈추,
+museum: 국립김해박물관,
+period: 한국-초기철기,
+excavation: 경남 김해,
+note: 
+}
+{
+image: gimmr5,
+name: 쇠뿔모양 손잡이 항아리,
+museum: 국립김해박물관,
+period: 한국-삼국시대-가야,
+excavation: 경남 함안,
+note: 
+}
+{
+image: gimmr6,
+name: 넓은 입 항아리,
+museum: 국립김해박물관,
+period: 한국-삼국시대-가야,
+excavation: 경남 김해,
+note: 
+}
+{
+image: gimmr7,
+name: 화로모양 그릇받침,
+museum: 국립김해박물관,
+period: 한국-삼국시대-가야,
+excavation: 경남 함안,
+note: 
+}
+{
+image: gimmr8,
+name: 청자 베개,
+museum: 국립김해박물관,
+period: 한국-광복이후,
+excavation: ,
+note: 
+}
+{
+image: gimmr9,
+name: 분청사기 사발,
+museum: 국립김해박물관,
+period: 한국-조선,
+excavation: 경남 김해,
+note: 
+}
+{
+image: gimmr10,
+name: 말 갑옷,
+museum: 국립김해박물관,
+period: 한국-삼국시대-가야,
+excavation: 경남 함안,
+note: 
+}
+
+
+제주
+{
+image: jejmr1,
+name: 최익현 초상,
+museum: 국립제주박물관,
+period: 1905년,
+excavation: ,
+note: 보물 1510호
+}
+{
+image: jejmr2,
+name: 이익태 지영록,
+museum: 국립제주박물관,
+period: 한국-조선,
+excavation: ,
+note: 보물 2002호
+}
+{
+image: jejmr3,
+name: 제주목사 이규원의 교지,
+museum: 국립제주박물관,
+period: 한국-조선,
+excavation: ,
+note: 
+}
+{
+image: jejmr4,
+name: 탐라지도병서,
+museum: 국립제주박물관,
+period: 한국-조선 1709년,
+excavation: ,
+note: 
+}
+{
+image: jejmr5,
+name: 굽 달린 접시,
+museum: 국립제주박물관,
+period: 한국-삼국시대,
+excavation: 제주 서귀포 화순리,
+note: 
+}
+{
+image: jejmr6,
+name: 허벅,
+museum: 국립제주박물관,
+period: 한국-조선,
+excavation: ,
+note: 
+}
+{
+image: jejmr7,
+name: 토신함,
+museum: 국립제주박물관,
+period: 한국-조선,
+excavation: ,
+note: 
+}
+{
+image: jejmr8,
+name: 표해록,
+museum: 국립제주박물관,
+period: 한국-조선,
+excavation: ,
+note: 
+}
+{
+image: jejmr9,
+name: 서양인이 그린 조선 남해안지도,
+museum: 국립제주박물관,
+period: 한국-조선,
+excavation: ,
+note: 
+}
+{
+image: jejmr10,
+name: 중창이 새겨진 기와,
+museum: 국립제주박물관,
+period: 한국-고려,
+excavation: 제주 서귀포 법화사 터,
+note: 
+}
+
+
+청주
+{
+image: chemr1,
+name: 계유명전씨아미타불비상,
+museum: 국립청주박물관,
+period: 한국-통일신라,
+excavation: 충남 연기군 비암사,
+note: 국보 106호
+}
+{
+image: chemr2,
+name: 기축명아미타불비상,
+museum: 국립청주박물관,
+period: 한국-통일신라,
+excavation: 충남 연기군 비암사,
+note: 보물 367호
+}
+{
+image: chemr3,
+name: 미륵보살반가사유비상,
+museum: 국립청주박물관,
+period: 한국-통일신라,
+excavation: 충남 연기군 비암사,
+note: 보물 368호
+}
+{
+image: chemr4,
+name: 청주 운천동 출토 동종,
+museum: 국립청주박물관,
+period: 한국-통일신라,
+excavation: 충북 청주 운천동,
+note: 보물 1167호
+}
+{
+image: chemr5,
+name: 신경행 청난공신교서 및 관련 문적,
+museum: 국립청주박물관,
+period: 1604년∼1812년,
+excavation: ,
+note: 보물 1380호
+}
+{
+image: chemr6,
+name: 청주 명암동 출토 ‘단산오옥’명 고려 먹,
+museum: 국립청주박물관,
+period: 한국-고려,
+excavation: 충북 청주 명암동,
+note: 보물 1880호
+}
+{
+image: chemr7,
+name: 최석정 초상 및 함,
+museum: 국립청주박물관,
+period: 한국-조선후기(18세기 초),
+excavation: ,
+note: 보물 1936호
+}
+{
+image: chemr8,
+name: 숙명신한첩,
+museum: 국립청주박물관,
+period: 한국-조선,
+excavation: ,
+note: 보물 1947호
+}
+{
+image: chemr9,
+name: 청주 운천동 신라 사적비,
+museum: 국립청주박물관,
+period: 한국-통일신라,
+excavation: 충북 청주 운천동,
+note: 충청북도유형문화재134호
+}
+{
+image: chemr10,
+name: 보살 얼굴,
+museum: 국립청주박물관,
+period: 한국-고려,
+excavation: 충북 충주 숭선사 터,
+note: 
+}
+
+
+춘천
+{
+image: chumr1,
+name: 강릉 한송사지 석조보살좌상,
+museum: 국립춘천박물관,
+period: 한국-고려,
+excavation: 강원 강릉 한송사 터,
+note: 국보 124호
+}
+{
+image: chumr2,
+name: 유숙 초상 및 관련 교지,
+museum: 국립춘천박물관,
+period: 한국-조선,
+excavation: ,
+note: 보물 1479호
+}
+{
+image: chumr3,
+name: 동제 염거화상 탑지,
+museum: 국립춘천박물관,
+period: 한국-통일신라,
+excavation: ,
+note: 보물 1871호
+}
+{
+image: chumr4,
+name: 전 회양 장연리 금동관음보살좌상,
+museum: 국립춘천박물관,
+period: 한국-고려말 조선초,
+excavation: 금강산,
+note: 보물 1872호
+}
+{
+image: chumr5,
+name: 원주 학성동 철조약사여래좌상,
+museum: 국립춘천박물관,
+period: 한국-신라말 고려초,
+excavation: 강원 원주 학성동,
+note: 보물 1873호
+}
+{
+image: chumr6,
+name: 청풍부원군김우명상여,
+museum: 국립춘천박물관,
+period: 한국-조선,
+excavation: ,
+note: 국가민속문화재 120호
+}
+{
+image: chumr7,
+name: 청동 바리,
+museum: 국립춘천박물관,
+period: 한국-조선,
+excavation: 강원 정선,
+note: 
+}
+{
+image: chumr8,
+name: 금은동불입상,
+museum: 국립춘천박물관,
+period: 한국-통일신라,
+excavation: 강원 양양,
+note: 
+}
+{
+image: chumr9,
+name: 금강산 민화병풍,
+museum: 국립춘천박물관,
+period: 한국-조선,
+excavation: ,
+note: 
+}
+{
+image: chumr10,
+name: 만인산,
+museum: 국립춘천박물관,
+period: 한국-조선,
+excavation: ,
+note: 
+}
+
+
+나주
+{
+image: najmr1,
+name: 나주 신촌리 금동관,
+museum: 국립나주박물관,
+period: 한국-백제,
+excavation: 전남 나주 신촌리,
+note: 국보 143호
+}
+{
+image: najmr2,
+name: 최희량 임란 관련 고문서,
+museum: 국립나주박물관,
+period: 한국-조선-선조 31,
+excavation: ,
+note: 보물 660호
+}
+{
+image: najmr3,
+name: 총마계회도,
+museum: 국립나주박물관,
+period: 1591년,
+excavation: ,
+note: 보물 1772호
+}
+{
+image: najmr4,
+name: 상서로운동물모양토기,
+museum: 국립나주박물관,
+period: 한국-백제,
+excavation: 전남 해남,
+note: 
+}
+{
+image: najmr5,
+name: 굽다리바리,
+museum: 국립나주박물관,
+period: 한국-백제,
+excavation: 전남 해남,
+note: 
+}
+{
+image: najmr6,
+name: 굽다리보시기,
+museum: 국립나주박물관,
+period: 한국-통일신라,
+excavation: 전남 무안,
+note: 
+}
+{
+image: najmr7,
+name: 청자기름병,
+museum: 국립나주박물관,
+period: 한국-고려,
+excavation: 전남 나주,
+note: 
+}
+{
+image: najmr8,
+name: 분청인화국화무늬잔,
+museum: 국립나주박물관,
+period: 한국-조선,
+excavation: 전남 나주,
+note: 
+}
+{
+image: najmr9,
+name: 간돌검,
+museum: 국립나주박물관,
+period: 한국-청동기,
+excavation: 전남 나주,
+note: 
+}
+{
+image: najmr10,
+name: 대롱옥,
+museum: 국립나주박물관,
+period: 한국-삼국시대,
+excavation: 전남 신안,
+note: 
+}
+
+
+
+익산
+{
+image: iksmr1,
+name: 익산 미륵사지 금동향로,
+museum: 국립익산박물관,
+period: 한국-통일신라,
+excavation: 전남 익산 미륵사지,
+note: 보물 1753호
+}
+{
+image: iksmr2,
+name: 익산 미륵사지 서탑 출토 사리장엄구,
+museum: 국립익산박물관,
+period: 한국-백제,
+excavation: 전남 익산 미륵사지,
+note: 보물 1991호
+}
+{
+image: iksmr3,
+name: 청동제보살손,
+museum: 국립익산박물관,
+period: 한국-고려,
+excavation: 전남 익산 미륵사지,
+note: 
+}
+{
+image: iksmr4,
+name: 청동제 거울,
+museum: 국립익산박물관,
+period: 한국-고려,
+excavation: 전남 익산 미륵사지,
+note: 
+}
+{
+image: iksmr5,
+name: 녹유 서까래기와,
+museum: 국립익산박물관,
+period: 한국-백제,
+excavation: 전남 익산 미륵사지,
+note: 
+}
+{
+image: iksmr6,
+name: 철제보살머리,
+museum: 국립익산박물관,
+period: 한국-고려,
+excavation: 전남 익산,
+note: 
+}
+{
+image: iksmr7,
+name: 백자 꽃 모양 접시,
+museum: 국립익산박물관,
+period: 한국-고려,
+excavation: 전남 익산 미륵사지,
+note: 
+}
+{
+image: iksmr8,
+name: 금동풍탁,
+museum: 국립익산박물관,
+period: 한국-백제,
+excavation: 전남 익산 미륵사지,
+note: 
+}
+{
+image: iksmr9,
+name: 치미,
+museum: 국립익산박물관,
+period: 한국-백제,
+excavation: 전남 익산 미륵사지,
+note: 
+}
+{
+image: iksmr10,
+name: 바둑돌,
+museum: 국립익산박물관,
+period: 한국-백제,
+excavation: 전남 익산 미륵사지,
+note: 
+}
