@@ -4,299 +4,349 @@
 name: 고려청자 에어팟 케이스,
 image: goods1,
 price: 18000,
-category: IT소품
+category: IT소품,
+image: https://www.museumshop.or.kr/center/files/good/202103121026420326100.jpg
 }
 {
 name: 고려청자 휴대폰 케이스,
 image: goods2,
 price: 19000,
 category: IT소품
+image: https://www.museumshop.or.kr/center/files/good/202103191706470188100.jpg
 }
 {
 name: 호랑이 나전칠기 에어팟프로 케이스,
 image: goods3,
 price: 19000,
 category: IT소품
+image: https://www.museumshop.or.kr/center/files/good/202203181811310881100.jpg
 }
 {
 name: 백자청화접시 자개 스마트톡,
 image: goods4,
 price: 17000,
 category: IT소품
+image: https://www.museumshop.or.kr/center/files/good/202108111444220270100.jpg
 }
 {
 name: 3단 자동우산 신익성 금강산도,
 image: goods5,
 price: 42000,
 category: 우산/양산
+image: https://www.museumshop.or.kr/center/files/good/3%EB%8B%A8-%EC%9E%90%EB%8F%99%EC%9A%B0%EC%82%B0-%EC%8B%A0%EC%9D%B5%EC%84%B1-%EA%B8%88%EA%B0%95%EC%82%B0%EB%8F%84440.jpg
 }
 {
 name: 떡살무늬 천 가방(에코백),
 image: goods6,
 price: 28000,
 category: 가방/지갑
+image: https://www.museumshop.or.kr/center/files/good/202208021432380655100.jpg
 }
 {
 name: 별헤는 밤 카드지갑,
 image: goods7,
 price: 12000,
 category: 가방/지갑
+image: https://www.museumshop.or.kr/center/files/good/%EB%B3%84-%EC%B9%B4%EB%93%9C%EC%A7%80%EA%B0%91-%EC%82%AC%EC%A7%84-%EC%83%88%EA%B2%83440_1.jpg
 }
 {
 name: 고려청자 자카드 아이패드 파우치(약12인치),
 image: goods8,
 price: 59000,
 category: 가방/지갑
+image: https://www.museumshop.or.kr/center/files/good/202108101514570844100.jpg
 }
 {
-name: 전통부채(세검정도),
+name: 전통부채(의궤),
 image: goods9,
 price: 11000,
 category: 부채
+image: https://www.museumshop.or.kr/center/files/good/202204051747270169100.jpg
 }
 {
 name: [조선시대 실경산수화] 손수건,
 image: goods10,
 price: 15000,
 category: 스카프/손수건
+image: https://www.museumshop.or.kr/center/files/good/201908021405100066100.jpg
 }
 {
 name: 매쉬 스카프,
 image: goods11,
 price: 69000,
 category: 스카프/손수건
+image: https://www.museumshop.or.kr/center/files/good/202203071915080635100.jpg
 }
 {
 name: 왕과왕비수저세트,
 image: goods12,
 price: 27000,
 category: 주방/식기류
+image: https://www.museumshop.or.kr/center/files/good/201906270925110395100.jpg
 }
 {
 name: 별헤는 밤 유리컵,
 image: goods13,
 price: 9000,
 category: 주방/식기류
+image: https://www.museumshop.or.kr/center/files/good/%EB%B3%84-%EC%9C%A0%EB%A6%AC%EC%BB%B5-%ED%9D%91440_6.jpg
 }
 {
 name: 전통문양 찻잔세트,
 image: goods14,
 price: 68000,
 category: 주방/식기류
+image: https://www.museumshop.or.kr/center/files/good/%EC%A0%84%ED%86%B5%EB%AC%B8%EC%96%91-%EC%B0%BB%EC%9E%94%EC%84%B8%ED%8A%B8440_4.jpg
 }
 {
 name: 청자상감운학문 접시,
 image: goods15,
 price: 140000,
 category: 주방/식기류
+image: https://www.museumshop.or.kr/center/files/good/%EC%B2%AD%EC%9E%90%EC%83%81%EA%B0%90%EC%9A%B4%ED%95%99%EB%AC%B8%EC%A0%91%EC%8B%9C440_1[2].jpg
 }
 {
 name: 장이 자개 텀블러 (대나무),
 image: goods16,
 price: 50000,
 category: 주방/식기류
+image: https://www.museumshop.or.kr/center/files/good/202101261027260115100.jpg
 }
 {
 name: 도자 코스터,
 image: goods17,
 price: 6000,
 category: 주방/식기류
+image: https://www.museumshop.or.kr/center/files/good/202108041603350950100.jpg
 }
 {
 name: 신라의 미소 소반 무선충전기,
 image: goods18,
 price: 45000,
 category: 인테리어소품
+image: https://www.museumshop.or.kr/center/files/good/202207291105220531100.jpg
 }
 {
 name: 반가사유상 미니어처(소),
 image: goods19,
 price: 45000,
 category: 인테리어소품
+image: https://www.museumshop.or.kr/center/files/good/202012100925340340100.jpg
 }
 {
 name: 청자투각 칠보 향로,
 image: goods20,
 price: 140000,
 category: 인테리어소품
+image: https://www.museumshop.or.kr/center/files/good/202108201526420702100.jpg
 }
 {
 name: 달항아리 쿠션,
 image: goods21,
 price: 98000,
 category: 인테리어소품
+image: https://www.museumshop.or.kr/center/files/good/202207181506200107100.jpg
 }
 {
 name: 안경케이스, 클리너 세트,
 image: goods22,
 price: 9000,
 category: 기타
+image: https://www.museumshop.or.kr/center/files/good/202109021625380750100.jpg
 }
 {
 name: 자개 목걸이,
 image: goods23,
 price: 68000,
 category: 액세서리
+image: https://www.museumshop.or.kr/center/files/good/202007301113060343100.jpg
 }
 {
 name: 나비 귀걸이,
 image: goods24,
 price: 65000,
 category: 액세서리
+image: https://www.museumshop.or.kr/center/files/good/202102081502150072100.jpg
 }
 {
 name: 화문 팔찌,
 image: goods25,
 price: 68000,
 category: 액세서리
+image: https://www.museumshop.or.kr/center/files/good/202102091032110514100.jpg
 }
 {
 name: 초충도 실크 양장수첩,
 image: goods26,
 price: 15000,
 category: 문구/사무
+image: https://www.museumshop.or.kr/center/files/good/202205231353020574100.jpg
 }
 {
 name: 밀레신라유물 수첩,
 image: goods27,
 price: 4500,
 category: 문구/사무
+image: https://www.museumshop.or.kr/center/files/good/201905241833180211100.jpg
 }
 {
 name: 스프링 수첩 (훈민정음),
 image: goods28,
 price: 2000,
 category: 문구/사무
+image: https://www.museumshop.or.kr/center/files/good/%ED%9B%88%EB%AF%BC%EC%A0%95%EC%9D%8C-%EC%8A%A4%ED%94%84%EB%A7%81%EC%88%98%EC%B2%A9440_1[2].jpg
 }
 {
 name: 나전종이필통,
 image: goods29,
 price: 7000,
 category: 문구/사무
+image: https://www.museumshop.or.kr/center/files/good/202205271736090608100.jpg
 }
 {
 name: 민화 액자형 엽서카드,
 image: goods30,
 price: 3000,
 category: 문구/사무
+image: https://www.museumshop.or.kr/center/files/good/202206171757150488100.jpg
 }
 {
 name: 금동반가사유상 봉투세트,
 image: goods31,
 price: 10000,
 category: 문구/사무
+image: https://www.museumshop.or.kr/center/files/good/202207281639020958100.jpg
 }
 {
 name: 의궤 금속명함집,
 image: goods32,
 price: 20000,
 category: 문구/사무
+image: https://www.museumshop.or.kr/center/files/good/%EC%9D%98%EA%B6%A4%EB%AA%85%ED%95%A8%EC%A7%91440.jpg
 }
 {
 name: 나전 자석,
 image: goods33,
 price: 6500,
 category: 문구/사무
+image: https://www.museumshop.or.kr/center/files/good/202206031015360280100.jpg
 }
 {
 name: 백자 자석,
 image: goods34,
 price: 15000,
 category: 문구/사무
+image: https://www.museumshop.or.kr/center/files/good/202108041823150599100.jpg
 }
 {
 name: 의궤 자 (30cm),
 image: goods35,
 price: 2000,
 category: 문구/사무
+image: https://www.museumshop.or.kr/center/files/good/202001060951340747100.jpg
 }
 {
 name: 미륵사지 석탑 책갈피,
 image: goods36,
 price: 3000,
 category: 문구/사무
+image: https://www.museumshop.or.kr/center/files/good/201911181035280277100.jpg
 }
 {
 name: 민화 퍼즐&엽서,
 image: goods37,
 price: 4000,
 category: 문구/사무
+image: https://www.museumshop.or.kr/center/files/good/202012100923230143100.jpg
 }
 {
 name: 거북선 만들기,
 image: goods38,
 price: 10000,
 category: 어린이
+image: https://www.museumshop.or.kr/center/files/good/%EA%B1%B0%EB%B6%81%EC%84%A0440[2].jpg
 }
 {
 name: 짱용이 바디필로우,
 image: goods39,
 price: 35000,
 category: 어린이
+image: https://www.museumshop.or.kr/center/files/good/202005111601190187100.jpg
 }
 {
 name: 석굴암본존불상 유물 재현품,
 image: goods40,
 price: 22000,
 category: 공예품
+image: https://www.museumshop.or.kr/center/files/good/202206221756500198100.jpg
 }
 {
 name: [호랑이 그림전]아트프린트,
 image: goods41,
 price: 15000,
 category: 공예품
+image: https://www.museumshop.or.kr/center/files/good/202112281830210476100.jpg
 }
 {
 name: 구름, 학 무늬 상감청자 주기세트,
 image: goods42,
 price: 100000,
 category: 공예품
+image: https://www.museumshop.or.kr/center/files/good/202112101556230937100.jpg
 }
 {
 name: 청자연화문탁잔계영배,
 image: goods43,
 price: 90000,
 category: 공예품
+image: https://www.museumshop.or.kr/center/files/good/202009021016510744100.jpg
 }
 {
 name: 여래입상 유물 재현품,
 image: goods44,
 price: 250000,
 category: 공예품
+image: https://www.museumshop.or.kr/center/files/good/201901171054560716100.jpg
 }
 {
 name: 보광사 삼층탑 유물 재현품,
 image: goods45,
 price: 250000,
 category: 공예품
+image: https://www.museumshop.or.kr/center/files/good/201901171601100288100.jpg
 }
 {
 name: 백자 유물재현품 세트,
 image: goods46,
 price: 135000,
 category: 공예품
+image: https://www.museumshop.or.kr/center/files/good/202103101313410282100.jpg
 }
 {
 name: 황남대총 금관,
 image: goods47,
 price: 240000,
 category: 공예품
+image: https://www.museumshop.or.kr/center/files/good/%ED%99%A9%EB%82%A8%EB%8C%80%EC%B4%9D-%EA%B8%88%EA%B4%80205[2].jpg
 }
 {
 name: 미니 훈민정음_해례본,
 image: goods48,
 price: 13500,
 category: 공예품
+image: https://www.museumshop.or.kr/center/files/good/%ED%9B%88%EB%AF%BC%EC%A0%95%EC%9D%8C(%ED%95%B4%EB%A1%80%EB%B3%B8%EC%9D%B8%EB%93%AF)440_1.jpg
 }
 {
 name: 한글 스카프,
 image: goods49,
 price: 19900,
 category: 스카프/손수건
+image: https://www.museumshop.or.kr/center/files/good/201911151854460415100.jpg
 }
 {
 name: 반가사유상 패션 마스크 세트,
 image: goods50,
 price: 45000,
 category: 기타
+image: https://www.museumshop.or.kr/center/files/good/202111101728150451100.jpg
 }
