@@ -1,10 +1,17 @@
 <script>
 
+<<<<<<< Updated upstream
 //import Exhibitiontotal from "./lib/Exhibitiontotal.svelte";
 
 import Tesr from "./lib/relic/tesr.svelte";
 
   // import Relic from "./lib/relic/Relic.svelte";
+=======
+import Eventpage from "./lib/Eventpage.svelte";
+import Exhibitiontotal from "./lib/Exhibitiontotal.svelte";
+import Upsidposter from "./lib/mainpage/Upsidposter.svelte";
+
+>>>>>>> Stashed changes
 
 
 
@@ -21,8 +28,7 @@ import Tesr from "./lib/relic/tesr.svelte";
           <ul class="navbar-nav mr-auto">
             <li class="nav-item, nav-link">박물관 정보</li>
             <li class="nav-item, nav-link">국내 유물</li>
-            <li class="nav-item, nav-link" >상설 전시회</li>
-            <li class="nav-item, nav-link">특별 전시회</li>
+            <li class="nav-item, nav-link">전시회</li>
             <li class="nav-item, nav-link">EVENT</li>
             <li class="nav-item, nav-link">게시판</li>
             <li class="nav-item, nav-link">Museum Shop</li>
@@ -41,8 +47,11 @@ import Tesr from "./lib/relic/tesr.svelte";
 <div id="test">
 
 </div>
+<<<<<<< Updated upstream
 <!-- <Exhibitiontotal /> -->
 <!-- <Relic/> -->
 <Tesr/>
+=======
+>>>>>>> Stashed changes
 
 

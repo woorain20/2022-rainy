@@ -1,5 +1,7 @@
 <script>
 import { onMount } from "svelte";
+import { callid } from "./store";
+
 
 let events=[]
 let inknum
@@ -12,18 +14,23 @@ onMount(async function(){
     const vev= await rsq.json()
     events=vev._embedded.event
 })
+function addno(ibs){
+    inknum=ibs
+    console.log(inknum)
+}
 
+$:callid.update(t=>inknum) 
 </script>
 
-<h1>skdhskdksskdhsk</h1>
+<h1>Museum EVENT!!!</h1>
 
 <div class="grid">
     {#each events.filter(t=>t.done) as event}
         <label class="square" >
-                <button id="d" on:click={()=>{inknum=event.id}}>
-                <img src="./src/lib/exhibitionposter/{event.banner}.jpg" alt = "사진오류" />
+                <button id="d" on:click={()=>{addno(event.no)}}>
+                <img src="./src/lib/eventbanner/{event.banner}.jpg" alt = "사진오류" />
                 <br /><br />
-                <h4>{event.eventname}</h4>
+                <h4>{event.eventname} </h4>
                 <p>{event.startday}~{event.endday}</p>
             </button>
         </label>
@@ -36,7 +43,7 @@ onMount(async function(){
     display: grid;
 	flex: 1;
 	grid-template-columns: repeat(3, 4fr);
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 	grid-gap: 1vmin;
     width:90%;
     margin: 0px auto;

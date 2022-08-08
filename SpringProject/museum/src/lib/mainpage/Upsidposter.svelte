@@ -66,21 +66,23 @@ if이요해서 만들기
 
 <ul id="board">
     {#each boards as board}
-        <li ><a href="https://www.museum.go.kr/site/main/archive/united/18496">{board.title}</a>     <div style="float:right">{board.date}</div></li> 
+        <li ><a href="https://www.museum.go.kr/site/main/archive/united/18496">{board.title}</a>    
+         <div style="float:right">{board.date}</div></li> 
     {/each}
 </ul>
 
 <h3>행사</h3>
 
 {#each events as event}
-<label>
-    <button class="eventposter">
-        <input type= radio ><img src = "./src/lib/eventbanner/{event.banner}.jpg" alt="업슴">
-    </button>
-
-</label><br/>
-<button>{event.eventname}</button>
-<p>{event.startday} ~ {event.endday}</p>
+<div id="eventbanner">
+    <label>
+        <button class="eventposter">
+            <img src = "./src/lib/eventbanner/{event.banner}.jpg" alt="업슴">
+        </button>
+    </label><br />
+    <button>{event.eventname}</button>
+    <p>{event.startday} ~ {event.endday}</p>
+</div>
 {/each}
 
 <style>
@@ -94,6 +96,9 @@ if이요해서 만들기
 }
 #board{
     border: 1px solid black;
+}
+#eventbanner{
+    float: left;
 }
 .eventposter>img{
     width: 200px;
