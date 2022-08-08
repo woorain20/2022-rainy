@@ -51,7 +51,7 @@ note: 국보 81호
 }
 {
 image: cenmr7,
-name: 감산사 석조 석조아미타여래입상
+name: 감산사 석조 석조아미타여래입상,
 museum: 국립중앙박물관,
 period: 통일신라 720년,
 excavation: 경북 경주,

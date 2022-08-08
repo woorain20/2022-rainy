@@ -1,6 +1,10 @@
 <script>
 
-import Exhibitiontotal from "./lib/Exhibitiontotal.svelte";
+//import Exhibitiontotal from "./lib/Exhibitiontotal.svelte";
+
+import Tesr from "./lib/relic/tesr.svelte";
+
+  // import Relic from "./lib/relic/Relic.svelte";
 
 
 
@@ -37,6 +41,8 @@ import Exhibitiontotal from "./lib/Exhibitiontotal.svelte";
 <div id="test">
 
 </div>
-<Exhibitiontotal />
+<!-- <Exhibitiontotal /> -->
+<!-- <Relic/> -->
+<Tesr/>
 
 
