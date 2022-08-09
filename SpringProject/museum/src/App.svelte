@@ -1,8 +1,8 @@
 <script>
-  import Tesr from "./lib/relic/tesr.svelte";
-  
-  
-  
+import Goods from "./lib/goods/Goods.svelte";
+
+
+
 </script>
 
   <!-- ======= Top Bar ======= -->
@@ -27,12 +27,8 @@
 
       <div class="logo">
         <h1><a href="index.html">Korea Muesum</a></h1>
-<<<<<<< Updated upstream
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
-=======
->>>>>>> Stashed changes
+
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -51,17 +47,8 @@
     </div>
   </header><!-- End Header -->
 
+<Goods/>
 
-<!-- <Upsidposter /> -->
-
-<<<<<<< Updated upstream
-=======
-
-<!-- <Exhibitiontotal /> -->
-<!-- <Relic/> -->
-<Tesr/>
-
->>>>>>> Stashed changes
 <style>
 
 
