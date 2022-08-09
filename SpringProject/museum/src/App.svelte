@@ -47,7 +47,6 @@ import Goods from "./lib/goods/Goods.svelte";
     </div>
   </header><!-- End Header -->
 
-<Goods/>
 
 <style>
 
