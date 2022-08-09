@@ -1,6 +1,5 @@
 <script>
     import { onMount } from "svelte";
-import { each } from "svelte/internal";
 
     const relic="http://192.168.0.51:8080/relic/?page=0&size=148"
 
@@ -12,6 +11,8 @@ import { each } from "svelte/internal";
         relicinfo=data._embedded.relic
         console.log(relicinfo)
     })
+
+    let text=""
 
     let rel = 0
 	let muserel = []
@@ -38,9 +39,13 @@ import { each } from "svelte/internal";
 		return `${muserel.slice(0, -1).join(', ')} and ${muserel[muserel.length - 1]}`
 	}
 
-    let gukbo, bomul, gita=false
+    let option, gukbo, bomul, gita=false
+    
+    function optopen(){
+        option=!option
+    }
 
-    function te(){
+    function reset(){
         muserel=null
         gukbo=bomul=gita=false
     }
@@ -51,38 +56,283 @@ import { each } from "svelte/internal";
         <h1>소장품 찾기</h1>
     </div>
     <div id="search_input">
-        <input type="text" autocomplete="off" placeholder="소장품 찾기">
-        <input type="submit" value="검색">
+        <input type="text" autocomplete="off" placeholder="유물명" bind:value="{text}">
     </div>
     <div id="option">
-        <div id="title_option">
-            <h4>상세 검색</h4>
+        <button on:click="{optopen}">상세 검색</button>
+        <div id="detail">
+            {#if option}
+            <div id="museum_option">  
+                <select bind:value={muserel}>
+                    {#each muse as reli}
+                    <option value={reli}>
+                        {reli}
+                    </option>
+                    {/each}
+                </select>
+            </div>
+            <div id="note_option">
+                <label>
+                    <input type="checkbox" bind:checked="{gukbo}">국보
+                </label>
+                <label>
+                    <input type="checkbox" bind:checked="{bomul}">보물
+                </label>
+                <label>
+                    <input type="checkbox" bind:checked="{gita}">기타
+                </label>
+            </div>
+            <div id="reset_bt">
+            <button on:click="{reset}">reset</button>
+            </div>
+            {/if}
         </div>
-        <div id="museum_option">  
-            <select bind:value={muserel}>
-                {#each muse as reli}
-                <option value={reli}>
-                    {reli}
-                </option>
-                {/each}
-            </select>
-        </div>
-        <div id="note_option">
-            <label>
-                <input type="checkbox" bind:checked="{gukbo}">국보
-            </label>
-            <label>
-                <input type="checkbox" bind:checked="{bomul}">보물
-            </label>
-            <label>
-                <input type="checkbox" bind:checked="{gita}">기타
-            </label>
-        </div>
-        <button on:click="{te}">reset</button>
     </div>
     <div id="result">
         {#each relicinfo as info}
-            {#if muserel==info.museum}
+            {#if text}
+                {#if text==info.name.slice(0,1)}
+                    <div id="content">
+                        <div id="img">
+                            <img src="./src/lib/relic/relicimg/{info.image}.jpg" alt="유물">
+                        </div>
+                        <div id="text">
+                            <table>
+                                <tr>
+                                    <td class="tda" colspan="2">{info.name}</td>
+                                </tr>
+                                <tr>
+                                    <td>시기</td>
+                                    <td class="tdb">{info.period}</td>
+                                </tr>
+                                <tr>
+                                    <td>등재</td>
+                                    <td class="tdb">{info.note}</td>
+                                </tr>
+                                <tr>
+                                    <td>출토지</td>
+                                    <td class="tdb">{info.excavation}</td>
+                                </tr>
+                                <tr>
+                                    <td>소장박물관</td>
+                                    <td class="tdb">{info.museum}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                {/if}
+                {#if text==info.name.slice(0,2)}
+                    <div id="content">
+                        <div id="img">
+                            <img src="./src/lib/relic/relicimg/{info.image}.jpg" alt="유물">
+                        </div>
+                        <div id="text">
+                            <table>
+                                <tr>
+                                    <td class="tda" colspan="2">{info.name}</td>
+                                </tr>
+                                <tr>
+                                    <td>시기</td>
+                                    <td class="tdb">{info.period}</td>
+                                </tr>
+                                <tr>
+                                    <td>등재</td>
+                                    <td class="tdb">{info.note}</td>
+                                </tr>
+                                <tr>
+                                    <td>출토지</td>
+                                    <td class="tdb">{info.excavation}</td>
+                                </tr>
+                                <tr>
+                                    <td>소장박물관</td>
+                                    <td class="tdb">{info.museum}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                {/if}
+                {#if text==info.name.slice(0,3)}
+                    <div id="content">
+                        <div id="img">
+                            <img src="./src/lib/relic/relicimg/{info.image}.jpg" alt="유물">
+                        </div>
+                        <div id="text">
+                            <table>
+                                <tr>
+                                    <td class="tda" colspan="2">{info.name}</td>
+                                </tr>
+                                <tr>
+                                    <td>시기</td>
+                                    <td class="tdb">{info.period}</td>
+                                </tr>
+                                <tr>
+                                    <td>등재</td>
+                                    <td class="tdb">{info.note}</td>
+                                </tr>
+                                <tr>
+                                    <td>출토지</td>
+                                    <td class="tdb">{info.excavation}</td>
+                                </tr>
+                                <tr>
+                                    <td>소장박물관</td>
+                                    <td class="tdb">{info.museum}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                {/if}
+                {#if text==info.name.slice(0,4)}
+                    <div id="content">
+                        <div id="img">
+                            <img src="./src/lib/relic/relicimg/{info.image}.jpg" alt="유물">
+                        </div>
+                        <div id="text">
+                            <table>
+                                <tr>
+                                    <td class="tda" colspan="2">{info.name}</td>
+                                </tr>
+                                <tr>
+                                    <td>시기</td>
+                                    <td class="tdb">{info.period}</td>
+                                </tr>
+                                <tr>
+                                    <td>등재</td>
+                                    <td class="tdb">{info.note}</td>
+                                </tr>
+                                <tr>
+                                    <td>출토지</td>
+                                    <td class="tdb">{info.excavation}</td>
+                                </tr>
+                                <tr>
+                                    <td>소장박물관</td>
+                                    <td class="tdb">{info.museum}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                {/if}
+                {#if text==info.name.slice(0,5)}
+                    <div id="content">
+                        <div id="img">
+                            <img src="./src/lib/relic/relicimg/{info.image}.jpg" alt="유물">
+                        </div>
+                        <div id="text">
+                            <table>
+                                <tr>
+                                    <td class="tda" colspan="2">{info.name}</td>
+                                </tr>
+                                <tr>
+                                    <td>시기</td>
+                                    <td class="tdb">{info.period}</td>
+                                </tr>
+                                <tr>
+                                    <td>등재</td>
+                                    <td class="tdb">{info.note}</td>
+                                </tr>
+                                <tr>
+                                    <td>출토지</td>
+                                    <td class="tdb">{info.excavation}</td>
+                                </tr>
+                                <tr>
+                                    <td>소장박물관</td>
+                                    <td class="tdb">{info.museum}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                {/if}
+                {#if text==info.name.slice(0,6)}
+                    <div id="content">
+                        <div id="img">
+                            <img src="./src/lib/relic/relicimg/{info.image}.jpg" alt="유물">
+                        </div>
+                        <div id="text">
+                            <table>
+                                <tr>
+                                    <td class="tda" colspan="2">{info.name}</td>
+                                </tr>
+                                <tr>
+                                    <td>시기</td>
+                                    <td class="tdb">{info.period}</td>
+                                </tr>
+                                <tr>
+                                    <td>등재</td>
+                                    <td class="tdb">{info.note}</td>
+                                </tr>
+                                <tr>
+                                    <td>출토지</td>
+                                    <td class="tdb">{info.excavation}</td>
+                                </tr>
+                                <tr>
+                                    <td>소장박물관</td>
+                                    <td class="tdb">{info.museum}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                {/if}
+                {#if text==info.name.slice(0,7)}
+                    <div id="content">
+                        <div id="img">
+                            <img src="./src/lib/relic/relicimg/{info.image}.jpg" alt="유물">
+                        </div>
+                        <div id="text">
+                            <table>
+                                <tr>
+                                    <td class="tda" colspan="2">{info.name}</td>
+                                </tr>
+                                <tr>
+                                    <td>시기</td>
+                                    <td class="tdb">{info.period}</td>
+                                </tr>
+                                <tr>
+                                    <td>등재</td>
+                                    <td class="tdb">{info.note}</td>
+                                </tr>
+                                <tr>
+                                    <td>출토지</td>
+                                    <td class="tdb">{info.excavation}</td>
+                                </tr>
+                                <tr>
+                                    <td>소장박물관</td>
+                                    <td class="tdb">{info.museum}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                {/if}
+                {#if text==info.name}
+                    <div id="content">
+                        <div id="img">
+                            <img src="./src/lib/relic/relicimg/{info.image}.jpg" alt="유물">
+                        </div>
+                        <div id="text">
+                            <table>
+                                <tr>
+                                    <td class="tda" colspan="2">{info.name}</td>
+                                </tr>
+                                <tr>
+                                    <td>시기</td>
+                                    <td class="tdb">{info.period}</td>
+                                </tr>
+                                <tr>
+                                    <td>등재</td>
+                                    <td class="tdb">{info.note}</td>
+                                </tr>
+                                <tr>
+                                    <td>출토지</td>
+                                    <td class="tdb">{info.excavation}</td>
+                                </tr>
+                                <tr>
+                                    <td>소장박물관</td>
+                                    <td class="tdb">{info.museum}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                {/if}
+
+            {:else if muserel==info.museum}
                 <div id="content">
                     <div id="img">
                         <img src="./src/lib/relic/relicimg/{info.image}.jpg" alt="유물">
@@ -90,19 +340,23 @@ import { each } from "svelte/internal";
                     <div id="text">
                         <table>
                             <tr>
-                                <td id="tda">{info.name}</td>
+                                <td class="tda" colspan="2">{info.name}</td>
                             </tr>
                             <tr>
-                                <td>시기: {info.period}</td>
+                                <td>시기</td>
+                                <td class="tdb">{info.period}</td>
                             </tr>
                             <tr>
-                                <td>등재: {info.note}</td>
+                                <td>등재</td>
+                                <td class="tdb">{info.note}</td>
                             </tr>
                             <tr>
-                                <td>출토지: {info.excavation}</td>
+                                <td>출토지</td>
+                                <td class="tdb">{info.excavation}</td>
                             </tr>
                             <tr>
-                                <td>소장박물관: {info.museum}</td>
+                                <td>소장박물관</td>
+                                <td class="tdb">{info.museum}</td>
                             </tr>
                         </table>
                     </div>
@@ -117,19 +371,23 @@ import { each } from "svelte/internal";
                         <div id="text">
                             <table>
                                 <tr>
-                                    <td id="tda">{info.name}</td>
+                                    <td class="tda" colspan="2">{info.name}</td>
                                 </tr>
                                 <tr>
-                                    <td>시기: {info.period}</td>
+                                    <td>시기</td>
+                                    <td class="tdb">{info.period}</td>
                                 </tr>
                                 <tr>
-                                    <td>등재: {info.note}</td>
+                                    <td>등재</td>
+                                    <td class="tdb">{info.note}</td>
                                 </tr>
                                 <tr>
-                                    <td>출토지: {info.excavation}</td>
+                                    <td>출토지</td>
+                                    <td class="tdb">{info.excavation}</td>
                                 </tr>
                                 <tr>
-                                    <td>소장박물관: {info.museum}</td>
+                                    <td>소장박물관</td>
+                                    <td class="tdb">{info.museum}</td>
                                 </tr>
                             </table>
                         </div>
@@ -144,19 +402,23 @@ import { each } from "svelte/internal";
                         <div id="text">
                             <table>
                                 <tr>
-                                    <td id="tda">{info.name}</td>
+                                    <td class="tda" colspan="2">{info.name}</td>
                                 </tr>
                                 <tr>
-                                    <td>시기: {info.period}</td>
+                                    <td>시기</td>
+                                    <td class="tdb">{info.period}</td>
                                 </tr>
                                 <tr>
-                                    <td>등재: {info.note}</td>
+                                    <td>등재</td>
+                                    <td class="tdb">{info.note}</td>
                                 </tr>
                                 <tr>
-                                    <td>출토지: {info.excavation}</td>
+                                    <td>출토지</td>
+                                    <td class="tdb">{info.excavation}</td>
                                 </tr>
                                 <tr>
-                                    <td>소장박물관: {info.museum}</td>
+                                    <td>소장박물관</td>
+                                    <td class="tdb">{info.museum}</td>
                                 </tr>
                             </table>
                         </div>
@@ -172,19 +434,23 @@ import { each } from "svelte/internal";
                             <div id="text">
                                 <table>
                                     <tr>
-                                        <td id="tda">{info.name}</td>
+                                        <td class="tda" colspan="2">{info.name}</td>
                                     </tr>
                                     <tr>
-                                        <td>시기: {info.period}</td>
+                                        <td>시기</td>
+                                        <td class="tdb">{info.period}</td>
                                     </tr>
                                     <tr>
-                                        <td>등재: {info.note}</td>
+                                        <td>등재</td>
+                                        <td class="tdb">{info.note}</td>
                                     </tr>
                                     <tr>
-                                        <td>출토지: {info.excavation}</td>
+                                        <td>출토지</td>
+                                        <td class="tdb">{info.excavation}</td>
                                     </tr>
                                     <tr>
-                                        <td>소장박물관: {info.museum}</td>
+                                        <td>소장박물관</td>
+                                        <td class="tdb">{info.museum}</td>
                                     </tr>
                                 </table>
                             </div>
@@ -192,8 +458,8 @@ import { each } from "svelte/internal";
                         {/if}
                     {/if}
                 {/if}                 
-            {/if}                 
-        {/each}                          
+            {/if}              
+        {/each}                        
     </div>
 </div>
 
@@ -201,19 +467,29 @@ import { each } from "svelte/internal";
     #option{
         margin-top: 35px;
     }
-    #title_option{
-        float: left;
-        margin-right: 30px;
+    #detail{
+        width: 600px;
+        height: 100px;
+        margin-top: 30px;
+        display: flex;
     }
     #museum_option{
         float: left;
-        margin-right: 30px;
+        margin-right: 20px;
         font-size: 1.1em;
+        flex: 3.5;
     }
     #note_option{
         float: left;
-        margin-right: 30px;
+        margin-right: 20px;
         font-size: 1.1em;
+        flex: 3.5;
+    }
+    #reset_bt{
+        flex: 2;
+    }
+    #result{
+        margin-top: 30px;
     }
     img{
         width: 300px;
@@ -234,13 +510,17 @@ import { each } from "svelte/internal";
     }
     table{
         text-align: left;
-        width: 300px;
+        width: 320px;
     }
-    #tda{
+    .tda{
         font-weight: 900;
         font-size: 1.2em;
     }
+    .tdb{
+        width: 200px;
+    }
     td{
+        width: 100px;
         height: 40px;
     }
 </style>
