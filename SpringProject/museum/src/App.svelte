@@ -1,9 +1,9 @@
 <script>
-  import Upsidposter from "./lib/mainpage/Upsidposter.svelte";
+  import Tesr from "./lib/relic/tesr.svelte";
   
   
   
-  </script>
+</script>
 
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center">
@@ -27,9 +27,12 @@
 
       <div class="logo">
         <h1><a href="index.html">Korea Muesum</a></h1>
+<<<<<<< Updated upstream
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
+=======
+>>>>>>> Stashed changes
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -49,8 +52,16 @@
   </header><!-- End Header -->
 
 
-<Upsidposter />
+<!-- <Upsidposter /> -->
 
+<<<<<<< Updated upstream
+=======
+
+<!-- <Exhibitiontotal /> -->
+<!-- <Relic/> -->
+<Tesr/>
+
+>>>>>>> Stashed changes
 <style>
 
 
