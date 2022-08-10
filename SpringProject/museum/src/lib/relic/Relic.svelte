@@ -25,11 +25,11 @@
     let search, seaopt=false
 
     function searop(){
-        search=!search
+        search=true
         seaopt=false
     }
     function optop(){
-        seaopt=!seaopt
+        seaopt=true
         search=false
     }
 </script>
