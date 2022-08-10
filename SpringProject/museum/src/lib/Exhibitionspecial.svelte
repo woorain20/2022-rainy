@@ -1,5 +1,6 @@
 <script>
     import { onMount } from "svelte";
+import Exhibitiondetail from "./exhibitiondetail.svelte";
     import { callid } from "./store";
 
     let exhib=[]
@@ -18,15 +19,23 @@
     }
         
     $:callid.update(t=>inknum)
+
+    let page=true
+    let detail=false
+
+    function toggle(){
+    page=!page
+    detail=!detail
+    }
     
     </script>
     
     <h1>Specail Exhibitions</h1>
-    
+    {#if page}
     <div class="grid">
         {#each exhib.filter(t=>t.done) as exhibition}
             {#if !exhibition.always}
-                <label class="square" >
+                <label class="square" on:click={toggle}>
                     <button id="d" on:click={()=>{addno(exhibition.id)}}>
                         <img src="./src/lib/exhibitionposter/{exhibition.poster}.jpg" alt = "사진오류" />
                         <br /><br />
@@ -37,7 +46,11 @@
             {/if}
         {/each}
     </div>
-
+    {/if}
+    {#if detail}
+    <bottun id="qwe" on:click={toggle}>다른 이벤트 보기</bottun>
+    <Exhibitiondetail/>
+    {/if}
     <style>
         .grid{
         display: grid;
@@ -59,5 +72,12 @@
         width:100%;
         height:60%;
     }
+    #qwe{
+    float: right;
+    border: 1px solid black;
+    background-color: bisque;
+    margin-right:30%;
+}
+
     
     </style>

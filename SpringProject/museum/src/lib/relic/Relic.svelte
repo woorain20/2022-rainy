@@ -2,17 +2,21 @@
     import { onMount } from "svelte";
     import RelicOption from "./RelicOption.svelte";
     import RelicSearch from "./RelicSearch.svelte";
+    import { paginate, PaginationNav } from 'svelte-easy-paginate'
 
     const relic="http://192.168.0.51:8080/relic/?page=0&size=148"
 
-    let relicinfo=[]
-
+    let items=[]
+    
     onMount(async function(){
         const res=await fetch(relic)
         const data = await res.json()
-        relicinfo=data._embedded.relic
+        items=data._embedded.relic
         // console.log(relicinfo)
     })
+    let currentPage = 1
+    let pageSize = 4
+    $: paginatedItems = paginate({ items, pageSize, currentPage })
 
     let search, option=false
 
@@ -24,6 +28,8 @@
         search=false
         option=true
     }
+
+  
 </script>
 
 <div id="main">
@@ -34,14 +40,17 @@
         <button on:click="{searopen}">검색</button>
         <button on:click="{optopen}">상세 검색</button>
     </div>
-    <div id="result">
+    <div id="result" >
+   
         {#if search}
             <RelicSearch/>
         {:else if option}
             <RelicOption/>
         {:else}
-            {#each relicinfo as info}
-            <div id="content">
+        <ul class="items">
+            {#each paginatedItems as info}
+            <li class="items">
+            <div id="content" class="items">
                 <div id="img">
                     <img src="./src/lib/relic/relicimg/{info.image}.jpg" alt="유물">
                 </div>
@@ -69,10 +78,21 @@
                     </table>
                 </div>
             </div>
-            {/each}
+        </li>
+        {/each}
+        <PaginationNav
+          totalItems="{items.length}"
+          pageSize="{pageSize}"
+          currentPage="{currentPage}"
+          limit="{2}"
+          showStepOptions="{true}"
+          on:setPage="{(e) => currentPage = e.detail.page}"
+        />
+        </ul>
         {/if}
     </div>
 </div>
+
 
 <style>
     #option{

@@ -2,8 +2,6 @@
 import { onMount } from "svelte";
 import Eventdetail from "./Eventdetail.svelte";
 import { callid } from "./store";
-import {Link} from "svelte-routing"
-
 
 let events=[]
 let inknum
@@ -28,15 +26,18 @@ function toggle(){
     detail=!detail
 }
 $:callid.update(t=>inknum) 
-</script>
-{#if page}
+</script> 
+
+
+
 <h1>Museum EVENT!!!</h1>
+{#if page}
 
 <div class="grid">
     {#each events.filter(t=>t.done) as event}
-        <label class="square" on:click={toggle}>
-                <button id="d" on:click={()=>{addno(event.no)}}>
-                <Link to="eventdetail"><img src="./src/lib/eventbanner/{event.banner}.jpg" alt = "사진오류" /></Link>
+    <label class="square" on:click={toggle}>
+       <button id="d" on:click={()=>{addno(event.no)}}>
+        <img src="./src/lib/eventbanner/{event.banner}.jpg" alt = "사진오류" />
                 <br /><br />
                 <h4>{event.eventname} </h4>
                 <p>{event.startday}~{event.endday}</p>
@@ -46,6 +47,7 @@ $:callid.update(t=>inknum)
 </div>
 {/if}
 {#if detail}
+<bottun id="qwe" on:click={toggle}>다른 이벤트 보기</bottun>
 <Eventdetail />
 {/if}
 
@@ -70,5 +72,12 @@ img{
     width:100%;
     height:60%;
 }
+#qwe{
+    float: right;
+    border: 1px solid black;
+    background-color: bisque;
+    margin-right:30%;
+}
+
 
 </style>

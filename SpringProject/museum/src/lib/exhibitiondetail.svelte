@@ -17,6 +17,7 @@ let callno
         exhib=open._embedded.exhibition
     })
 </script>
+<main>
 
 <h1>EXHIBITION</h1>
 
@@ -53,17 +54,17 @@ let callno
     </div>
     {/if}
 {/each}
-    
-    <style>
-        /* div,table,th,tr,td {
-            border: 1px solid black;
-        } */
-        #poster{
-            float: left;
+</main>
+<style>
+#poster{ 
+        float: left;
+        width:450px;
+        margin:0 auto;
 }
 #content{
     float: left;
     margin-left:20px;
+    width:300px;
    
 }
 #content>table>th{
@@ -80,6 +81,10 @@ let callno
 #detailcon{
     height:300px;
 }
+    main{
+    width:60%;
+    margin: 0px auto;
+    }
 
 
 </style>

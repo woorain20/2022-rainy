@@ -17,13 +17,13 @@ import {callid} from "./store"
 })
 
 </script>
-
+<main>
 <h1>EVENT </h1>
 
 {#each events as event}
 {#if event.no==callno}
     <div id="poster">
-        <img src="./src/lib/eventbanner/{event.banner}.jpg" style="width: 450px; height:600px;" alt="오타났다"/>
+        <img src="./src/lib/eventbanner/{event.banner}.jpg" style="width: 100%; height:600px;" alt="오타났다"/>
     </div>
     <div id="content">
         <table>
@@ -66,16 +66,18 @@ import {callid} from "./store"
             </div>
     {/if}   
 {/each}
-            <style>
-                /* div,table,th,tr,td {
-        border: 1px solid black;
-    } */
+</main>
+<style>
+
     #poster{
         float: left;
+        width:450px;
+        margin:0 auto;
     }
     #content{
         float: left;
         margin-left:20px;
+        width:300px;
        
     }
     #content>table>th{
@@ -99,6 +101,10 @@ import {callid} from "./store"
         border: 0px;
         height:50px;
         text-align: left;
+    }
+    main{
+    width:60%;
+    margin: 0px auto;
     }
     
     

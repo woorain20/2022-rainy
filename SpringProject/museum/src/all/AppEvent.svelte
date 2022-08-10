@@ -1,14 +1,14 @@
 <script>
     
     import {Router, Route} from "../../node_modules/svelte-routing"
-    import Eventdetail from "src/lib/Eventdetail.svelte";
+    import Eventdetail from "../../src/lib/Eventdetail.svelte";
     import Eventpage from "../../src/lib/Eventpage.svelte";
 
     export let url=""
 
 </script>
 
-
+<Eventpage />
 
 <Router url={url}>
     <!-- <nav>
