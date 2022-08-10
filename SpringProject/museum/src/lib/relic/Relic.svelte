@@ -14,23 +14,15 @@
         // console.log(relicinfo)
     })
 
-    let text=""
+    let search, option=false
 
-    let option=false
-    
-    function optopen(){
-        option=!option
-    }
-
-    let search, seaopt=false
-
-    function searop(){
+    function searopen(){
         search=true
-        seaopt=false
+        option=false
     }
-    function optop(){
-        seaopt=true
+    function optopen(){
         search=false
+        option=true
     }
 </script>
 
@@ -39,7 +31,7 @@
         <h1>소장품 검색</h1>
     </div>
     <div id="option">
-        <button on:click="{searop}">검색</button>
+        <button on:click="{searopen}">검색</button>
         <button on:click="{optopen}">상세 검색</button>
     </div>
     <div id="result">
