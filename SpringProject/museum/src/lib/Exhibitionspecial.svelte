@@ -2,8 +2,9 @@
     import { onMount } from "svelte";
     import Exhibitiondetail from "./exhibitiondetail.svelte";
     import { callid } from "./store";
+    import { paginate, PaginationNav } from 'svelte-easy-paginate'
 
-    let exhib=[]
+    let items=[]
     let inknum
     
     const slidingbnn="http://192.168.0.51:8080/exhibition/"
@@ -11,7 +12,7 @@
     onMount(async function(){
         const red= await fetch(slidingbnn)
         const open= await red.json()
-        exhib=open._embedded.exhibition
+        items=open._embedded.exhibition
     })
     function addno(ibs){
         inknum=ibs
@@ -28,6 +29,10 @@
     detail=!detail
     }
     
+    let currentPage = 1
+    let pageSize = 4
+    $: exhib = paginate({ items, pageSize, currentPage })
+
     </script>
     
     <h1>Specail Exhibitions</h1>
@@ -46,6 +51,14 @@
             {/if}
         {/each}
     </div>
+    <PaginationNav
+        totalItems="{items.length}"
+        pageSize="{pageSize}"
+        currentPage="{currentPage}"
+        limit="{1}"
+        showStepOptions="{true}"
+        on:setPage="{(e) => currentPage = e.detail.page}"
+    />
     {/if}
     {#if detail}
     <bottun id="qwe" on:click={toggle}>다른 이벤트 보기</bottun>
@@ -56,7 +69,7 @@
         display: grid;
         flex: 1;
         grid-template-columns: repeat(3, 4fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
         grid-gap: 1vmin;
         width:90%;
         margin: 0px auto;

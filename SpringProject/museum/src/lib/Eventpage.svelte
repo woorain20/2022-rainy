@@ -2,8 +2,9 @@
 import { onMount } from "svelte";
 import Eventdetail from "./Eventdetail.svelte";
 import { callid } from "./store";
+import { paginate, PaginationNav } from 'svelte-easy-paginate'
 
-let events=[]
+let items=[]
 let inknum
 
 const eventdb="http://192.168.0.51:8080/event/"
@@ -12,7 +13,7 @@ onMount(async function(){
     
     const rsq= await fetch(eventdb)
     const vev= await rsq.json()
-    events=vev._embedded.event
+    items=vev._embedded.event
 })
 function addno(ibs){
     inknum=ibs
@@ -26,6 +27,11 @@ function toggle(){
     detail=!detail
 }
 $:callid.update(t=>inknum) 
+
+    let currentPage = 1
+    let pageSize = 7
+    $: events = paginate({ items, pageSize, currentPage })
+
 </script> 
 
 
@@ -45,6 +51,14 @@ $:callid.update(t=>inknum)
         </label>
     {/each}
 </div>
+    <PaginationNav
+    totalItems="{items.length}"
+    pageSize="{pageSize}"
+    currentPage="{currentPage}"
+    limit="{1}"
+    showStepOptions="{true}"
+    on:setPage="{(e) => currentPage = e.detail.page}"
+    />
 {/if}
 {#if detail}
 <bottun id="qwe" on:click={toggle}>다른 이벤트 보기</bottun>
