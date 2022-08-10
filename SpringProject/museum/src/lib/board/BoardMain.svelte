@@ -42,7 +42,7 @@
         <tr>
             <th>번호</th>
             <th>구분</th>
-            <th>제목</th>
+            <th class="thda">제목</th>
             <th>작성자</th>
             <th>작성일</th>
             <th>조회</th>
@@ -53,7 +53,7 @@
         <tr on:click="{aop}">
             <td>{pbd.num}</td>
             <td>{pbd.workplace}</td>
-            <td><button on:click={()=>{addno(pbd.title)}}>{pbd.title}</button></td>
+            <td class="thda"><button on:click={()=>{addno(pbd.title)}}>{pbd.title}</button></td>
             <td>{pbd.whiter}</td>
             <td>{pbd.date}</td>
             <td>{pbd.count}</td>
@@ -80,5 +80,17 @@
         width: 75%;
         height: 80%;
         border: 1px solid;
+    }
+    th{
+        width: 10%;
+        height: 10%;
+    }
+    td{
+        width: 10%;
+        height: 10%;
+    }
+    .thda{
+        width: 20%;
+        height: 10%;
     }
 </style>
