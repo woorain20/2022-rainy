@@ -35,15 +35,9 @@ $:callid.update(t=>inknum)
 
 <div class="grid">
     {#each events.filter(t=>t.done) as event}
-<<<<<<< Updated upstream
     <label class="square" on:click={toggle}>
        <button id="d" on:click={()=>{addno(event.no)}}>
         <img src="./src/lib/eventbanner/{event.banner}.jpg" alt = "사진오류" />
-=======
-        <label class="square" >
-                <button id="d" on:click={()=>{addno(event.no)}}>
-                <img src="./src/lib/eventbanner/{event.banner}.jpg" alt = "사진오류" />
->>>>>>> Stashed changes
                 <br /><br />
                 <h4>{event.eventname} </h4>
                 <p>{event.startday}~{event.endday}</p>
