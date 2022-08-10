@@ -1,6 +1,7 @@
 <script>
 import { onMount } from "svelte";
 import { callid } from "./store";
+import {Link} from "svelte-routing"
 
 
 let events=[]
@@ -28,7 +29,7 @@ $:callid.update(t=>inknum)
     {#each events.filter(t=>t.done) as event}
         <label class="square" >
                 <button id="d" on:click={()=>{addno(event.no)}}>
-                <img src="./src/lib/eventbanner/{event.banner}.jpg" alt = "사진오류" />
+                <Link to="eventdetail"><img src="./src/lib/eventbanner/{event.banner}.jpg" alt = "사진오류" /></Link>
                 <br /><br />
                 <h4>{event.eventname} </h4>
                 <p>{event.startday}~{event.endday}</p>

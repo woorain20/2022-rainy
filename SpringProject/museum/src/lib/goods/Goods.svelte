@@ -13,6 +13,15 @@
     })
 
     let total, fashion, props, dinner, stationery, craft, etc=false
+
+    function opent(){
+        total=true
+        fashion=props=dinner=stationery=craft=etc=false
+    }
+    function openf(){
+        fashion=true
+        total=props=dinner=stationery=craft=etc=false
+    }
 </script>
 <div>
     <button>전체</button>   
