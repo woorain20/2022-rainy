@@ -1,5 +1,19 @@
 <script>
+    import { onMount } from "svelte";
+    import {callid} from "../store"
 
+    const post="http://192.168.0.51:8080/postboard/?page=0&size=50"
+    let board=[]
+
+    let callno
+    callid.subscribe(t=>{ callno=t})
+
+    onMount(async function(){
+        const res=await fetch(post+"&sort=num,desc")
+        const data = await res.json()
+        board=data._embedded.postboard
+        // console.log(board)
+    })
 </script>
 
 <div>
@@ -10,10 +24,23 @@
         <h7 style="float: right; padding: 0px 10px;">담당자:직원</h7>
     </div>
     <div id="content">
-    </div>
-    <button>이전글</button>
-    <button>다음글</button>
+        {#each board as pbd}
+            {#if pbd.num==callno}
+            <table>
+                <tr>
+                    <td rowspan="2">{pbd.title}</td>
+                    <td>{pbd.date}</td>
+                    <td>{pbd.whiter}</td>
+                </tr>
+                <tr>
+                    <td>{pbd.content}</td>
+                </tr>
+            </table>
+            {/if}
+        {/each}
+    </div>       
 </div>
+
 <style>
     #content{
         border:1px solid black;

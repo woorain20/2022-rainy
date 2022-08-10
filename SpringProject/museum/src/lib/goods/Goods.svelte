@@ -9,7 +9,7 @@
         const res=await fetch(goodsList)
         const data = await res.json()
         goods=data._embedded.goods
-        console.log(goods)
+        // console.log(goods)
     })
 
     let total, it, interior, scarf, accessory, bag, umbrella, dinner, stationery, craft, fan, kids, etc=false

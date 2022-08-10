@@ -1,21 +1,16 @@
 <script>
     import { onMount } from "svelte"; 
-    import { paginate, PaginationNav } from 'svelte-easy-paginate'
 
     const relic="http://192.168.0.51:8080/relic/?page=0&size=148"
 
-    let items=[]
+    let relicinfo=[]
 
     onMount(async function(){
         const res=await fetch(relic)
         const data = await res.json()
-        items=data._embedded.relic
+        relicinfo=data._embedded.relic
         // console.log(relicinfo)
     })
-
-    let currentPage = 1
-    let pageSize = 4
-    $: relicinfo = paginate({ items, pageSize, currentPage })
 
     let rel = 0
 	let muserel = []
@@ -80,9 +75,7 @@
     </div>
 </div>
 <div id="result">
-    <ul class="items">
     {#each relicinfo as info}
-    <li class="items">
     {#if muserel==info.museum}
         {#if gukbo}
             {#if info.note.slice(0,2)=="국보"}
@@ -210,17 +203,7 @@
             </div>
         {/if}
     {/if}
-    </li>
     {/each}
-    <PaginationNav
-    totalItems="{items.length}"
-    pageSize="{pageSize}"
-    currentPage="{currentPage}"
-    limit="{1}"
-    showStepOptions="{true}"
-    on:setPage="{(e) => currentPage = e.detail.page}"
-    />
-    </ul>
 </div>
 
 <style>

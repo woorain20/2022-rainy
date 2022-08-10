@@ -14,19 +14,24 @@
         items=data._embedded.relic
         // console.log(relicinfo)
     })
+    
     let currentPage = 1
     let pageSize = 4
     $: relicinfo = paginate({ items, pageSize, currentPage })
 
-    let search, option=false
+    let search, option, view=false
 
     function searopen(){
         search=true
-        option=false
+        option=view=false
     }
     function optopen(){
-        search=false
         option=true
+        search=view=false
+    }
+    function viewopen(){
+        view=true
+        search=option=false
     }
 
   
@@ -39,6 +44,7 @@
     <div id="option">
         <button on:click="{searopen}">검색</button>
         <button on:click="{optopen}">상세 검색</button>
+        <button on:click="{viewopen}">전체 보기</button>
     </div>
     <div id="result" >
         {#if search}
@@ -131,5 +137,8 @@
     td{
         width: 100px;
         height: 40px;
+    }
+    li{
+        list-style: none;
     }
 </style>

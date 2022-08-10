@@ -18,7 +18,7 @@ import {callid} from "./store"
 
 </script>
 <main>
-<h1>EVENT </h1>
+<h1>EVENT</h1>
 
 {#each events as event}
 {#if event.no==callno}
