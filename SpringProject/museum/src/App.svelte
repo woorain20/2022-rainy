@@ -38,8 +38,8 @@ import Goods from "./lib/goods/Goods.svelte";
           <li><a href="index.html">전시회</a></li>
           <li><a href="index.html">EVENT</a></li>
           <li><a href="index.html">게시판</a></li>
-          <li><a href="index.html">About Us</a></li>
-          <li><a href="cindex.html">Contact</a></li>
+          <li><a href="index.html">상품</a></li>
+          <li><a href="cindex.html">About Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -47,7 +47,7 @@ import Goods from "./lib/goods/Goods.svelte";
     </div>
   </header><!-- End Header -->
 
-
+<Goods/>
 <style>
 
 
