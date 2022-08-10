@@ -1,5 +1,6 @@
 <script>
 import { onMount } from "svelte";
+import Eventdetail from "./Eventdetail.svelte";
 import { callid } from "./store";
 import {Link} from "svelte-routing"
 
@@ -19,15 +20,21 @@ function addno(ibs){
     inknum=ibs
     console.log(inknum)
 }
+let page=true
+let detail=false
 
+function toggle(){
+    page=!page
+    detail=!detail
+}
 $:callid.update(t=>inknum) 
 </script>
-
+{#if page}
 <h1>Museum EVENT!!!</h1>
 
 <div class="grid">
     {#each events.filter(t=>t.done) as event}
-        <label class="square" >
+        <label class="square" on:click={toggle}>
                 <button id="d" on:click={()=>{addno(event.no)}}>
                 <Link to="eventdetail"><img src="./src/lib/eventbanner/{event.banner}.jpg" alt = "사진오류" /></Link>
                 <br /><br />
@@ -37,7 +44,10 @@ $:callid.update(t=>inknum)
         </label>
     {/each}
 </div>
-
+{/if}
+{#if detail}
+<Eventdetail />
+{/if}
 
 <style>
     .grid{
