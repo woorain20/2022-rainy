@@ -16,7 +16,7 @@
     })
     let currentPage = 1
     let pageSize = 4
-    $: paginatedItems = paginate({ items, pageSize, currentPage })
+    $: relicinfo = paginate({ items, pageSize, currentPage })
 
     let search, option=false
 
@@ -41,14 +41,13 @@
         <button on:click="{optopen}">상세 검색</button>
     </div>
     <div id="result" >
-   
         {#if search}
             <RelicSearch/>
         {:else if option}
             <RelicOption/>
         {:else}
         <ul class="items">
-            {#each paginatedItems as info}
+            {#each relicinfo as info}
             <li class="items">
             <div id="content" class="items">
                 <div id="img">
@@ -84,7 +83,7 @@
           totalItems="{items.length}"
           pageSize="{pageSize}"
           currentPage="{currentPage}"
-          limit="{2}"
+          limit="{1}"
           showStepOptions="{true}"
           on:setPage="{(e) => currentPage = e.detail.page}"
         />

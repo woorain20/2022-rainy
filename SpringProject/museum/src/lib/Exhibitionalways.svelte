@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-import Exhibitiondetail from "./exhibitiondetail.svelte";
+    import Exhibitiondetail from "./exhibitiondetail.svelte";
     import { callid } from "./store";
 
     let exhib=[]

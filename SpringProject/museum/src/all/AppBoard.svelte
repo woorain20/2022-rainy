@@ -1,6 +1,6 @@
 <script>
-    import Boarddetail from "../../src/lib/Boarddetail.svelte";
+    import BoardMain from "../../src/lib/board/BoardMain.svelte";
 
 </script>
 
-<Boarddetail/>
+<BoardMain/>

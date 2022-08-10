@@ -10,24 +10,6 @@
         <h7 style="float: right; padding: 0px 10px;">담당자:직원</h7>
     </div>
     <div id="content">
-        <table>
-            <tr>
-                <th>번호</th>
-                <th>구분</th>
-                <th>제목</th>
-                <th>작성자</th>
-                <th>작성일</th>
-                <th>조회</th>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
     </div>
     <button>이전글</button>
     <button>다음글</button>
