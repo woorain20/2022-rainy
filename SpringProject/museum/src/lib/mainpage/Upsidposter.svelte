@@ -72,24 +72,25 @@ onMount(async function(){
       <p>지금 신청 가능하거나 진행중인 EVENT 최신 소식!</p>
     </div>
 
-    <div class="clients-slider swiper align-items-center">
+    <div class="clients-slider swiper align-items-center" id="eventCarousel">
       <div class="swiper-wrapper ">
         {#each events as event}
         <div id="eventbanner">
             <label>
                 <button class="eventposter">
-                  <div class="swiper-slide"><img src = "./src/lib/eventbanner/{event.banner}.jpg" alt="업슴"></div>
+                  <div class="swiper-slide"><img src = "./src/lib/eventbanner/{event.banner}.jpg" class="img-fluid" alt="업슴"></div>
                 </button>
             </label><br />
-            <button>{event.eventname}</button>
+            <button class="nametak">{event.eventname}</button>
             <p>{event.startday} ~ {event.endday}</p>
-        </div>
-        {/each}
+          </div>
+          {/each}
       </div>
       <div class="swiper-pagination"></div>
     </div>
 
   </div>
+
 </section><!-- End Clients Section -->
 
 
@@ -108,10 +109,23 @@ onMount(async function(){
 }
 #eventbanner{
     float: left;
+    text-align: center;
+    width:20%;
 }
 .eventposter>div>img{
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+}
+.container{
+  margin:0px auto;
+}
+.nametak{
+  width: 100%;
+  border: 0px;
+  background-color: white;
+}
+.nametak:hover{
+  background-color: antiquewhite;
 }
 
 </style>
