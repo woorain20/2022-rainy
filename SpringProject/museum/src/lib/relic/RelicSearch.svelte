@@ -19,6 +19,7 @@
     }
     function close(){
         a=false
+        text=""
     }
 </script>
 

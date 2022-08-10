@@ -12,6 +12,7 @@
         console.log(goods)
     })
 
+    let total, fashion, props, dinner, stationery, craft, etc=false
 </script>
 <div>
     <button>전체</button>   
