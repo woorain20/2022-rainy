@@ -1,10 +1,10 @@
 <script>
-import Upsidposter from "./lib/mainpage/Upsidposter.svelte";
+  import Upsidposter from "./lib/mainpage/Upsidposter.svelte";
+
 
 </script>
-
-  <Upsidposter />
-
+<Upsidposter/>
+  
 <style>
 
 </style>

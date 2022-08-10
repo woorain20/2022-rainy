@@ -14,9 +14,13 @@
     "vite": "^3.0.0"
   },
   "dependencies": {
+<<<<<<< Updated upstream
     "i": "^0.3.7",
     "npm": "^8.16.0",
     "svelte-easy-paginate": "^1.1.1",
     "svelte-routing": "^1.6.0"
+=======
+    "svelte-easy-paginate": "^1.1.1"
+>>>>>>> Stashed changes
   }
 }

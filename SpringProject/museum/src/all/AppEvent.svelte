@@ -1,12 +1,14 @@
 <script>
+<<<<<<< Updated upstream
     
     import {Router, Route} from "../../node_modules/svelte-routing"
     import Eventdetail from "../../src/lib/Eventdetail.svelte";
+=======
+>>>>>>> Stashed changes
     import Eventpage from "../../src/lib/Eventpage.svelte";
 
-    export let url=""
-
 </script>
+<<<<<<< Updated upstream
 
 <Eventpage />
 
@@ -24,3 +26,6 @@
         <Route path="/"></Route>
     </div>
 </Router>
+=======
+<Eventpage/>
+>>>>>>> Stashed changes
