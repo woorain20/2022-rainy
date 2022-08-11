@@ -3,8 +3,8 @@
 </script>
 
 <div>
-    <h1>Our Vision</h1>
     <div id="first">
+        <h1>Our Vision</h1>
         <div id="intro">
             <ul>
                 <li>더 많은 사람에게 우리의 문화재를 보여주고 싶습니다.</li>
@@ -16,10 +16,10 @@
             <img src="https://gongju.museum.go.kr/_prog/download/?site_dvs_cd=gongju&func_gbn_cd=main_visual&mng_no=68" alt="first">
         </div>
     </div>
-    <h1>Our History</h1>
     <div id="second">
+        <h1>Our History</h1>
         <div id="s_img">
-            <img src="https://vmspace.com/ActiveFile/spacem.org/board_img/11890992356197b43075d9d.jpg" alt="second">
+            <img src="https://gyeongju.museum.go.kr/kor/images/common/svisual_img10.jpg" alt="second">
         </div>
         <div id="history">
             <p>소녀들의 까닭이요, 위에 언덕 내 슬퍼하는 불러 나의 아무 봅니다. 별을 내 오는 하나에 언덕 듯합니다. 토끼, 우는 옥 지나고 그리워 된 가을로 봅니다. 그리워 때 별 묻힌 애기 별 하나에 나는 이국 버리었습니다. 이런 차 그리고 별 내일 듯합니다. 하나에 별 말 소녀들의 무덤 어머님, 멀리 봅니다. 파란 아름다운 나는 내 멀듯이, 듯합니다. 하나에 남은 하늘에는 하나에 까닭입니다. 지나가는 밤을 나는 어머니, 노새, 가을로 어머니 마리아 별 있습니다.
@@ -29,14 +29,14 @@
                 새워 계절이 별에도 벌레는 때 언덕 파란 있습니다. 나는 말 오면 있습니다. 라이너 당신은 하나에 다 어머니, 릴케 이름과 봅니다. 라이너 이런 멀리 어머니 아직 묻힌 가슴속에 이런 별 듯합니다. 한 언덕 부끄러운 애기 우는 그러나 봅니다. 하늘에는 쉬이 노새, 불러 봅니다. 흙으로 하나에 많은 릴케 가난한 나는 봅니다. 슬퍼하는 별빛이 아침이 추억과 헤는 피어나듯이 이름과, 마리아 봅니다. 이름자를 별 이웃 가을 멀듯이, 소학교 멀리 듯합니다.</p>
         </div>
     </div>
-    <h1>Our Team</h1>
     <div id="third">
-        <div>
+        <h1>Our Team</h1>
+        <div class="person">
             <img src="https://cdn.pixabay.com/photo/2016/04/25/07/15/man-1351317__340.png" alt="people">
             <p>김우기</p>
             <p>Main Developer</p>
         </div>
-        <div>
+        <div class="person">
             <img src="https://cdn.pixabay.com/photo/2019/10/21/14/18/man-4566210__340.jpg" alt="people">
             <p>김남우</p>
             <p>Main Developer</p>
@@ -47,55 +47,73 @@
 <style>
     h1{
         text-align: center;
-        margin-top: 20px;
+        margin-top: 2%;
+        background-color: #cce6ff;
     }
     #first{
         width: 100%;
-        height: 14%; 
+        height: 15%; 
         margin-top: 30px;
-        border: 1px solid;
     }
     #intro{
-        width: 50%;
+        width: 45%;
         height: 14%;
-        font-size: 1.1em;
+        font-size: 1.2em;
         font-weight: 600;
-        margin-top: 50px;  
+        margin-top: 3%;  
+        margin-left: 5%;
         float: left;
     }
     #intro > ul > li{
         list-style: georgian;
-        margin-top: 10px;
-        margin-bottom: 30px;   
+        margin-top: 1%;
+        margin-bottom: 3%;   
     }
     #f_img{
-        width: 40%;
-        height: 12%;
-        margin-left: 800px;
+        width: 45%;
+        height: 100%;
+        margin-left: 50%;
+        margin-top: 3%;
     }
     #f_img > img{
-        width: 90%;
-        height: 90%;    
+        width: 100%;
     }
     #second{
         width: 100%;
-        height: 18%; 
-        margin-top: 30px;
-        border: 1px solid;
+        height: 60%; 
+        margin-top: 5%;
     }
     #s_img{
-        width: 50%;
-        height: 50%;
+        width: 45%;
+        height: 30%;
+        margin-top: 3%;
+        margin-left: 1%;
         float: left; 
     }
     #s_img > img{
-        width: 50%;
-        height: 14%;   
+        width: 100%;
+        height: 100%;   
     }
     #history{
         width: 40%;
-        height: 14%;
+        height: 80%;
         font-size: 1em;
         font-weight: 400;
+        margin-left: 50%;
+        margin-top: 3%;
+    }
+    #third{
+        width: 100%;
+        height: 100%; 
+        margin-top: 5%;
+    }
+    .person{
+        width: 45%;
+        height: 100%;
+        font-size: 1.2em;
+        font-weight: 500;
+        margin-top: 3%;
+        text-align: center;
+        float: left;
     }
 </style>
