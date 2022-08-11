@@ -1,17 +1,10 @@
 <script>
 import { onMount } from "svelte";
+import { paginate } from "svelte-easy-paginate";
+import PaginationNav from "svelte-easy-paginate/src/PaginationNav.svelte";
 
-
-let posters=[]
 let exhib=[]
 let boards=[]
-let events=[]
-let sliedtest=[
-    {number:"slide-1"},
-    {number:"slide-2"},
-    {number:"slide-3"},
-
-]
 
 const upsidebanner="http://192.168.0.51:8080/mainpage/"
 const slidingbnn="http://192.168.0.51:8080/exhibition/"
@@ -21,7 +14,7 @@ const eventdb="http://192.168.0.51:8080/event/"
 onMount(async function(){
     const res=await fetch(upsidebanner)
     const data = await res.json()
-    posters=data._embedded.mainpage
+    items=data._embedded.mainpage
 
     const red= await fetch(slidingbnn)
     const open= await red.json()
@@ -33,8 +26,13 @@ onMount(async function(){
     
     const rsq= await fetch(eventdb)
     const vev= await rsq.json()
-    events=vev._embedded.event
+    items=vev._embedded.event
 })
+  let items=[]
+
+    let currentPage = 1
+    let pageSize = 5
+    $: eventposter = paginate({ items, pageSize, currentPage })
 
 </script>
 
@@ -58,7 +56,7 @@ onMount(async function(){
 <ul id="board">
     {#each boards as board}
       {#if board.official}
-        <li ><a href="https://www.museum.go.kr/site/main/archive/united/18496">{board.title}</a>    
+        <li ><a href="http://127.0.0.1:5173/board.html/">{board.title}</a>    
          <div style="float:right">{board.date}</div></li> 
       {/if}
     {/each}
@@ -76,7 +74,7 @@ onMount(async function(){
 
     <div class="clients-slider swiper align-items-center" id="eventCarousel">
       <div class="swiper-wrapper ">
-        {#each events as event}
+        {#each eventposter as event}
         <div id="eventbanner">
             <label>
                 <button class="eventposter">
@@ -86,10 +84,20 @@ onMount(async function(){
             <button class="nametak">{event.eventname}</button>
             <p>{event.startday} ~ {event.endday}</p>
           </div>
-          {/each}
+        
+        {/each}
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-pagination"></div>
-    </div>
+      <div id=paginate>
+        <PaginationNav
+        totalItems="{items.length}"
+        pageSize="{pageSize}"
+        currentPage="{currentPage}"
+        limit="{8}"
+        showStepOptions="{true}"
+        on:setPage="{(e) => currentPage = e.detail.page}"
+        />
+      </div>
 
   </div>
 
@@ -114,6 +122,7 @@ onMount(async function(){
     text-align: center;
     width:20%;
 }
+
 .eventposter>div>img{
     width: 250px;
     height: 250px;
@@ -129,6 +138,7 @@ onMount(async function(){
 .nametak:hover{
   background-color: antiquewhite;
 }
+
 
 </style>
 

@@ -30,7 +30,7 @@
     }
     
     let currentPage = 1
-    let pageSize = 4
+    let pageSize = 3
     $: exhib = paginate({ items, pageSize, currentPage })
 
     </script>

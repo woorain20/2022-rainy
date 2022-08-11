@@ -1,16 +1,24 @@
 <script>
     import { onMount } from "svelte";
+    import { paginate } from "svelte-easy-paginate";
+import PaginationNav from "svelte-easy-paginate/src/PaginationNav.svelte";
 
     const goodsList="http://192.168.0.51:8080/goods/?page=0&size=50"
 
-    let goods=[]
+    
 
     onMount(async function(){
         const res=await fetch(goodsList)
         const data = await res.json()
-        goods=data._embedded.goods
+        items=data._embedded.goods
         // console.log(goods)
     })
+    let items=[]
+
+    let currentPage = 1
+    let pageSize = 16
+    $: goods = paginate({ items, pageSize, currentPage })
+
 
     let total, it, interior, scarf, accessory, bag, umbrella, dinner, stationery, craft, fan, kids, etc=false
 
@@ -82,7 +90,7 @@
     <button on:click="{openk}">어린이</button>   
     <button on:click="{opene}">기타</button>   
 </div>
-<div>
+<div id="main">
     {#each goods as good}
         {#if total}
         <div id="intro">
@@ -219,5 +227,14 @@
     img{
         width: 250px;
         height: 300px; 
+    }
+    #main{
+        width: 100%;
+        float: left;
+    }
+    #paginate{
+
+        float: left;
+        margin: 0 auto;
     }
 </style>

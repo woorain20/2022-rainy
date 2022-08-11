@@ -130,4 +130,10 @@
     .thda{
         width: 45%;
     }
+    .thda>label>button{
+        width: 100%;
+    }
+    .thda>label{
+        width: 100%;
+    }
 </style>

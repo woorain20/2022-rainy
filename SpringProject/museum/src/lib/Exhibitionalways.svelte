@@ -6,6 +6,7 @@
 
     let items=[]
     let inknum
+    let da=[]
     
     const slidingbnn="http://192.168.0.51:8080/exhibition/"
     
@@ -13,6 +14,9 @@
         const red= await fetch(slidingbnn)
         const open= await red.json()
         items=open._embedded.exhibition
+       
+        console.log(da)
+        console.log(items)
     })
     function addno(ibs){
         inknum=ibs
@@ -30,7 +34,7 @@
     }
     
     let currentPage = 1
-    let pageSize = 4
+    let pageSize = 3
     $: exhib = paginate({ items, pageSize, currentPage })
 
     </script>
@@ -38,6 +42,7 @@
     <h1>Always Exhibitions</h1>
     {#if page}
     <div class="grid">
+     
         {#each exhib.filter(t=>t.done) as exhibition}
             {#if exhibition.always}
                 <label class="square" on:click={toggle}>
@@ -48,7 +53,7 @@
                         <p>{exhibition.startday}~{exhibition.endday}</p>
                     </button>
                 </label>
-            {/if}
+                {/if}
         {/each}
     </div>
     <PaginationNav
