@@ -57,8 +57,10 @@ onMount(async function(){
 
 <ul id="board">
     {#each boards as board}
+      {#if board.official}
         <li ><a href="https://www.museum.go.kr/site/main/archive/united/18496">{board.title}</a>    
          <div style="float:right">{board.date}</div></li> 
+      {/if}
     {/each}
 </ul>
 
