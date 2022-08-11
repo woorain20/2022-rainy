@@ -1,5 +1,42 @@
 <script>
-    import { Link } from "svelte-routing";
+import { onMount } from "svelte";
+import { Link } from "svelte-routing";
+
+
+    let boards=[]
+   
+    let title, content, whiter, workplace
+    let official=false
+
+    const savepoint="http://192.168.0.51:8080/postboard/?page=0&size=50"
+	onMount(async function(){
+		const res=await fetch(savepoint)
+		const data = await res.json()
+		boards=data._embedded.postboard
+	})
+
+
+    async function add(){
+        const board = {
+			 done: official , date : new Date , content: content, title: title, whiter: whiter,workplace: workplace,
+        }
+		await fetch(savepoint,{
+			method:"POST", headers:{    //headers를 설정해야 오류가 안남
+				"Content-Type":"application/json"
+			},
+			body:JSON.stringify({
+				done:board.done, date : board.date, content : board.content, title: board.title, whiter: board.whiter, workplace: board.workplace
+			})
+		})
+        boards=[board,...boards]
+        
+        title =""
+        content =""
+        whiter =""
+        workplace =""
+        official=false
+        console.log(board)
+    }
 
 </script>
 
@@ -14,8 +51,13 @@
     <Link to="home"><button>Home</button></Link>
 </div>
 <div>
-    <input type="text">
-    <input type="submit">
+    <input type="text" bind:value={title}> 제목
+    <input type="text" bind:value={whiter}> 작성자
+    <input type="text" bind:value={workplace}> 장소
+    <input type="text" bind:value={content}>내용 
+    <input type="checkbox" bind:checked={official}>오피셜
+    <input type="submit" on:click={()=>add()}>
+ 
 </div>
 
 <style>

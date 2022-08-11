@@ -232,9 +232,5 @@ import PaginationNav from "svelte-easy-paginate/src/PaginationNav.svelte";
         width: 100%;
         float: left;
     }
-    #paginate{
 
-        float: left;
-        margin: 0 auto;
-    }
 </style>
