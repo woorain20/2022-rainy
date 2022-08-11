@@ -135,18 +135,33 @@
         display: table-cell;
         vertical-align: middle;
     }
+    #list{
+        margin-top: 5%;
+    }
     h1{
-        margin-bottom: 50px;
+        margin-bottom: 5%;
     }
     ul{
-        margin-bottom: 50px;
+        margin-bottom: 5%;
     }
     li{
         list-style: none;
         float: left;
+        font-weight: 600;
+    }
+    button{
+        width: 10%;
+        border-radius: 5px 5px 5px 5px;
+        margin: 0.5%;
+    }
+    button:hover{
+        border: 2px solid #3333ff;
+    }
+    button:focus{
+        background-color: #ffffe6;
     }
     img{
-        width: 100%;
+        width: 90%;
         height: 70%;
         border-radius: 5px 5px 5px 5px;
     }
