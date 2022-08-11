@@ -73,28 +73,41 @@
 </div>
 
 <style>
+    #contents{
+        background-color: #f9ffe6;
+    }
+    #img{
+        width: 100%;
+        align-items: center;
+    }
     img{
-        width: 96%;
-        border-radius: 5px 5px 5px 5px;
+        width: 50%;
+        border-radius: 7px 7px 7px 7px;
     }
     #map{
         float: left;
-        margin-top: 30px;
-        margin-right: 80px;
+        margin-top: 3%;
+        margin-left: 20%;
+        margin-bottom: 2%;
+        box-shadow: 5px 5px 5px;
     }
     #info{
         float: left;
-        margin-top: 30px;
-        margin-left: 80px;
+        margin-top: 3%;
+        margin-left: 6%;
+        margin-bottom: 2%;
     }
     .tdb{
-        border: 1px solid;
+        border: 5px inset;
         width: 100px;
         height: 30px;
+        background-color: #e6e6e6;
     }
     .tda{
-        border: 1px solid;
+        border: 5px inset;
         width: 550px;
         height: 30px;
+        font-weight: 600;
+        text-align: left;
     }
 </style>

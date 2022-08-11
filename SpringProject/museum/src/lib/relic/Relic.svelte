@@ -100,43 +100,60 @@
 
 
 <style>
+    #main{
+        text-align: center;
+        vertical-align: middle;
+    }
+    #header{
+        margin-top: 3%;
+    }
     #option{
-        margin-top: 35px;
+        margin-top: 3%;
     }
     #result{
-        margin-top: 30px;
-    }
-    img{
-        width: 300px;
-        height: 250px;
+        margin-top: 3%;
+        margin-left: 20%;
+        margin-right: 30%;
     }
     #content{
-        margin-top: 20px;
-        width: 700px;
-        height: 260px;
-        border-bottom: 1px dashed;
+        margin-top: 2%;
+        width: 100%;
+        border-bottom: 2px dashed;
     }
     #img{
+        width: 300px;
+        height: 270px;
         float: left;
+        margin-bottom: 2%;
+        margin-left: 10%;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
     }
     #text{
-        float: left;
-        margin-left: 30px;
+        width: 350px;
+        height: 270px;
+        margin-left: 55%;
+        margin-bottom: 2%;
     }
     table{
         text-align: left;
-        width: 320px;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
     }
     .tda{
         font-weight: 900;
         font-size: 1.2em;
     }
     .tdb{
-        width: 200px;
+        width: 20%;
     }
     td{
-        width: 100px;
-        height: 40px;
+        width: 10%;
+        height: 4%;
     }
     li{
         list-style: none;

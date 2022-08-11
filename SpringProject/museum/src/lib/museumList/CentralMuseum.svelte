@@ -72,13 +72,17 @@
     </div>
 </div>
 
+
 <style>
+    #contents{
+        background-color: #f9ffe6;
+    }
     #img{
         width: 100%;
         align-items: center;
     }
     img{
-        width: 50%;
+        width: 45%;
         border-radius: 7px 7px 7px 7px;
     }
     #map{
@@ -98,6 +102,7 @@
         border: 5px inset;
         width: 100px;
         height: 30px;
+        background-color: #e6e6e6;
     }
     .tda{
         border: 5px inset;
