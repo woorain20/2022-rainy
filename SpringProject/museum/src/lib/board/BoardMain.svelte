@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import {boardid} from "../store"
+    import {boardid,boardcount} from "../store"
     import { paginate, PaginationNav } from 'svelte-easy-paginate'
     import Boarddetail from "./Boarddetail.svelte";
     import BoardWrite from "./BoardWrite.svelte";
@@ -9,6 +9,7 @@
 
     let items=[]
     let inknum
+    let inkcount
 
     onMount(async function(){
         const res=await fetch(post+"&sort=num,desc")
@@ -22,14 +23,17 @@
     }
 
     $:boardid.update(t=>inknum) 
+    $:boardcount.update(t=>inkcount)
         
     let page=true
     let content=false
     let write=false
 
-    function aop(){
+    function aop(recnt){
+        inkcount=recnt
         content=!content
         page=!page
+        console.log(inkcount)
     }
 
     function writeop(){
@@ -60,7 +64,7 @@
             <div class="align" on:click={()=>{addno(pbd.num)}}>
                 <div class="number board-open">공지</div>
                 <div class="place board-open">{pbd.workplace}</div>
-                <div class="thda board-open"><label on:click={aop}><button on:click={()=>{addno(pbd.num)}}>{pbd.title}</button></label></div>
+                <div class="thda board-open"><label on:click={()=>aop(pbd.count)}><button on:click={()=>{addno(pbd.num)}}>{pbd.title}</button></label></div>
                 <div class="writer board-open">{pbd.whiter}</div>
                 <div class="date board-open">{pbd.date}</div>
                 <div class="count board-open">{pbd.count}</div>
@@ -73,7 +77,7 @@
             <div id="content" class="align" on:click={()=>{addno(pbd.num)}}>
                 <div class="number board-open">{items.length-items.indexOf(pbd,0)}</div>
                 <div class="place board-open">{pbd.workplace}</div>
-                <div class="thda board-open"><label on:click={aop}><button on:click={()=>{addno(pbd.num)}}>{pbd.title}</button></label></div>
+                <div class="thda board-open"><label on:click={()=>aop(pbd.count)}><button on:click={()=>{addno(pbd.num)}}>{pbd.title}</button></label></div>
                 <div class="writer board-open">{pbd.whiter}</div>
                 <div class="date board-open">{pbd.date}</div>
                 <div class="count board-open">{pbd.count}</div>
