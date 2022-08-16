@@ -19,7 +19,7 @@
         // console.log(board)
         // console.log(callno)
         modeficount=modeficount+1
-        console.log(modeficount)
+
         await fetch(post+callno,{
 			method:"PATCH", headers:{    //headers를 설정해야 오류가 안남
 				"Content-Type":"application/json"
