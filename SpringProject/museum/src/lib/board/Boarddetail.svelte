@@ -3,6 +3,7 @@
     import {boardid} from "../store"
     
     let callno
+    
 
     boardid.subscribe(t=>{callno=t})
     const post="http://192.168.0.51:8080/postboard/"
@@ -14,6 +15,7 @@
         board=data._embedded.postboard
         // console.log(board)
         // console.log(callno)
+        
     })
 
     let pass=""
@@ -30,9 +32,11 @@
         {#if pbd.num==callno}
     <div id="top">
         <h3 style="text-align: left;">{pbd.title}</h3> 
+
         <h7 style="float: right; padding: 0px 10px;">작성일: {pbd.date}</h7>
         <h7 style="float: right; padding: 0px 10px;">조회수: {pbd.count}</h7>
         <h7 style="float: right; padding: 0px 10px;">담당자: {pbd.whiter}</h7>
+
     </div>
     <div id="content">
         {pbd.content} 
