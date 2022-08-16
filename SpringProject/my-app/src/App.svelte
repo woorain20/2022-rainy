@@ -6,7 +6,10 @@
     import Goods from "./lib/Goods.svelte";
     import Home from "./lib/Home.svelte";
     import Museum from "./lib/Museum.svelte";
-    import Relic from "./lib/Relic.svelte";
+    import Relic from "./lib/Relic.svelte"; 
+import Test22 from "./lib/Test22.svelte";
+
+
     export let url=""
 
 </script>
@@ -27,9 +30,11 @@
       <Route path="event" component={Event}></Route>
       <Route path="board" component={Board}></Route>
       <Route path="goods" component={Goods}></Route>
+      <Route path="test" component={Test22}></Route>
       <Route path="/"><Home/></Route>
   </div>
 </Router>
+
 
 
 <style>

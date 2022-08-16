@@ -51,11 +51,11 @@ import { Link } from "svelte-routing";
     <Link to="home"><button>Home</button></Link>
 </div>
 <div>
-    <input type="text" bind:value={title}> 제목
-    <input type="text" bind:value={whiter}> 작성자
-    <input type="text" bind:value={workplace}> 장소
-    <input type="text" bind:value={content}>내용 
-    <input type="checkbox" bind:checked={official}>오피셜
+    제목<input type="text" bind:value={title}><br />
+    작성자<input type="text" bind:value={whiter}> <br />
+    장소<input type="text" bind:value={workplace}> <br />
+    내용 <textarea bind:value={content}></textarea><br />
+    오피셜<input type="checkbox" bind:checked={official}><br />
     <input type="submit" on:click={()=>add()}>
  
 </div>

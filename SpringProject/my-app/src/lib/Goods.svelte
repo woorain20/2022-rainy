@@ -49,10 +49,10 @@ import { onMount } from "svelte";
     <Link to="home"><button>Home</button></Link>
 </div>
 <div>
-    <input type="text" bind:value={name}> 상품이름
-    <input type="text" bind:value={category}> 구성
-    <input type="text" bind:value={image}> 이미지 링크 주소 
-    <input type="text" bind:value={price}>가격("원"까지 기입) 
+    상품이름<input type="text" bind:value={name}> 
+    구성<input type="text" bind:value={category}> <br />
+    이미지 링크 주소 <input type="text" bind:value={image}> 
+    가격("원"까지 기입) <input type="text" bind:value={price}>
     <input type="submit" on:click={()=>add()}>
  
 </div>
