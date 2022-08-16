@@ -49,6 +49,7 @@
     }
 </script>
 
+<div id="main">
 <div id="detail">
     <div id="museum_option">  
         <select bind:value={muserel}>
@@ -205,62 +206,78 @@
     {/if}
     {/each}
 </div>
+</div>
 
 <style>
+    #main{
+        text-align: center;
+        vertical-align: middle;
+        width: 100%;
+    }
     #detail{
-        width: 600px;
-        height: 100px;
-        margin-top: 30px;
+        width: 100%;
+        height: 20%;
+        margin-left: 10%;
+        margin-top: 3%;
         display: flex;
     }
     #museum_option{
         float: left;
-        margin-right: 20px;
+        margin-right: 1%;
         font-size: 1.1em;
-        flex: 3.5;
+        flex: 3;
     }
     #note_option{
         float: left;
-        margin-right: 20px;
+        margin-right: 1%;
         font-size: 1.1em;
-        flex: 3.5;
+        flex: 3;
     }
     #reset_bt{
         flex: 2;
     }
     #result{
-        margin-top: 30px;
-    }
-    img{
-        width: 300px;
-        height: 250px;
+        margin-top: 3%;
+        margin-left: 20%;
+        margin-right: 20%;
     }
     #content{
-        margin-top: 20px;
-        width: 700px;
-        height: 260px;
-        border-bottom: 1px dashed;
+        margin-top: 2%;
+        width: 100%;
+        border-bottom: 2px dashed;
     }
     #img{
+        width: 300px;
+        height: 270px;
         float: left;
+        margin-bottom: 2%;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
     }
     #text{
-        float: left;
-        margin-left: 30px;
+        width: 350px;
+        height: 270px;
+        margin-left: 100%;
+        margin-bottom: 2%;
     }
     table{
         text-align: left;
-        width: 320px;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
     }
     .tda{
         font-weight: 900;
         font-size: 1.2em;
     }
     .tdb{
-        width: 200px;
+        width: 20%;
     }
     td{
-        width: 100px;
-        height: 40px;
+        width: 10%;
+        height: 4%;
     }
 </style>

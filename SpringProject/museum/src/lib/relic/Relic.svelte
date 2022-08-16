@@ -32,6 +32,7 @@
     function viewopen(){
         view=true
         search=option=false
+        currentPage=1
     }
 
   
