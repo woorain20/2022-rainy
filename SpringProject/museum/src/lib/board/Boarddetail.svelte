@@ -8,7 +8,6 @@
     const post="http://192.168.0.51:8080/postboard/"
     let board=[]
 
-
     onMount(async function(){
         const res=await fetch(post)
         const data = await res.json()
@@ -16,7 +15,17 @@
         // console.log(board)
         // console.log(callno)
     })
+
+    let pass=""
+
+	async function remove(pbd){
+		await fetch(post+pbd.num,{
+			method:"DELETE"
+		})
+		board=board.filter(t=>t!==pbd)
+	}
 </script>
+<div>
     {#each board as pbd}
         {#if pbd.num==callno}
     <div id="top">
@@ -28,9 +37,17 @@
     <div id="content">
         {pbd.content} 
     </div>
+    <div id="delete">
+        <input type="password" bind:value="{pass}">           
+        {#if pass==pbd.password}
+            <button disabled="{!pass}" on:click="{()=>remove(pbd)}"><a href="board.html">삭제</a></button>
+        {:else if pass!=pbd.password}
+            <button disabled="{!pass}">삭제</button>
+        {/if}    
+    </div>
         {/if}
     {/each}
-
+</div>
 
 <style>
     #content{

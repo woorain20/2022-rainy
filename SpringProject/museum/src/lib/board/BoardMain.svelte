@@ -3,6 +3,7 @@
     import {boardid} from "../store"
     import { paginate, PaginationNav } from 'svelte-easy-paginate'
     import Boarddetail from "./Boarddetail.svelte";
+    import BoardWrite from "./BoardWrite.svelte";
 
     const post="http://192.168.0.51:8080/postboard/?page=0&size=50"
 
@@ -22,13 +23,19 @@
     }
 
     $:boardid.update(t=>inknum) 
-    
-    
+        
     let page=true
     let content=false
+    let write=false
+
     function aop(){
         content=!content
         page=!page
+    }
+
+    function writeop(){
+        page=!page
+        write=!write
     }
 
     let currentPage = 1
@@ -36,6 +43,7 @@
     $: postboards = paginate({ items, pageSize, currentPage })
 </script>
 
+<div>
 {#if page}
 <div id="board">
     <div id="name" class="align">
@@ -82,12 +90,21 @@
             on:setPage="{(e) => currentPage = e.detail.page}"
             />
         </div>
+    </div>
+    <div>
+        <button on:click="{writeop}">글쓰기</button>
+    </div>
+{/if}
 </div>
-    {/if}
+<div>
     {#if content}
-    <Boarddetail/>
-    <bottun on:click={aop}>뒤로가기</bottun>  
+        <Boarddetail/>
+        <bottun on:click={aop}>뒤로가기</bottun>  
+    {:else if write}
+        <BoardWrite/>
+        <bottun on:click={writeop}>뒤로가기</bottun>
     {/if}
+</div>
 
 <style>
 
