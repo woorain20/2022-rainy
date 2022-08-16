@@ -39,8 +39,8 @@
 </script>
 
 <div id="main">
-    <div id="header">
-        <h1>소장품 검색</h1>
+    <div id="head">
+        <h1>소장품 찾기</h1>
     </div>
     <div id="option">
         <button on:click="{searopen}">검색</button>
@@ -105,7 +105,7 @@
         text-align: center;
         vertical-align: middle;
     }
-    #header{
+    #head{
         margin-top: 3%;
     }
     #option{
@@ -118,6 +118,7 @@
     }
     #content{
         margin-top: 2%;
+        margin-bottom: 3%;
         width: 100%;
         border-bottom: 2px dashed;
     }
@@ -127,11 +128,16 @@
         float: left;
         margin-bottom: 2%;
         margin-left: 10%;
+        overflow: hidden;
     }
     img{
         width: 100%;
         height: 100%;
         object-fit: fill;
+        transition: all 0.2s linear;
+    }
+    img:hover{
+        transform: scale(1.1);
     }
     #text{
         width: 350px;

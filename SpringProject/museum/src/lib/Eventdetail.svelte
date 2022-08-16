@@ -17,9 +17,12 @@ import {callid} from "./store"
 })
 
 </script>
-<main>
-<h1>EVENT</h1>
 
+<div id="main">
+    <div id="head">
+        <h1>EVENT</h1>
+    </div>
+<div id="info">
 {#each events as event}
 {#if event.no==callno}
     <div id="poster">
@@ -66,27 +69,42 @@ import {callid} from "./store"
             </div>
     {/if}   
 {/each}
-</main>
+</div>
+</div>
 <style>
-
+    #main{
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 3%;
+    }
+    #head{
+        margin-top: 3%;
+        margin-bottom: 2%;
+        margin-left: 35%;
+    }
+    #info{
+        margin-left: 25%;
+    }
     #poster{
         float: left;
         width:450px;
         margin:0 auto;
+        margin-bottom: 3%;
     }
     #content{
         float: left;
-        margin-left:20px;
+        margin-left:5%;
         width:300px;
-       
+        margin-bottom: 3%;
     }
     #content>table>th{
         margin-top:10px;
+        font-size: 1.2em;
     }
     .col{
         width:100px;
         height:50px;
-        text-align: right;
+        text-align: left;
     }
     .con{
         width:200px;
@@ -101,11 +119,5 @@ import {callid} from "./store"
         border: 0px;
         height:50px;
         text-align: left;
-    }
-    main{
-    width:60%;
-    margin: 0px auto;
-    }
-    
-    
-    </style>
+    } 
+</style>

@@ -238,11 +238,11 @@
     }
     #result{
         margin-top: 3%;
-        margin-left: 20%;
-        margin-right: 20%;
+        margin-left: 15%;
     }
     #content{
-        margin-top: 2%;
+        margin-top: 3%;
+        margin-bottom: 2%;
         width: 100%;
         border-bottom: 2px dashed;
     }
@@ -251,16 +251,21 @@
         height: 270px;
         float: left;
         margin-bottom: 2%;
+        overflow: hidden;
     }
     img{
         width: 100%;
         height: 100%;
         object-fit: fill;
+        transition: all 0.2s linear;
+    }
+    img:hover{
+        transform: scale(1.1);
     }
     #text{
         width: 350px;
         height: 270px;
-        margin-left: 100%;
+        margin-left: 60%;
         margin-bottom: 2%;
     }
     table{

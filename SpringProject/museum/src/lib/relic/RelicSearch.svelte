@@ -23,6 +23,7 @@
     }
 </script>
 
+<div id="main">
 <div id="search_input">
     <input type="text" autocomplete="off" placeholder="유물명" bind:value="{text}">
     <button on:click="{open}">찾기</button>
@@ -276,40 +277,66 @@
         {/each}
     {/if}
 </div>
+</div>
 <style>
-    #result{
-        margin-top: 30px;
+    #main{
+        text-align: center;
+        vertical-align: middle;
+        width: 100%;
     }
-    img{
-        width: 300px;
-        height: 250px;
+    #search_input{
+        width: 100%;
+        height: 20%;
+        margin-left: 10%;
+        margin-top: 3%;
+    }
+    #result{
+        margin-top: 3%;
+        margin-left: 15%;
     }
     #content{
-        margin-top: 20px;
-        width: 700px;
-        height: 260px;
-        border-bottom: 1px dashed;
+        margin-top: 3%;
+        margin-bottom: 2%;
+        width: 100%;
+        border-bottom: 2px dashed;
     }
     #img{
+        width: 300px;
+        height: 270px;
         float: left;
+        margin-bottom: 2%;
+        overflow: hidden;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        transition: all 0.2s linear;
+    }
+    img:hover{
+        transform: scale(1.1);
     }
     #text{
-        float: left;
-        margin-left: 30px;
+        width: 350px;
+        height: 270px;
+        margin-left: 60%;
+        margin-bottom: 2%;
     }
     table{
         text-align: left;
-        width: 320px;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
     }
     .tda{
         font-weight: 900;
         font-size: 1.2em;
     }
     .tdb{
-        width: 200px;
+        width: 20%;
     }
     td{
-        width: 100px;
-        height: 40px;
+        width: 10%;
+        height: 4%;
     }
 </style>

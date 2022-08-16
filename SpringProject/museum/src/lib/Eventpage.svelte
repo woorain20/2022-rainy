@@ -34,9 +34,10 @@ $:callid.update(t=>inknum)
 
 </script> 
 
-
-
-<h1>Museum EVENT!!!</h1>
+<div id="main">
+    <div id="head">
+        <h1>Museum EVENT</h1>
+    </div>
 {#if page}
 
 <div class="grid">
@@ -64,8 +65,17 @@ $:callid.update(t=>inknum)
 <bottun id="qwe" on:click={toggle}>다른 이벤트 보기</bottun>
 <Eventdetail />
 {/if}
+</div>
 
 <style>
+    #main{
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 3%;
+    }
+    #head{
+        margin-bottom: 2%;
+    }
     .grid{
     display: grid;
 	flex: 1;
@@ -74,6 +84,7 @@ $:callid.update(t=>inknum)
 	grid-gap: 1vmin;
     width:90%;
     margin: 0px auto;
+    margin-bottom: 2%;
     }
 div>label>button {
 	width: 100%;
@@ -92,6 +103,4 @@ img{
     background-color: bisque;
     margin-right:30%;
 }
-
-
 </style>
