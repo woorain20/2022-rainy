@@ -30,9 +30,9 @@
         {#if pbd.num==callno}
     <div id="top">
         <h3 style="text-align: left;">{pbd.title}</h3> 
-        <h7 style="float: right; padding: 0px 10px;">작성일 :{pbd.date}</h7>
-        <h7 style="float: right; padding: 0px 10px;">조회수 : {pbd.count}</h7>
-        <h7 style="float: right; padding: 0px 10px;">담당자:{pbd.whiter}</h7>
+        <h7 style="float: right; padding: 0px 10px;">작성일: {pbd.date}</h7>
+        <h7 style="float: right; padding: 0px 10px;">조회수: {pbd.count}</h7>
+        <h7 style="float: right; padding: 0px 10px;">담당자: {pbd.whiter}</h7>
     </div>
     <div id="content">
         {pbd.content} 

@@ -10,7 +10,6 @@
     let items=[]
     let inknum
 
-
     onMount(async function(){
         const res=await fetch(post+"&sort=num,desc")
         const data = await res.json()
@@ -41,6 +40,7 @@
     let currentPage = 1
     let pageSize = 10
     $: postboards = paginate({ items, pageSize, currentPage })
+
 </script>
 
 <div>
@@ -48,7 +48,7 @@
 <div id="board">
     <div id="name" class="align">
         <div class="number board-open">번호</div>
-        <div class="place board-open">소속</div>
+        <div class="place board-open">장소</div>
         <div class="thda board-open">제목</div>
         <div class="writer board-open">작성자</div>
         <div class="date board-open">작성일</div>
@@ -58,13 +58,13 @@
         {#each items as pbd}
             {#if pbd.official}
             <div class="align" on:click={()=>{addno(pbd.num)}}>
-                        <div class="number board-open">공지</div>
-                        <div class="place board-open">{pbd.workplace}</div>
-                        <div class="thda board-open"><label on:click={aop}><button on:click={()=>{addno(pbd.num)}}>{pbd.title}</button></label></div>
-                        <div class="writer board-open">{pbd.whiter}</div>
-                        <div class="date board-open">{pbd.date}</div>
-                        <div class="count board-open">{pbd.count}</div>
-                </div>
+                <div class="number board-open">공지</div>
+                <div class="place board-open">{pbd.workplace}</div>
+                <div class="thda board-open"><label on:click={aop}><button on:click={()=>{addno(pbd.num)}}>{pbd.title}</button></label></div>
+                <div class="writer board-open">{pbd.whiter}</div>
+                <div class="date board-open">{pbd.date}</div>
+                <div class="count board-open">{pbd.count}</div>
+            </div>
             {/if}
         {/each}
     </div>
