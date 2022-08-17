@@ -118,7 +118,7 @@ let positionright = 0;
   <div class="container">
 
     <div class="section-title">
-      <h2>행사</h2>
+      <h2>EVENT</h2>
       <p>지금 신청 가능하거나 진행중인 EVENT 최신 소식!</p>
     </div>
 

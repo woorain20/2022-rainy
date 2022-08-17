@@ -60,7 +60,7 @@ import PaginationNav from "svelte-easy-paginate/src/PaginationNav.svelte";
                 </label>
             {:else}
                 <label class="square close ">
-                    <button id="d" class="close ">
+                    <button id="d" class="close " >
                         <img src="./src/lib/exhibitionposter/{exhibition.poster}.jpg" alt = "사진오류" />
                         <br /><br />
                         <h4>{exhibition.title}</h4>
