@@ -1,148 +1,133 @@
 <script>
-let curPos = 0;
-let postion = 0;
-const IMAGE_WIDTH = 640;
-const prevBtn = document.querySelector(".prev")
-const nextBtn = document.querySelector(".next")
-const images = document.querySelector(".images")
- 
-export function prev(){
-  if(curPos > 0){
-    nextBtn.removeAttribute("disabled")
-    postion += IMAGE_WIDTH;
-    images.style.transform = `translateX(${postion}px)`;
-    curPos = curPos - 1;
-  }
-  if(curPos == 0){
-    prevBtn.setAttribute('disabled', 'true')
-  }
-}
-export function next(){
-  if(curPos < 3){
-    prevBtn.removeAttribute("disabled")
-    postion -= IMAGE_WIDTH;
-    images.style.transform = `translateX(${postion}px)`;
-    curPos = curPos + 1;
-  }
-  if(curPos == 3){
-    nextBtn.setAttribute('disabled', 'true')
-  }
-}
- 
-function init(){
-  prevBtn.setAttribute('disabled', 'true')
-  prevBtn.addEventListener("click", prev)
-  nextBtn.addEventListener("click", next)
-}
- 
-init();
-  </script>
-<h3>나오나?dddd</h3>
+  let currId = 0;
+  const images = [
+    './src/lib/image/flower.jpg',
+    './src/lib/image/fox.jpg',
+    './src/lib/image/gayasnarock.jpg',
+    './src/lib/image/lightning.jpg',
+    './src/lib/image/moon.jpg',
+  ];
+  const imgLen = images.length;
+  let positionLeft = 0;
 
+  const moveSlider = () => {
+    positionLeft = currId * 100;
+  };
 
-<div id="slideShow">
-    <ul class="slides">
-      <li><img src="./src/lib/image/flower.jpg" alt="d"></li>
-      <li><img src="./src/lib/image/fox.jpg" alt="d"></li>
-      <li><img src="./src/lib/image/lightning.jpg" alt="d"></li>
-      <li><img src="./src/lib/image/moon.jpg" alt="d"></li>
-      <li><img src="./src/lib/image/nature.jpg" alt="d"></li>
-      <li><img src="./src/lib/image/space.jpg" alt="d"></li>
-    </ul>  
-    <p class="controller">
-      
-      <!-- &lang: 왼쪽 방향 화살표
-      &rang: 오른쪽 방향 화살표 -->
-      <span class="prev" on:click={prev}>&lang;</span>  
-      <span class="next" on:click={next}>&rang;</span>
-    </p>
+  const next = () => {
+    currId = currId === imgLen - 1 ? 0 : currId + 1;
+    moveSlider();
+  };
+	
+  const prev = () => {
+    currId = currId === 0 ? imgLen - 1 : currId - 1;
+    moveSlider();
+  };
+
+  const getIndex = (index) => {
+    currId = index;
+    moveSlider();
+  };
+
+	let interval = setInterval(next, 2000);
+	const autoPlay = () => {
+		interval = setInterval(next, 2000)
+	}
+
+	const stopPlay = () => {
+		clearInterval(interval)
+	}
+  function focus(){
+
+  }
+</script>
+<main>
+<h1>Svelte Image Carousel Slider</h1>
+  <div on:mouseover={stopPlay} on:mouseleave={autoPlay} on:focus={focus}  class="container">
+    <div class="slider" style="left: -{positionLeft}%;">
+      {#each images as img}
+        <img src={img} alt="" />
+      {/each}
+    </div>
+    <div class="arrow">
+      <button on:click={prev} class="prev">Prev</button>
+      <button on:click={next} class="next">Next</button>
+    </div>
+    <div class="papagination">
+      {#each images as _, i}
+        <button
+          class={currId === i ? 'active' : ''}
+          on:click={() => getIndex(i)}
+        ></button>
+      {/each}
+    </div>
   </div>
-<!-- 출처: https://eunhee-programming.tistory.com/106 [코드짜는 문과녀:티스토리] -->
+<p>
+  Images from pixabay : <a
+    href="https://pixabay.com/"
+    target="_blank"
+    rel="noopener">https://pixabay.com/</a
+  >
+</p>
+</main>
 <style>
-    /* 초기화 */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+ main {
+    padding: 15px;
+    text-align: center;
+  }
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .slider {
+    display: flex;
+    position: relative;
+    transition: left 0.5s;
+  }
+  .slider img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  .arrow button {
+    margin-bottom: 0;
+    padding: 12px;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+  }
 
-li{
-  list-style-type: none;
-}
+  .papagination {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 8px;
+    width: 100%;
+  }
 
-/* 보여줄 구간의 높이와 넓이 설정 */
-#slideShow{
-  width: 500px;
-  height: 300px;
-  position: relative;
-  margin: 50px auto;
-  overflow: hidden;   
-  /*리스트 형식으로 이미지를 일렬로 
-  정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은
-  hidden으로 숨겨줘야됨*/
-}
-
-
-.slides{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 2500px; /* 슬라이드할 사진과 마진 총 넓이 */
-  transition: left 0.5s ease-out; 
-  /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
-}
-
-/* 첫 번째 슬라이드 가운데에 정렬하기위해
-첫번째 슬라이드만 margin-left조정 */
-.slides li:first-child{
-  margin-left: 100px;
-}
-
-/* 슬라이드들 옆으로 정렬 */
-.slides li:not(:last-child){
-  float: left;
-  margin-right: 100px;
-}
-
-.slides li{
-  float: left;
-}
-
-.controller span{
-  position:absolute;
-  background-color: transparent;
-  color: black;
-  text-align: center;
-  border-radius: 50%;
-  padding: 10px 20px;
-  top: 50%;
-  font-size: 1.3em;
-  cursor: pointer;
-}
-
-/* 이전, 다음 화살표에 마우스 커서가 올라가 있을때 */
-.controller span:hover{
-  background-color: rgba(128, 128, 128, 0.11);
-}
-
-.prev{
-  left: 10px;
-}
-
-/* 이전 화살표에 마우스 커서가 올라가 있을때 
-이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
-.prev:hover{
-  transform: translateX(-10px);
-}
-
-.next{
-  right: 10px;
-}
-
-/* 다음 화살표에 마우스 커서가 올라가 있을때 
-이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
-.next:hover{
-  transform: translateX(10px);
-}
-/* 출처: https://eunhee-programming.tistory.com/106 [코드짜는 문과녀:티스토리] */
+  .papagination button {
+    margin: 0 4px;
+    width: 14px;
+    height: 14px;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    cursor: pointer;
+  }
+  .papagination .active {
+    background-color: rgba(255, 0, 0, 0.8);
+  }
 </style>
