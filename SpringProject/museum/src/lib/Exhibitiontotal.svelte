@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { paginate } from "svelte-easy-paginate";
-import PaginationNav from "svelte-easy-paginate/src/PaginationNav.svelte";
+    import PaginationNav from "svelte-easy-paginate/src/PaginationNav.svelte";
     import Exhibitiondetail from "./exhibitiondetail.svelte";
     import { callid } from "./store";
 
