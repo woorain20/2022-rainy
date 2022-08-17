@@ -4,7 +4,7 @@
     import RelicSearch from "./RelicSearch.svelte";
     import { paginate, PaginationNav } from 'svelte-easy-paginate'
 
-    const relic="http://192.168.0.51:8080/relic/?page=0&size=148"
+    const relic="http://192.168.0.51:8080/relic/?page=0&size=200"
 
     let items=[]
     
@@ -98,7 +98,6 @@
         {/if}
     </div>
 </div>
-
 
 <style>
     #main{

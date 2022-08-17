@@ -7,8 +7,6 @@
     import Home from "./lib/Home.svelte";
     import Museum from "./lib/Museum.svelte";
     import Relic from "./lib/Relic.svelte"; 
-import Test22 from "./lib/Test22.svelte";
-
 
     export let url=""
 
@@ -30,7 +28,6 @@ import Test22 from "./lib/Test22.svelte";
       <Route path="event" component={Event}></Route>
       <Route path="board" component={Board}></Route>
       <Route path="goods" component={Goods}></Route>
-      <Route path="test" component={Test22}></Route>
       <Route path="/"><Home/></Route>
   </div>
 </Router>

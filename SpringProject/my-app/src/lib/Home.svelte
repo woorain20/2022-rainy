@@ -10,5 +10,4 @@
     <Link to="event"><button>Event</button></Link>
     <Link to="board"><button>Board</button></Link>
     <Link to="goods"><button>Goods</button></Link>
-    <Link to="test"><button>Test</button></Link>
 </div>
