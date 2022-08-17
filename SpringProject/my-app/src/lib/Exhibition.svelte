@@ -6,6 +6,23 @@
     let poster, title, place, fee, startday, endday, content, linkpage
     let always, done=false
 
+    let workplacenames=[
+        "중앙박물관",
+        "경주박물관",
+        "광주박물관",
+        "전주박물관",
+        "대구박물관",
+        "부여박물관",
+        "공주박물관",
+        "진주박물관",
+        "청주박물관",
+        "김해박물관",
+        "제주박물관",
+        "춘천박물관",
+        "나주박물관",
+        "익산박물관"
+    ]
+
     const savepoint="http://192.168.0.51:8080/exhibition/"
     
     onMount(async function(){
@@ -53,9 +70,16 @@
     <Link to="home"><button>Home</button></Link>
 </div>
 <div>
+    <div>
+        장소<select bind:value={place}>
+            {#each workplacenames as workplacename}
+                <option value={workplacename}>
+                {workplacename}
+            </option>
+            {/each} 
+        </div>
     포스터<input type="url" bind:value="{poster}">
     전시회<input type="text" bind:value="{title}"><br/>
-    장소<input type="text" bind:value="{place}">
     요금<input type="text" bind:value="{fee}"><br/>
     시작<input type="text" bind:value="{startday}">
     종료<input type="text" bind:value="{endday}"><br/>

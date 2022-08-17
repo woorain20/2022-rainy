@@ -3,6 +3,22 @@
     import { onMount } from "svelte";
 
     let event=[]
+    let workplacenames=[
+        "중앙박물관",
+        "경주박물관",
+        "광주박물관",
+        "전주박물관",
+        "대구박물관",
+        "부여박물관",
+        "공주박물관",
+        "진주박물관",
+        "청주박물관",
+        "김해박물관",
+        "제주박물관",
+        "춘천박물관",
+        "나주박물관",
+        "익산박물관"
+    ]
     let banner, eventname, fee, place, startday, endday, time, empty, content, step
     let done=false
     const savepoint="http://192.168.0.51:8080/event/"
@@ -53,13 +69,20 @@
     <Link to="home"><button>Home</button></Link>
 </div>
 <div>
+    <div>
+    장소<select bind:value={place}>
+        {#each workplacenames as workplacename}
+            <option value={workplacename}>
+            {workplacename}
+        </option>
+        {/each} <br />
+    </div>
     배너<input type="url" bind:value="{banner}">
-    이벤트명<input type="text" bind:value="{eventname}"><br/>
-    요금<input type="text" bind:value="{fee}">
-    장소<input type="text" bind:value="{place}"><br/>
+    이벤트명<input type="text" bind:value="{eventname}">
+    요금<input type="text" bind:value="{fee}"><br/>
     시작<input type="text" bind:value="{startday}">
     마침<input type="text" bind:value="{endday}"><br/>
-    시간<input type="text" bind:value="{time}">
+    진행시간<input type="text" bind:value="{time}">
     정원<input type="text" bind:value="{empty}"><br/>
     내용<input type="text" bind:value="{content}">
     담당자<input type="text" bind:value="{step}"><br/>

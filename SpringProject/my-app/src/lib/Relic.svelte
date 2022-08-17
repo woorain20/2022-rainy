@@ -5,6 +5,22 @@
     const savepoint="http://192.168.0.51:8080/relic/?page=0&size=200"
 
     let relic=[]
+    let workplacenames=[
+        "중앙박물관",
+        "경주박물관",
+        "광주박물관",
+        "전주박물관",
+        "대구박물관",
+        "부여박물관",
+        "공주박물관",
+        "진주박물관",
+        "청주박물관",
+        "김해박물관",
+        "제주박물관",
+        "춘천박물관",
+        "나주박물관",
+        "익산박물관"
+    ]
 
     let image, name, period, note, excavation, museum
 
@@ -51,12 +67,20 @@
     <Link to="home"><button>Home</button></Link>
 </div>
 <div>
+    <div>
+        소장박물관<select bind:value={museum}>
+            {#each workplacenames as workplacename}
+                <option value={workplacename}>
+                {workplacename}
+            </option>
+            {/each} 
+        </div>
+
     이미지<input type="url" bind:value="{image}">
     유물명<input type="text" bind:value="{name}"><br/>
     시대<input type="text" bind:value="{period}">
     등재<input type="text" bind:value="{note}"><br/>
     출토지<input type="text" bind:value="{excavation}">
-    소장박물관<input type="text" bind:value="{museum}"><br/>
     <input type="submit" on:click={()=>add()}>
 </div>
 
