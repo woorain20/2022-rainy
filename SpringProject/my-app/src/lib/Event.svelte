@@ -78,24 +78,24 @@
 <div class="post">
     <div>
         <h2>추가</h2>
-    장소<select bind:value={place}>
+    장소  <select bind:value={place}>
         {#each workplacenames as workplacename}
             <option value={workplacename}>
             {workplacename}
         </option>
         {/each} <br />
     </div>
-    배너<input type="url" bind:value="{banner}">
-    이벤트명<input type="text" bind:value="{eventname}">
-    요금<input type="text" bind:value="{fee}"><br/>
-    시작<input type="date" bind:value="{startday}">
-    마침<input type="date" bind:value="{endday}"><br/>
-    진행시간<input type="text" bind:value="{time}">
-    정원<input type="text" bind:value="{empty}"><br/>
-    내용<input type="text" bind:value="{content}">
-    담당자<input type="text" bind:value="{step}"><br/>
-    종료<input type="checkbox" bind:checked="{done}"><br/>
-    <input type="submit" on:click={()=>add()}>
+    <label>포스터파일 <input type="url" bind:value="{banner}"></label>
+    <label>이벤트명 <input type="text" bind:value="{eventname}"></label>
+    <label>요금 <input type="text" bind:value="{fee}"></label><br /><br />
+    <label>시작 <input type="date" bind:value="{startday}"></label>
+    <label>마침 <input type="date" bind:value="{endday}"></label><br /><br />
+    <label>진행시간 <input type="text" bind:value="{time}"></label>
+    <label>정원 <input type="text" bind:value="{empty}"></label>
+    <label>담당자 <input type="text" bind:value="{step}"></label>
+    <label>종료 <input type="checkbox" bind:checked="{done}"></label><br /><br />
+    <label>내용 <textarea bind:value="{content}" /></label>
+    <input type="submit" style="width: 85px; height:40px;" on:click={()=>add()} />
 </div>
 
 <div class="delete"> 
@@ -149,5 +149,19 @@
     }
     .day{
         width: 100px;
+    }
+    .post{
+        border: 1px solid black;
+        height: 750px;
+        width:900px;
+    }
+    .post>label{
+        float: left;
+        padding-left:10px
+    }
+    textarea{
+        margin: 0px 25px;
+        width: 820px; 
+        height:400px;
     }
 </style>

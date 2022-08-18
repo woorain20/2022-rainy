@@ -25,7 +25,7 @@ import { Link } from "svelte-routing";
     let official=false
     let password= 1111
 
-    const savepoint="http://192.168.0.51:8080/postboard/?page=0&size=50"
+    const savepoint="http://192.168.0.51:8080/postboard/?page=0&size=50&sort=num,desc"
 	onMount(async function(){
 		const res=await fetch(savepoint)
 		const data = await res.json()
@@ -55,6 +55,13 @@ import { Link } from "svelte-routing";
         password=1111
         console.log(board)
     }
+    async function remove(board){
+		await fetch("http://192.168.0.51:8080/postboard/"+board.num,{
+			method:"DELETE"
+		})
+		boards=boards.filter(t=>t!==board)
+        alert("삭제되었습니다.");
+	}
 
 </script>
 
@@ -68,8 +75,9 @@ import { Link } from "svelte-routing";
     <Link to="goods"><button>Goods</button></Link>
     <Link to="home"><button>Home</button></Link>
 </div>
-<div>
-    장소<select bind:value={workplace}>
+<div class="post">
+    <h2>추가</h2>
+    장소<select bind:value={workplace} >
         {#each workplacenames as workplacename}
             <option value={workplacename}>
             {workplacename}
@@ -84,8 +92,54 @@ import { Link } from "svelte-routing";
     <input type="submit" on:click={()=>add()}>
 </div>
 
+<div class="delete"> 
+    <h2>삭제</h2>
+    <table>
+        <tr>
+            <td>고유번호</td>
+            <td>게시글 제목</td>
+            <td>작성자</td>
+            <td>기관</td>
+            <td>공지여부</td>
+            <td>비밀번호</td>
+            <td>작성일</td>
+        </tr>
+        {#each boards as board}
+        <tr>
+            <td>{board.num}</td>
+            <td class="title">{board.title}</td>
+            <td>{board.whiter}</td>
+            <td class="day">{board.workplace}</td>
+            <td>{#if board.official}
+                공지
+                {:else if !board.official}
+                X
+                {/if}
+            </td>
+            <td>{board.password}</td>
+            <td class="day">{board.date}</td>
+            <td><button on:click={remove}>삭제</button></td>
+        </tr>
+        {/each}
+    </table>
+
+</div>
+
 <style>
     div{
         margin-bottom: 30px;
+    }
+    td{
+        border-bottom: 1px dashed black
+    }
+    .day{
+        width: 100px;
+    }
+    .title{
+        width:500px;
+    }
+    .delete{
+        height:700px;
+        overflow-y: scroll;
     }
 </style>

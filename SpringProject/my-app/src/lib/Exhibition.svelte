@@ -77,24 +77,26 @@
     <Link to="home"><button>Home</button></Link>
 </div>
 <div class="post">
+    <h2> 추가 </h2>
     <div>
-        장소<select bind:value={place}>
+        장소  <select bind:value={place} style="font-size: 1em;">
             {#each workplacenames as workplacename}
                 <option value={workplacename}>
                 {workplacename}
             </option>
             {/each} 
         </div>
-    포스터<input type="url" bind:value="{poster}">
-    전시회<input type="text" bind:value="{title}"><br/>
-    요금<input type="text" bind:value="{fee}"><br/>
-    시작<input type="text" bind:value="{startday}">
-    종료<input type="text" bind:value="{endday}"><br/>
-    내용<input type="text" bind:value="{content}">
-    링크<input type="text" bind:value="{linkpage}"><br/>
-    상설<input type="checkbox" bind:checked="{always}">
-    종료<input type="checkbox" bind:checked="{done}"><br/>
-    <input type="submit" on:click={()=>add()}>
+    <label>포스터 <input type="url" bind:value="{poster}" placeholder="링크url"></label>
+    <label>전시회 <input type="text" bind:value="{title}"placeholder="전시회이름" style="width: 250px;"></label>
+    <label>요금 <input type="text" bind:value="{fee}" placeholder="금액('원'까지 기입)"></label><br/><br/>
+    <label>시작 <input type="date" bind:value="{startday}"></label>
+    <label>종료 <input type="date" bind:value="{endday}"></label>
+    <label><p>내용</p> <textarea bind:value="{content}" placeholder="전시회 내용"/></label><br/>
+    <label> 링크 <input type="text" bind:value="{linkpage}"></label>
+    <label>상설 <input type="checkbox" bind:checked="{always}"></label><br/>
+    <label>종료 <input type="checkbox" bind:checked="{done}"></label>
+    <br/><br/><br/><br/><br/><br/><br/>
+    <input type="submit" style="width: 85px; height:40px;" on:click={()=>add()}>
 </div>
 
 <div class="delete"> 
@@ -160,5 +162,18 @@
     td>button{
         margin-left: 5px;
     }
-
+    .post{
+        border: 1px solid black;
+        height: 900px;
+        width:900px;
+    }
+    .post>label{
+        float: left;
+        padding-left:10px
+    }
+    textarea{
+        margin: 0px 25px;;
+        width: 820px; 
+        height:600px;
+    }
 </style>
