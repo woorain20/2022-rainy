@@ -57,6 +57,13 @@
        linkpage=""
        console.log(exhi)
    }
+   async function remove(event){
+		await fetch(savepoint+event.no,{
+			method:"DELETE"
+		})
+		exhibition=exhibition.filter(t=>t!==event)
+        alert("삭제되었습니다.");
+	}
 </script>
 
 <div>
@@ -69,7 +76,7 @@
     <Link to="goods"><button>Goods</button></Link>
     <Link to="home"><button>Home</button></Link>
 </div>
-<div>
+<div class="post">
     <div>
         장소<select bind:value={place}>
             {#each workplacenames as workplacename}
@@ -90,8 +97,68 @@
     <input type="submit" on:click={()=>add()}>
 </div>
 
+<div class="delete"> 
+    <h2>삭제</h2>
+    <table>
+        <tr>
+            <td>고유번호</td>
+            <td>이미지파일이름</td>
+            <td>장소</td>
+            <td>전시회이름</td>
+            <td>시작날</td>
+            <td>마감날</td>
+            <td>가격</td>
+            <td>진행여부</td>
+            <td>전시회종류</td>
+        </tr>
+        {#each exhibition as exhi}
+        <tr>
+            <td>{exhi.id}</td>
+            <td>{exhi.poster}</td>
+            <td class="day">{exhi.place}</td>
+            <td class="day">{exhi.title}</td>
+            <td class="day">{exhi.startday}</td>
+            <td class="day">{exhi.endday}</td>
+            <td>{exhi.fee}</td>
+            <td>{#if exhi.done}
+                O
+                {:else if !exhi.done}
+                X
+                {/if}
+            </td>
+            <td>{#if exhi.always}
+                <p class="always">상설</p>
+                {:else if !exhi.always}
+                <p class="spacial">특별</p>
+                {/if}
+            </td>
+            <td><button on:click={remove}>삭제</button></td>
+        </tr>
+        {/each}
+    </table>
+
+</div>
+
 <style>
     div{
         margin-bottom: 30px;
     }
+    td{
+        border-bottom: 1px dashed black;
+
+    }
+    .day{
+        width: 100px;
+    }
+    td>.always{
+        background-color: bisque;
+    }
+    td>.spacial{
+        background-color: navy;
+        color:white;
+    }
+    td>button{
+        margin-left: 5px;
+    }
+
 </style>
