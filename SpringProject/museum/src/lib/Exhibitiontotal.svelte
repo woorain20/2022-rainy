@@ -47,15 +47,15 @@
             {#if exhibition.done}
                 <label class="square open" on:click={toggle}>
                     <button id="d" class="open" on:click={()=>{addno(exhibition.id)}}>
-                        <img src="./src/lib/exhibitionposter/{exhibition.poster}.jpg" alt = "사진오류" />
-                        <br /><br />
-                        <h4>{exhibition.title}</h4>
-                        <p>{exhibition.startday}~{exhibition.endday}</p>
                         {#if exhibition.always}
                             <h2> 상설 전시회</h2>
                         {:else if !exhibition.always}
                             <h2> 특별 전시회</h2>
                         {/if}
+                        <img src="./src/lib/exhibitionposter/{exhibition.poster}.jpg" alt = "사진오류" />
+                        <br /><br />
+                        <h4>{exhibition.title}</h4>
+                        <p>{exhibition.startday}~{exhibition.endday}</p>
                     </button>
                 </label>
             {:else}
@@ -81,7 +81,7 @@
 
     {/if}
     {#if detail}
-    <bottun id="qwe" on:click={toggle}>다른 이벤트 보기</bottun>
+    <bottun id="qwe" on:click={toggle}>다른 이벤트</bottun>
     <Exhibitiondetail/>
     {/if}
 </div>
@@ -125,9 +125,15 @@ img{
 }
 #qwe{
     float: right;
-    border: 1px solid black;
+    border: 2px solid black;
     background-color: bisque;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.2em;
     margin-right:30%;
+}
+#qwe:hover{
+    background-color: #ffff99;
 }
 .close{
     opacity: 0.6;

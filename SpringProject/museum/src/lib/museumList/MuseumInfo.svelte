@@ -74,7 +74,7 @@
     }
 </script>
 
-<body>
+<div id="total">
     <div id="list">
         <h1>우리의 박물관을 찾아서</h1>
         <ul>
@@ -128,11 +128,11 @@
             <IksanMuseum/>
         {/if}
     </div>
-</body>
+</div>
+
 <style>
-    body{
+    #total{
         text-align: center;
-        display: table-cell;
         vertical-align: middle;
     }
     #list{
@@ -143,14 +143,17 @@
     }
     ul{
         margin-bottom: 5%;
+        width: 90%;
+        margin-left: 5%;
     }
     li{
         list-style: none;
         float: left;
         font-weight: 600;
+        font-size: 1.5em;
     }
     button{
-        width: 10%;
+        width: 12%;
         border-radius: 5px 5px 5px 5px;
         margin: 0.5%;
     }
