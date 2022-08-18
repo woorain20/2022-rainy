@@ -137,6 +137,10 @@
     div{
         margin-bottom: 30px;
     }
+    td{
+        border-bottom: 1px dashed;
+        margin: 5px;
+    }
     #search{
         margin-top: 20px;
         margin-left: 200px;
