@@ -136,10 +136,10 @@
         vertical-align: middle;
     }
     #list{
-        margin-top: 5%;
+        margin-top: 3%;
     }
     h1{
-        margin-bottom: 5%;
+        margin-bottom: 3%;
     }
     ul{
         margin-bottom: 5%;
@@ -154,19 +154,20 @@
     }
     button{
         width: 12%;
-        border-radius: 5px 5px 5px 5px;
+        border: 3px outset;
+        border-radius: 5px;
         margin: 0.5%;
     }
     button:hover{
-        border: 2px solid #3333ff;
+        border: 3px inset;
     }
     button:focus{
-        background-color: #ffffe6;
+        border: 3px inset;
     }
     img{
         width: 90%;
         height: 70%;
-        border-radius: 5px 5px 5px 5px;
+        border-radius: 5px;
     }
     #contents{
         margin-bottom: 2%;

@@ -76,8 +76,12 @@
         width: 20%;
     }
     #click{
+        border: 3px outset;
         border-radius: 5px 5px 5px 5px;
         font-weight: 600;
+    }
+    #click:hover{
+        border: 3px inset;
     }
     #note{
         font-weight: 800;

@@ -19,9 +19,6 @@ import {callid} from "./store"
 </script>
 
 <div id="main">
-    <div id="head">
-        <h1>EVENT</h1>
-    </div>
 <div id="info">
 {#each events as event}
 {#if event.no==callno}
@@ -55,10 +52,10 @@ import {callid} from "./store"
                         <td class="col">내용</td>
                         <td class="con">{event.content}</td>
                     </tr>
-                    <tr >
+                    <tr>
                         <td colspan="2">
-                            <button>장바구니</button>
-                            <button>예매하기</button>
+                            <button class="but">장바구니</button>
+                            <button class="but">예매하기</button>
                         </td>
                     </tr>
             </table>
@@ -75,12 +72,7 @@ import {callid} from "./store"
     #main{
         text-align: center;
         vertical-align: middle;
-        margin-top: 3%;
-    }
-    #head{
-        margin-top: 3%;
-        margin-bottom: 2%;
-        margin-left: 35%;
+        margin-top: 5%;
     }
     #info{
         margin-left: 25%;
@@ -108,9 +100,17 @@ import {callid} from "./store"
     }
     .con{
         width:200px;
+        border-bottom: 1px dotted;
     }
     #detailcon{
         height:200px;
+    }
+    .but{
+        margin-top: 3%;
+        border: 3px outset;
+    }
+    .but:hover{
+        border: 3px inset;
     }
     #content>p{
         margin-left:20px;
@@ -119,5 +119,6 @@ import {callid} from "./store"
         border: 0px;
         height:50px;
         text-align: left;
+        font-weight: 600;
     } 
 </style>

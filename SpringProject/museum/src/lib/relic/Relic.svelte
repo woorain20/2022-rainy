@@ -167,6 +167,11 @@
     #option>button{
         background-color: white;
         border:0px;
-        border-bottom:2px solid gray;
+        border-bottom:5px solid #d9d9d9;
+    }
+    #option>button:focus{
+        background-color: white;
+        border:0px;
+        border-bottom:5px solid #4d4dff;
     }
 </style>

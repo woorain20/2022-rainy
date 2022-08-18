@@ -58,17 +58,17 @@
     </div>
     <div id="note_option">
         <label>
-            <input type="checkbox" bind:checked="{gukbo}">국보
+            <input class="check" type="checkbox" bind:checked="{gukbo}">국보
         </label>
         <label>
-            <input type="checkbox" bind:checked="{bomul}">보물
+            <input class="check" type="checkbox" bind:checked="{bomul}">보물
         </label>
         <label>
-            <input type="checkbox" bind:checked="{gita}">기타
+            <input class="check" type="checkbox" bind:checked="{gita}">기타
         </label>
     </div>
     <div id="reset_bt">
-    <button on:click="{reset}">reset</button>
+    <button class="but" on:click="{reset}">RESET</button>
     </div>
 </div>
 <div id="result">
@@ -211,26 +211,35 @@
         width: 100%;
     }
     #detail{
-        width: 100%;
+        width: 60%;
         height: 20%;
-        margin-left: 10%;
+        margin-left: 30%;
         margin-top: 3%;
         display: flex;
     }
     #museum_option{
         float: left;
-        margin-right: 1%;
         font-size: 1.1em;
         flex: 3;
     }
     #note_option{
         float: left;
-        margin-right: 1%;
         font-size: 1.1em;
-        flex: 3;
+        flex: 5;
     }
     #reset_bt{
         flex: 2;
+    }
+    .check{
+        width: 100%;
+    }
+    .but{
+        border: 3px outset;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+    .but:hover{
+        border: 3px inset;
     }
     #result{
         margin-top: 3%;

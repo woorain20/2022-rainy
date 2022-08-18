@@ -128,6 +128,10 @@
         border-radius: 5px 5px 5px 5px;
         font-weight: 700;
         background-color: linen;
+        border: 3px outset;
+    }
+    #write>button:hover{
+        border: 3px inset;
     }
     #board{
         width: 75%;
@@ -183,13 +187,12 @@
     .back{
         margin-left: 5%;
         border-radius: 5px 5px 5px 5px;
-        border: 2px solid;
+        border: 3px outset;
         font-weight: 600;
         background-color: #cce6ff;
     }
     .back:hover{
-        background-color: #000000;
-        color: white;
-        border: 0
+        background-color: #cce6ff;
+        border: 3px inset
     }
 </style>

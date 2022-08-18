@@ -26,8 +26,8 @@
 <div id="main">
 <div id="search_input">
     <input type="text" autocomplete="off" placeholder="유물명" bind:value="{text}">
-    <button on:click="{open}">찾기</button>
-    <button on:click="{close}">RESET</button>
+    <button class="but" on:click="{open}">찾기</button>
+    <button class="but" on:click="{close}">RESET</button>
 </div>
 <div id="result">
     {#if a}
@@ -289,6 +289,18 @@
         height: 20%;
         margin-left: 10%;
         margin-top: 3%;
+    }
+    #search_input > input{
+        width: 25%;
+        margin-right: 3%;
+    }
+    .but{
+        border: 3px outset;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+    .but:hover{
+        border: 3px inset;
     }
     #result{
         margin-top: 3%;

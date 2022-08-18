@@ -38,10 +38,9 @@
 </script>
 <div id="main">
     <div id="head">
-        <h1>EXHIBITIOM</h1>
+        <h1>EXHIBITION</h1>
     </div>
-{#if page}
-    
+{#if page}  
     <div class="grid ">
         {#each exhib as exhibition}
             {#if exhibition.done}
@@ -82,7 +81,9 @@
     {/if}
     {#if detail}
     <bottun id="qwe" on:click={toggle}>다른 이벤트</bottun>
+    <div id="next">
     <Exhibitiondetail/>
+    </div>
     {/if}
 </div>
 
@@ -91,6 +92,7 @@
     text-align: center;
     vertical-align: middle;
     margin-top: 3%;
+    margin-bottom: 3%;
 }
 #head{
     margin-bottom: 2%;
@@ -118,22 +120,24 @@ div>label>button {
 	border: none;
 	margin: 0;
 }
-
 img{
     width:100%;
     height:60%;
 }
 #qwe{
-    float: right;
-    border: 2px solid black;
-    background-color: bisque;
+    width: 7.5%;
+    background-color: white;
+    border:0px;
+    border-bottom: 5px solid #e6e6e6;
     border-radius: 5px;
     font-weight: 600;
     font-size: 1.2em;
-    margin-right:30%;
+    margin-left: 30%;
 }
 #qwe:hover{
-    background-color: #ffff99;
+    background-color: white;
+    border:0px;
+    border-bottom:5px solid #4d4dff;
 }
 .close{
     opacity: 0.6;
@@ -142,6 +146,7 @@ img{
     background-color: lightcoral;
     content:"전시 완료";
 }
-
-    
-    </style>
+#next{
+    margin-left: 10%;
+}
+</style>

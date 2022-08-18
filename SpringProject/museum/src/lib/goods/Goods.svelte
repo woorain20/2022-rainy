@@ -69,20 +69,23 @@
 </script>
 
 <div id="main">
+    <div id="head">
+        <h1>Goods Mall</h1>
+    </div>
     <div id="but">
-        <button on:click="{opent}">전체</button>   
-        <button on:click="{openit}">IT소품</button>   
-        <button on:click="{openin}">인테리어소품</button>   
-        <button on:click="{opensc}">스카프/손수건</button>   
-        <button on:click="{openac}">액세서리</button>   
-        <button on:click="{openb}">가방/지갑</button>   
-        <button on:click="{openu}">우산/양산</button>   
-        <button on:click="{opend}">주방/식기류</button>   
-        <button on:click="{openst}">문구/사무</button>   
-        <button on:click="{openc}">공예품</button>   
-        <button on:click="{openf}">부채</button>   
-        <button on:click="{openk}">어린이</button>   
-        <button on:click="{opene}">기타</button>   
+        <button class="button" on:click="{opent}">전체</button>   
+        <button class="button" on:click="{openit}">IT소품</button>   
+        <button class="button" on:click="{openin}">인테리어소품</button>   
+        <button class="button" on:click="{opensc}">스카프/손수건</button>   
+        <button class="button" on:click="{openac}">액세서리</button>   
+        <button class="button" on:click="{openb}">가방/지갑</button>   
+        <button class="button" on:click="{openu}">우산/양산</button>   
+        <button class="button" on:click="{opend}">주방/식기류</button>   
+        <button class="button" on:click="{openst}">문구/사무</button>   
+        <button class="button" on:click="{openc}">공예품</button>   
+        <button class="button" on:click="{openf}">부채</button>   
+        <button class="button" on:click="{openk}">어린이</button>   
+        <button class="button" on:click="{opene}">기타</button>   
     </div>
     <div id="content">
         {#each goods as good}
@@ -219,18 +222,23 @@
         vertical-align: middle;
         margin-top: 2%;
     }
+    #head{
+        margin-bottom: 3%;
+    }
     #but{
         margin-bottom: 3%;
     }
-    button{
+    .button{
         width: 7%;
-        border-radius: 5px 5px 5px 5px;
+        border: 3px outset;
+        border-radius: 5px;
+        font-weight: 700;
     }
-    button:hover{
-        border: 2px solid #3333ff;
+    .button:hover{
+        border: 3px inset;
     }
-    button:focus{
-        background-color: #ffffe6;
+    .button:focus{
+        border: 3px inset;
     }
     #content{
         display: grid;

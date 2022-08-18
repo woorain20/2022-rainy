@@ -62,8 +62,10 @@ $:callid.update(t=>inknum)
     />
 {/if}
 {#if detail}
-<bottun id="qwe" on:click={toggle}>다른 이벤트 보기</bottun>
-<Eventdetail />
+    <bottun id="qwe" on:click={toggle}>다른 이벤트</bottun>
+    <div id="next">
+        <Eventdetail />
+    </div>
 {/if}
 </div>
 
@@ -99,8 +101,21 @@ img{
 }
 #qwe{
     float: right;
-    border: 1px solid black;
-    background-color: bisque;
+    background-color: white;
+    border:0px;
+    border-bottom: 5px solid #e6e6e6;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.2em;
     margin-right:30%;
+}
+#qwe:hover{
+    background-color: white;
+    border:0px;
+    border-bottom:5px solid #4d4dff;
+}
+#next{
+    margin-top: 3%;
+    margin-left: 5%;
 }
 </style>

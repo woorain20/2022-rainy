@@ -17,10 +17,8 @@ let callno
         exhib=open._embedded.exhibition
     })
 </script>
-<main>
 
-<h1>EXHIBITION</h1>
-
+<div id="total">
 {#each exhib as exhibition}
 {#if callno==exhibition.id}
 <div id="poster">
@@ -54,37 +52,42 @@ let callno
     </div>
     {/if}
 {/each}
-</main>
+</div>
+
 <style>
 #poster{ 
-        float: left;
-        width:450px;
-        margin:0 auto;
+    float: left;
+    width:450px;
+    margin:0 auto;
 }
 #content{
     float: left;
-    margin-left:20px;
+    margin-left:5%;
     width:300px;
-   
 }
 #content>table>th{
     margin-top:30px;
 }
+th{
+    font-weight: 600;
+    font-size: 1.2em;
+}
 .col{
     width:100px;
     height:50px;
-    text-align: right;
+    text-align: left;
 }
 .con{
     width:200px;
+    border-bottom: 1px dotted;
 }
 #detailcon{
     height:300px;
 }
-    main{
+#total{
     width:60%;
     margin: 0px auto;
-    }
-
+    margin-top: 3%;
+}
 
 </style>
