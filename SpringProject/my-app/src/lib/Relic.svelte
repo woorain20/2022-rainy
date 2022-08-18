@@ -67,20 +67,22 @@
     <Link to="home"><button>Home</button></Link>
 </div>
 <div class="post">
-    <div>
+    <h2>추가</h2>
+    <div style="float:left; padding-left:30px;">
         소장박물관<select bind:value={museum}>
             {#each workplacenames as workplacename}
                 <option value={workplacename}>
                 {workplacename}
             </option>
             {/each} 
-        </div>
-
-    <label>이미지 <input type="url" bind:value="{image}" placeholder="이미지주소"></label><br/><br/>
-    <label>유물명 <input type="text" bind:value="{name}" placeholder="이름"></label><br/><br/>
-    <label>시대 <input type="text" bind:value="{period}" placeholder="제작시기"></label><br/><br/>
-    <label>등재 <input type="text" bind:value="{note}" placeholder="국보,보물,사적 등등"></label><br/><br/>
-    <label>출토지 <input type="text" bind:value="{excavation}" placeholder="발견 지역"></label>
+    </div>
+    <table>
+        <tr><td>이미지 </td><td><input type="url" bind:value="{image}" placeholder="이미지주소"> </td></tr>
+        <tr><td>유물명 </td><td><input type="text" bind:value="{name}" placeholder="이름"> </td></tr>
+        <tr><td>시대 </td><td><input type="text" bind:value="{period}" placeholder="제작시기"> </td></tr>
+        <tr><td>등재 </td><td><input type="text" bind:value="{note}" placeholder="국보,보물,사적 등등"> </td></tr>
+        <tr><td>출토지 </td><td><input type="text" bind:value="{excavation}" placeholder="발견 지역"> </td></tr>
+    </table>
     <input type="submit" style="width: 85px; height:40px;" on:click={()=>add()}>
 </div>
 
@@ -94,9 +96,8 @@
         width:900px;
         margin: 0px auto;
     }
-    .post>label{
-        float: left;
-        padding-left:10px
+    .post td {
+        padding:5px;
+        border : 0px;
     }
-
 </style>

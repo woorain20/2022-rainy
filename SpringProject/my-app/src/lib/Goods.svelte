@@ -79,9 +79,9 @@
     <Link to="goods"><button>Goods</button></Link>
     <Link to="home"><button>Home</button></Link>
 </div>
-<div id="post">
+<div class="post">
     <h3>추가</h3>
-    <div>
+    <div style="float:left; padding-left:30px;">
         상품분류<select bind:value={category}>
         {#each categories as cate}
             <option value={cate}>
@@ -89,11 +89,14 @@
         </option>
         {/each}
     </div>
-    상품이름<input type="text" bind:value={name}> 
-    이미지 링크<input type="url" bind:value={image}> 
-    가격("원"까지 기입) <input type="text" bind:value={price}><br/>
-    <input type="submit" on:click={()=>add()}>
+    <table>
+    <tr><td>상품이름</td><td> <input type="text" bind:value={name}> </td></tr>
+    <tr><td>이미지 링크 </td><td><input type="url" bind:value={image}></td></tr>
+    <tr><td>가격("원"까지 기입) </td><td><input type="text" bind:value={price}></td></tr>
+    </table><br/>
+    <input type="submit" style="width: 85px; height:40px;" on:click={()=>add()}>
 </div>
+
 <div id="delete">
     <h3>삭제</h3>
     <input type="text" bind:value="{txt}">
@@ -144,5 +147,16 @@
     #search{
         margin-top: 20px;
         margin-left: 200px;
+    }
+    .post{
+        border: 1px solid black;
+        height: 300px;
+        width:900px;
+        margin: 0px auto;
+    }
+    .post td{
+        padding:5px;
+        
+        border : 0px;
     }
 </style>

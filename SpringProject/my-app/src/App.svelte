@@ -21,6 +21,9 @@
       <Link to="/">Exit</Link>
   </nav> -->
   <div>
+    <h1>관리자모드</h1>
+  </div>
+  <div>
       <Route path="home" component={Home}><Home/></Route>
       <Route path="museum" component={Museum}></Route>
       <Route path="relic" component={Relic}></Route>

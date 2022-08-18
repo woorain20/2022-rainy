@@ -53,21 +53,31 @@
     <Link to="goods"><button>Goods</button></Link>
     <Link to="home"><button>Home</button></Link>
 </div>
-<div>
-    전경<input type="url" bind:value="{photo}">
-    주소<input type="text" bind:value="{address}"> 
-    전화번호<input type="text" bind:value="{phone}"><br/>
-    개관<input type="text" bind:value="{found}">
-    이용시간<input type="text" bind:value="{time}">
-    휴무일<input type="text" bind:value="{rest}"><br/>
-    요금<input type="text" bind:value="{fee}">
-    편의시설<input type="text" bind:value="{depository}">
-    홈페이지<input type="url" bind:value="{homepage}"><br/>
-    <input type="submit" on:click={()=>add()}>
+<div class="post">
+    <div>
+        <table>
+            <tr><td>전경</td><td><input type="url" bind:value="{photo}"></td><td> 주소</td><td><input type="text" bind:value="{address}"> </td></tr>
+            <tr><td>전화번호></td><td><input type="text" bind:value="{phone}"></td><td> 개관</td><td><input type="text" bind:value="{found}"> </td></tr>
+            <tr><td>이용시간</td><td><input type="text" bind:value="{time}"></td><td>휴무일</td><td><input type="text" bind:value="{rest}"></td></tr>
+            <tr><td>요금</td><td><input type="text" bind:value="{fee}"></td><td>편의시설</td><td><input type="text" bind:value="{depository}"></td></tr>
+            <tr><td>홈페이지</td><td><input type="url" bind:value="{homepage}"></td><td></td><td></td></tr>
+        </table>
+        <input type="submit" style="width: 85px; height:40px;" on:click={()=>add()}>
+    </div>
 </div>
 
 <style>
     div{
         margin-bottom: 30px;
+    }
+    .post{
+        border: 1px solid black;
+        height: 300px;
+        width:900px;
+        margin: 0px auto;
+    }
+    .post td {
+        padding:5px;
+        border : 0px;
     }
 </style>
