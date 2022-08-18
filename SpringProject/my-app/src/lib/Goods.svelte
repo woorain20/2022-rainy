@@ -75,7 +75,7 @@
     <Link to="relic"><button>Relic</button></Link>
     <Link to="exhibition"><button>Exhibition</button></Link>
     <Link to="event"><button>Event</button></Link>
-    <Link to="good"><button>good</button></Link>
+    <Link to="board"><button>Board</button></Link>
     <Link to="goods"><button>Goods</button></Link>
     <Link to="home"><button>Home</button></Link>
 </div>
