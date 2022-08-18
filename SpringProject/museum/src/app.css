@@ -40,12 +40,7 @@ h1 {
   padding: 2em;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+
 
 button {
   border-radius: 8px;
@@ -84,5 +79,29 @@ button:focus-visible {
 
 } */
 #standardrole{
+  width:60%; margin: 0 auto;
   margin-top:150px;
+}
+
+.info-tit{
+  display: inline-block;
+    vertical-align: middle;
+    font-size: 24px;
+    color: #000;
+    font-family: 'notokr-bold';
+}
+.info-txt {
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-info-area {
+  width: calc(100%);
+  padding: 12px 0 35px 0;
+  border-bottom: 3px solid #000000;
+  margin : 0px auto;
+  margin-bottom: 16px;
+}
+#app {
+  margin: 0px auto;
+  text-align: center;
 }

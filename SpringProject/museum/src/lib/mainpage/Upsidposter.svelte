@@ -76,8 +76,10 @@ let positionright = 0;
 
 
 
-
-<h1>전국 전시회 모음</h1>
+<div class="section-title">
+  <h2>전국 전시회 모음</h2>
+  <p>전국에 진행중인 전시회</p>
+</div>
 
   <div class="container1" >
     <div class=" slider3" style="left: -{positionright}%;">
@@ -96,23 +98,21 @@ let positionright = 0;
       <button on:click={nextt} class="nextt">&rang;</button>
     </div>
   </div>
-
-
-<h2>알립니다</h2>
-<p>공지사항, 공고, 채용, 보도자료</p>
-
-<th>공지사항</th>
-
-<ul id="board">
-    {#each boards as board}
-      {#if board.official}
-        <li ><a href="http://127.0.0.1:5173/board.html/">{board.title}</a>    
-         <div style="float:right">{board.date}</div></li> 
-      {/if}
-    {/each}
-</ul>
-
-
+  <br /><br />
+  <div class="section-title">
+    <h2>공지사항</h2>
+  </div>
+  <div id="board">
+    <ul>
+        {#each boards as board}
+          {#if board.official}
+            <li ><a href="http://127.0.0.1:5173/board.html/">{board.title}</a>    
+            <div style="float:right">{board.date}</div></li> 
+          {/if}
+        {/each}
+    </ul>
+  </div>
+<br />
 
 <section id="clients" class="clients">
   <div class="container">
@@ -211,7 +211,12 @@ let positionright = 0;
     flex-shrink: 0;
   }
   #board{
-    border: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0px auto;
+    padding-top:10px; 
   }
   #eventbanner{
     float: left;
