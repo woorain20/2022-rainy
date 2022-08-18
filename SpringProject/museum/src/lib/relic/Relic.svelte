@@ -164,4 +164,9 @@
     li{
         list-style: none;
     }
+    #option>button{
+        background-color: white;
+        border:0px;
+        border-bottom:2px solid gray;
+    }
 </style>
