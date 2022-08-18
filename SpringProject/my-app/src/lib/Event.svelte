@@ -154,6 +154,7 @@
         border: 1px solid black;
         height: 750px;
         width:900px;
+        margin: 0px auto;
     }
     .post>label{
         float: left;

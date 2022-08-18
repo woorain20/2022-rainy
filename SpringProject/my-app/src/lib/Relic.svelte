@@ -92,6 +92,7 @@
         border: 1px solid black;
         height: 300px;
         width:900px;
+        margin: 0px auto;
     }
     .post>label{
         float: left;

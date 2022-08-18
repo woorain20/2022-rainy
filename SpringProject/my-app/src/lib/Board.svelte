@@ -76,19 +76,19 @@ import { Link } from "svelte-routing";
     <Link to="home"><button>Home</button></Link>
 </div>
 <div class="post">
-    <h2>추가</h2>
-    장소<select bind:value={workplace} >
-        {#each workplacenames as workplacename}
-            <option value={workplacename}>
-            {workplacename}
-        </option>
-        {/each} <br />
+    <div>
+        <h2>추가</h2>
+        장소<select bind:value={workplace} >
+            {#each workplacenames as workplacename}
+                <option value={workplacename}>
+                {workplacename}
+            </option>
+            {/each} <br />
     </div>
-<div>
-    제목<input type="text" bind:value={title}><br />
-    작성자<input type="text" bind:value={whiter}> <br />
-    내용 <textarea bind:value={content}></textarea><br />
-    오피셜<input type="checkbox" bind:checked={official}><br />
+    <label>제목 <input type="text" bind:value={title} style="width:800px" placeholder="게시글 제목"></label><br /><br />
+    <label style="padding-left:500px;" >작성자 <input type="text" bind:value={whiter} placeholder="이름+직책"></label>
+    <label style="padding-left:70px;">공지 <input type="checkbox" bind:checked={official}></label><br />
+    <label>내용 <textarea bind:value={content} placeholder="게시글 내용 적어주세요"></textarea></label><br />
     <input type="submit" on:click={()=>add()}>
 </div>
 
@@ -141,5 +141,20 @@ import { Link } from "svelte-routing";
     .delete{
         height:700px;
         overflow-y: scroll;
+    }
+    .post{
+        border: 1px solid black;
+        height: 900px;
+        width:900px;
+        margin: 0px auto;
+    }
+    .post>label{
+        float: left;
+        padding-left:10px
+    }
+    textarea{
+        margin: 0px 25px;;
+        width: 820px; 
+        height:600px;
     }
 </style>
