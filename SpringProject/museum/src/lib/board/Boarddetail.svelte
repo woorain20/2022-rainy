@@ -39,12 +39,12 @@
 		board=board.filter(t=>t!==pbd)
 	}
 </script>
-<div>
+
+<div id="total">
     {#each board as pbd}
         {#if pbd.num==callno}
     <div id="top">
         <h3 style="text-align: left;">{pbd.title}</h3> 
-
         <h7 style="float: right; padding: 0px 10px;">작성일: {pbd.date}</h7>
         <h7 style="float: right; padding: 0px 10px;">조회수: {pbd.count}</h7>
         <h7 style="float: right; padding: 0px 10px;">담당자: {pbd.whiter}</h7>
@@ -54,7 +54,7 @@
         {pbd.content} 
     </div>
     <div id="delete">
-        <input type="password" bind:value="{pass}">           
+        <input type="password" bind:value="{pass}" placeholder="비밀번호를 입력하세요">           
         {#if pass==pbd.password}
             <button disabled="{!pass}" on:click="{()=>remove(pbd)}"><a href="board.html">삭제</a></button>
         {:else if pass!=pbd.password}
@@ -66,13 +66,32 @@
 </div>
 
 <style>
-    #content{
-        border:1px solid black;
-        width: 100%;
-        height:500px;
+    #total{
+        width: 90%;
+        margin-left: 5%;
     }
     #top{
         width:100%;
         height:80px;
+    }
+    h3{
+        margin-left: 3%;
+        font-weight: 600;
+    }
+    h7{
+        margin-right: 2%;
+    }
+    #content{
+        border:1px solid black;
+        width: 100%;
+        height:500px;
+        margin-bottom: 1%;
+    }
+    #delete{
+        margin-bottom: 1%;
+    }
+    #delete > button > a{
+        text-decoration: none;
+        color: black;
     }
 </style>

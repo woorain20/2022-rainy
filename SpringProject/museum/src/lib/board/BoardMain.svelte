@@ -47,24 +47,28 @@
 
 </script>
 
-<div>
-{#if page}
-<div id="board">
-    <div id="name" class="align">
-        <div class="number board-open">번호</div>
-        <div class="place board-open">장소</div>
-        <div class="thda board-open">제목</div>
-        <div class="writer board-open">작성자</div>
-        <div class="date board-open">작성일</div>
-        <div class="count board-open">조회</div>
+<div id="total">
+    <h1>게시판</h1>
+    {#if page}
+    <div id="write">
+        <button on:click="{writeop}">글쓰기</button>
     </div>
+    <div id="board">
+        <div id="name" class="align">
+            <div class="number board-open">번호</div>
+            <div class="place board-open">장소</div>
+            <div class="thda board-open" id="title">제목</div>
+            <div class="writer board-open">작성자</div>
+            <div class="date board-open">작성일</div>
+            <div class="count board-open">조회</div>
+        </div>
     <div class="align">
         {#each items as pbd}
             {#if pbd.official}
             <div class="align" on:click={()=>{addno(pbd.num)}}>
                 <div class="number board-open">공지</div>
                 <div class="place board-open">{pbd.workplace}</div>
-                <div class="thda board-open"><label on:click={()=>aop(pbd.count)}><button on:click={()=>{addno(pbd.num)}}>{pbd.title}</button></label></div>
+                <div class="thda board-open" on:click={()=>aop(pbd.count)}><button on:click={()=>{addno(pbd.num)}}>{pbd.title}</button></div>
                 <div class="writer board-open">{pbd.whiter}</div>
                 <div class="date board-open">{pbd.date}</div>
                 <div class="count board-open">{pbd.count}</div>
@@ -77,7 +81,7 @@
             <div id="content" class="align" on:click={()=>{addno(pbd.num)}}>
                 <div class="number board-open">{items.length-items.indexOf(pbd,0)}</div>
                 <div class="place board-open">{pbd.workplace}</div>
-                <div class="thda board-open"><label on:click={()=>aop(pbd.count)}><button on:click={()=>{addno(pbd.num)}}>{pbd.title}</button></label></div>
+                <div class="thda board-open" on:click={()=>aop(pbd.count)}><button on:click={()=>{addno(pbd.num)}}>{pbd.title}</button></div>
                 <div class="writer board-open">{pbd.whiter}</div>
                 <div class="date board-open">{pbd.date}</div>
                 <div class="count board-open">{pbd.count}</div>
@@ -95,26 +99,42 @@
             />
         </div>
     </div>
-    <div>
-        <button on:click="{writeop}">글쓰기</button>
-    </div>
 {/if}
 </div>
 <div>
     {#if content}
         <Boarddetail/>
-        <bottun on:click={aop}>뒤로가기</bottun>  
+        <bottun class="back" on:click={aop}>뒤로가기</bottun>  
     {:else if write}
         <BoardWrite/>
-        <bottun on:click={writeop}>뒤로가기</bottun>
+        <bottun class="back" on:click={writeop}>뒤로가기</bottun>
     {/if}
 </div>
 
 <style>
-
+    #total{
+        margin-top: 3%;
+        text-align: center;
+    }
+    h1{
+        margin-bottom: 2%;
+    }
+    #write{
+        text-align: right;
+        width: 87.5%;
+        margin-bottom: 0.5%;
+    }
+    #write>button{
+        border-radius: 5px 5px 5px 5px;
+        font-weight: 700;
+        background-color: linen;
+    }
     #board{
-        width: 70%;
+        width: 75%;
         margin:0 auto;
+    }
+    #name{
+        background-color: lightgray;
     }
     #paginate{
         float:left;
@@ -123,10 +143,10 @@
     .align{
         width: 100%;
         float: left;
-    }
-    
+    }   
     .board-open{
         float: left;
+        margin-bottom: 1px;
     }
     .number{
         width: 5%;
@@ -148,13 +168,28 @@
         width: 5%;
         border: 1px solid black;
     }
+    #title{
+        border: 1px solid black;
+    }
     .thda{
         width: 45%;
+        border: 1px solid black;
     }
-    .thda>label>button{
+    .thda>button{
         width: 100%;
+        background-color: white;
+        border:0px
     }
-    .thda>label{
-        width: 100%;
+    .back{
+        margin-left: 5%;
+        border-radius: 5px 5px 5px 5px;
+        border: 2px solid;
+        font-weight: 600;
+        background-color: #cce6ff;
+    }
+    .back:hover{
+        background-color: #000000;
+        color: white;
+        border: 0
     }
 </style>

@@ -10,7 +10,6 @@
         const data = await res.json()
         museuminfomation=data._embedded.museumlist
         console.log(museuminfomation)
-        // console.log(museuminfo[0])
     })
 </script>
 
