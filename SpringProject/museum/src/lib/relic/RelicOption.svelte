@@ -37,11 +37,7 @@
 		return `${muserel.slice(0, -1).join(', ')} and ${muserel[muserel.length - 1]}`
 	}
 
-    let option, gukbo, bomul, gita=false
-    
-    function optopen(){
-        option=!option
-    }
+    let gukbo, bomul, gita=false
 
     function reset(){
         muserel=null

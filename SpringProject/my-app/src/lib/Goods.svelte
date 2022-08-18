@@ -50,6 +50,23 @@
        price =""
        console.log(good)
    }
+
+   let txt=""
+   async function remove(good){
+		await fetch("http://192.168.0.51:8080/goods/"+good.id,{
+			method:"DELETE"
+		})
+		goods=goods.filter(t=>t!==good)
+        alert("삭제되었습니다.")
+	}
+    let a=false
+    function open(){
+        a=!a
+    }
+    function close(){
+        a=false
+        txt=""
+    }
 </script>
 
 <div>
@@ -62,7 +79,8 @@
     <Link to="goods"><button>Goods</button></Link>
     <Link to="home"><button>Home</button></Link>
 </div>
-<div>
+<div id="post">
+    <h3>추가</h3>
     <div>
         상품분류<select bind:value={category}>
         {#each categories as cate}
@@ -76,9 +94,51 @@
     가격("원"까지 기입) <input type="text" bind:value={price}><br/>
     <input type="submit" on:click={()=>add()}>
 </div>
+<div id="delete">
+    <h3>삭제</h3>
+    <input type="text" bind:value="{txt}">
+    <button on:click="{open}">찾기</button>
+    <button on:click="{close}">RESET</button>
+    <div id="search">
+        <table>
+        {#if a}
+        {#each goods as good}
+        {#if txt==good.name.slice(0,1)}
+            <tr>
+                <td>{good.name}</td>
+                <td>{good.category}</td>
+                <td>{good.price}</td>
+                <td><button disabled="{!txt}" on:click="{()=>remove(good)}">삭제</button></td>
+            </tr>      
+        {/if}
+        {#if txt==good.name.slice(0,2)}
+            <tr>
+                <td>{good.name}</td>
+                <td>{good.category}</td>
+                <td>{good.price}</td>
+                <td><button disabled="{!txt}" on:click="{()=>remove(good)}">삭제</button></td>
+            </tr>   
+        {/if}
+        {#if txt==good.name}
+            <tr>
+                <td>{good.name}</td>
+                <td>{good.category}</td>
+                <td>{good.price}</td>
+                <td><button disabled="{!txt}" on:click="{()=>remove(good)}">삭제</button></td>
+            </tr>   
+        {/if}
+        {/each}
+        {/if}
+        </table>
+    </div>
+</div>
 
 <style>
     div{
         margin-bottom: 30px;
+    }
+    #search{
+        margin-top: 20px;
+        margin-left: 200px;
     }
 </style>
