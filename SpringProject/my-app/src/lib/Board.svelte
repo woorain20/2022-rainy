@@ -118,7 +118,7 @@ import { Link } from "svelte-routing";
             </td>
             <td>{board.password}</td>
             <td class="day">{board.date}</td>
-            <td><button on:click={remove}>삭제</button></td>
+            <td><button on:click={()=>(remove)}>삭제</button></td>
         </tr>
         {/each}
     </table>
