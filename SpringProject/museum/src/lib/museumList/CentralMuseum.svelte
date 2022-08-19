@@ -14,7 +14,7 @@
     </script>
 
 <div id="main">
-    <div id="contentsdd">
+    <div id="contents">
         <div id="muse">
             {#each museuminfomation as museum}
             {#if museum.photo=="central3"}
@@ -72,15 +72,14 @@
 </div>
         
         
-        <style>
-#contentsdd{
+<style>
+    #contents{
     background-color: #f9ffe6;
 
     }
     #muse-img{
         width: 100%;
         align-items: center;
-
     }
     img{
         width: 45%;
