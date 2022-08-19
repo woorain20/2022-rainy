@@ -134,7 +134,7 @@
                 <p class="spacial">특별</p>
                 {/if}
             </td>
-            <td><button on:click={remove}>삭제</button></td>
+            <td><button on:click={()=>remove(exhi)}>삭제</button></td>
         </tr>
         {/each}
     </table>
