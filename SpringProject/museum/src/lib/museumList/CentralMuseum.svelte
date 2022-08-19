@@ -74,8 +74,7 @@
         
 <style>
     #contents{
-    background-color: #f9ffe6;
-
+        background-color: #f9ffe6;
     }
     #muse-img{
         width: 100%;
@@ -83,7 +82,7 @@
     }
     img{
         width: 45%;
-        border-radius: 7px 7px 7px 7px;
+        border-radius: 7px;
     }
     #map{
         float: left;
