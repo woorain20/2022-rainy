@@ -2,14 +2,14 @@
 
 </script>
 
-<div>
+<div id="total">
     <div id="first">
         <h1>Our Vision</h1>
         <div id="intro">
             <ul>
-                <li>더 많은 사람에게 우리의 문화재를 보여주고 싶습니다.</li>
-                <li>사람들이 루브르를 찾는 것처럼 더 많은 사람이 우리의 박물관을 찾길 바랍니다.</li>
-                <li>우리는 우리의 박물관에 호기심을 갖게 하는 입구가 되고 싶습니다.</li>
+                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                <li>Contrary to popular belief, Lorem Ipsum is not simply random text.</li>
+                <li>There are many variations of passages of Lorem Ipsum available.</li>
             </ul>
         </div>
         <div id="f_img">
@@ -26,7 +26,7 @@
 
                 어머니, 무덤 하나의 오는 언덕 까닭입니다. 피어나듯이 릴케 쉬이 말 별 있습니다. 위에도 별 청춘이 슬퍼하는 별 어머님, 나의 말 프랑시스 있습니다. 우는 내린 다 까닭입니다. 아침이 다 무엇인지 마리아 시인의 까닭입니다. 이웃 하나에 걱정도 어머님, 오면 소학교 까닭입니다. 오면 경, 같이 봅니다. 별 아름다운 하나에 멀듯이, 마리아 새워 보고, 애기 나는 까닭입니다. 우는 까닭이요, 무덤 듯합니다.
                 
-                새워 계절이 별에도 벌레는 때 언덕 파란 있습니다. 나는 말 오면 있습니다. 라이너 당신은 하나에 다 어머니, 릴케 이름과 봅니다. 라이너 이런 멀리 어머니 아직 묻힌 가슴속에 이런 별 듯합니다. 한 언덕 부끄러운 애기 우는 그러나 봅니다. 하늘에는 쉬이 노새, 불러 봅니다. 흙으로 하나에 많은 릴케 가난한 나는 봅니다. 슬퍼하는 별빛이 아침이 추억과 헤는 피어나듯이 이름과, 마리아 봅니다. 이름자를 별 이웃 가을 멀듯이, 소학교 멀리 듯합니다.</p>
+                새워 계절이 별에도 벌레는 때 언덕 파란 있습니다.</p>
         </div>
     </div>
     <div id="third">
@@ -34,20 +34,24 @@
         <div class="person">
             <img src="https://cdn.pixabay.com/photo/2016/04/25/07/15/man-1351317__340.png" alt="people">
             <p>김우기</p>
-            <p>Main Developer</p>
+            <p>Developer</p>
         </div>
         <div class="person">
             <img src="https://cdn.pixabay.com/photo/2019/10/21/14/18/man-4566210__340.jpg" alt="people">
             <p>김남우</p>
-            <p>Main Developer</p>
+            <p>Developer</p>
         </div>
     </div>
 </div>
 
 <style>
+    #total{
+        width: 85%;
+        margin-left: 7%;
+    }
     h1{
         text-align: center;
-        margin-top: 2%;
+        margin-top: 3%;
         background-color: #cce6ff;
     }
     #first{
@@ -77,6 +81,7 @@
     }
     #f_img > img{
         width: 100%;
+        border-radius: 5px;
     }
     #second{
         width: 100%;
@@ -92,7 +97,8 @@
     }
     #s_img > img{
         width: 100%;
-        height: 100%;   
+        height: 100%;  
+        border-radius: 5px; 
     }
     #history{
         width: 40%;
@@ -115,5 +121,10 @@
         margin-top: 3%;
         text-align: center;
         float: left;
+        margin-bottom: 3%;
+    }
+    .person > p{
+        margin-top: 2%;
+        font-weight: 600;
     }
 </style>

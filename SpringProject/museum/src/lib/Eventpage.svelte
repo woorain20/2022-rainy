@@ -79,43 +79,46 @@ $:callid.update(t=>inknum)
         margin-bottom: 2%;
     }
     .grid{
-    display: grid;
-	flex: 1;
-	grid-template-columns: repeat(3, 4fr);
-	grid-template-rows: repeat(2, 1fr);
-	grid-gap: 1vmin;
-    width:90%;
-    margin: 0px auto;
-    margin-bottom: 2%;
+        display: grid;
+        flex: 1;
+        grid-template-columns: repeat(3, 4fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 1vmin;
+        width:90%;
+        margin: 0px auto;
+        margin-bottom: 2%;
     }
-div>label>button {
-	width: 100%;
-	height: 100%;
-    color:black;
-	border: none;
-	margin: 0;
-	}
-img{
-    width:100%;
-    height:60%;
-}
-#qwe{
-    float: right;
-    background-color: white;
-    border:0px;
-    border-bottom: 5px solid #e6e6e6;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 1.2em;
-    margin-right:30%;
-}
-#qwe:hover{
-    background-color: white;
-    border:0px;
-    border-bottom:5px solid #4d4dff;
-}
-#next{
-    margin-top: 3%;
-    margin-left: 5%;
-}
+    #d:hover{
+        opacity: 0.7;
+    }
+    div>label>button {
+        width: 100%;
+        height: 100%;
+        color:black;
+        border: none;
+        margin: 0;
+        }
+    img{
+        width:100%;
+        height:60%;
+    }
+    #qwe{
+        float: right;
+        background-color: white;
+        border:0px;
+        border-bottom: 5px solid #e6e6e6;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 1.2em;
+        margin-right:30%;
+    }
+    #qwe:hover{
+        background-color: white;
+        border:0px;
+        border-bottom:5px solid #4d4dff;
+    }
+    #next{
+        margin-top: 3%;
+        margin-left: 5%;
+    }
 </style>

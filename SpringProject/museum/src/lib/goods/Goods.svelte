@@ -250,6 +250,7 @@
         margin: 0px auto;
         margin-bottom: 2%;
         overflow-y: scroll;
+        margin-bottom: 3%;
     }
     #intro{
         width: 100%;
