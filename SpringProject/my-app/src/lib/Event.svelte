@@ -132,7 +132,7 @@
                 X
                 {/if}
             </td>
-            <td><button on:click={remove}>삭제</button></td>
+            <td><button on:click={()=>(remove(event))}>삭제</button></td>
         </tr>
         {/each}
     </table>
