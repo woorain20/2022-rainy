@@ -9,7 +9,7 @@
     boardid.subscribe(t=>{callno=t})
     boardcount.subscribe(t=>{modeficount=t})
 
-    const post="http://192.168.0.51:8080/postboard/?page=0&size=200"
+    const post="http://192.168.0.51:8080/postboard/"
     let board=[]
 
     onMount(async function(){
@@ -20,7 +20,7 @@
         // console.log(callno)
         modeficount=modeficount+1
 
-        await fetch("http://192.168.0.51:8080/postboard/"+callno,{
+        await fetch(post+callno,{
 			method:"PATCH", headers:{    //headers를 설정해야 오류가 안남
 				"Content-Type":"application/json"
 			},
