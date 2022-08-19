@@ -94,7 +94,7 @@
             <button on:click="{iksanopen}"><li>국립 익산박물관</li></button>
         </ul>
     </div>
-    <div id="contents">
+    <div id="contentsss">
         {#if !list && !list2 && !list3 && !list4 && !list5 && !list6 && !list7 && !list8 && !list9 && !list10 && !list11 && !list12 && !list13 && !list14}
             <img {src} alt="담">
         {/if}
@@ -128,6 +128,9 @@
             <IksanMuseum/>
         {/if}
     </div>
+</div>
+<div style="margin-bottom:100px">
+    
 </div>
 
 <style>
@@ -169,7 +172,7 @@
         height: 70%;
         border-radius: 5px;
     }
-    #contents{
+    #contentsss{
         margin-bottom: 2%;
     }
 </style>
