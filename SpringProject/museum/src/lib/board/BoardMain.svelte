@@ -5,7 +5,7 @@
     import Boarddetail from "./Boarddetail.svelte";
     import BoardWrite from "./BoardWrite.svelte";
 
-    const post="http://192.168.0.51:8080/postboard/?page=0&size=50"
+    const post="http://192.168.0.51:8080/postboard/?page=0&size=200"
 
     let items=[]
     let inknum
@@ -34,6 +34,11 @@
         content=!content
         page=!page
         console.log(inkcount)
+    }
+    
+    function backpage(){
+        content=!content
+        page=!page
     }
 
     function writeop(){
@@ -104,7 +109,7 @@
 <div>
     {#if content}
         <Boarddetail/>
-        <bottun class="back" on:click={aop}>뒤로가기</bottun>  
+        <bottun class="back" on:click={backpage}>뒤로가기</bottun>  
     {:else if write}
         <BoardWrite/>
         <bottun class="back" on:click={writeop}>뒤로가기</bottun>

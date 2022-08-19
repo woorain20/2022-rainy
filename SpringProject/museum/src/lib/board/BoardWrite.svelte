@@ -48,6 +48,7 @@
         <input type="password" placeholder="비밀번호" id="pass" maxlength="6" minlength="4" bind:value="{password}">
         <p class="arrow_box">비밀번호는 4~6자리 숫자로 입력해주세요</p><br/>
         <textarea placeholder="내용을 입력해주세요" bind:value="{content}"></textarea><br/>
+
         <input type="submit" value="작성" id="click" on:click={()=>add()}>
     </div>
     <div id="note">
