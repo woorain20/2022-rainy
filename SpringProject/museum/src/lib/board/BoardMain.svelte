@@ -70,8 +70,8 @@
     <div class="align">
         {#each items as pbd}
             {#if pbd.official}
-            <div class="align" on:click={()=>{addno(pbd.num)}}>
-                <div class="number board-open">공지</div>
+            <div class="align" id="notice" on:click={()=>{addno(pbd.num)}}>
+                <div class="number board-open" style="background-color: #ffffb3;">공지</div>
                 <div class="place board-open">{pbd.workplace}</div>
                 <div class="thda board-open" on:click={()=>aop(pbd.count)}><button on:click={()=>{addno(pbd.num)}}>{pbd.title}</button></div>
                 <div class="writer board-open">{pbd.whiter}</div>
