@@ -1,0 +1,14 @@
+C:\Users\KB\study\비주얼스튜디오\ApiPra\ApiPra\bin\Debug\ApiPra.exe.config
+C:\Users\KB\study\비주얼스튜디오\ApiPra\ApiPra\bin\Debug\ApiPra.exe
+C:\Users\KB\study\비주얼스튜디오\ApiPra\ApiPra\bin\Debug\ApiPra.pdb
+C:\Users\KB\study\비주얼스튜디오\ApiPra\ApiPra\obj\Debug\ApiPra.csproj.AssemblyReference.cache
+C:\Users\KB\study\비주얼스튜디오\ApiPra\ApiPra\obj\Debug\ApiPra.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\study\비주얼스튜디오\ApiPra\ApiPra\obj\Debug\ApiPra.Form1.resources
+C:\Users\KB\study\비주얼스튜디오\ApiPra\ApiPra\obj\Debug\ApiPra.Properties.Resources.resources
+C:\Users\KB\study\비주얼스튜디오\ApiPra\ApiPra\obj\Debug\ApiPra.csproj.GenerateResource.cache
+C:\Users\KB\study\비주얼스튜디오\ApiPra\ApiPra\obj\Debug\ApiPra.csproj.CoreCompileInputs.cache
+C:\Users\KB\study\비주얼스튜디오\ApiPra\ApiPra\obj\Debug\ApiPra.exe
+C:\Users\KB\study\비주얼스튜디오\ApiPra\ApiPra\obj\Debug\ApiPra.pdb
+C:\Users\KB\study\비주얼스튜디오\ApiPra\ApiPra\bin\Debug\Newtonsoft.Json.dll
+C:\Users\KB\study\비주얼스튜디오\ApiPra\ApiPra\bin\Debug\Newtonsoft.Json.xml
+C:\Users\KB\study\비주얼스튜디오\ApiPra\ApiPra\obj\Debug\ApiPra.csproj.CopyComplete

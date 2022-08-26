@@ -1,0 +1,11 @@
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy12\Lotto_Pr\bin\Debug\Lotto_Pr.exe.config
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy12\Lotto_Pr\bin\Debug\Lotto_Pr.exe
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy12\Lotto_Pr\bin\Debug\Lotto_Pr.pdb
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy12\Lotto_Pr\obj\Debug\Lotto_Pr.csproj.AssemblyReference.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy12\Lotto_Pr\obj\Debug\Lotto_Pr.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy12\Lotto_Pr\obj\Debug\Lotto_Pr.Form1.resources
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy12\Lotto_Pr\obj\Debug\Lotto_Pr.Properties.Resources.resources
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy12\Lotto_Pr\obj\Debug\Lotto_Pr.csproj.GenerateResource.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy12\Lotto_Pr\obj\Debug\Lotto_Pr.csproj.CoreCompileInputs.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy12\Lotto_Pr\obj\Debug\Lotto_Pr.exe
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy12\Lotto_Pr\obj\Debug\Lotto_Pr.pdb

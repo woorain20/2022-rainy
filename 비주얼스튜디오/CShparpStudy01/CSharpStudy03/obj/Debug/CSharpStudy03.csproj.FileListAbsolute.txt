@@ -1,0 +1,8 @@
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy03\bin\Debug\CSharpStudy03.exe.config
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy03\bin\Debug\CSharpStudy03.exe
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy03\bin\Debug\CSharpStudy03.pdb
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy03\obj\Debug\CSharpStudy03.csproj.AssemblyReference.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy03\obj\Debug\CSharpStudy03.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy03\obj\Debug\CSharpStudy03.csproj.CoreCompileInputs.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy03\obj\Debug\CSharpStudy03.exe
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy03\obj\Debug\CSharpStudy03.pdb

@@ -1,0 +1,11 @@
+C:\Users\KB\study\비주얼스튜디오\CStudy\CStudy\bin\Debug\CStudy.exe.config
+C:\Users\KB\study\비주얼스튜디오\CStudy\CStudy\bin\Debug\CStudy.exe
+C:\Users\KB\study\비주얼스튜디오\CStudy\CStudy\bin\Debug\CStudy.pdb
+C:\Users\KB\study\비주얼스튜디오\CStudy\CStudy\obj\Debug\CStudy.csproj.AssemblyReference.cache
+C:\Users\KB\study\비주얼스튜디오\CStudy\CStudy\obj\Debug\CStudy.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\study\비주얼스튜디오\CStudy\CStudy\obj\Debug\CStudy.Form1.resources
+C:\Users\KB\study\비주얼스튜디오\CStudy\CStudy\obj\Debug\CStudy.Properties.Resources.resources
+C:\Users\KB\study\비주얼스튜디오\CStudy\CStudy\obj\Debug\CStudy.csproj.GenerateResource.cache
+C:\Users\KB\study\비주얼스튜디오\CStudy\CStudy\obj\Debug\CStudy.csproj.CoreCompileInputs.cache
+C:\Users\KB\study\비주얼스튜디오\CStudy\CStudy\obj\Debug\CStudy.exe
+C:\Users\KB\study\비주얼스튜디오\CStudy\CStudy\obj\Debug\CStudy.pdb

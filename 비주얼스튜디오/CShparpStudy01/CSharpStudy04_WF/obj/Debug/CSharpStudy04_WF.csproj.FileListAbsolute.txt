@@ -1,0 +1,11 @@
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy04_WF\bin\Debug\CSharpStudy04_WF.exe.config
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy04_WF\bin\Debug\CSharpStudy04_WF.exe
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy04_WF\bin\Debug\CSharpStudy04_WF.pdb
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy04_WF\obj\Debug\CSharpStudy04_WF.csproj.AssemblyReference.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy04_WF\obj\Debug\CSharpStudy04_WF.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy04_WF\obj\Debug\CSharpStudy04_WF.Properties.Resources.resources
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy04_WF\obj\Debug\CSharpStudy04_WF.csproj.GenerateResource.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy04_WF\obj\Debug\CSharpStudy04_WF.csproj.CoreCompileInputs.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy04_WF\obj\Debug\CSharpStudy04_WF.exe
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy04_WF\obj\Debug\CSharpStudy04_WF.pdb
+C:\Users\KB\새 폴더\비주얼스튜디오\CShparpStudy01\CSharpStudy04_WF\obj\Debug\CSharpStudy04_WF.Form1.resources

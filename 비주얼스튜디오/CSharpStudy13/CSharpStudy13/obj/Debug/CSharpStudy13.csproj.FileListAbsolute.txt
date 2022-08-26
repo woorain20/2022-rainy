@@ -1,0 +1,8 @@
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy13\bin\Debug\CSharpStudy13.exe.config
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy13\bin\Debug\CSharpStudy13.exe
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy13\bin\Debug\CSharpStudy13.pdb
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy13\obj\Debug\CSharpStudy13.csproj.AssemblyReference.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy13\obj\Debug\CSharpStudy13.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy13\obj\Debug\CSharpStudy13.csproj.CoreCompileInputs.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy13\obj\Debug\CSharpStudy13.exe
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy13\obj\Debug\CSharpStudy13.pdb

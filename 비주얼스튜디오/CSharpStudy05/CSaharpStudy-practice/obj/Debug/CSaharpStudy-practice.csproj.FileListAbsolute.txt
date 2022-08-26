@@ -1,0 +1,8 @@
+C:\Users\KB\새 폴더\비주얼스튜디오\CSharpStudy05\CSaharpStudy-practice\bin\Debug\CSaharpStudy-practice.exe.config
+C:\Users\KB\새 폴더\비주얼스튜디오\CSharpStudy05\CSaharpStudy-practice\bin\Debug\CSaharpStudy-practice.exe
+C:\Users\KB\새 폴더\비주얼스튜디오\CSharpStudy05\CSaharpStudy-practice\bin\Debug\CSaharpStudy-practice.pdb
+C:\Users\KB\새 폴더\비주얼스튜디오\CSharpStudy05\CSaharpStudy-practice\obj\Debug\CSaharpStudy-practice.csproj.AssemblyReference.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\CSharpStudy05\CSaharpStudy-practice\obj\Debug\CSaharpStudy-practice.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\CSharpStudy05\CSaharpStudy-practice\obj\Debug\CSaharpStudy-practice.csproj.CoreCompileInputs.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\CSharpStudy05\CSaharpStudy-practice\obj\Debug\CSaharpStudy-practice.exe
+C:\Users\KB\새 폴더\비주얼스튜디오\CSharpStudy05\CSaharpStudy-practice\obj\Debug\CSaharpStudy-practice.pdb

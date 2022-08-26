@@ -1,0 +1,8 @@
+C:\Users\KB\study\비주얼스튜디오\Zoo_Console\bin\Debug\Zoo_Console.exe.config
+C:\Users\KB\study\비주얼스튜디오\Zoo_Console\bin\Debug\Zoo_Console.exe
+C:\Users\KB\study\비주얼스튜디오\Zoo_Console\bin\Debug\Zoo_Console.pdb
+C:\Users\KB\study\비주얼스튜디오\Zoo_Console\obj\Debug\Zoo_Console.csproj.AssemblyReference.cache
+C:\Users\KB\study\비주얼스튜디오\Zoo_Console\obj\Debug\Zoo_Console.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\study\비주얼스튜디오\Zoo_Console\obj\Debug\Zoo_Console.csproj.CoreCompileInputs.cache
+C:\Users\KB\study\비주얼스튜디오\Zoo_Console\obj\Debug\Zoo_Console.exe
+C:\Users\KB\study\비주얼스튜디오\Zoo_Console\obj\Debug\Zoo_Console.pdb

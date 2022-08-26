@@ -1,0 +1,8 @@
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy08\CSharpStudy-practice02\bin\Debug\CSharpStudy-practice02.exe.config
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy08\CSharpStudy-practice02\bin\Debug\CSharpStudy-practice02.exe
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy08\CSharpStudy-practice02\bin\Debug\CSharpStudy-practice02.pdb
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy08\CSharpStudy-practice02\obj\Debug\CSharpStudy-practice02.csproj.AssemblyReference.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy08\CSharpStudy-practice02\obj\Debug\CSharpStudy-practice02.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy08\CSharpStudy-practice02\obj\Debug\CSharpStudy-practice02.csproj.CoreCompileInputs.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy08\CSharpStudy-practice02\obj\Debug\CSharpStudy-practice02.exe
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy08\CSharpStudy-practice02\obj\Debug\CSharpStudy-practice02.pdb

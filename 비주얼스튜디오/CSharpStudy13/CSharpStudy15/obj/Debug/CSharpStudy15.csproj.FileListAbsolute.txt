@@ -1,0 +1,14 @@
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy15\bin\Debug\CSharpStudy15.exe.config
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy15\bin\Debug\CSharpStudy15.exe
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy15\bin\Debug\CSharpStudy15.pdb
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy15\obj\Debug\CSharpStudy15.csproj.AssemblyReference.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy15\obj\Debug\CSharpStudy15.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy15\obj\Debug\CSharpStudy15.Form1.resources
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy15\obj\Debug\CSharpStudy15.Properties.Resources.resources
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy15\obj\Debug\CSharpStudy15.csproj.GenerateResource.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy15\obj\Debug\CSharpStudy15.csproj.CoreCompileInputs.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy15\obj\Debug\CSharpStudy15.exe
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy15\obj\Debug\CSharpStudy15.pdb
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy15\bin\Debug\Newtonsoft.Json.dll
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy15\bin\Debug\Newtonsoft.Json.xml
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy13\CSharpStudy15\obj\Debug\CSharpStudy15.csproj.CopyComplete

@@ -1,0 +1,11 @@
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\MusicLogin\bin\Debug\MusicLogin.exe.config
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\MusicLogin\bin\Debug\MusicLogin.exe
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\MusicLogin\bin\Debug\MusicLogin.pdb
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\MusicLogin\obj\Debug\MusicLogin.csproj.AssemblyReference.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\MusicLogin\obj\Debug\MusicLogin.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\MusicLogin\obj\Debug\MusicLogin.Form1.resources
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\MusicLogin\obj\Debug\MusicLogin.Properties.Resources.resources
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\MusicLogin\obj\Debug\MusicLogin.csproj.GenerateResource.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\MusicLogin\obj\Debug\MusicLogin.csproj.CoreCompileInputs.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\MusicLogin\obj\Debug\MusicLogin.exe
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\MusicLogin\obj\Debug\MusicLogin.pdb

@@ -1,0 +1,13 @@
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\practice02\bin\Debug\practice02.exe.config
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\practice02\bin\Debug\practice02.exe
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\practice02\bin\Debug\practice02.pdb
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\practice02\obj\Debug\practice02.csproj.AssemblyReference.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\practice02\obj\Debug\practice02.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\practice02\obj\Debug\practice02.FirstCustomerControl.resources
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\practice02\obj\Debug\practice02.Form1.resources
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\practice02\obj\Debug\practice02.Properties.Resources.resources
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\practice02\obj\Debug\practice02.csproj.GenerateResource.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\practice02\obj\Debug\practice02.csproj.CoreCompileInputs.cache
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\practice02\obj\Debug\practice02.exe
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\practice02\obj\Debug\practice02.pdb
+C:\Users\KB\새 폴더\비주얼스튜디오\MusicLogin\practice02\obj\Debug\practice02.SecondCustomerControl.resources

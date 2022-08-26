@@ -1,0 +1,11 @@
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy0824\CSharpStudy0824-1\obj\Debug\CSharpStudy0824-1.csproj.AssemblyReference.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy0824\CSharpStudy0824-1\obj\Debug\CSharpStudy0824-1.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy0824\CSharpStudy0824-1\obj\Debug\CSharpStudy0824_1.Form1.resources
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy0824\CSharpStudy0824-1\obj\Debug\CSharpStudy0824_1.Properties.Resources.resources
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy0824\CSharpStudy0824-1\obj\Debug\CSharpStudy0824-1.csproj.GenerateResource.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy0824\CSharpStudy0824-1\obj\Debug\CSharpStudy0824-1.csproj.CoreCompileInputs.cache
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy0824\CSharpStudy0824-1\bin\Debug\CSharpStudy0824-1.exe.config
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy0824\CSharpStudy0824-1\bin\Debug\CSharpStudy0824-1.exe
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy0824\CSharpStudy0824-1\bin\Debug\CSharpStudy0824-1.pdb
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy0824\CSharpStudy0824-1\obj\Debug\CSharpStudy0824-1.exe
+C:\Users\KB\study\비주얼스튜디오\CSharpStudy0824\CSharpStudy0824-1\obj\Debug\CSharpStudy0824-1.pdb

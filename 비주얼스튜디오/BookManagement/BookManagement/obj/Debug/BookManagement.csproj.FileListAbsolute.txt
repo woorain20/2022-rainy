@@ -1,0 +1,13 @@
+C:\Users\KB\study\비주얼스튜디오\BookManagement\BookManagement\bin\Debug\BookManagement.exe.config
+C:\Users\KB\study\비주얼스튜디오\BookManagement\BookManagement\bin\Debug\BookManagement.exe
+C:\Users\KB\study\비주얼스튜디오\BookManagement\BookManagement\bin\Debug\BookManagement.pdb
+C:\Users\KB\study\비주얼스튜디오\BookManagement\BookManagement\obj\Debug\BookManagement.csproj.AssemblyReference.cache
+C:\Users\KB\study\비주얼스튜디오\BookManagement\BookManagement\obj\Debug\BookManagement.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\study\비주얼스튜디오\BookManagement\BookManagement\obj\Debug\BookManagement.Form1.resources
+C:\Users\KB\study\비주얼스튜디오\BookManagement\BookManagement\obj\Debug\BookManagement.Properties.Resources.resources
+C:\Users\KB\study\비주얼스튜디오\BookManagement\BookManagement\obj\Debug\BookManagement.csproj.GenerateResource.cache
+C:\Users\KB\study\비주얼스튜디오\BookManagement\BookManagement\obj\Debug\BookManagement.csproj.CoreCompileInputs.cache
+C:\Users\KB\study\비주얼스튜디오\BookManagement\BookManagement\obj\Debug\BookManagement.exe
+C:\Users\KB\study\비주얼스튜디오\BookManagement\BookManagement\obj\Debug\BookManagement.pdb
+C:\Users\KB\study\비주얼스튜디오\BookManagement\BookManagement\obj\Debug\BookManagement.Form2.resources
+C:\Users\KB\study\비주얼스튜디오\BookManagement\BookManagement\obj\Debug\BookManagement.Form3.resources
