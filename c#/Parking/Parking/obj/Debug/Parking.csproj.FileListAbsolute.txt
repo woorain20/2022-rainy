@@ -1,0 +1,11 @@
+C:\Users\KB\study\비주얼스튜디오\Parking\Parking\bin\Debug\Parking.exe.config
+C:\Users\KB\study\비주얼스튜디오\Parking\Parking\bin\Debug\Parking.exe
+C:\Users\KB\study\비주얼스튜디오\Parking\Parking\bin\Debug\Parking.pdb
+C:\Users\KB\study\비주얼스튜디오\Parking\Parking\obj\Debug\Parking.csproj.AssemblyReference.cache
+C:\Users\KB\study\비주얼스튜디오\Parking\Parking\obj\Debug\Parking.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\study\비주얼스튜디오\Parking\Parking\obj\Debug\Parking.Main.resources
+C:\Users\KB\study\비주얼스튜디오\Parking\Parking\obj\Debug\Parking.Properties.Resources.resources
+C:\Users\KB\study\비주얼스튜디오\Parking\Parking\obj\Debug\Parking.csproj.GenerateResource.cache
+C:\Users\KB\study\비주얼스튜디오\Parking\Parking\obj\Debug\Parking.csproj.CoreCompileInputs.cache
+C:\Users\KB\study\비주얼스튜디오\Parking\Parking\obj\Debug\Parking.exe
+C:\Users\KB\study\비주얼스튜디오\Parking\Parking\obj\Debug\Parking.pdb
