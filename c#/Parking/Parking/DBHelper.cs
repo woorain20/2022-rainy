@@ -22,7 +22,7 @@ namespace Parking
             conn.Open();
         }
 
-        internal static void selectQuery(int ParkingSpot=-1 )
+        public static void selectQuery(int ParkingSpot=-1 )
         {
             try
             {

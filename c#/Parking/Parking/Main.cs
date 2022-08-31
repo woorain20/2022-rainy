@@ -16,7 +16,7 @@ namespace Parking
         {
             InitializeComponent();
             label_Now.Text = DateTime.Now.ToString("yyyy년 MM월 dd일 hh시 mm분 ss초 tt");
-
+         
             try
             {
                 textBox_ParkingSpot.Text = DataManager.Cars[0].ParkingSpot.ToString();
@@ -115,6 +115,10 @@ namespace Parking
                     else
                     {
                         string oldCar = car.CarNum;
+                        int basicCharge = 2000;
+                        TimeSpan duration = DateTime.Now - car.ParkingTime;
+                        int durationM = (int)duration.TotalMinutes;
+                        int totalCharge = basicCharge + ((durationM - 30) / 10) * 200;
                         car.CarNum = "";
                         car.DriverName = "";
                         car.PhoneNum = "";
@@ -123,10 +127,21 @@ namespace Parking
                         dataGridView_ParkingManager.DataSource = null;
                         dataGridView_ParkingManager.DataSource = DataManager.Cars;
 
-                        DataManager.Save(textBox_ParkingSpot.Text, "", "", "", false);
-                        string contents = $"주차공간 {textBox_ParkingSpot.Text}에" + $"{oldCar}차를 출차했습니다.";
-                        writeLog(contents);
-                        MessageBox.Show(contents);
+                        if (durationM <= 30)
+                        {
+                            DataManager.Save(textBox_ParkingSpot.Text, "", "", "", false);
+                            string contents = $"주차공간 {textBox_ParkingSpot.Text}에 {oldCar}차를 출차했습니다. 요금은 {basicCharge}원입니다.";
+                            writeLog(contents);
+                            MessageBox.Show(contents);
+                        }
+                        else
+                        {
+                            DataManager.Save(textBox_ParkingSpot.Text, "", "", "", false);
+                            string contents = $"주차공간 {textBox_ParkingSpot.Text}에 {oldCar}차를 출차했습니다. 요금은 {totalCharge}원입니다.";
+                            writeLog(contents);
+                            MessageBox.Show(contents);
+                        }
+                       
                     }
                 }
                 catch (Exception)
@@ -139,7 +154,7 @@ namespace Parking
         private void dataGridView_ParkingManager_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
-            {
+            {    
                 ParkingCar car = dataGridView_ParkingManager.CurrentRow.DataBoundItem as ParkingCar;
                 textBox_ParkingSpot.Text = car.ParkingSpot.ToString();
                 textBox_CarNum.Text = car.CarNum;
@@ -252,10 +267,10 @@ namespace Parking
                 int basicCharge = 2000;
                 TimeSpan duration = DateTime.Now - car.ParkingTime;
                 int durationM=(int)duration.TotalMinutes;
-                int totalCharge=basicCharge+((durationM-29)/10)*200;
+                int totalCharge=basicCharge+((durationM-30)/10)*200;
                 if (parkingCar.Trim() != "")
                 {
-                    if (durationM < 30)
+                    if (durationM <= 30)
                     {
                         textBox_Cost.Text = $"{basicCharge}원";
                         MessageBox.Show($"현재 요금은 {basicCharge}원 입니다.");
@@ -281,6 +296,10 @@ namespace Parking
                 
             }
             
+        }
+
+        private void dataGridView_ParkingManager_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
         }
     }
 }

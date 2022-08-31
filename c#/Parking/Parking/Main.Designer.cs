@@ -57,10 +57,17 @@
             this.label_Now = new System.Windows.Forms.Label();
             this.timer_Now = new System.Windows.Forms.Timer(this.components);
             this.dataGridView_ParkingManager = new System.Windows.Forms.DataGridView();
+            this.parkingSpotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.driverNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parkingTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parkingCarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ParkingManager)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkingCarBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -317,13 +324,56 @@
             // 
             // dataGridView_ParkingManager
             // 
+            this.dataGridView_ParkingManager.AutoGenerateColumns = false;
             this.dataGridView_ParkingManager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ParkingManager.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.parkingSpotDataGridViewTextBoxColumn,
+            this.carNumDataGridViewTextBoxColumn,
+            this.driverNameDataGridViewTextBoxColumn,
+            this.phoneNumDataGridViewTextBoxColumn,
+            this.parkingTimeDataGridViewTextBoxColumn});
+            this.dataGridView_ParkingManager.DataSource = this.parkingCarBindingSource;
             this.dataGridView_ParkingManager.Location = new System.Drawing.Point(12, 214);
             this.dataGridView_ParkingManager.Name = "dataGridView_ParkingManager";
             this.dataGridView_ParkingManager.RowTemplate.Height = 23;
             this.dataGridView_ParkingManager.Size = new System.Drawing.Size(800, 195);
             this.dataGridView_ParkingManager.TabIndex = 0;
             this.dataGridView_ParkingManager.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ParkingManager_CellClick);
+            this.dataGridView_ParkingManager.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ParkingManager_CellContentClick);
+            // 
+            // parkingSpotDataGridViewTextBoxColumn
+            // 
+            this.parkingSpotDataGridViewTextBoxColumn.DataPropertyName = "ParkingSpot";
+            this.parkingSpotDataGridViewTextBoxColumn.HeaderText = "주차공간";
+            this.parkingSpotDataGridViewTextBoxColumn.Name = "parkingSpotDataGridViewTextBoxColumn";
+            // 
+            // carNumDataGridViewTextBoxColumn
+            // 
+            this.carNumDataGridViewTextBoxColumn.DataPropertyName = "CarNum";
+            this.carNumDataGridViewTextBoxColumn.HeaderText = "차량번호";
+            this.carNumDataGridViewTextBoxColumn.Name = "carNumDataGridViewTextBoxColumn";
+            // 
+            // driverNameDataGridViewTextBoxColumn
+            // 
+            this.driverNameDataGridViewTextBoxColumn.DataPropertyName = "DriverName";
+            this.driverNameDataGridViewTextBoxColumn.HeaderText = "운전자명";
+            this.driverNameDataGridViewTextBoxColumn.Name = "driverNameDataGridViewTextBoxColumn";
+            // 
+            // phoneNumDataGridViewTextBoxColumn
+            // 
+            this.phoneNumDataGridViewTextBoxColumn.DataPropertyName = "PhoneNum";
+            this.phoneNumDataGridViewTextBoxColumn.HeaderText = "전화번호";
+            this.phoneNumDataGridViewTextBoxColumn.Name = "phoneNumDataGridViewTextBoxColumn";
+            // 
+            // parkingTimeDataGridViewTextBoxColumn
+            // 
+            this.parkingTimeDataGridViewTextBoxColumn.DataPropertyName = "ParkingTime";
+            this.parkingTimeDataGridViewTextBoxColumn.HeaderText = "주차시간";
+            this.parkingTimeDataGridViewTextBoxColumn.Name = "parkingTimeDataGridViewTextBoxColumn";
+            // 
+            // parkingCarBindingSource
+            // 
+            this.parkingCarBindingSource.DataSource = typeof(Parking.ParkingCar);
             // 
             // Main
             // 
@@ -346,6 +396,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ParkingManager)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkingCarBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,6 +432,12 @@
         private System.Windows.Forms.TextBox textBox_Cost;
         private System.Windows.Forms.Button button_Cost;
         private System.Windows.Forms.DataGridView dataGridView_ParkingManager;
+        private System.Windows.Forms.BindingSource parkingCarBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parkingSpotDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn carNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn driverNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parkingTimeDataGridViewTextBoxColumn;
     }
 }
 
