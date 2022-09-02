@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Train</title>
+</head>
+<body>
+	<h1 style=color:darkblue>Train image</h1>
+	<!-- 상대주소
+		Html 문서가 있는 위치에서 출발
+		./ - 현재 폴더 - 생략 가능하지만 가급적 써주는 것이 좋다
+		../ - 상위 폴더
+		/폴더 이름 - 하위 이름 
+		과제 - 본인 관심사 사진 5장을 선택해서 다운
+		img 태그를 이용해서 사진 출력
+		1. 현재 폴더
+		2. 하위 폴더
+		3. 하위/하위 폴더
+		4. 상위 폴더
+		5. 상위/하위 폴더-->
+	<h3>1. 현재 폴더</h3>
+	<img src="./t00.jpg"/>
+	<img src="./t05.jpg" width="500"/><br/>
+	<br/>
+	<h3>2. 하위 폴더</h3>
+	<img src="./train3/t01.jpg"/>
+	<img src="./train3/t06.jpg"/><br/>
+	<br/>
+	<h3>3. 하위/하위 폴더</h3>
+	<img src="./train3/train5/t02.jpg"/>
+	<img src="./train3/train5/t07.jpg"/><br/>
+	<br/>
+	<h3>4. 상위 폴더</h3>
+	<img src="../t03.jpg" width="800"/>
+	<img src="../t08.jpg"/><br/>
+	<br/>
+	<h3>5. 상위/하위 폴더</h3>
+	<img src="../train4/t04.jpg"/>
+	<img src="../train4/t09.jpg"/><br/>
+</body>
+</html>

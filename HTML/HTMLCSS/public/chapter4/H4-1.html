@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS단위</title>
+<style type="text/css">
+	*{
+		font-size:18px;
+	}
+	h1{
+		margin:10px;
+		font-size:200%;
+		line-height:2em;
+	}
+	p:nth-child(2){
+		font-size:200%;
+		/* 0~256 rgb(red,green,blue) */
+		color:rgb(104,17,199)
+	}
+	p:nth-child(3){
+		font-size:2em;
+		color:#eb0854
+	}
+	p:nth-child(4){
+		font-size:150px;
+		/* rgba의 4번째는 투명도 - 0~1 */
+		color:rgba(43,187,224,0.3)
+	}
+	div{
+		width:300px;
+		height:200px;
+		background-color:#4e32a8;
+	}
+</style>
+</head>
+<body>
+	<h1>We are Arsenal</h1>
+	<p>abcdefghijklmnopqrstuvwxyz</p>
+	<p>abcdefghijklmnopqrstuvwxyz</p>
+	<p>abcdefghijklmnopqrstuvwxyz</p>
+	<p>abcdefghijklmnopqrstuvwxyz</p>
+	<div>
+	</div>
+</body>
+</html>

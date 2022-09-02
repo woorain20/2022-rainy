@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가시/박스 속성</title>
+<style type="text/css">
+/*  display:inline
+	visivility:visible, hidden, collapse
+	rgb(0~255) 256,256,256 */
+	#box{
+		display:inline-block;
+		
+		background-color:skyblue;
+		width:300px;
+		height:50px;
+		margin:10px;
+		/* 0~1 투명도 */
+		opacity:0.8;
+		border: 2px solid;
+		padding:10px;
+		/*  전체너비: width+(margin+border+padding)*2
+		 	전체높이: height+(margin+border+padding)*2 */
+	}
+	#s1{
+		display:block;
+	}
+	#box2{
+		visibility:hidden;
+		background-color:yellow;
+		width:300px;
+		height:50px;
+		margin:10px;
+	}
+	#s2{
+		display:block;
+	}
+	#box3{
+		background-color:yellowgreen;
+		width:300px;
+		height:50px;
+		margin:10px 5px 15px 20px; /* 위 우 아래 좌 */
+		opacity:0.8;
+		border: 2px solid;
+		padding:10px;
+	}
+	#box4{
+		background-color:yellowgreen;
+		width:300px;
+		height:50px;
+		margin:10px 20px; /* 위아래 좌우 */
+		opacity:0.6;
+		border: 2px solid;
+		padding:10px;
+	}
+</style>
+</head>
+<body>
+	<span id="s1">Dummy</span>
+	<div id="box">
+		<span>Lorem ipsum dolor sit amet......</span>
+	</div>
+	<span>Dummy</span>
+	<span id="s2">Dummy</span>
+	<div id="box2">
+		<span>Lorem ipsum dolor sit amet......</span>
+	</div>
+	<span>Dummy</span>
+	<span id="s3">Dummy</span>
+	<div id="box3">
+		<span>Lorem ipsum dolor sit amet......</span>
+	</div>
+	<span>Dummy</span>
+	<span id="s4">Dummy</span>
+	<div id="box4">
+		<span>Lorem ipsum dolor sit amet......</span>
+	</div>
+	<span>Dummy</span>
+</body>
+</html>

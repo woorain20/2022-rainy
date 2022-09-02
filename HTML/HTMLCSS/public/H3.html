@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>practice</title>
+</head>
+<body>
+	<h1>Hello World</h1>
+	<h3>Hello World!</h3>
+	<!-- 절대주소 
+	컴퓨터에 있는 진짜 주소 -->
+	<!-- 상대주소
+	Html 문서가 있는 위치에서 출발
+	./ - 현재 폴더 - 생략 가능하지만 가급적 써주는 것이 좋다
+	../ - 상위 폴더
+	/폴더 이름 - 하위 이름 
+	과제 - 본인 관심사 사진 5장을 선택해서 다운
+	img 태그를 이용해서 사진 출력
+	1. 현재 폴더
+	2. 하위 폴더
+	3. 하위/하위 폴더
+	4. 상위 폴더
+	5. 상위/하위 폴더-->
+	<img src="C:\Users\KB\study\HTML\chapter2\Penguins.jpg">
+	<img src="./chapter2/Penguins.jpg"/>
+	<img src="./chapter2/Penguins1.jpg" alt="오류 - 이미지 없음"/>
+	<img src="https://post-phinf.pstatic.net/MjAxNzExMThfMTU3/MDAxNTEwOTg1MjU0MDMw.UnE6KDZeDvuggh3t
+	CZyAh1TnZdmvZQGLVZbT2nhBIAYg.9QvOIhmCZnSwa0BXJ8CVs3ROxovGtlVmRmglS2HE8esg.JPEG/20171118-006.jpg?type=w1200"/>
+	
+	<!-- alt-이미지가 없을 때 나오는 글
+		width - 가로 길이(px)
+		height - 세로 길이(px) -->
+	<img src="./chapter2/Penguins.jpg" width="300" height="100"/>
+	<!-- 보통 width height 둘 중 하나만 사용하고 최근에는 CSS에서 함 -->
+	<br/>
+	<img src="https://via.placeholder.com/500x400"/>
+	<br/>
+	<audio src="./chapter2/Kalimba.mp3" controls="controls" loop="loop"></audio>
+	<br/>
+	<video src="./chapter2/Wildlife.mp4" controls="controls" width="750" poster="./chapter2/Penguins.jpg"></video>
+	<video controls >
+		<source src="./chapter2/Wildlife.mp4" type="vodeo/mp4"/>
+		<source src="./chapter2/Wildlife.webm" type="vodeo/webm"/>
+	</video>
+	
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/Uu399Gd9BDU" title="YouTube video player" 
+	frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+	allowfullscreen></iframe>
+	<br/>
+	<br/>
+	<!-- get -> 주소창에 데이터 보임
+		 post -> 주소창에 데이터 안 보임 -->
+	<form>
+		<input type="date"/><br/>
+		<input type="text"/><br/>
+		<input type="submit"/><br/>
+		<input type="password"/><br/>
+		<input type="file"/><br/>
+		<input type="text" name="str1"/><br/>
+		<input type="button"/><br/>
+		<button>play</button><br/>
+		<input type="reset"/><br/>
+		<input type="radio"/><br/>
+		<label>아이디</label>
+		<h5>3번 입력 오류시</h5>
+		<input type="text"/><br/>
+		<label>비밀번호</label>
+		<p>8자리 이상</p>
+		<input type="password"/><br/>
+		<label>e_mail</label>
+		<input type="email"/><br/>
+		<input type="range"/><br/>
+		<!-- radio - 선택지 중 한개만 선택해야 될 때
+			checkbox - 다중 선택 가능 -->
+			<!--  서버에 받을 때 value
+				  먼저 선택되어 있는 걸 택할 때 checked -->
+		<input type="radio" name="gender" value="man" checked="checked"/>남성<br/>
+		<input type="radio" name="gender" value="woman"/>여성<br/>
+		<input type="checkbox"/>축구
+		<input type="checkbox"/>농구
+		<input type="checkbox"/>야구		
+		<input type="checkbox"/>배구		
+		<input type="checkbox"/>족구<br/>
+		<textarea rows="10" cols="15">내용을 입력하세요.</textarea><br/>
+		<select multiple="multiple">
+			<option>짜장면</option>
+			<option>짬뽕</option>
+			<option>볶음밥</option>
+			<option>울면</option>
+			<option>냉우동</option>
+			<option>야끼우동</option>
+			<option>탕수육</option>
+		</select><br/>
+		<select>
+			<optgroup label="경양식">
+				<option>돈까스</option>
+				<option>오므라이스</option>
+				<option>치킨까스</option>
+				<option>파스타</option>
+			</optgroup>
+			<optgroup label="분식">
+				<option>김밥</option>
+				<option>라면</option>
+				<option>떡볶이</option>
+				<option>어묵</option>
+			</optgroup>
+		</select>
+	</form>
+	<form>
+		<fieldset>
+			<legend>로그인</legend>
+			<table>
+				<tr>
+					<td>이름</td>
+					<td><input type="text"/></td>
+				</tr>
+				<tr>
+					<td>이메일</td>
+					<td><input type="email"/></td>
+				</tr>
+			</table>
+			<input type="submit"/>
+		</fieldset>
+	</form>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!-- xml -->
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width==device-width, inital-scale=1">
+<title>test</title>
+<!-- <title> 브라우저 창 제목 -->
+<style type="text/css">
+	h3{
+		color:blue;
+	}
+	#beta{
+		color:yellowgreen;
+	}
+	ul{
+		background-color:skyblue;
+		width:150px;
+		list-style-type:none;
+	}
+	li a{
+		display: black;
+		color:white;
+		text-decoration:none;
+	}
+</style>
+<script type="text/javascript">
+var num1=0;
+var str="Hello World";
+console.log(num1);
+console.log(str);
+</script>
+</head>
+
+<body>
+	<!-- 주석 -->
+	<!-- <h1> 시작 태그, 내용 </h1>끝 태그-->
+	<!-- <h1>Hello World!</h1> - 요소(element) -->
+	<h3>Hello World!</h3>
+	<!-- <br/> 줄바꿈 시작태그 끝태그 없이 1개만 사용-->
+	<br/>
+	<h1>Hello World!</h1>
+	<h1 style="color:blue;">Hello World!</h1>
+	<!-- style="color:blue;" - 속성(attribute) -->
+	<a href="https://www.naver.com">Naver</a>
+	<!-- <a href></a> - 하이퍼링크 -->
+</body>
+
+<body>
+	<!-- 글자 태그 -->
+	<!-- 제목(heading) h1~h6 -->
+	<h1>제목 Heading1</h1>
+	<h2>제목 Heading2</h2>
+	<h3>제목 Heading3</h3>
+	<h4>제목 Heading4</h4>
+	<h5>제목 Heading5</h5>
+	<h6>제목 Heading6</h6>
+	<!-- 본문(paragraph) p -->
+	<!-- <hr/> - 수평선 -->
+	<h1>Lorem Ipsum</h1>
+	<p>Lorem Ipsum is simply dummy text of the printing and type setting industry. <br/>
+	Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+	when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br/><hr/>
+	It has survived not only five centuries, but also the leap into electronic typesetting, 
+	remaining essentially unchanged. <br/> It was popularised in the 1960s with the release of Letraset sheets 
+	containing Lorem Ipsum passages, and more recently with desktop publishing software like 
+	Aldus PageMaker including versions of Lorem Ipsum.
+	</p>
+	<!-- 앵커 태그 a href - 링크-->
+		<a href="https://www.daum.net">Daum</a>
+		<a href="https://github.com">Github</a>
+</body>
+
+<body>
+	<!-- p48 코드2-8 -->
+	<a href="#alpha">Move to Alpha</a>
+	<a href="#beta">Move to Beta</a>
+	<a href="#gamma">Move to Gamma</a>
+	<hr/>
+	<h1 id="alpha">Alpha</h1>
+	<p>Contrary to popular belief, Lorem Ipsum is not simply random text. 
+	It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <br/>
+	Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
+	looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, 
+	and going through the cites of the word in classical literature, discovered the undoubtable source. <br/>
+	Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" 
+	(The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, 
+	very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", 
+	comes from a line in section 1.10.32.
+	</p>
+	<h1 id="beta">Beta</h1>
+	<p>It is a long established fact that a reader will be distracted by the readable content of a page 
+	when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution 
+	of letters, as opposed to using 'Content here, content here', making it look like readable English. <br/>
+	Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, 
+	and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved 
+	over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+	</p>
+	<h1 id="gamma">Gamma</h1>
+	<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration 
+	in some form, by injected humour, or randomised words which don't look even slightly believable. <br/>
+	If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden 
+	in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks 
+	as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,
+	combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. <br/>
+	The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words
+	etc.
+	</p>
+</body>
+
+<body>
+	<h1><b>Lorem ipsum dolor sit amet</b></h1>
+	<h1><i>Lorem ipsum dolor sit amet</b></h1>
+	<h1><small>Lorem ipsum dolor sit amet</b></h1>
+	<h1><sub>Lorem ipsum dolor sit amet</b></h1>
+	<h1><sup>Lorem ipsum dolor sit amet</b></h1>
+	<h1><ins>Lorem ipsum dolor sit amet</b></h1>
+	<h1><del>Lorem ipsum dolor sit amet</b></h1>
+	<hr/>
+	<b>Lorem ipsum dolor sit amet</b><br/>
+	<i>Lorem ipsum dolor sit amet</i><br/>
+	<small>Lorem ipsum dolor sit amet</small><br/>
+	<sub>Lorem ipsum dolor sit amet</sub><br/>
+	<sup>Lorem ipsum dolor sit amet</sup><br/>
+	<ins>Lorem ipsum dolor sit amet</ins><br/>
+	<del>Lorem ipsum dolor sit amet</del><br/>
+</body>
+
+</body>
+	<!-- 목록 태그 -->
+	<!-- 내비게이션 바, navigation bar, navi bar -->
+	<h1>ol tag 순서(숫자)</h1>
+	<ol>
+		<li>facebook</li>
+		<li>tweeter</li>
+		<li>instagram</li>
+		<li>minihompy</li>
+	</ol>
+	<h1>ul tag 도형</h1>
+	<ul>
+		<li><a href="#">facebook</a></li>
+		<li><a href="#">tweeter</a></li>
+		<li><a href="#">instagram</a></li>
+		<li><a href="#">minihompy</a></li>
+		<li>tweeter</li>
+		<li>instagram</li>
+		<li>minihompy</li>
+	</ul>
+<body>
+
+</body>
+	<!-- 테이블 태그 -->
+	<table border="2">
+		<tr>
+			<th>학년</th>
+			<th>반</th>
+			<th>번호</th>
+			<th>이름</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>1</td>
+			<td>1</td>
+			<td>김이박</td>		
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>2</td>
+			<td>2</td>
+			<td>이박정</td>		
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>3</td>
+			<td>3</td>
+			<td>박정최</td>		
+		</tr>
+	</table>
+<body>
+
+</body>
+	<table border="5">
+		<tr>
+			<th colspan="5">Table Data</th>
+			<th rowspan="6">Table Data</th>			
+		</tr>
+		<tr>
+			<th>학년</th>
+			<th>반</th>
+			<th>번호</th>
+			<th>이름</th>
+		</tr>
+		<tr>
+			<td rowspan="3">1</td>
+			<td rowspan="2">1</td>
+			<td>1</td>
+			<td>김이박</td>		
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>이박정</td>		
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>3</td>
+			<td>박정최</td>		
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>1</td>
+			<td>1</td>
+			<td>가나다</td>		
+		</tr>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>상태 선택자</title>
+<style type="text/css">
+	input:enabled{
+		background-color:white;
+	}
+	input:disabled{
+		background-color:gold;
+	}
+	input:focus{
+		background-color:skyblue;
+	}
+	input[type=checkbox]:checked + #div1{
+		display:none;
+		
+	}
+	#c-input:checkedbox + div{
+		height:0px;
+		color:black;
+	}
+	#div-hidden{
+		height:0px;
+		color:black;
+	}
+	#div1{
+		width:650px;
+		height:300px;
+		overflow:hidden;
+		-ms-transition-duration:2s;
+		-webkit-transition-duration:2s;
+		-moz-transition-duration:2s;
+		transition-duration:2s;
+	}
+</style>
+</head>
+<body>
+	<h2>Enabled</h2>
+	<input/>
+	<h2>Disabled</h2>
+	<input disabled="disabled"/>
+	<div>
+		<input id="c-input" type="checkbox"/>
+		<div id="div1" class="div-class">
+			<h1>Hello</h1>
+			<p>가나다라마바사아자차카타파하 에헤 으헤으헤</p>
+		</div>
+	</div>
+	<div id="div2" class="div-class">
+		<h1>Hello</h1>
+		<p>가나다라마바사아자차카타파하 에헤 으헤으헤</p>
+	</div>
+	<div id="div3" class="div-class">
+		<h1>Hello</h1>
+		<p>가나다라마바사아자차카타파하 에헤 으헤으헤</p>
+	</div>
+</body>
+</html>

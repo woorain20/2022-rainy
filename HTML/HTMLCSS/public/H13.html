@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>동일 선택자</title>
+<style type="text/css">
+	/* 동일 선택자 
+		+ 는 바로 밑에 한 개만 선택
+		~ 는 뒤에 위치한 모든 요소 선택 */
+	/*h1 태그 바로 뒤에 위치하는 h2 태그의  color 속성 적용*/
+	h1+h2{
+		color:red;
+	}
+	/*h1 태그 뒤에 위치하는 h2 태그의 background-color 속성 적용*/
+	h1~h2{
+		background-color:orange;
+	}
+</style>
+</head>
+<body>
+	<h1>Header - 1</h1>
+	<h2 id="first-h2" class="h2-after-h1">Header - 2</h2>
+	<h2>Header - 2</h2>
+	<h2>Header - 2</h2>
+	<h2>Header - 2</h2>
+</body>
+</html>

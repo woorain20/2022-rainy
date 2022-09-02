@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>자손 후손</title>
+<style type="text/css">
+/* A space B - 후손 선택 
+   A > B - 자손 선택 */
+	#header h1, #header h2{
+		color:pink;
+	}
+	#section h1, p{
+		color:skyblue;
+	}
+	#sector > h1{
+		color:gold;
+	}
+</style>
+</head>
+<body>
+	<div id="header">
+		<h1 class="title">Korea</h1>
+		<h2 class="title">Finland</h2>
+		<div id="nav">
+			<h1>Daegu</h1>
+		</div>
+	</div>
+	<div id="section">
+		<h1 class="title">France</h1>
+		<p>France revolution is....</p>
+	</div>
+	<div id="sector">
+		<h1 class="title">Korea</h1>
+		<h2 class="title">Finland</h2>
+		<div id="nav">
+			<h1>Daegu</h1>
+		</div>
+	</div>
+</body>
+</html>

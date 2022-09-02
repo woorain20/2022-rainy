@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>id 부여</title>
+<style type="text/css">
+	#header{
+		width: 500px;
+		height: 300px;
+		margin: 0 auto;
+		background: yellowgreen;
+		border: solid;
+		padding: 10px;
+	}
+	#wrap{
+		width: 800px;
+		height: 300px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	#aside{
+		width: 300px;
+		height: 150px;
+		float: left;
+		background:yellow;
+	}
+	#content{
+		width: 300px;
+		height: 150px;
+		float: right;
+		background:aqua;
+	}
+</style>
+</head>
+<body>
+	<!-- 특정 태그에 id 부여 중복 불가 -->
+	<div id="header" align="center">
+		<h1>Header</h1>
+	</div>
+	<div id="wrap">
+		<div id="aside" align="left">
+			<h1>Aside</h1>
+		</div>
+		<div id="content" align="right">
+			<h1>Content</h1>
+		</div>
+	</div>
+</body>
+</html>
