@@ -1,0 +1,33 @@
+#player{
+    border: 2px solid red;
+    width:40%;
+    height:400px;
+}
+#player ul{
+    float: left;
+}
+#player li{
+    list-style: none;
+    border: 1px solid black;
+    width: 150px;
+    height: 50px;
+}
+/* #player ul:hover{
+    transform: translateY(45px);
+} */
+#search{
+    float: left;
+    width:40%;
+    height:300px;
+}
+#search button{
+    width: 100px;
+    height: 30px;
+}
+#search li{
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 5px 5px 5px 5px;
+    width: 150px;
+    height: 50px;
+}
