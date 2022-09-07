@@ -1,0 +1,16 @@
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\bin\Debug\Hospital.exe.config
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\bin\Debug\Hospital.exe
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\bin\Debug\Hospital.pdb
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.csproj.AssemblyReference.cache
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.Login.resources
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.Main.resources
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.Properties.Resources.resources
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.cache
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.csproj.CoreCompileInputs.cache
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.exe
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.pdb
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.PatientInfo.resources
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.ManagerInfo.resources
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.MedicineInfo.resources
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.WaitInfo.resources
