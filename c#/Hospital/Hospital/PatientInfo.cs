@@ -21,7 +21,7 @@ namespace Hospital
                 textBox_PCode.Text = DataManager.patients[0].pCode.ToString();
                 textBox_Name.Text = DataManager.patients[0].name;
                 textBox_Age.Text = DataManager.patients[0].age.ToString();
-                textBox_Gender.Text = DataManager.patients[0].gender.ToString();
+                textBox_Gender.Text = DataManager.patients[0].gender;
                 textBox_Phone.Text = DataManager.patients[0].phoneNum;
                 textBox_Adress.Text = DataManager.patients[0].address;
                 textBox_Visit.Text = DataManager.patients[0].visit.ToString();
@@ -45,7 +45,7 @@ namespace Hospital
                 textBox_PCode.Text = patients.pCode.ToString();
                 textBox_Name.Text = patients.name;
                 textBox_Age.Text = patients.age.ToString();
-                textBox_Gender.Text = patients.gender.ToString();
+                textBox_Gender.Text = patients.gender;
                 textBox_Phone.Text = patients.phoneNum;
                 textBox_Adress.Text = patients.address;
                 textBox_Visit.Text = patients.visit.ToString();

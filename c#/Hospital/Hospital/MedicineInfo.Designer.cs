@@ -33,17 +33,20 @@
             this.dataGridView_MedicineList = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button_Order = new System.Windows.Forms.Button();
+            this.button_Add = new System.Windows.Forms.Button();
             this.textBox_Amount = new System.Windows.Forms.TextBox();
             this.textBox_Name = new System.Windows.Forms.TextBox();
             this.textBox_Code = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.medicineBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button_Delete = new System.Windows.Forms.Button();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medicineBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button_modify = new System.Windows.Forms.Button();
+            this.button_refresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MedicineList)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -88,7 +91,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button_Order);
             this.groupBox2.Controls.Add(this.textBox_Amount);
             this.groupBox2.Controls.Add(this.textBox_Name);
             this.groupBox2.Controls.Add(this.textBox_Code);
@@ -97,19 +99,20 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(281, 51);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(152, 355);
+            this.groupBox2.Size = new System.Drawing.Size(152, 310);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "의약품 발주";
+            this.groupBox2.Text = "의약품 추가/삭제";
             // 
-            // button_Order
+            // button_Add
             // 
-            this.button_Order.Location = new System.Drawing.Point(42, 326);
-            this.button_Order.Name = "button_Order";
-            this.button_Order.Size = new System.Drawing.Size(75, 23);
-            this.button_Order.TabIndex = 6;
-            this.button_Order.Text = "주문";
-            this.button_Order.UseVisualStyleBackColor = true;
+            this.button_Add.Location = new System.Drawing.Point(281, 379);
+            this.button_Add.Name = "button_Add";
+            this.button_Add.Size = new System.Drawing.Size(152, 23);
+            this.button_Add.TabIndex = 6;
+            this.button_Add.Text = "추가";
+            this.button_Add.UseVisualStyleBackColor = true;
+            this.button_Add.Click += new System.EventHandler(this.button_Add_Click);
             // 
             // textBox_Amount
             // 
@@ -159,9 +162,15 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "코드번호";
             // 
-            // medicineBindingSource
+            // button_Delete
             // 
-            this.medicineBindingSource.DataSource = typeof(Hospital.Medicine);
+            this.button_Delete.Location = new System.Drawing.Point(281, 459);
+            this.button_Delete.Name = "button_Delete";
+            this.button_Delete.Size = new System.Drawing.Size(152, 23);
+            this.button_Delete.TabIndex = 7;
+            this.button_Delete.Text = "삭제";
+            this.button_Delete.UseVisualStyleBackColor = true;
+            this.button_Delete.Click += new System.EventHandler(this.button_Delete_Click);
             // 
             // codeDataGridViewTextBoxColumn
             // 
@@ -181,11 +190,39 @@
             this.amountDataGridViewTextBoxColumn.HeaderText = "재고";
             this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
             // 
+            // medicineBindingSource
+            // 
+            this.medicineBindingSource.DataSource = typeof(Hospital.Medicine);
+            // 
+            // button_modify
+            // 
+            this.button_modify.Location = new System.Drawing.Point(281, 419);
+            this.button_modify.Name = "button_modify";
+            this.button_modify.Size = new System.Drawing.Size(152, 23);
+            this.button_modify.TabIndex = 8;
+            this.button_modify.Text = "수정";
+            this.button_modify.UseVisualStyleBackColor = true;
+            this.button_modify.Click += new System.EventHandler(this.button_modify_Click);
+            // 
+            // button_refresh
+            // 
+            this.button_refresh.Location = new System.Drawing.Point(281, 499);
+            this.button_refresh.Name = "button_refresh";
+            this.button_refresh.Size = new System.Drawing.Size(152, 23);
+            this.button_refresh.TabIndex = 9;
+            this.button_refresh.Text = "조회";
+            this.button_refresh.UseVisualStyleBackColor = true;
+            this.button_refresh.Click += new System.EventHandler(this.button_refresh_Click);
+            // 
             // MedicineInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 559);
+            this.Controls.Add(this.button_refresh);
+            this.Controls.Add(this.button_Delete);
+            this.Controls.Add(this.button_modify);
+            this.Controls.Add(this.button_Add);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -210,7 +247,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button_Order;
+        private System.Windows.Forms.Button button_Add;
         private System.Windows.Forms.TextBox textBox_Amount;
         private System.Windows.Forms.TextBox textBox_Name;
         private System.Windows.Forms.TextBox textBox_Code;
@@ -218,5 +255,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource medicineBindingSource;
+        private System.Windows.Forms.Button button_Delete;
+        private System.Windows.Forms.Button button_modify;
+        private System.Windows.Forms.Button button_refresh;
     }
 }

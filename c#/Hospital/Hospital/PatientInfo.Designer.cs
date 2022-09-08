@@ -36,7 +36,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button_Load = new System.Windows.Forms.Button();
+            this.textBox_PCode = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button_modify = new System.Windows.Forms.Button();
+            this.button_delete = new System.Windows.Forms.Button();
             this.textBox_Prosc = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox_Visit = new System.Windows.Forms.TextBox();
@@ -48,11 +51,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button_add = new System.Windows.Forms.Button();
-            this.button_delete = new System.Windows.Forms.Button();
-            this.button_modify = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox_PCode = new System.Windows.Forms.TextBox();
             this.pCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -138,10 +136,8 @@
             // 
             this.groupBox2.Controls.Add(this.textBox_PCode);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.button_Load);
             this.groupBox2.Controls.Add(this.button_modify);
             this.groupBox2.Controls.Add(this.button_delete);
-            this.groupBox2.Controls.Add(this.button_add);
             this.groupBox2.Controls.Add(this.textBox_Prosc);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.textBox_Visit);
@@ -163,14 +159,39 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "환자 정보";
             // 
-            // button_Load
+            // textBox_PCode
             // 
-            this.button_Load.Location = new System.Drawing.Point(381, 222);
-            this.button_Load.Name = "button_Load";
-            this.button_Load.Size = new System.Drawing.Size(75, 23);
-            this.button_Load.TabIndex = 16;
-            this.button_Load.Text = "불러오기";
-            this.button_Load.UseVisualStyleBackColor = true;
+            this.textBox_PCode.Location = new System.Drawing.Point(94, 24);
+            this.textBox_PCode.Name = "textBox_PCode";
+            this.textBox_PCode.Size = new System.Drawing.Size(141, 21);
+            this.textBox_PCode.TabIndex = 21;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(22, 27);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 12);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "환자코드";
+            // 
+            // button_modify
+            // 
+            this.button_modify.Location = new System.Drawing.Point(300, 222);
+            this.button_modify.Name = "button_modify";
+            this.button_modify.Size = new System.Drawing.Size(75, 23);
+            this.button_modify.TabIndex = 19;
+            this.button_modify.Text = "수정";
+            this.button_modify.UseVisualStyleBackColor = true;
+            // 
+            // button_delete
+            // 
+            this.button_delete.Location = new System.Drawing.Point(381, 222);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(75, 23);
+            this.button_delete.TabIndex = 18;
+            this.button_delete.Text = "삭제";
+            this.button_delete.UseVisualStyleBackColor = true;
             // 
             // textBox_Prosc
             // 
@@ -257,49 +278,6 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "연락처";
             // 
-            // button_add
-            // 
-            this.button_add.Location = new System.Drawing.Point(300, 191);
-            this.button_add.Name = "button_add";
-            this.button_add.Size = new System.Drawing.Size(75, 23);
-            this.button_add.TabIndex = 17;
-            this.button_add.Text = "추가";
-            this.button_add.UseVisualStyleBackColor = true;
-            // 
-            // button_delete
-            // 
-            this.button_delete.Location = new System.Drawing.Point(381, 191);
-            this.button_delete.Name = "button_delete";
-            this.button_delete.Size = new System.Drawing.Size(75, 23);
-            this.button_delete.TabIndex = 18;
-            this.button_delete.Text = "삭제";
-            this.button_delete.UseVisualStyleBackColor = true;
-            // 
-            // button_modify
-            // 
-            this.button_modify.Location = new System.Drawing.Point(300, 222);
-            this.button_modify.Name = "button_modify";
-            this.button_modify.Size = new System.Drawing.Size(75, 23);
-            this.button_modify.TabIndex = 19;
-            this.button_modify.Text = "수정";
-            this.button_modify.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(22, 27);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 12);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "환자코드";
-            // 
-            // textBox_PCode
-            // 
-            this.textBox_PCode.Location = new System.Drawing.Point(94, 24);
-            this.textBox_PCode.Name = "textBox_PCode";
-            this.textBox_PCode.Size = new System.Drawing.Size(141, 21);
-            this.textBox_PCode.TabIndex = 21;
-            // 
             // pCodeDataGridViewTextBoxColumn
             // 
             this.pCodeDataGridViewTextBoxColumn.DataPropertyName = "pCode";
@@ -385,9 +363,7 @@
         private System.Windows.Forms.TextBox textBox_Age;
         private System.Windows.Forms.TextBox textBox_Name;
         private System.Windows.Forms.TextBox textBox_Prosc;
-        private System.Windows.Forms.Button button_Load;
         private System.Windows.Forms.DataGridView dataGridView_PatientList;
-        private System.Windows.Forms.Button button_add;
         private System.Windows.Forms.Button button_delete;
         private System.Windows.Forms.Button button_modify;
         private System.Windows.Forms.Label label9;

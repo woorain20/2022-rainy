@@ -21,6 +21,7 @@ namespace Hospital
         {
             Load();
             PLoad();
+            MLoad();
         }
 
         public static void Load()
@@ -64,6 +65,28 @@ namespace Hospital
                     patient.phoneNum = item["PhoneNum"].ToString();
                     patient.visit = item["Visit"].ToString() == "" ? new DateTime() : DateTime.Parse(item["Visit"].ToString());
                     patients.Add(patient);
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        public static void MLoad()
+        {
+            try
+            {
+                MDBHelper.selectQuery();
+                medicines.Clear();
+
+                foreach (DataRow item in MDBHelper.dt.Rows)
+                {
+                    Medicine medicine = new Medicine();
+                    medicine.code = item["Code"].ToString();
+                    medicine.name = item["Name"].ToString();
+                    medicine.amount = int.Parse(item["Amount"].ToString());
+                    medicines.Add(medicine);
                 }
             }
             catch (Exception ex)
@@ -215,5 +238,94 @@ namespace Hospital
             }
         }
 
+        public static void MSave(string code, string name, string amount, bool isRemove)
+        {
+            try
+            {
+                MDBHelper.updateQuery(code, name, amount, isRemove);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        public static void MSave(string command, string code, string name, string amount, out string contents)
+        {
+            MDBHelper.dataInsertQuery(code, name, amount, command);
+            contents = "";
+
+            if (command == "insert")
+            {
+                MDBInsert(code, name, amount, ref contents);
+            }
+        }
+
+        public static void MSave(string command, string code, out string contents)
+        {
+            MDBHelper.dataDeleteQuery(code, command);
+            contents = "";
+
+            if (command == "delete")
+            {
+                MDBDelete(code, ref contents);
+            }
+        }
+
+        public static void MSave(string command, string code, string amount, out string contents)
+        {
+            MDBHelper.dataUpdateQuery(code, amount, command);
+            contents = "";
+
+            if (command == "update")
+            {
+                MDBUpdate(code, amount, ref contents);
+            }
+        }
+
+        private static bool MDBDelete(string code, ref string contents)
+        {
+            if (MDBHelper.dt.Rows.Count != 0)
+            {
+                MDBHelper.deleteQuery(code);
+                contents = $"의약품 번호 {code}이/가 삭제되었습니다.";
+                return true;
+            }
+            else
+            {
+                contents = $"해당 의약품 번호 {code}가 존재하지 않습니다.";
+                return false;
+            }
+        }
+
+        private static bool MDBUpdate(string code, string amount, ref string contents)
+        {
+            if (MDBHelper.dt.Rows.Count != 0)
+            {
+                MDBHelper.updateMQuery(code, amount);
+                contents = $"의약품 번호 {code}의 수량이 {amount}로 수정되었습니다.";
+                return true;
+            }
+            else
+            {
+                contents = $"해당 의약품 번호 {code}가 존재하지 않습니다.";
+                return false;
+            }
+        }
+
+        private static bool MDBInsert(string code, string name, string amount, ref string contents)
+        {
+            if (MDBHelper.dt.Rows.Count != 0)
+            {
+                MDBHelper.insertQuery(code, name, amount);
+                contents = $"의약품 번호 {code}이/가 추가되었습니다.";
+                return true;
+            }
+            else
+            {
+                contents = $"해당 의약품 번호 {code}가 이미 존재합니다.";
+                return false;
+            }
+        }
     }
 }

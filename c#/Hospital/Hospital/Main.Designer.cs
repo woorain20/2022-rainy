@@ -36,6 +36,14 @@
             this.관리자정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView_Patient = new System.Windows.Forms.DataGridView();
+            this.pCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.visitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView_Treat = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -79,24 +87,23 @@
             this.textBox_Pros = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label_Manage = new System.Windows.Forms.Label();
-            this.pCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.visitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox_Medicine = new System.Windows.Forms.TextBox();
+            this.medicineBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Patient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Treat)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Medicine)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicineBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -168,6 +175,55 @@
             this.dataGridView_Patient.RowTemplate.Height = 23;
             this.dataGridView_Patient.Size = new System.Drawing.Size(199, 285);
             this.dataGridView_Patient.TabIndex = 0;
+            // 
+            // pCodeDataGridViewTextBoxColumn
+            // 
+            this.pCodeDataGridViewTextBoxColumn.DataPropertyName = "pCode";
+            this.pCodeDataGridViewTextBoxColumn.HeaderText = "환자번호";
+            this.pCodeDataGridViewTextBoxColumn.Name = "pCodeDataGridViewTextBoxColumn";
+            this.pCodeDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "이름";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // ageDataGridViewTextBoxColumn
+            // 
+            this.ageDataGridViewTextBoxColumn.DataPropertyName = "age";
+            this.ageDataGridViewTextBoxColumn.HeaderText = "나이";
+            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "성별";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "주소";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // phoneNumDataGridViewTextBoxColumn
+            // 
+            this.phoneNumDataGridViewTextBoxColumn.DataPropertyName = "phoneNum";
+            this.phoneNumDataGridViewTextBoxColumn.HeaderText = "연락처";
+            this.phoneNumDataGridViewTextBoxColumn.Name = "phoneNumDataGridViewTextBoxColumn";
+            this.phoneNumDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // visitDataGridViewTextBoxColumn
+            // 
+            this.visitDataGridViewTextBoxColumn.DataPropertyName = "visit";
+            this.visitDataGridViewTextBoxColumn.HeaderText = "최근방문";
+            this.visitDataGridViewTextBoxColumn.Name = "visitDataGridViewTextBoxColumn";
+            // 
+            // patientBindingSource
+            // 
+            this.patientBindingSource.DataSource = typeof(Hospital.Patient);
             // 
             // groupBox2
             // 
@@ -389,7 +445,13 @@
             // 
             // dataGridView_Medicine
             // 
+            this.dataGridView_Medicine.AutoGenerateColumns = false;
             this.dataGridView_Medicine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Medicine.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codeDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn1,
+            this.amountDataGridViewTextBoxColumn});
+            this.dataGridView_Medicine.DataSource = this.medicineBindingSource;
             this.dataGridView_Medicine.Location = new System.Drawing.Point(0, 20);
             this.dataGridView_Medicine.Name = "dataGridView_Medicine";
             this.dataGridView_Medicine.RowTemplate.Height = 23;
@@ -413,6 +475,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.textBox_Medicine);
+            this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.button_Reset);
             this.groupBox4.Controls.Add(this.button_Update);
             this.groupBox4.Controls.Add(this.textBox_Hospital);
@@ -436,7 +500,7 @@
             // 
             // button_Reset
             // 
-            this.button_Reset.Location = new System.Drawing.Point(462, 191);
+            this.button_Reset.Location = new System.Drawing.Point(462, 234);
             this.button_Reset.Name = "button_Reset";
             this.button_Reset.Size = new System.Drawing.Size(75, 23);
             this.button_Reset.TabIndex = 33;
@@ -445,7 +509,7 @@
             // 
             // button_Update
             // 
-            this.button_Update.Location = new System.Drawing.Point(17, 191);
+            this.button_Update.Location = new System.Drawing.Point(16, 234);
             this.button_Update.Name = "button_Update";
             this.button_Update.Size = new System.Drawing.Size(75, 23);
             this.button_Update.TabIndex = 32;
@@ -454,7 +518,7 @@
             // 
             // textBox_Hospital
             // 
-            this.textBox_Hospital.Location = new System.Drawing.Point(372, 148);
+            this.textBox_Hospital.Location = new System.Drawing.Point(372, 191);
             this.textBox_Hospital.Name = "textBox_Hospital";
             this.textBox_Hospital.Size = new System.Drawing.Size(165, 21);
             this.textBox_Hospital.TabIndex = 31;
@@ -462,7 +526,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(298, 151);
+            this.label16.Location = new System.Drawing.Point(298, 194);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(29, 12);
             this.label16.TabIndex = 30;
@@ -470,7 +534,7 @@
             // 
             // textBox_Doctor
             // 
-            this.textBox_Doctor.Location = new System.Drawing.Point(84, 148);
+            this.textBox_Doctor.Location = new System.Drawing.Point(84, 191);
             this.textBox_Doctor.Name = "textBox_Doctor";
             this.textBox_Doctor.Size = new System.Drawing.Size(189, 21);
             this.textBox_Doctor.TabIndex = 29;
@@ -478,7 +542,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(15, 151);
+            this.label15.Location = new System.Drawing.Point(15, 194);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(29, 12);
             this.label15.TabIndex = 28;
@@ -557,54 +621,43 @@
             this.label_Manage.TabIndex = 7;
             this.label_Manage.Text = "label17";
             // 
-            // pCodeDataGridViewTextBoxColumn
+            // label17
             // 
-            this.pCodeDataGridViewTextBoxColumn.DataPropertyName = "pCode";
-            this.pCodeDataGridViewTextBoxColumn.HeaderText = "환자번호";
-            this.pCodeDataGridViewTextBoxColumn.Name = "pCodeDataGridViewTextBoxColumn";
-            this.pCodeDataGridViewTextBoxColumn.Visible = false;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(15, 156);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(29, 12);
+            this.label17.TabIndex = 34;
+            this.label17.Text = "처방";
             // 
-            // nameDataGridViewTextBoxColumn
+            // textBox_Medicine
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "이름";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.textBox_Medicine.Location = new System.Drawing.Point(84, 153);
+            this.textBox_Medicine.Name = "textBox_Medicine";
+            this.textBox_Medicine.Size = new System.Drawing.Size(189, 21);
+            this.textBox_Medicine.TabIndex = 35;
             // 
-            // ageDataGridViewTextBoxColumn
+            // medicineBindingSource
             // 
-            this.ageDataGridViewTextBoxColumn.DataPropertyName = "age";
-            this.ageDataGridViewTextBoxColumn.HeaderText = "나이";
-            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
+            this.medicineBindingSource.DataSource = typeof(Hospital.Medicine);
             // 
-            // genderDataGridViewTextBoxColumn
+            // codeDataGridViewTextBoxColumn
             // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "성별";
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "의약품 번호";
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
             // 
-            // addressDataGridViewTextBoxColumn
+            // nameDataGridViewTextBoxColumn1
             // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "주소";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.Visible = false;
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "이름";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
             // 
-            // phoneNumDataGridViewTextBoxColumn
+            // amountDataGridViewTextBoxColumn
             // 
-            this.phoneNumDataGridViewTextBoxColumn.DataPropertyName = "phoneNum";
-            this.phoneNumDataGridViewTextBoxColumn.HeaderText = "연락처";
-            this.phoneNumDataGridViewTextBoxColumn.Name = "phoneNumDataGridViewTextBoxColumn";
-            this.phoneNumDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // visitDataGridViewTextBoxColumn
-            // 
-            this.visitDataGridViewTextBoxColumn.DataPropertyName = "visit";
-            this.visitDataGridViewTextBoxColumn.HeaderText = "최근방문";
-            this.visitDataGridViewTextBoxColumn.Name = "visitDataGridViewTextBoxColumn";
-            // 
-            // patientBindingSource
-            // 
-            this.patientBindingSource.DataSource = typeof(Hospital.Patient);
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "재고수량";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
             // 
             // Main
             // 
@@ -627,6 +680,7 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Patient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Treat)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -635,7 +689,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Medicine)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicineBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -701,5 +755,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn visitDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource patientBindingSource;
+        private System.Windows.Forms.TextBox textBox_Medicine;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource medicineBindingSource;
     }
 }

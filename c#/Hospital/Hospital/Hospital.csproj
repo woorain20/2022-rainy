@@ -68,6 +68,7 @@
     <Compile Include="ManagerInfo.Designer.cs">
       <DependentUpon>ManagerInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDBHelper.cs" />
     <Compile Include="Medicine.cs" />
     <Compile Include="MedicineInfo.cs">
       <SubType>Form</SubType>
