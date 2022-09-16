@@ -13,4 +13,4 @@ C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.pdb
 C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.PatientInfo.resources
 C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.ManagerInfo.resources
 C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.MedicineInfo.resources
-C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.WaitInfo.resources
+C:\Users\KB\study\비주얼스튜디오\Hospital\Hospital\obj\Debug\Hospital.Nurse.resources

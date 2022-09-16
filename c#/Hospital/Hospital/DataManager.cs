@@ -11,17 +11,16 @@ namespace Hospital
     public class DataManager
     {
         public static List<Manager> managers = new List<Manager>();
-        public static List<Patient> patients = new List<Patient>();
         public static List<Medicine> medicines = new List<Medicine>();
+        public static List<Treat> treatments = new List<Treat>();
         public static List<Waiting> waitings = new List<Waiting>();
-        public static List<Treatment> treatments = new List<Treatment>();
-        public static List<Chart> charts = new List<Chart>();
 
         static DataManager()
         {
             Load();
-            PLoad();
             MLoad();
+            TLoad();
+            WLoad();
         }
 
         public static void Load()
@@ -44,32 +43,7 @@ namespace Hospital
             catch (Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-        }
-
-        public static void PLoad()
-        {
-            try
-            {
-                PDBHelper.selectQuery();
-                patients.Clear();
-
-                foreach (DataRow item in PDBHelper.dt.Rows)
-                {
-                    Patient patient = new Patient();
-                    patient.pCode = int.Parse(item["Code"].ToString());
-                    patient.name = item["Name"].ToString();
-                    patient.age = int.Parse(item["Age"].ToString());
-                    patient.gender = item["Gender"].ToString();
-                    patient.address = item["Address"].ToString();
-                    patient.phoneNum = item["PhoneNum"].ToString();
-                    patient.visit = item["Visit"].ToString() == "" ? new DateTime() : DateTime.Parse(item["Visit"].ToString());
-                    patients.Add(patient);
-                }
-            }
-            catch (Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show("Load오류");
             }
         }
 
@@ -92,6 +66,64 @@ namespace Hospital
             catch (Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show("MLoad오류");
+            }
+        }
+
+        public static void TLoad()
+        {
+            try
+            {
+                TDBHelper.selectQuery();
+                treatments.Clear();
+
+                foreach (DataRow item in TDBHelper.dt.Rows)
+                {
+                    Treat treat = new Treat();
+                    treat.chartNum = int.Parse(item["ChartNum"].ToString());
+                    treat.pCode = int.Parse(item["Code"].ToString());
+                    treat.pName = item["Name"].ToString();
+                    treat.pBirth = DateTime.Parse(item["Birth"].ToString());
+                    treat.pGen = item["Gender"].ToString();
+                    treat.pNum = item["Phone"].ToString();
+                    treat.pAddress = item["Address"].ToString();
+                    treat.pVisit = DateTime.Parse(item["Visit"].ToString());
+                    treat.pDiagnosis = item["Diagnosis"].ToString();
+                    treat.pMedicine = item["Medicine"].ToString();
+                    treatments.Add(treat);
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show("TLoad오류");
+            }
+        }
+
+        public static void WLoad()
+        {
+            try
+            {
+                WDBHelper.selectQuery();
+                waitings.Clear();
+
+                foreach (DataRow item in WDBHelper.dt.Rows)
+                {
+                    Waiting wait = new Waiting();
+                    wait.ChartNum = int.Parse(item["ChartNum"].ToString());
+                    wait.Code = int.Parse(item["Code"].ToString());
+                    wait.Name = item["Name"].ToString();
+                    wait.Birth = DateTime.Parse(item["Birth"].ToString());
+                    wait.Gender = item["Gender"].ToString();
+                    wait.Phone = item["Phone"].ToString();
+                    wait.Address = item["Address"].ToString();
+                    waitings.Add(wait);
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show("WLoad오류");
             }
         }
 
@@ -174,70 +206,6 @@ namespace Hospital
             }
         }
 
-        public static void PSave(string codeText, string name, string age, string gender, string address, string phoneNum, string visit, bool isRemove)
-        {
-            try
-            {
-                PDBHelper.updateQuery(codeText, name, age, gender, address, phoneNum, visit, isRemove);
-            }
-            catch (Exception)
-            {
-
-            }
-        }
-
-        public static void PSave(string command, string pCode, string name, string age, string gender, string address, string phoneNum, string visit, out string contents)
-        {
-            PDBHelper.dataInsertQuery(pCode, name, age, gender, address, phoneNum, visit, command);
-            contents = "";
-
-            if (command == "insert")
-            {
-                PDBInsert(pCode, name, age, gender, address, phoneNum, visit, ref contents);
-            }
-        }
-
-        public static void PSave(string command, string pCode, out string contents)
-        {
-            PDBHelper.dataDeleteQuery(pCode, command);
-            contents = "";
-
-            if (command == "delete")
-            {
-                PDBDelete(pCode, ref contents);
-            }
-        }
-
-        private static bool PDBDelete(string pCode, ref string contents)
-        {
-            if (PDBHelper.dt.Rows.Count != 0)
-            {
-                PDBHelper.deleteQuery(pCode);
-                contents = $"환자 번호 {pCode}이/가 삭제되었습니다.";
-                return true;
-            }
-            else
-            {
-                contents = $"해당 환자 번호 {pCode}가 존재하지 않습니다.";
-                return false;
-            }
-        }
-
-        private static bool PDBInsert(string pCode, string name, string age, string gender, string address, string phoneNum, string visit, ref string contents)
-        {
-            if (PDBHelper.dt.Rows.Count != 0)
-            {
-                PDBHelper.insertQuery(pCode, name, age, gender, address, phoneNum, visit);
-                contents = $"환자 번호 {pCode}이/가 추가되었습니다.";
-                return true;
-            }
-            else
-            {
-                contents = $"해당 환자 번호 {pCode}가 이미 존재합니다.";
-                return false;
-            }
-        }
-
         public static void MSave(string code, string name, string amount, bool isRemove)
         {
             try
@@ -283,6 +251,17 @@ namespace Hospital
             }
         }
 
+        public static void MSave(string command, string code, int amount, int use, out string contents)
+        {
+            MDBHelper.dataUpdateQuery(code, amount, use, command);
+            contents = "";
+
+            if (command == "update")
+            {
+                MDBUpdate(code, amount, use, ref contents);
+            }
+        }
+
         private static bool MDBDelete(string code, ref string contents)
         {
             if (MDBHelper.dt.Rows.Count != 0)
@@ -302,8 +281,23 @@ namespace Hospital
         {
             if (MDBHelper.dt.Rows.Count != 0)
             {
-                MDBHelper.updateMQuery(code, amount);
+                MDBHelper.updateQuery(code, amount);
                 contents = $"의약품 번호 {code}의 수량이 {amount}로 수정되었습니다.";
+                return true;
+            }
+            else
+            {
+                contents = $"해당 의약품 번호 {code}가 존재하지 않습니다.";
+                return false;
+            }
+        }
+
+        private static bool MDBUpdate(string code, int amount, int use, ref string contents)
+        {
+            if (MDBHelper.dt.Rows.Count != 0)
+            {
+                MDBHelper.updateQuery(code, amount, use);
+                contents = $"의약품 번호 {code}의 수량이 {amount-use}로 수정되었습니다.";
                 return true;
             }
             else
@@ -324,6 +318,237 @@ namespace Hospital
             else
             {
                 contents = $"해당 의약품 번호 {code}가 이미 존재합니다.";
+                return false;
+            }
+        }
+
+        public static void TSave(string chartNum, string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress, string pVisit, string pDiagnosis, string pMedicine, bool isRemove)
+        {
+            try
+            {
+                TDBHelper.updateQuery(chartNum, pCode, pName, pBirth, pGen, pNum, pAddress, pVisit, pDiagnosis, pMedicine, isRemove);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        public static void TSave(string command, string chartNum, string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress, string pVisit, string pDiagnosis, string pMedicine, out string contents)
+        {
+            TDBHelper.dataInsertQuery(chartNum, pCode, pName, pBirth, pGen, pNum, pAddress, pVisit, pDiagnosis, pMedicine, command);
+            contents = "";
+
+            if (command == "insert")
+            {
+                TDBInsert(chartNum, pCode, pName, pBirth, pGen, pNum, pAddress, pVisit, pDiagnosis, pMedicine, ref contents);
+            }
+        }
+
+        public static void TSave(string command, string chartNum, out string contents)
+        {
+            TDBHelper.dataDeleteQuery(chartNum, command);
+            contents = "";
+
+            if (command == "delete")
+            {
+                TDBDelete(chartNum, ref contents);
+            }
+        }
+
+        public static void TSave(string command, string pCode, string pVisit, string pDiagnosis, string pMedicine, out string contents)
+        {
+            TDBHelper.dataUpdateQuery(pCode, pVisit, pDiagnosis, pMedicine, command);
+            contents = "";
+
+            if (command == "update")
+            {
+                TDBUpdate(pCode, pVisit, pDiagnosis, pMedicine, ref contents);
+            }
+        }
+
+        public static void TSave(string command, string pCode, string pName, string pGen, string pNum, string pAddress, out string contents)
+        {
+            TDBHelper.dataUpdateQuery(pCode, pName, pGen, pNum, pAddress, command);
+            contents = "";
+
+            if (command == "update")
+            {
+                TDBUpdate(pCode, pName, pGen, pNum, pAddress, ref contents);
+            }
+        }
+
+        public static void TView(string command, string pName, out string contents)
+        {
+            TDBHelper.dataViewQuery(pName, command);
+            contents = "";
+
+            if (command == "view")
+            {
+                TDBView(pName, ref contents);
+            }
+        }
+
+        private static bool TDBDelete(string chartNum, ref string contents)
+        {
+            if (TDBHelper.dt.Rows.Count != 0)
+            {
+                TDBHelper.deleteQuery(chartNum);
+                contents = $"환자 차트 번호 {chartNum}이/가 삭제되었습니다.";
+                return true;
+            }
+            else
+            {
+                contents = $"해당 환자 차트 번호 {chartNum}가 존재하지 않습니다.";
+                return false;
+            }
+        }
+
+        private static bool TDBUpdate(string pCode, string pVisit, string pDiagnosis, string pMedicine, ref string contents)
+        {
+            if (TDBHelper.dt.Rows.Count != 0)
+            {
+                TDBHelper.updateQuery(pCode, pVisit, pDiagnosis, pMedicine);
+                contents = $"환자 번호 {pCode}이 수정되었습니다.";
+                return true;
+            }
+            else
+            {
+                contents = $"해당 환자 번호 {pCode}가 존재하지 않습니다.";
+                return false;
+            }
+        }
+
+        private static bool TDBUpdate(string pCode, string pName, string pGen, string pNum, string pAddress, ref string contents)
+        {
+            if (TDBHelper.dt.Rows.Count != 0)
+            {
+                TDBHelper.updateQuery(pCode, pName, pGen, pNum, pAddress);
+                contents = $"환자 번호 {pCode}이 수정되었습니다.";
+                return true;
+            }
+            else
+            {
+                contents = $"해당 환자 번호 {pCode}가 존재하지 않습니다.";
+                return false;
+            }
+        }
+
+        private static bool TDBInsert(string chartNum, string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress, string pVisit, string pDiagnosis, string pMedicine, ref string contents)
+        {
+            if (TDBHelper.dt.Rows.Count != 0)
+            {
+                TDBHelper.insertQuery(chartNum, pCode, pName, pBirth, pGen, pNum, pAddress, pVisit, pDiagnosis, pMedicine);
+                contents = $"환자 차트 번호 {chartNum}이/가 추가되었습니다.";
+                return true;
+            }
+            else
+            {
+                contents = $"해당 환자 차트 번호 {chartNum}가 이미 존재합니다.";
+                return false;
+            }
+        }
+
+        private static bool TDBView(string pName, ref string contents)
+        {
+            if(TDBHelper.dt.Rows.Count != 0)
+            {
+                TDBHelper.viewQuery(pName);
+                contents = $"환자 이름 {pName}를 찾았습니다.";
+                return true;
+            }
+            else
+            {
+                contents = $"환자 이름 {pName}은 존재하지 않습니다.";
+                return false;
+            }
+        }
+
+        public static void WSave(string chartNum, string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress, bool isRemove)
+        {
+            try
+            {
+                WDBHelper.updateQuery(chartNum, pCode, pName, pBirth, pGen, pNum, pAddress, isRemove);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        public static void WSave(string command, string chartNum, string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress, out string contents)
+        {
+            WDBHelper.dataInsertQuery(chartNum, pCode, pName, pBirth, pGen, pNum, pAddress, command);
+            contents = "";
+
+            if (command == "insert")
+            {
+                WDBInsert(chartNum, pCode, pName, pBirth, pGen, pNum, pAddress, ref contents);
+            }
+        }
+
+        public static void WSave(string command, string pCode, out string contents)
+        {
+            WDBHelper.dataDeleteQuery(pCode, command);
+            contents = "";
+
+            if (command == "delete")
+            {
+                WDBDelete(pCode, ref contents);
+            }
+        }
+
+        public static void WSave(string command, string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress, out string contents)
+        {
+            WDBHelper.dataUpdateQuery(pCode, pName, pBirth, pGen, pNum, pAddress, command);
+            contents = "";
+
+            if (command == "update")
+            {
+                WDBUpdate(pCode, pName, pBirth, pGen, pNum, pAddress, ref contents);
+            }
+        }
+        private static bool WDBDelete(string pCode, ref string contents)
+        {
+            if (WDBHelper.dt.Rows.Count != 0)
+            {
+                WDBHelper.deleteQuery(pCode);
+                contents = $"환자 번호 {pCode}이/가 대기자 명단에서 삭제되었습니다.";
+                return true;
+            }
+            else
+            {
+                contents = $"해당 환자 번호 {pCode}가 대기자 명단에 존재하지 않습니다.";
+                return false;
+            }
+        }
+
+        private static bool WDBUpdate(string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress, ref string contents)
+        {
+            if (WDBHelper.dt.Rows.Count != 0)
+            {
+                WDBHelper.updateQuery(pCode, pName, pBirth, pGen, pNum, pAddress);
+                contents = $"환자 번호 {pCode}이 수정되었습니다.";
+                return true;
+            }
+            else
+            {
+                contents = $"해당 환자 번호 {pCode}가 존재하지 않습니다.";
+                return false;
+            }
+        }
+
+        private static bool WDBInsert(string chartNum, string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress, ref string contents)
+        {
+            if (WDBHelper.dt.Rows.Count != 0)
+            {
+                WDBHelper.insertQuery(chartNum, pCode, pName, pBirth, pGen, pNum, pAddress);
+                contents = $"환자 차트 번호 {chartNum}이/가 추가되었습니다.";
+                return true;
+            }
+            else
+            {
+                contents = $"해당 환자 차트 번호 {chartNum}가 이미 존재합니다.";
                 return false;
             }
         }

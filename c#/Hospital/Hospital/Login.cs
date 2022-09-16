@@ -54,10 +54,26 @@ namespace Hospital
                         {
                             if(manage.password==textBox_Password.Text)
                             {
-                                MessageBox.Show($"{manage.name}님 환영합니다.");
-                                Main main = new Main();
-                                main.ShowDialog();
-                                DataManager.Load();
+                                if (manage.position == "간호사")
+                                {
+                                    MessageBox.Show($"{manage.name}님 환영합니다.");
+                                    Nurse nurse = new Nurse();
+                                    nurse.ShowDialog();
+                                    DataManager.Load();
+                                    textBox_Id.Text = "";
+                                    textBox_Password.Text = "";
+                                }
+                                else
+                                {
+                                    MessageBox.Show($"{manage.name}님 환영합니다.");
+                                    Main main = new Main();
+                                    main.doc = manage.name;
+                                    main.ShowDialog();
+                                    DataManager.Load();
+                                    textBox_Id.Text = "";
+                                    textBox_Password.Text = "";
+                                }
+
                             }
                             else
                             {

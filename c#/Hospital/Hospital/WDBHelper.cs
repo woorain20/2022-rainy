@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    public class PDBHelper
+    public class WDBHelper
     {
         private static SqlConnection conn = new SqlConnection();
         public static SqlDataAdapter da;
@@ -22,7 +22,7 @@ namespace Hospital
             conn.Open();
         }
 
-        public static void selectQuery(int pCode = -1)
+        public static void selectQuery(int chartNum = -1)
         {
             try
             {
@@ -30,18 +30,18 @@ namespace Hospital
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
-                if (pCode == -1)
+                if (chartNum == -1)
                 {
-                    cmd.CommandText = "select * from Patient";
+                    cmd.CommandText = "select * from Waiting";
                 }
                 else
                 {
-                    cmd.CommandText = "select * from Patient " + " where Code =" + pCode;
+                    cmd.CommandText = "select * from Waiting " + " where ChartNum =" + chartNum;
                 }
 
                 da = new SqlDataAdapter(cmd);
                 ds = new DataSet();
-                da.Fill(ds, "Patient");
+                da.Fill(ds, "Waiting");
                 dt = ds.Tables[0];
             }
             catch (Exception)
@@ -50,7 +50,7 @@ namespace Hospital
             }
         }
 
-        public static void updateQuery(string pCode, string name, string birth, string gender, string address, string phoneNum, string visit, bool isRemove)
+        public static void updateQuery(string chartNum, string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress, bool isRemove)
         {
             try
             {
@@ -62,14 +62,14 @@ namespace Hospital
 
                 if (!isRemove)
                 {
-                    sqlcommand = "update Patient set Name=@p1, Birth=@p2, Gender=@p3, Address=@p4, PhoneNum=@p5, Visit=@p6 where Code=@p7";
-                    cmd.Parameters.AddWithValue("@p1", name);
-                    cmd.Parameters.AddWithValue("@p2", birth);
-                    cmd.Parameters.AddWithValue("@p3", gender);
-                    cmd.Parameters.AddWithValue("@p4", address);
-                    cmd.Parameters.AddWithValue("@p5", phoneNum);
-                    cmd.Parameters.AddWithValue("@p6", visit);
-                    cmd.Parameters.AddWithValue("@p7", pCode);
+                    sqlcommand = "update Waiting set Code=@p1, Name=@p2, Birth=@p3, Gender=@p4, Phone=@p5, Address=@p6 where ChartNum=@p7";
+                    cmd.Parameters.AddWithValue("@p1", pCode);
+                    cmd.Parameters.AddWithValue("@p2", pName);
+                    cmd.Parameters.AddWithValue("@p3", pBirth);
+                    cmd.Parameters.AddWithValue("@p4", pGen);
+                    cmd.Parameters.AddWithValue("@p5", pNum);
+                    cmd.Parameters.AddWithValue("@p6", pAddress);
+                    cmd.Parameters.AddWithValue("@p7", chartNum);
                 }
                 cmd.CommandText = sqlcommand;
                 cmd.ExecuteNonQuery();
@@ -84,12 +84,12 @@ namespace Hospital
             }
         }
 
-        public static void dataInsertQuery(string pCode, string name, string birth, string gender, string address, string phoneNum, string visit, string command)
+        public static void dataInsertQuery(string chartNum, string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress, string command)
         {
             string sqlcommand = "";
             if (command == "insert")
             {
-                sqlcommand = "insert into Patient values (@p1, @p2, @p3, @p4, @p5, @p6, @p7)";
+                sqlcommand = "insert into Waiting values (@p1, @p2, @p3, @p4, @p5, @p6, @p7)";
             }
             try
             {
@@ -97,13 +97,13 @@ namespace Hospital
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@p1", pCode);
-                cmd.Parameters.AddWithValue("@p2", name);
-                cmd.Parameters.AddWithValue("@p3", birth);
-                cmd.Parameters.AddWithValue("@p4", gender);
-                cmd.Parameters.AddWithValue("@p5", address);
-                cmd.Parameters.AddWithValue("@p6", phoneNum);
-                cmd.Parameters.AddWithValue("@p7", visit);
+                cmd.Parameters.AddWithValue("@p1", chartNum);
+                cmd.Parameters.AddWithValue("@p2", pCode);
+                cmd.Parameters.AddWithValue("@p3", pName);
+                cmd.Parameters.AddWithValue("@p4", pBirth);
+                cmd.Parameters.AddWithValue("@p5", pGen);
+                cmd.Parameters.AddWithValue("@p6", pNum);
+                cmd.Parameters.AddWithValue("@p7", pAddress);
                 cmd.CommandText = sqlcommand;
                 cmd.ExecuteNonQuery();
             }
@@ -122,7 +122,7 @@ namespace Hospital
             string sqlcommand = "";
             if (command == "delete")
             {
-                sqlcommand = "delete from Patient where Code=@p1";
+                sqlcommand = "delete from Waiting where Code=@p1";
             }
             try
             {
@@ -144,12 +144,12 @@ namespace Hospital
             }
         }
 
-        public static void dataUpdateQuery(string pCode, string name, string gender, string address, string phoneNum, string command)
+        public static void dataUpdateQuery(string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress, string command)
         {
             string sqlcommand = "";
             if (command == "update")
             {
-                sqlcommand = "update Patient set Name=@p1, Gender=@p2, Address=@p3, PhoneNum=@p4 where Code=@p5";
+                sqlcommand = "update Waiting set Name=@p1, Birth=@p2, Gender=@p3, Phone=@p4, Address=@p5 where Code=@p6";
             }
             try
             {
@@ -157,11 +157,12 @@ namespace Hospital
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@p1", name);
-                cmd.Parameters.AddWithValue("@p2", gender);
-                cmd.Parameters.AddWithValue("@p3", address);
-                cmd.Parameters.AddWithValue("@p4", phoneNum);
-                cmd.Parameters.AddWithValue("@p5", pCode);
+                cmd.Parameters.AddWithValue("@p1", pName);
+                cmd.Parameters.AddWithValue("@p2", pBirth);
+                cmd.Parameters.AddWithValue("@p3", pGen);
+                cmd.Parameters.AddWithValue("@p4", pNum);
+                cmd.Parameters.AddWithValue("@p5", pAddress);
+                cmd.Parameters.AddWithValue("@p6", pCode);
                 cmd.CommandText = sqlcommand;
                 cmd.ExecuteNonQuery();
             }
@@ -179,15 +180,14 @@ namespace Hospital
         {
             dataDeleteQuery(pCode, "delete");
         }
-
-        public static void updateQuery(string pCode, string name, string gender, string address, string phoneNum)
+        public static void updateQuery(string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress)
         {
-            dataUpdateQuery(pCode, name, gender, address, phoneNum, "update");
+            dataUpdateQuery(pCode, pName, pBirth, pGen, pNum, pAddress, "update");
         }
 
-        public static void insertQuery(string pCode, string name, string birth, string gender, string address, string phoneNum, string visit)
+        public static void insertQuery(string chartNum, string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress)
         {
-            dataInsertQuery(pCode, name, birth, gender, address, phoneNum, visit, "insert");
+            dataInsertQuery(chartNum, pCode, pName, pBirth, pGen, pNum, pAddress, "insert");
         }
     }
 }

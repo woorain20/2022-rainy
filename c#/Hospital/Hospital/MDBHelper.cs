@@ -164,14 +164,47 @@ namespace Hospital
             }
         }
 
+        public static void dataUpdateQuery(string code, int amount, int use, string command)
+        {
+            string sqlcommand = "";
+            if (command == "update")
+            {
+                sqlcommand = "update Medicine set Amount=@p1 where Code=@p2";
+            }
+            try
+            {
+                ConnectDB();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@p1", amount-use);
+                cmd.Parameters.AddWithValue("@p2", code);
+                cmd.CommandText = sqlcommand;
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         public static void deleteQuery(string code)
         {
             dataDeleteQuery(code, "delete");
         }
 
-        public static void updateMQuery(string code, string amount)
+        public static void updateQuery(string code, string amount)
         {
             dataUpdateQuery(code, amount, "update");
+        }        
+        
+        public static void updateQuery(string code, int amount, int use)
+        {
+            dataUpdateQuery(code, amount, use, "update");
         }
 
         public static void insertQuery(string code, string name, string amount)
