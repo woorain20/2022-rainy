@@ -48,6 +48,10 @@ namespace Hospital
             {
 
             }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public static void updateQuery(string idText, string password, string name, string position, bool isRemove)

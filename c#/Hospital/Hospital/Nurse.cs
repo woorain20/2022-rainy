@@ -142,8 +142,10 @@ namespace Hospital
         {
             DataManager.TLoad();
             DataManager.WLoad();
+            DataManager.MLoad();
             dataGridView_Find.DataSource = null;
             dataGridView_Waiting.DataSource = null;
+            dataGridView_Medic.DataSource = null;
             if (DataManager.waitings.Count > 0)
             {
                 dataGridView_Waiting.DataSource = DataManager.waitings;
@@ -151,6 +153,10 @@ namespace Hospital
             if (DataManager.treatments.Count > 0)
             {
                 dataGridView_Find.DataSource = DataManager.treatments;
+            }
+            if (DataManager.medicines.Count > 0)
+            {
+                dataGridView_Medic.DataSource = DataManager.medicines;
             }
         }
 
@@ -220,17 +226,16 @@ namespace Hospital
 
         private void find_name(string pName)
         {
-            //pName = pName.Trim();
             if (pName == textBox_Finder.Text)
             {
                 DataManager.FindLoad(pName);
-                MessageBox.Show($"{pName} 환자를 찾았습니다.");
-                writeLog($"{pName} 환자를 찾았습니다.");
+                //MessageBox.Show($"{pName} 환자를 찾았습니다.");
+                //writeLog($"{pName} 환자를 찾았습니다.");
             }
             else
             {
-                writeLog($"{pName} 환자는 존재하지 않습니다.");
-                MessageBox.Show($"{pName} 환자는 존재하지 않습니다.");
+                //MessageBox.Show($"{pName} 환자는 존재하지 않습니다.");
+                //writeLog($"{pName} 환자는 존재하지 않습니다.");
             }
         }
 

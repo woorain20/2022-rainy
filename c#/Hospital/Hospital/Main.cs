@@ -208,55 +208,6 @@ namespace Hospital
 
         }
 
-        private void treat_new(string chartNum, string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress, string pVisit, string pDiagnosis, string pMedicine, string command)
-        {
-            chartNum = chartNum.Trim();
-            int.TryParse(chartNum, out int pChartNum);
-            int.TryParse(pCode, out int ppCode);
-            string contents = "";
-            string usedcn = lookUpChartNum(int.Parse(chartNum));
-            string usedco = lookUppCode(int.Parse(pCode));
-            if (pChartNum >= 10000)
-            {
-                if(ppCode >= 5000)
-                {
-
-                }
-                else
-                {
-                    writeLog("환자 번호는 5000이상의 숫자여야 합니다.");
-                    MessageBox.Show("환자 번호는 5000이상의 숫자여야 합니다.");
-                    return;
-                }
-            }
-            else
-            {
-                writeLog("차트 번호는 10000이상의 숫자여야 합니다.");
-                MessageBox.Show("차트 번호는 10000이상의 숫자여야 합니다.");
-                return;
-            }
-
-            if (chartNum == usedcn)
-            {
-                writeLog($"차트 번호 {chartNum}가 이미 존재합니다.");
-                MessageBox.Show($"차트 번호 {chartNum}가 이미 존재합니다.");
-                return;
-            }
-            else if(pCode == usedco)
-            {
-                writeLog($"환자 번호 {pCode}가 이미 존재합니다.");
-                MessageBox.Show($"환자 번호 {pCode}가 이미 존재합니다.");
-                return;
-            }
-            else
-            {
-                DataManager.TSave(command, chartNum, pCode, pName, pBirth, pGen, pNum, pAddress, pVisit, pDiagnosis, pMedicine, out contents);
-                button_Reset.PerformClick();
-                MessageBox.Show(contents);
-                writeLog(contents);
-            }
-        }
-
         private void treat_add(string pCode, string pVisit, string pDiagnosis, string pMedicine, string command)
         {
             medic_modify(textBox_MedCode.Text, int.Parse(textBox_MedAmount.Text), int.Parse(textBox_MedUsed.Text), "update");
@@ -269,48 +220,6 @@ namespace Hospital
             button_Reset.PerformClick();
             MessageBox.Show(contents);
             writeLog(contents);
-        }
-
-        private string lookUpChartNum(int chartNum)
-        {
-            string usedChartNum = "";
-            try
-            {
-                foreach (var item in DataManager.treatments)
-                {
-                    if (item.chartNum == int.Parse(chartNum.ToString()))
-                    {
-                        usedChartNum = item.chartNum.ToString();
-                        break;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-
-            }
-            return usedChartNum;
-        }
-
-        private string lookUppCode(int pCode)
-        {
-            string usedpCode = "";
-            try
-            {
-                foreach (var item in DataManager.treatments)
-                {
-                    if (item.pCode == int.Parse(pCode.ToString()))
-                    {
-                        usedpCode = item.pCode.ToString();
-                        break;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-
-            }
-            return usedpCode;
         }
 
         private void button_Add_Click(object sender, EventArgs e)

@@ -48,6 +48,10 @@ namespace Hospital
             {
 
             }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public static void updateQuery(string chartNum, string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress, string pVisit, string pDiagnosis, string pMedicine, bool isRemove)
@@ -228,7 +232,8 @@ namespace Hospital
             }
             catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show(ex.StackTrace);
             }
             finally
             {
@@ -254,11 +259,6 @@ namespace Hospital
         public static void insertQuery(string chartNum, string pCode, string pName, string pBirth, string pGen, string pNum, string pAddress, string pVisit, string pDiagnosis, string pMedicine)
         {
             dataInsertQuery(chartNum, pCode, pName, pBirth, pGen, pNum, pAddress, pVisit, pDiagnosis, pMedicine, "insert");
-        }
-
-        public static void viewQuery(string pName)
-        {
-            dataViewQuery(pName);
         }
     }
 }
