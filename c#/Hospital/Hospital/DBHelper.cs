@@ -32,7 +32,7 @@ namespace Hospital
                 cmd.Connection = conn;
                 if (id == -1)
                 {
-                    cmd.CommandText = "select * from HospitalManage";
+                    cmd.CommandText = "select * from HospitalManage order by Id";
                 }
                 else
                 {

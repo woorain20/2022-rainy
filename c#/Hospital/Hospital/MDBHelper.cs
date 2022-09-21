@@ -32,7 +32,7 @@ namespace Hospital
                 cmd.Connection = conn;
                 if (code == -1)
                 {
-                    cmd.CommandText = "select * from Medicine";
+                    cmd.CommandText = "select * from Medicine order by Code";
                 }
                 else
                 {

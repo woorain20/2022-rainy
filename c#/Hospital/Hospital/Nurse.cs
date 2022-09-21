@@ -16,6 +16,7 @@ namespace Hospital
         {
             InitializeComponent();
             label_Now.Text = DateTime.Now.ToString("yyyy년 MM월 dd일 hh시 mm분 ss초 tt");
+            this.textBox_Finder.KeyDown += button_Find_KeyDown;
 
             try
             {
@@ -99,24 +100,17 @@ namespace Hospital
 
         private void button_Find_Click(object sender, EventArgs e)
         {
-            //find_name(textBox_Finder.Text, "view");
-            Dictionary<string, int> Name = new Dictionary<string, int>();
-            DataTable dtName = new DataTable();
-            DataView dvName = new DataView();
-            foreach (var item in Name)
+            dataGridView_Find.DataSource = null;
+            find_name(textBox_Finder.Text);
+            dataGridView_Find.DataSource = DataManager.treatments;
+        }
+
+        private void button_Find_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                DataRow row = dtName.NewRow();
-                row["환자번호"]=item.Key;
-                row["이름"]=item.Value;
-                row["생년월일"]=item.Value;
-                row["연락처"]=item.Value;
-                dtName.Rows.Add(row);
+                button_Find_Click(sender, e);
             }
-            string findName=textBox_Finder.Text;
-
-            dvName = new DataView(dtName, "이름" + findName, "나이" + DataViewRowState.CurrentRows, "생년월일" + DataViewRowState.CurrentRows, "연락처" + DataViewRowState.CurrentRows);
-
-            dataGridView_Find.DataSource = dvName;
         }
 
         private void button_Reset_Click(object sender, EventArgs e)
@@ -224,43 +218,19 @@ namespace Hospital
             return usedpCode;
         }
 
-        private string lookName(string pName)
+        private void find_name(string pName)
         {
-            string usedpName = "";
-            try
+            //pName = pName.Trim();
+            if (pName == textBox_Finder.Text)
             {
-                foreach (var item in DataManager.treatments)
-                {
-                    if (item.pName == pName.ToString())
-                    {
-                        usedpName = item.pName.ToString();
-                        break;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-
-            }
-            return usedpName;
-        }
-
-        private void find_name(string pName, string command)
-        {
-            pName = pName.Trim();
-            string contents = "";
-            string findN = lookName(pName);
-            if (findN == textBox_Finder.Text)
-            {
-                DataManager.TView(command, pName, out contents);
-                button_Refresh.PerformClick();
-                MessageBox.Show(contents);
-                writeLog(contents);
+                DataManager.FindLoad(pName);
+                MessageBox.Show($"{pName} 환자를 찾았습니다.");
+                writeLog($"{pName} 환자를 찾았습니다.");
             }
             else
             {
-                MessageBox.Show(contents);
-                writeLog(contents);
+                writeLog($"{pName} 환자는 존재하지 않습니다.");
+                MessageBox.Show($"{pName} 환자는 존재하지 않습니다.");
             }
         }
 

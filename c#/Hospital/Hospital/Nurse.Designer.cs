@@ -34,14 +34,37 @@
             this.의약품정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView_Waiting = new System.Windows.Forms.DataGridView();
+            this.chartNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.waitingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView_Medic = new System.Windows.Forms.DataGridView();
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medicineBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button_Reset = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_Finder = new System.Windows.Forms.TextBox();
             this.button_Find = new System.Windows.Forms.Button();
             this.dataGridView_Find = new System.Windows.Forms.DataGridView();
+            this.chartNumDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pGenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pVisitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pDiagnosisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pMedicineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.treatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label_Now = new System.Windows.Forms.Label();
             this.button_Receipt = new System.Windows.Forms.Button();
             this.button_Cancel = new System.Windows.Forms.Button();
@@ -68,39 +91,16 @@
             this.textBox_PDia = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox_PMed = new System.Windows.Forms.TextBox();
-            this.treatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medicineBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.waitingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.chartNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chartNumDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pGenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pVisitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pDiagnosisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pMedicineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Waiting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.waitingBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Medic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicineBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Find)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treatBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medicineBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.waitingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -157,6 +157,57 @@
             this.dataGridView_Waiting.Size = new System.Drawing.Size(163, 391);
             this.dataGridView_Waiting.TabIndex = 0;
             // 
+            // chartNumDataGridViewTextBoxColumn
+            // 
+            this.chartNumDataGridViewTextBoxColumn.DataPropertyName = "ChartNum";
+            this.chartNumDataGridViewTextBoxColumn.HeaderText = "차트번호";
+            this.chartNumDataGridViewTextBoxColumn.Name = "chartNumDataGridViewTextBoxColumn";
+            this.chartNumDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // codeDataGridViewTextBoxColumn1
+            // 
+            this.codeDataGridViewTextBoxColumn1.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn1.HeaderText = "환자번호";
+            this.codeDataGridViewTextBoxColumn1.Name = "codeDataGridViewTextBoxColumn1";
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "이름";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            // 
+            // birthDataGridViewTextBoxColumn
+            // 
+            this.birthDataGridViewTextBoxColumn.DataPropertyName = "Birth";
+            this.birthDataGridViewTextBoxColumn.HeaderText = "생년월일";
+            this.birthDataGridViewTextBoxColumn.Name = "birthDataGridViewTextBoxColumn";
+            this.birthDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "성별";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            this.genderDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "연락처";
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "주소";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // waitingBindingSource
+            // 
+            this.waitingBindingSource.DataSource = typeof(Hospital.Waiting);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView_Medic);
@@ -181,6 +232,28 @@
             this.dataGridView_Medic.RowTemplate.Height = 23;
             this.dataGridView_Medic.Size = new System.Drawing.Size(177, 391);
             this.dataGridView_Medic.TabIndex = 0;
+            // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "의약품 번호";
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "제품명";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "재고";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            // 
+            // medicineBindingSource
+            // 
+            this.medicineBindingSource.DataSource = typeof(Hospital.Medicine);
             // 
             // groupBox3
             // 
@@ -231,6 +304,7 @@
             this.button_Find.Text = "찾기";
             this.button_Find.UseVisualStyleBackColor = true;
             this.button_Find.Click += new System.EventHandler(this.button_Find_Click);
+            this.button_Find.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button_Find_KeyDown);
             // 
             // dataGridView_Find
             // 
@@ -254,6 +328,74 @@
             this.dataGridView_Find.Size = new System.Drawing.Size(422, 173);
             this.dataGridView_Find.TabIndex = 0;
             this.dataGridView_Find.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Find_CellClick);
+            // 
+            // chartNumDataGridViewTextBoxColumn1
+            // 
+            this.chartNumDataGridViewTextBoxColumn1.DataPropertyName = "chartNum";
+            this.chartNumDataGridViewTextBoxColumn1.HeaderText = "차트번호";
+            this.chartNumDataGridViewTextBoxColumn1.Name = "chartNumDataGridViewTextBoxColumn1";
+            this.chartNumDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // pCodeDataGridViewTextBoxColumn
+            // 
+            this.pCodeDataGridViewTextBoxColumn.DataPropertyName = "pCode";
+            this.pCodeDataGridViewTextBoxColumn.HeaderText = "환자번호";
+            this.pCodeDataGridViewTextBoxColumn.Name = "pCodeDataGridViewTextBoxColumn";
+            // 
+            // pNameDataGridViewTextBoxColumn
+            // 
+            this.pNameDataGridViewTextBoxColumn.DataPropertyName = "pName";
+            this.pNameDataGridViewTextBoxColumn.HeaderText = "이름";
+            this.pNameDataGridViewTextBoxColumn.Name = "pNameDataGridViewTextBoxColumn";
+            // 
+            // pBirthDataGridViewTextBoxColumn
+            // 
+            this.pBirthDataGridViewTextBoxColumn.DataPropertyName = "pBirth";
+            this.pBirthDataGridViewTextBoxColumn.HeaderText = "생년월일";
+            this.pBirthDataGridViewTextBoxColumn.Name = "pBirthDataGridViewTextBoxColumn";
+            // 
+            // pGenDataGridViewTextBoxColumn
+            // 
+            this.pGenDataGridViewTextBoxColumn.DataPropertyName = "pGen";
+            this.pGenDataGridViewTextBoxColumn.HeaderText = "성별";
+            this.pGenDataGridViewTextBoxColumn.Name = "pGenDataGridViewTextBoxColumn";
+            // 
+            // pNumDataGridViewTextBoxColumn
+            // 
+            this.pNumDataGridViewTextBoxColumn.DataPropertyName = "pNum";
+            this.pNumDataGridViewTextBoxColumn.HeaderText = "연락처";
+            this.pNumDataGridViewTextBoxColumn.Name = "pNumDataGridViewTextBoxColumn";
+            // 
+            // pAddressDataGridViewTextBoxColumn
+            // 
+            this.pAddressDataGridViewTextBoxColumn.DataPropertyName = "pAddress";
+            this.pAddressDataGridViewTextBoxColumn.HeaderText = "주소";
+            this.pAddressDataGridViewTextBoxColumn.Name = "pAddressDataGridViewTextBoxColumn";
+            // 
+            // pVisitDataGridViewTextBoxColumn
+            // 
+            this.pVisitDataGridViewTextBoxColumn.DataPropertyName = "pVisit";
+            this.pVisitDataGridViewTextBoxColumn.HeaderText = "최근방문";
+            this.pVisitDataGridViewTextBoxColumn.Name = "pVisitDataGridViewTextBoxColumn";
+            this.pVisitDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // pDiagnosisDataGridViewTextBoxColumn
+            // 
+            this.pDiagnosisDataGridViewTextBoxColumn.DataPropertyName = "pDiagnosis";
+            this.pDiagnosisDataGridViewTextBoxColumn.HeaderText = "최근진단";
+            this.pDiagnosisDataGridViewTextBoxColumn.Name = "pDiagnosisDataGridViewTextBoxColumn";
+            this.pDiagnosisDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // pMedicineDataGridViewTextBoxColumn
+            // 
+            this.pMedicineDataGridViewTextBoxColumn.DataPropertyName = "pMedicine";
+            this.pMedicineDataGridViewTextBoxColumn.HeaderText = "최근처방";
+            this.pMedicineDataGridViewTextBoxColumn.Name = "pMedicineDataGridViewTextBoxColumn";
+            this.pMedicineDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // treatBindingSource1
+            // 
+            this.treatBindingSource1.DataSource = typeof(Hospital.Treat);
             // 
             // label_Now
             // 
@@ -468,147 +610,6 @@
             this.textBox_PMed.Size = new System.Drawing.Size(80, 21);
             this.textBox_PMed.TabIndex = 78;
             // 
-            // treatBindingSource1
-            // 
-            this.treatBindingSource1.DataSource = typeof(Hospital.Treat);
-            // 
-            // codeDataGridViewTextBoxColumn
-            // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "의약품 번호";
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "제품명";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "재고";
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            // 
-            // medicineBindingSource
-            // 
-            this.medicineBindingSource.DataSource = typeof(Hospital.Medicine);
-            // 
-            // waitingBindingSource
-            // 
-            this.waitingBindingSource.DataSource = typeof(Hospital.Waiting);
-            // 
-            // chartNumDataGridViewTextBoxColumn
-            // 
-            this.chartNumDataGridViewTextBoxColumn.DataPropertyName = "ChartNum";
-            this.chartNumDataGridViewTextBoxColumn.HeaderText = "차트번호";
-            this.chartNumDataGridViewTextBoxColumn.Name = "chartNumDataGridViewTextBoxColumn";
-            this.chartNumDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // codeDataGridViewTextBoxColumn1
-            // 
-            this.codeDataGridViewTextBoxColumn1.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn1.HeaderText = "환자번호";
-            this.codeDataGridViewTextBoxColumn1.Name = "codeDataGridViewTextBoxColumn1";
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "이름";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            // 
-            // birthDataGridViewTextBoxColumn
-            // 
-            this.birthDataGridViewTextBoxColumn.DataPropertyName = "Birth";
-            this.birthDataGridViewTextBoxColumn.HeaderText = "생년월일";
-            this.birthDataGridViewTextBoxColumn.Name = "birthDataGridViewTextBoxColumn";
-            this.birthDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "성별";
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // phoneDataGridViewTextBoxColumn
-            // 
-            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "연락처";
-            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            this.phoneDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "주소";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // chartNumDataGridViewTextBoxColumn1
-            // 
-            this.chartNumDataGridViewTextBoxColumn1.DataPropertyName = "chartNum";
-            this.chartNumDataGridViewTextBoxColumn1.HeaderText = "차트번호";
-            this.chartNumDataGridViewTextBoxColumn1.Name = "chartNumDataGridViewTextBoxColumn1";
-            this.chartNumDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // pCodeDataGridViewTextBoxColumn
-            // 
-            this.pCodeDataGridViewTextBoxColumn.DataPropertyName = "pCode";
-            this.pCodeDataGridViewTextBoxColumn.HeaderText = "환자번호";
-            this.pCodeDataGridViewTextBoxColumn.Name = "pCodeDataGridViewTextBoxColumn";
-            // 
-            // pNameDataGridViewTextBoxColumn
-            // 
-            this.pNameDataGridViewTextBoxColumn.DataPropertyName = "pName";
-            this.pNameDataGridViewTextBoxColumn.HeaderText = "이름";
-            this.pNameDataGridViewTextBoxColumn.Name = "pNameDataGridViewTextBoxColumn";
-            // 
-            // pBirthDataGridViewTextBoxColumn
-            // 
-            this.pBirthDataGridViewTextBoxColumn.DataPropertyName = "pBirth";
-            this.pBirthDataGridViewTextBoxColumn.HeaderText = "생년월일";
-            this.pBirthDataGridViewTextBoxColumn.Name = "pBirthDataGridViewTextBoxColumn";
-            // 
-            // pGenDataGridViewTextBoxColumn
-            // 
-            this.pGenDataGridViewTextBoxColumn.DataPropertyName = "pGen";
-            this.pGenDataGridViewTextBoxColumn.HeaderText = "성별";
-            this.pGenDataGridViewTextBoxColumn.Name = "pGenDataGridViewTextBoxColumn";
-            // 
-            // pNumDataGridViewTextBoxColumn
-            // 
-            this.pNumDataGridViewTextBoxColumn.DataPropertyName = "pNum";
-            this.pNumDataGridViewTextBoxColumn.HeaderText = "연락처";
-            this.pNumDataGridViewTextBoxColumn.Name = "pNumDataGridViewTextBoxColumn";
-            // 
-            // pAddressDataGridViewTextBoxColumn
-            // 
-            this.pAddressDataGridViewTextBoxColumn.DataPropertyName = "pAddress";
-            this.pAddressDataGridViewTextBoxColumn.HeaderText = "주소";
-            this.pAddressDataGridViewTextBoxColumn.Name = "pAddressDataGridViewTextBoxColumn";
-            // 
-            // pVisitDataGridViewTextBoxColumn
-            // 
-            this.pVisitDataGridViewTextBoxColumn.DataPropertyName = "pVisit";
-            this.pVisitDataGridViewTextBoxColumn.HeaderText = "최근방문";
-            this.pVisitDataGridViewTextBoxColumn.Name = "pVisitDataGridViewTextBoxColumn";
-            this.pVisitDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // pDiagnosisDataGridViewTextBoxColumn
-            // 
-            this.pDiagnosisDataGridViewTextBoxColumn.DataPropertyName = "pDiagnosis";
-            this.pDiagnosisDataGridViewTextBoxColumn.HeaderText = "최근진단";
-            this.pDiagnosisDataGridViewTextBoxColumn.Name = "pDiagnosisDataGridViewTextBoxColumn";
-            this.pDiagnosisDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // pMedicineDataGridViewTextBoxColumn
-            // 
-            this.pMedicineDataGridViewTextBoxColumn.DataPropertyName = "pMedicine";
-            this.pMedicineDataGridViewTextBoxColumn.HeaderText = "최근처방";
-            this.pMedicineDataGridViewTextBoxColumn.Name = "pMedicineDataGridViewTextBoxColumn";
-            this.pMedicineDataGridViewTextBoxColumn.Visible = false;
-            // 
             // Nurse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -643,6 +644,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Nurse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -651,14 +653,14 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Waiting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.waitingBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Medic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicineBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Find)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treatBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medicineBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.waitingBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -32,7 +32,7 @@ namespace Hospital
                 cmd.Connection = conn;
                 if (chartNum == -1)
                 {
-                    cmd.CommandText = "select * from Treatment";
+                    cmd.CommandText = "select * from Treatment order by ChartNum";
                 }
                 else
                 {
@@ -211,28 +211,24 @@ namespace Hospital
             }
         }
 
-        public static void dataViewQuery(string pName, string command)
-        {
-            string sqlcommand = "";
-            if (command == "view")
-            {
-                sqlcommand = "SELECT  Code AS 환자번호, Name AS 이름, Birth AS 생년월일, Phone AS 연락처 FROM Treatment WHERE(Name = @p1)";
-            }
-            
+        public static void dataViewQuery(string pName)
+        {           
             try
             {
                 ConnectDB();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM Treatment where Name=@p1";
                 cmd.Parameters.AddWithValue("@p1", pName);
-                cmd.CommandText = sqlcommand;
-                cmd.ExecuteNonQuery();
 
+                da = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                da.Fill(ds, "Treatment");
+                dt = ds.Tables[0];
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                System.Windows.Forms.MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -262,7 +258,7 @@ namespace Hospital
 
         public static void viewQuery(string pName)
         {
-            dataViewQuery(pName, "view");
+            dataViewQuery(pName);
         }
     }
 }

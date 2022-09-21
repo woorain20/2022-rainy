@@ -54,7 +54,7 @@
             this.groupBox1.Controls.Add(this.textBox_Password);
             this.groupBox1.Controls.Add(this.textBox_Id);
             this.groupBox1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox1.Location = new System.Drawing.Point(236, 198);
+            this.groupBox1.Location = new System.Drawing.Point(163, 125);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(412, 242);
             this.groupBox1.TabIndex = 0;
@@ -88,6 +88,7 @@
             this.button_Login.Text = "로그인";
             this.button_Login.UseVisualStyleBackColor = true;
             this.button_Login.Click += new System.EventHandler(this.button_Login_Click);
+            this.button_Login.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button_Login_KeyDown);
             // 
             // textBox_Password
             // 
@@ -109,7 +110,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(570, 98);
+            this.pictureBox1.Location = new System.Drawing.Point(497, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(78, 68);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -119,7 +120,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(60, 198);
+            this.pictureBox2.Location = new System.Drawing.Point(32, 125);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 242);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -129,7 +130,7 @@
             // label_Now
             // 
             this.label_Now.AutoSize = true;
-            this.label_Now.Location = new System.Drawing.Point(13, 589);
+            this.label_Now.Location = new System.Drawing.Point(12, 392);
             this.label_Now.Name = "label_Now";
             this.label_Now.Size = new System.Drawing.Size(64, 12);
             this.label_Now.TabIndex = 3;
@@ -139,7 +140,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("한컴 소망 M", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(251, 112);
+            this.label4.Location = new System.Drawing.Point(156, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(267, 40);
             this.label4.TabIndex = 4;
@@ -155,13 +156,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 613);
+            this.ClientSize = new System.Drawing.Size(612, 411);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label_Now);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.KeyPreview = true;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

@@ -76,7 +76,7 @@ namespace Hospital
             {
                 TDBHelper.selectQuery();
                 treatments.Clear();
-
+ 
                 foreach (DataRow item in TDBHelper.dt.Rows)
                 {
                     Treat treat = new Treat();
@@ -97,6 +97,33 @@ namespace Hospital
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
                 //System.Windows.Forms.MessageBox.Show("TLoad오류");
+            }
+        }
+
+        public static void FindLoad(string pName)
+        {
+            try
+            {
+                TDBHelper.dataViewQuery(pName);             
+                treatments.Clear();
+
+                foreach (DataRow item in TDBHelper.dt.Rows)
+                {
+                    Treat treat = new Treat();
+                    treat.chartNum = int.Parse(item["ChartNum"].ToString());
+                    treat.pCode = int.Parse(item["Code"].ToString());
+                    treat.pName = item["Name"].ToString();
+                    treat.pBirth = DateTime.Parse(item["Birth"].ToString());
+                    treat.pGen = item["Gender"].ToString();
+                    treat.pNum = item["Phone"].ToString();
+                    treat.pAddress = item["Address"].ToString();
+                    treatments.Add(treat);
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show("findLoad오류");
             }
         }
 
@@ -378,17 +405,6 @@ namespace Hospital
             }
         }
 
-        public static void TView(string command, string pName, out string contents)
-        {
-            TDBHelper.dataViewQuery(pName, command);
-            contents = "";
-
-            if (command == "view")
-            {
-                TDBView(pName, ref contents);
-            }
-        }
-
         private static bool TDBDelete(string chartNum, ref string contents)
         {
             if (TDBHelper.dt.Rows.Count != 0)
@@ -445,21 +461,6 @@ namespace Hospital
             else
             {
                 contents = $"해당 환자 차트 번호 {chartNum}가 이미 존재합니다.";
-                return false;
-            }
-        }
-
-        private static bool TDBView(string pName, ref string contents)
-        {
-            if(TDBHelper.dt.Rows.Count != 0)
-            {
-                TDBHelper.viewQuery(pName);
-                contents = $"환자 이름 {pName}를 찾았습니다.";
-                return true;
-            }
-            else
-            {
-                contents = $"환자 이름 {pName}은 존재하지 않습니다.";
                 return false;
             }
         }

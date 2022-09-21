@@ -16,6 +16,7 @@ namespace Hospital
         {
             InitializeComponent();
             label_Now.Text = DateTime.Now.ToString("yyyy년 MM월 dd일 hh시 mm분 ss초 tt");
+            this.textBox_Password.KeyDown += button_Login_KeyDown;
         }
 
         private void timer_Now_Tick(object sender, EventArgs e)
@@ -92,6 +93,14 @@ namespace Hospital
                 }
             }
 
+        }
+
+        private void button_Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button_Login_Click(sender, e);
+            }
         }
     }
 }
