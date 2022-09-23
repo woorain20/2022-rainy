@@ -1,0 +1,15 @@
+pip install jupyterlab
+
+jupyter-lab
+
+파이썬 실행
+
+pip install pandas
+
+pip install seaborn
+
+pip install tensorflow
+
+pip install -U scikit-learn
+
+https://github.com/mwaskom/seaborn-data

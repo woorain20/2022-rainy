@@ -1,0 +1,12 @@
+D3 - UI/UX 요구사항 분석, 사용자 화면 설계, 사용자 인터페이스 구현 -> 자바스크립트 라이브러리(그래프 그려주는 것, HTML, CSSM, JS와 연결) -> 파이썬으로 대체
+
+Jsp - Html+Css+JS+EL+JSTL -> Jsp -  요즘에는 Jsp로 화면 설계하는 곳 없음 -> 스벨트로 대체
+
+스프링 - 서버프로그램 기능 구현
+php -> 웹
+C# -> .net asp
+python -> Django, flask
+java -> spring -> 웹 만들 때 자바를 많이 사용(60%정도)
+JS -> Node.js express
+
+root= 12345
