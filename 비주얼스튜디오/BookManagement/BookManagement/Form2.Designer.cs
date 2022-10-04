@@ -201,6 +201,7 @@
             this.dataGridView_Book.RowTemplate.Height = 23;
             this.dataGridView_Book.Size = new System.Drawing.Size(776, 219);
             this.dataGridView_Book.TabIndex = 0;
+            this.dataGridView_Book.Click += new System.EventHandler(this.dataGridView_book_CurrentCellChanged);
             // 
             // isbnDataGridViewTextBoxColumn
             // 

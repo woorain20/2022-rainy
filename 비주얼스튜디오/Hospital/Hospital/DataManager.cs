@@ -183,7 +183,6 @@ namespace Hospital
 
         public static void Save(string command, string id, string password, string name, string position, out string contents)
         {
-            //DBHelper.dataInsertQuery(id, password, name, position, command);
             contents = "";
 
             if (command == "insert")
@@ -194,7 +193,6 @@ namespace Hospital
 
         public static void Save(string command, string id, out string contents)
         {
-            //DBHelper.dataDeleteQuery(id, command);
             contents = "";
 
             if (command == "delete")

@@ -120,7 +120,7 @@ namespace BookManagement
                     {
                         DateTime oldDay = book.borrowedAt;
                         book.userId = 0;
-                        book.name = "";
+                        book.userName = "";
                         book.isBorrowed = false;
                         book.borrowedAt=new DateTime();
 
