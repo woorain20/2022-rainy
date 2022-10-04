@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=GuestBook/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{GuestbookService.java[GuestbookService" modifiers="513" timestamp="1659054700475"/>
+    <typeInfo handle="=GuestBook/C:\/Users\/KB\/study\/Spring\/spring-tool-suite-4-4.15.1.RELEASE-e4.24.0-win32.win32.x86_64.self-extracting\/contents\/sts-4.15.1.RELEASE\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.3.v20220515-1416\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/maven.pomderived=/true=/&lt;java.security(Guard.class[Guard" modifiers="1537" timestamp="1652591962000"/>
+    <typeInfo handle="=Practice-2/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{MetroAllService.java[MetroAllService" modifiers="513" timestamp="1659065054324"/>
+    <typeInfo handle="=Practice-2/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.repository{SeoulMetroRepository.java[SeoulMetroRepository" modifiers="513" timestamp="1658984717674"/>
+    <typeInfo handle="=Practice-2/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{SeoulMetroService.java[SeoulMetroService" modifiers="513" timestamp="1659076139153"/>
+    <typeInfo handle="=Practice-2/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{DaeguMetroService.java[DaeguMetroService" modifiers="513" timestamp="1659078430080"/>
+    <typeInfo handle="=GuestBook/C:\/Users\/KB\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.7.2\/spring-data-jpa-2.7.2.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/2.7.2=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1658802768899"/>
+    <typeInfo handle="=Practice-2/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{SeoulStationService.java[SeoulStationService" modifiers="513" timestamp="1659333384115"/>
+</typeInfoHistroy>
