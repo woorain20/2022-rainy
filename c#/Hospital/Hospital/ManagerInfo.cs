@@ -138,5 +138,10 @@ namespace Hospital
                 dataGridView_ManagerList.DataSource = DataManager.managers;
             }
         }
+
+        private void dataGridView_ManagerList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
